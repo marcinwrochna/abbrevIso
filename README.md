@@ -1,7 +1,12 @@
 # abbrevIso
 Publication title abbreviation per [ISO-4](http://www.uai.cl/images/sitio/biblioteca/citas/ISO_4_1997en.pdf) standard.
 
-[LTWA](http://www.issn.org/services/online-services/access-to-the-ltwa/) (List of Title Word Abbreviations).
+This is a library for finding abbreviations of journal titles and searching [LTWA](http://www.issn.org/services/online-services/access-to-the-ltwa/) (List of Title Word Abbreviations).
+Try it [live](https://www.mimuw.edu.pl/~mw290715/iso4/), also check there for caveats and an overview of ISO-4 rules.
+
+_International Journal of Geographical Information Science → Int. J. Geogr. Inf. Sci._  
+_Zeitschrift für deutsches Altertum und deutsche Literatur → Z. dtsch. Altert. dtsch. Lit._  
+_4OR-A Quarterly Journal of Operations Research → 4OR-Q. J. Oper. Res._
 
 ## Using
 `abbrevIso.makeAbbreviation(s)` outputs the computed abbreviation for the given title `s`.
