@@ -39,7 +39,7 @@ function debounce(f, wait) {
  */
 function onInputChange() {
   const value = $('#inputText')[0].value;
-	// Ignore short values.
+  // Ignore short values.
   if (value.trim().length < 4) {
     $('#info2').html(""); // Clear the 'searching...'.
     return;
@@ -52,7 +52,7 @@ function onInputChange() {
   const result = abbrevIso.makeAbbreviation(value, languages);
   $('#resultString').text(result);
   // Find and list all matching patterns (without excluding overlaps).
-	const matchingPatterns = abbrevIso.getMatchingPatterns(value, languages);
+  const matchingPatterns = abbrevIso.getMatchingPatterns(value, languages);
   $('#matchingPatterns')
       .html("<th>Words</th><th>Abbr.</th><th><a " +
       		  "href='https://www.loc.gov/standards/iso639-2/php/code_list.php'>" +
@@ -71,9 +71,9 @@ function onInputChange() {
 $(document).ready(function() {
 	// Handle API: read parameters from GET into the HTML form.
 	// Default is English only, because it's much faster.
-  $('#engCheckbox').prop('checked', true);
+	$('#engCheckbox').prop('checked', true);
 	let r = new RegExp('[\?&]eng=([^&#]*)', 'i').exec(window.location.href);
-  if (r) {
+	if (r) {
 		if (r[1] && ['true','1','True','yes','eng'].includes(r[1]))
 			$('#engCheckbox').prop('checked', true);
 		else
@@ -122,7 +122,7 @@ $(document).ready(function() {
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-12926426-7', 'auto');
+		ga('create', 'UA-12926426-9', 'auto');
 		ga('send', 'pageview');
 	}, 1);
 });
