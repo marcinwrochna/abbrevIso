@@ -24,7 +24,7 @@ let nullAbbrv = 0;
 let successCount = 0;
 let failCount = 0;
 let table = '{| class="wikitable"\n|-\n!page title\n!infobox title\n' +
-	'!infobox abbrv\n!bot guess\n!validate\n!infobox lang\n!infobox country\n'+
+	'!infobox abbrv\n!bot guess\n!infobox lang\n!infobox country\n'+
 	'! scope="column" style="width: 400px;" | LTWA patterns applied\n!comment\n';
 
 
@@ -39,21 +39,33 @@ for (const testCase of testCases) {
 	console.warn('Testing ' + totalCount + ': '+ testCase);
 	
 	let test = testCase.split('\t');
-	if (test[2] == 'NULL' || test[2].trim().length == 0) {
+	let title = test[2].normalize('NFC').trim();
+	// Discard disambigs like '(journal)'.
+	let wikititle = test[0].normalize('NFC').trim().replace(/\s*\(.*\)/, '');
+	let value = title;
+	// If no infobox title, use wiki page title.
+	if (value == 'NULL' || value.length == 0)
+		value = wikititle;
+	let infoboxID = test[1].normalize('NFC').trim() ;
+	let abbrv = test[4].normalize('NFC').trim();
+	let language = test[5].normalize('NFC').trim();
+	let country = test[6].normalize('NFC').trim() ;
+	
+	if (abbrv == 'NULL' || abbrv.trim().length == 0) {
 		nullAbbrv++;
 		continue;
 	}
+	const engCountries = ['United States', 'U.S.', 'U. S.', 'USA', 'U.S.A', 'US',
+		'United Kingdom', 'UK', 'New Zealand', 'Australia', 'UK & USA', 'England'];
+	let assumeEnglish = (language.trim().length < 2 || language.startsWith('English'));
+	assumeEnglish = assumeEnglish && engCountries.indexOf(country) >= 0
+	let languages = assumeEnglish ? ['eng', 'mul', 'lat', 'und'] : undefined;
 	
-	let value = test[1].normalize('NFC').trim();
-	// If no infobox title, use wiki page title, removing disambigs like '(journal)'.
-	if (value == 'NULL' || value.length == 0)
-		value = test[0].normalize('NFC').trim().replace(/\s*\(.*\)/, ''); 
-	let result = abbrevIso.makeAbbreviation(value);
-	if (result === test[2].normalize('NFC').trim() ||
-			// Allow passing the test if removing dependent part and comments (parens) helps.
-			result.replace(/\s*:.+/, '') === test[2].normalize('NFC').trim().replace(/\s*\(.+/, ''))
+	let result = abbrevIso.makeAbbreviation(value, languages);
+	// Allow passing the test if removing dependent part and comments (parens) helps.
+	if (result === abbrv || result.replace(/\s*:.+/, '') === abbrv.replace(/\s*\(.+/, '')) {
 		successCount++;
-	else {
+	} else {
 		failCount++;
 		if (test[1] == test[0] || test[1] == 'NULL' || test[1].trim().length == 0)
 			test[1] = '';
@@ -68,7 +80,7 @@ for (const testCase of testCases) {
 		}
 		applied += '</pre>';
 		if (failCount < 250)
-		table += '|-\n| [[' + test[0] + ']]\n| ' + test[1] + '\n| ' + test[2] + '\n' +
+			table += '|-\n| [[' + test[0] + ']]\n| ' + test[1] + '\n| ' + test[2] + '\n' +
 				'| ' + result + '\n| ' + test[3] + '\n| ' + test[4] + '\n| ' + applied + '\n| \n';
 		//table += '|-\n{{ISO 4 mismatch |pagename=' + test[0] + ' |title=' + test[1] +
 		//		' |abbreviation=' + test[2] + ' |bot-guess=' + result + ' |language=' + test[3] +
