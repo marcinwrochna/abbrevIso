@@ -10,7 +10,7 @@ let AbbrevIso = require('./nodeBundle.js');
 
 let ltwa = fs.readFileSync('LTWA_20160915-modified.csv', 'utf8');
 let shortWords = fs.readFileSync('shortwords.txt', 'utf8');
-abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
+let abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
 
 //console.log(abbrevIso.makeAbbreviation('International Journal of Geographical Information Science'));
 
@@ -33,11 +33,11 @@ for (const testCase of testCases) {
 	if (testCase[0] == '#' || testCase.trim().length == 0)
 		continue;
 	// Limit number of tests executed.
-	if (totalCount > 20)
+	if (totalCount > 40)
 		break;
 	totalCount++;
 	console.warn('Testing ' + totalCount + ': '+ testCase);
-	
+
 	let test = testCase.split('\t');
 	let title = test[2].normalize('NFC').trim();
 	// Discard disambigs like '(journal)'.
@@ -50,38 +50,43 @@ for (const testCase of testCases) {
 	let abbrv = test[4].normalize('NFC').trim();
 	let language = test[5].normalize('NFC').trim();
 	let country = test[6].normalize('NFC').trim() ;
-	
+
 	if (abbrv == 'NULL' || abbrv.trim().length == 0) {
 		nullAbbrv++;
 		continue;
 	}
 	const engCountries = ['United States', 'U.S.', 'U. S.', 'USA', 'U.S.A', 'US',
 		'United Kingdom', 'UK', 'New Zealand', 'Australia', 'UK & USA', 'England'];
-	let assumeEnglish = (language.trim().length < 2 || language.startsWith('English'));
-	assumeEnglish = assumeEnglish && engCountries.indexOf(country) >= 0
+	let assumeEnglish = false;
+	if (language.trim().length < 2 ||
+			language.startsWith('English') ||
+			language == 'NULL')
+		assumeEnglish = true;
+	assumeEnglish = assumeEnglish && (engCountries.indexOf(country) >= 0);
 	let languages = assumeEnglish ? ['eng', 'mul', 'lat', 'und'] : undefined;
-	
+
 	let result = abbrevIso.makeAbbreviation(value, languages);
 	// Allow passing the test if removing dependent part and comments (parens) helps.
 	if (result === abbrv || result.replace(/\s*:.+/, '') === abbrv.replace(/\s*\(.+/, '')) {
 		successCount++;
 	} else {
 		failCount++;
-		if (test[1] == test[0] || test[1] == 'NULL' || test[1].trim().length == 0)
-			test[1] = '';
-		if (test[3] == 'NULL' || test[3].trim().length == 0)
-			test[3] = '';
-		if (test[4] == 'NULL' || test[4].trim().length == 0)
-			test[4] = '';
+		if (title == wikititle || title == 'NULL' || title.length == 0)
+			title = '';
+		if (language == 'NULL' || language.length == 0)
+			language = '';
+		if (country == 'NULL' || country.length == 0)
+			country = '';
 		let applied = '<pre>';
 		let matchingPatterns = abbrevIso.getMatchingPatterns(value);
 		for (const pattern of matchingPatterns) {
-			applied += pattern[0] + '\t' + pattern[1] + '\t' + pattern[2] + '\n';
+			applied += pattern.line + '\n';
 		}
 		applied += '</pre>';
-		if (failCount < 250)
-			table += '|-\n| [[' + test[0] + ']]\n| ' + test[1] + '\n| ' + test[2] + '\n' +
-				'| ' + result + '\n| ' + test[3] + '\n| ' + test[4] + '\n| ' + applied + '\n| \n';
+		// Only output the first 500 mismatches.
+		if (failCount < 500)
+			table += '|-\n| [[' + wikititle + ']]\n| ' + title + '\n| ' + abbrv + '\n' +
+				'| ' + result + '\n| ' + language + '\n| ' + country + '\n| ' + applied + '\n| \n';
 		//table += '|-\n{{ISO 4 mismatch |pagename=' + test[0] + ' |title=' + test[1] +
 		//		' |abbreviation=' + test[2] + ' |bot-guess=' + result + ' |language=' + test[3] +
 		//		' |country=' + test[4] + ' |matches=' + applied + '}}\n';
