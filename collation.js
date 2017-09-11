@@ -27,25 +27,26 @@ export const newlineRegex = /\r\n|[\n\v\f\r\x85\u2028\u2029]/;
  * @param {string} s
  * @return {string}
  */
+
 export function normalize(s) {
-  return s
-    .replace(/\u00DF/g, 'ss').replace(/\u1E9E/g, 'SS') // scharfes S
-    .replace(/\u0111/g, 'd').replace(/\u0110/g, 'D') // crossed D
-    .replace(/\u00F0/g, 'd').replace(/\u00D0/g, 'D') // eth
-    .replace(/\u00FE/g, 'th').replace(/\u00DE/g, 'TH') // thorn
-    .replace(/\u0127/g, 'h').replace(/\u0126/g, 'H') // H-bar
-    .replace(/\u0142/g, 'l').replace(/\u0141/g, 'L') // L with stroke
-    .replace(/\u0153/g, 'oe').replace(/\u0152/g, 'Oe') // oe ligature
-    .replace(/\u00E6/g, 'ae').replace(/\u00C6/g, 'Ae') // ae ligature
-    .replace(/\u0131/g, 'i') // dotless i
-    .replace(/\u00F8/g, 'o').replace(/\u00D8/g, 'O') // o with stroke
-    // Catalan middle dot, double prime (weirdly used for slavic langs),
-    // unicode replacement character (for some mis-utf'd Turkish).
-    .replace(/[\u00B7\u02BA\uFFFD]/g, '')
-    // Most diacritics are handled by this standard unicode normalization:
-    // it decomposes characters into simpler characters plus modifiers,
-    // and throws out the modifiers.
-    .normalize('NFKD').replace(/[\u0300-\u036f]/gu, '');
+	return s
+		.replace(/\u00DF/g, 'ss').replace(/\u1E9E/g, 'SS') // scharfes S
+		.replace(/\u0111/g, 'd').replace(/\u0110/g, 'D') // crossed D
+		.replace(/\u00F0/g, 'd').replace(/\u00D0/g, 'D') // eth
+		.replace(/\u00FE/g, 'th').replace(/\u00DE/g, 'TH') // thorn
+		.replace(/\u0127/g, 'h').replace(/\u0126/g, 'H') // H-bar
+		.replace(/\u0142/g, 'l').replace(/\u0141/g, 'L') // L with stroke
+		.replace(/\u0153/g, 'oe').replace(/\u0152/g, 'Oe') // oe ligature
+		.replace(/\u00E6/g, 'ae').replace(/\u00C6/g, 'Ae') // ae ligature
+		.replace(/\u0131/g, 'i') // dotless i
+		.replace(/\u00F8/g, 'o').replace(/\u00D8/g, 'O') // o with stroke
+		// Catalan middle dot, double prime (weirdly used for slavic langs),
+		// unicode replacement character (for some mis-utf'd Turkish).
+		.replace(/[\u00B7\u02BA\uFFFD]/g, '')
+		// Most diacritics are handled by this standard unicode normalization:
+		// it decomposes characters into simpler characters plus modifiers,
+		// and throws out the modifiers.
+		.normalize('NFKD').replace(/[\u0300-\u036f]/gu, '');
 }
 
 /**
@@ -56,14 +57,14 @@ export function normalize(s) {
  * @return {string}
  */
 export function promiscuouslyNormalize(s) {
-  return normalize(s)
-      .toLowerCase()
-      .replace(new RegExp(boundariesRegex, 'g'), ' ')
-      .replace(/\s+/gu, ' ').replace(/^\s/gu, '').replace(/\s$/gu, '')
-      .replace(/[^a-z\ ]/g, '')
-      .replace(/ss/g, 's')
-      .replace(/oe/g, 'o').replace(/ae/g, 'e')
-      .replace(/kh/g, '').replace(/h/g, '');
+	return normalize(s)
+		.toLowerCase()
+		.replace(new RegExp(boundariesRegex, 'g'), ' ')
+		.replace(/\s+/gu, ' ').replace(/^\s/gu, '').replace(/\s$/gu, '')
+		.replace(/[^a-z\ ]/g, '')
+		.replace(/ss/g, 's')
+		.replace(/oe/g, 'o').replace(/ae/g, 'e')
+		.replace(/kh/g, '').replace(/h/g, '');
 }
 
 /**
@@ -75,8 +76,8 @@ export function promiscuouslyNormalize(s) {
  * @return {boolean}
  */
 export function cEquiv(s, t) {
-  // TODO perhaps we could use instead the more standard:
-  //	(new Intl.Collator('en-u', {usage:'search', sensitivity:'base')).compare(s,t)?
+	// TODO perhaps we could use instead the more standard:
+	//     (new Intl.Collator('en-u', {usage:'search', sensitivity:'base')).compare(s,t)?
 	return (normalize(s).toLowerCase() == normalize(t).toLowerCase());
 }
 
@@ -95,7 +96,7 @@ export function getCollatingMatch(s, t) {
 	let i = 0;
 	let j = 0;
 	let result = [[], []];
-
+	
 	while (j < tt.length) {
 		if (i >= ss.length) {
 			if (cEquiv('', tt[j])) {
@@ -105,14 +106,12 @@ export function getCollatingMatch(s, t) {
 			} else {
 				return false; // `ss` is too short to match `tt`.
 			}
-		} else if (i + 1 < ss.length && j + 1 < tt.length &&
-            cEquiv(ss[i]+ss[i+1], tt[j]+tt[j+1])) {
+		} else if (i + 1 < ss.length && j + 1 < tt.length && cEquiv(ss[i]+ss[i+1], tt[j]+tt[j+1])) {
 			result[0].push(ss[i]);
 			result[1].push(tt[j]);
 			i++;
 			j++;
-		} else if (j + 1 < tt.length &&
-            cEquiv(ss[i], tt[j]+tt[j+1]) && !cEquiv(tt[j+1], '')) {
+		} else if (j + 1 < tt.length && cEquiv(ss[i], tt[j]+tt[j+1]) && !cEquiv(tt[j+1], '')) {
 			if (cEquiv('', tt[j])) {
 				result[0].push('');
 				result[1].push(tt[j]);
@@ -123,8 +122,7 @@ export function getCollatingMatch(s, t) {
 				i++;
 				j += 2;
 			}
-		} else if (i + 1 < ss.length
-          && cEquiv(ss[i] + ss[i+1], tt[j]) && !cEquiv(ss[i+1], '')) {
+		} else if (i + 1 < ss.length && cEquiv(ss[i] + ss[i+1], tt[j]) && !cEquiv(ss[i+1], '')) {
 			if (cEquiv(ss[i], '')) {
 				result[0].push(ss[i]);
 				result[1].push('');
@@ -157,8 +155,8 @@ export function getCollatingMatch(s, t) {
  * @return {Array<string>}
  */
 export function debugUTF(s) {
-  let r = [];
-  for (let i = 0; i < s.length; i++)
-    r.push(s.codePointAt(i).toString(16));
-  return r;
+	let r = [];
+	for (let i = 0; i < s.length; i++)
+		r.push(s.codePointAt(i).toString(16));
+	return r;
 }

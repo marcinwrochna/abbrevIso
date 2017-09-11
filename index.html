@@ -2,7 +2,7 @@
 <head>
 	<meta charset = "utf-8">
 	<title>LTWA search</title>
-  <script
+	<script
 		src="https://code.jquery.com/jquery-3.2.1.min.js"
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		crossorigin="anonymous"></script>
@@ -17,54 +17,53 @@ let abbrevIso;
 /**
  * Returns a wrapping function: as long as it continues to be invoked,
  * `f` will not be triggered. It will be called after it stops being called for
- *	`wait` milliseconds.
+ * `wait` milliseconds.
  * @param {} f
  * @param {number} wait
  */
 function debounce(f, wait) {
-  let timeout;
-  return function() {
-    let context = this, args = arguments;
-    let later = function() {
-      timeout = null;
-      f.apply(context, args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
+	let timeout;
+	return function() {
+		let context = this, args = arguments;
+		let later = function() {
+			timeout = null;
+			f.apply(context, args);
+		};
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+	};
 };
 
 /**
  * Processes the string given by the user in the form input and show results.
  */
 function onInputChange() {
-  const value = $('#inputText')[0].value;
-  // Ignore short values.
-  if (value.trim().length < 4) {
-    $('#info2').html(""); // Clear the 'searching...'.
-    return;
-  }
-  // If user checked 'English only', use english, multi, latin and undefined.
-  let languages = undefined;
-  if ($('#engCheckbox')[0].checked)
-    languages = [ 'eng', 'mul', 'lat', 'und' ];
-  // Compute and show the abbreviation.
-  const result = abbrevIso.makeAbbreviation(value, languages);
-  $('#resultString').text(result);
-  // Find and list all matching patterns (without excluding overlaps).
-  const matchingPatterns = abbrevIso.getMatchingPatterns(value, languages);
-  $('#matchingPatterns')
-      .html("<th>Words</th><th>Abbr.</th><th><a " +
-      		  "href='https://www.loc.gov/standards/iso639-2/php/code_list.php'>" +
-						"Languages</a></th>");
-  for (const pattern of matchingPatterns) {
-    let row = document.createElement('tr');
-    row.innerHTML = "<td>" + pattern.pattern + "</td><td>" +
-                    pattern.replacement + "</td><td>" +
-                    pattern.languages.join(',') + "</td>";
-    $('#matchingPatterns').append(row);
-  }
-  $('#info2').html(""); // Clear the 'searching...'.
+	const value = $('#inputText')[0].value;
+	// Ignore short values.
+	if (value.trim().length < 4) {
+		$('#info2').html(""); // Clear the 'searching...'.
+		return;
+	}
+	// If user checked 'English only', use english, multi, latin and undefined.
+	let languages = undefined;
+	if ($('#engCheckbox')[0].checked)
+	languages = [ 'eng', 'mul', 'lat', 'und' ];
+	// Compute and show the abbreviation.
+	const result = abbrevIso.makeAbbreviation(value, languages);
+	$('#resultString').text(result);
+	// Find and list all matching patterns (without excluding overlaps).
+	const matchingPatterns = abbrevIso.getMatchingPatterns(value, languages);
+	$('#matchingPatterns').html("<th>Words</th><th>Abbr.</th><th><a " +
+		"href='https://www.loc.gov/standards/iso639-2/php/code_list.php'>" +
+		"Languages</a></th>");
+	for (const pattern of matchingPatterns) {
+		let row = document.createElement('tr');
+		row.innerHTML = "<td>" + pattern.pattern + "</td><td>" +
+			pattern.replacement + "</td><td>" +
+			pattern.languages.join(',') + "</td>";
+		$('#matchingPatterns').append(row);
+	}
+	$('#info2').html(""); // Clear the 'searching...'.
 };
 
 
@@ -99,7 +98,7 @@ $(document).ready(function() {
 		(ltwa, shortWords) => {
 			ltwa = ltwa[0];
 			shortWords = shortWords[0];
-		 	abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
+			abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
 			$('#info').html("Loaded " +  abbrevIso.size + " rows.");
 
 			// We're ready to parse, so enable the interface and doTheMatching();

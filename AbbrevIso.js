@@ -25,7 +25,7 @@ export class LTWAPattern {
 		let a = line.split('\t');
 		if (a.length != 3)
 			throw new Error('Number of fields in LTWA line is not 3: "' + line + '"');
-
+		
 		this.line = line;
 		let p = a[0].normalize('NFC').trim();
 		// Some patterns include a disambiguation comment in parentheses, remove it.
@@ -34,16 +34,14 @@ export class LTWAPattern {
 		if (p.length < 3)
 			throw new Error('LTWA line has too short pattern: "' + line + '"');
 		this.replacement = a[1].normalize('NFC').trim();
-		if (this.replacement == 'n.a.' ||
-				this.replacement == 'n. a.' ||
-				this.replacement == 'n.a')
+		if (this.replacement == 'n.a.' || this.replacement == 'n. a.' || this.replacement == 'n.a')
 			this.replacement = '–';
 		this.languages = a[2].split(',').map(Function.prototype.call,
 				String.prototype.trim);
 		this.startDash = (p.charAt(0) == '-');
 		this.endDash = (p.charAt(p.length - 1) == '-');
 	}
-
+	
 	/**
 	 * Returns a string representation for easy sorting.
 	 * @return {string}
@@ -85,7 +83,7 @@ export class AbbrevIso {
 		 * @private The number of patterns added.
 		 */
 		this.size_ = 0;
-
+		
 		// Add all patterns from ltwa as new `LTWAPattern`s.
 		if (!(ltwa instanceof Array))
 			ltwa = ltwa.split(collation.newlineRegex);
@@ -104,27 +102,27 @@ export class AbbrevIso {
 			shortWords = shortWords.split(collation.newlineRegex);
 		this.shortWords_ = shortWords.map((s) => s.trim());
 	}
-
-  /** @return {number} Number of patterns added. */
-  get size() { return this.size_; }
-
-  /** @param {LTWAPattern} pattern */
-  addPattern(pattern) {
-    let p = pattern.pattern;
-    p = p.replace(/^-/, '');
-    p = p.replace(/-$/, '');
-    p = collation.normalize(p);
-    if (!/^[A-Za-z]/u.test(p))
-      this.badPatterns_.push(pattern);
-    p = collation.promiscuouslyNormalize(p);
-    if (pattern.startDash)
-      this.nonprefixPatterns_.add(p, pattern);
-    else
-      this.dictPatterns_.add(p, pattern);
-    this.size_++;
-  }
-
-        /**
+	
+	/** @return {number} Number of patterns added. */
+	get size() { return this.size_; }
+	
+	/** @param {LTWAPattern} pattern */
+	addPattern(pattern) {
+		let p = pattern.pattern;
+		p = p.replace(/^-/, '');
+		p = p.replace(/-$/, '');
+		p = collation.normalize(p);
+		if (!/^[A-Za-z]/u.test(p))
+			this.badPatterns_.push(pattern);
+		p = collation.promiscuouslyNormalize(p);
+		if (pattern.startDash)
+			this.nonprefixPatterns_.add(p, pattern);
+		else
+			this.dictPatterns_.add(p, pattern);
+		this.size_++;
+	}
+	
+	/**
 	 * Returns any patterns that could potentially match `s` somewhere.
 	 * This returns around 5 times more patterns than actually match.
 	 * @param {string} s
@@ -152,8 +150,8 @@ export class AbbrevIso {
 		result = result.filter((x, i, res) => !i || x !== res[i-1]);
 		return result;
 	}
-
-
+	
+	
 	/**
 	 * Returns all matches of one given LTWAPattern in `value`.
 	 * We only call this function for the output from `getPotentialPatterns`,
@@ -164,17 +162,16 @@ export class AbbrevIso {
 	 * @param {string} value
 	 * @param {LTWAPattern} pattern
 	 * @param {?Array<string>} languages - If this has empty intersection with
-	 * 	`pattern.languages`, we return no matches (an empty array).
-	 * 	(as ISO-639-2 (B) codes, e.g. 'mul' for multiple, 'und' for undefined).
+	 *     `pattern.languages`, we return no matches (an empty array).
+	 *     (as ISO-639-2 (B) codes, e.g. 'mul' for multiple, 'und' for undefined).
 	 * @return {Array} An Array of `[i, iend, abbr, pattern]` Arrays,
-	 * 	where the `pattern` matches `value[i..iend-1]`,
-	 *	`abbr` is the computed abbreviation that should be put in place of the
-	 * 	match; it has capitalization, diacritics etc. preserved.
-	 * 	`pattern` is the input LTWAPattern.
+	 *     where the `pattern` matches `value[i..iend-1]`,
+	 *     `abbr` is the computed abbreviation that should be put in place of the
+	 *     match; it has capitalization, diacritics etc. preserved.
+	 *     `pattern` is the input LTWAPattern.
 	 */
 	getPatternMatches(value, pattern, languages = undefined) {
-		// If a list of languages is given, check if it intersects the pattern's
-		// list.
+		// If a list of languages is given, check if it intersects the pattern's list.
 		if (languages !== undefined) {
 			let isLanguageMatching = false;
 			for (const language of languages) {
@@ -186,7 +183,7 @@ export class AbbrevIso {
 			if (!isLanguageMatching)
 				return [];
 		}
-
+		
 		let replacement = pattern.replacement;
 		if (replacement == '–')
 			replacement = '';
@@ -198,7 +195,7 @@ export class AbbrevIso {
 		if (pattern.endDash)
 			p = p.replace(/-$/, '');
 		replacement = Array.from(replacement);
-
+		
 		let result = [];
 		let isPreviousCharBoundary = true;
 		let i = 0;
@@ -224,17 +221,15 @@ export class AbbrevIso {
 					abbr += '.';
 					continue;
 				}
-        // Omit value characters until we get to one
-        // also present in the replacement.
-        while (!collation.cEquiv(r[1][ii], replacement[j]) &&
-               (j + 1 >= replacement.length ||
-                !collation.cEquiv(r[1][ii],
-                        replacement[j] +
-                            replacement[j + 1]))) {
-          ii++;
-          iend += r[0][ii].length;
-        }
-        // If r[1][ii] is equivalent to two characters of the replacement,
+				// Omit value characters until we get to one
+				// also present in the replacement.
+				while (!collation.cEquiv(r[1][ii], replacement[j]) &&
+						(j + 1 >= replacement.length ||
+						!collation.cEquiv(r[1][ii], replacement[j] + replacement[j + 1]))) {
+					ii++;
+					iend += r[0][ii].length;
+				}
+				// If r[1][ii] is equivalent to two characters of the replacement,
 				// we have to advance j twice.
 				if (!collation.cEquiv(r[1][ii], replacement[j]))
 					j++;
@@ -273,26 +268,26 @@ export class AbbrevIso {
 					continue;
 				}
 			}
-
+			
 			// If the replacement was 'n. a.' (not abbreviated), we make it so.
 			if (replacement == '')
 				abbr = value.substring(i, iend);
 			// Report the match.
 			result.push([i, iend, abbr, pattern]);
-
+			
 			i++;
 			isPreviousCharBoundary = collation.boundariesRegex.test(value[i-1]);
 		}
-
+		
 		return result;
 	}
-
+	
 	/**
 	 * Returns all patterns matching `value`, sorted by start index of match.
 	 * Note this is not called by `makeAbbreviation`.
 	 * @param {string} value
 	 * @param {?Array<string>} languages - Only use patterns that apply to these.
-	 * 	(as ISO-639-2 (B) codes, e.g. 'mul' for multiple, 'und' for undefined).
+	 *     (as ISO-639-2 (B) codes, e.g. 'mul' for multiple, 'und' for undefined).
 	 * @param {?Array<LTWAPattern>} [patterns=getPotentialPatterns(value)]
 	 * @return {Array<LTWAPattern>}
 	 */
@@ -307,14 +302,14 @@ export class AbbrevIso {
 		matches.sort((a, b) => (getBeginning(a) - getBeginning(b)));
 		return matches.map(([i, iend, abbr, pattern]) => pattern);
 	}
-
+	
 	/**
 	 * Compute an abbreviation according to all ISO-4 rules.
 	 * @param {string} value
 	 * @param {?Array<string>} languages - Only use patterns that apply to these.
-	 * 	(as ISO-639-2 (B) codes, e.g. 'mul' for multiple, 'und' for undefined).
+	 *     (as ISO-639-2 (B) codes, e.g. 'mul' for multiple, 'und' for undefined).
 	 * @param {?Array<LTWAPattern>} [patterns=getPotentialPatterns(value)]
-	 * 	A list of potential patterns (you could give all, it's just damn slow).
+	 *     A list of potential patterns (you could give all, it's just damn slow).
 	 * @return {string}
 	 */
 	makeAbbreviation(value, languages = undefined, patterns = undefined) {
@@ -323,37 +318,37 @@ export class AbbrevIso {
 		// Some basic lossless Unicode normalization.
 		value = value.normalize('NFC').trim();
 		// Punctuation:
-		//	Remove ellipsis.
+		//     Remove ellipsis.
 		value = value.replace(/\.\.\./ug, '');
 		value = value.replace(/\u2026/ug, '');
-		//	Remove commas.
+		//     Remove commas.
 		value = value.replace(/,/ug, '');
-		//	Replace periods with commas, unless part of acronyms/initialisms,
-		//  ordinals, or already abbreviated expressions.
+		//     Replace periods with commas, unless part of acronyms/initialisms,
+		//     ordinals, or already abbreviated expressions.
 		value = value.replace(/\./ug, ',');
 		value = value.replace(/((^|[A-Z,\.&\-\\\/])\s?[A-Z]),/ug, '$1.'); // Acronyms.
 		value = value.replace(/((^|[A-Z,\.&\-\\\/])\s?[A-Z]),/ug, '$1.'); // Repeat for overlaps.
 		value = value.replace(/([\s\-:,&#()\\\/][0-9]{1,3}),/ug, '$1.'); // Ordinals.
 		value = value.replace(/((^|\s)(St|Mr|Ms|Mrs|Mx|Dr|Prof|vs)),/ug, '$1.');
 		value = value.replace(/^J,/ug, 'J.');
-		//  (Standard says commas and periods for dependent titles can be preserved,
-		//  but it doesn't seem to apply any such exceptions in examples).
-		//	Omit '&' and '+' (when they stand for 'and'),
-		//  unless part of names like AT&T.
+		//     (Standard says commas and periods for dependent titles can be preserved,
+		//     but it doesn't seem to apply any such exceptions in examples).
+		//     Omit '&' and '+' (when they stand for 'and'),
+		//     unless part of names like AT&T.
 		value = value.replace(/([^A-Z0-9])[&+]([^A-Z0-9])/ug, '$1$2');
-		//	All other punctuation is preserved.
-
+		//     All other punctuation is preserved.
+		
 		// Capitalization is preserved.
-		//	(First letter should be capitalized, but we leave that to local style,
-		//  check e.g. 'tm-Technisches Messen').
-
+		//     (First letter should be capitalized, but we leave that to local style,
+		//     check e.g. 'tm-Technisches Messen').
+		
 		// Omit articles, prepositions, and conjunctions, unless first preposition
 		// in title/subtitle, parts of names, meant as initialisms, 'A' meant as
 		// 'Part A', national practice... Here I omit them only when preceded by a
 		// boundary, succeeded by whitespace, and lower case or CamelCase (e.g. 'OR'
 		// is preserved, since it may mean 'Operations Research', but 'B-A ' would
 		// lose the 'A').
-
+		
 		// Articles, as opposed to other short words, are removed from the
 		// beginning also, and are not preserved in single word titles.
 		const articles = ['a', 'an', 'the', 'der', 'die', 'das', 'den', 'dem',
@@ -372,13 +367,13 @@ export class AbbrevIso {
 		value = value.replace(new RegExp(
 				'((^|' + collation.boundariesRegex.source + '))(l|L)\'',
 				'gu'), '$1');
-
+		
 		// We delay checking prepositions and conjunctions until a bit later, as
 		// they are retained in 'single word' titles. If at the end we'd get a
 		// single word, the current `value` will be returned. So further
 		// modifications work on 'result' instead of `value`.
 		let result = value;
-
+		
 		// Find and apply patterns, being careful about overlaps.
 		let matches = []; // A list of [i, iend, startDash, endDash, abbr, line].
 		for (const pattern of patterns)
@@ -403,7 +398,7 @@ export class AbbrevIso {
 			// we don't abbreviate at all.
 			if (abbr.length < iend - i)
 				result = result.substring(0, i) + abbr + result.substr(iend);
-
+		
 		// Other short words are not removed from beginning
 		for (const word of this.shortWords_) {
 			if (word.trim().length != 0) {
@@ -416,12 +411,12 @@ export class AbbrevIso {
 						'gu'), '$1');
 			}
 		}
-
+		
 		// TODO Omit words like Series, Part, Section, Sect., Ser.
-
+		
 		// Remove superfluous whitepace.
 		result = result.replace(/\s+/gu, ' ').trim();
-
+		
 		// Preserve single words.
 		if (!(new RegExp('.' + collation.boundariesRegex.source + '.', 'u').test(result)))
 			return value;
