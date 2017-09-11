@@ -63,7 +63,7 @@ let AbbrevIso = require('./nodeBundle.js');
 
 let ltwa = fs.readFileSync('LTWA_20160915-modified.csv', 'utf8');
 let shortWords = fs.readFileSync('shortwords.txt', 'utf8');
-abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
+let abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
 
 let s = 'International Journal of Geographical Information Science';
 console.log(abbrevIso.makeAbbreviation(s));
