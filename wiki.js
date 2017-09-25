@@ -24,7 +24,7 @@ let nullAbbrv = 0;
 let successCount = 0;
 let failCount = 0;
 let table = '{| class="wikitable"\n|-\n!page title\n!infobox title\n' +
-	'!infobox abbrv\n!bot guess\n!infobox lang\n!infobox country\n'+
+	'!infobox abbrv\n!bot guess\n!validate\n!infobox lang\n!infobox country\n'+
 	'! scope="column" style="width: 400px;" | LTWA patterns applied\n!comment\n';
 
 
@@ -33,7 +33,7 @@ for (const testCase of testCases) {
 	if (testCase[0] == '#' || testCase.trim().length == 0)
 		continue;
 	// Limit number of tests executed.
-	if (totalCount > 40)
+	if (totalCount > 1000)
 		break;
 	totalCount++;
 	console.warn('Testing ' + totalCount + ': '+ testCase);
@@ -46,7 +46,7 @@ for (const testCase of testCases) {
 	// If no infobox title, use wiki page title.
 	if (value == 'NULL' || value.length == 0)
 		value = wikititle;
-	let infoboxID = test[1].normalize('NFC').trim() ;
+	let infoboxID = test[1].normalize('NFC').trim();
 	let abbrv = test[4].normalize('NFC').trim();
 	let language = test[5].normalize('NFC').trim();
 	let country = test[6].normalize('NFC').trim() ;
@@ -83,16 +83,23 @@ for (const testCase of testCases) {
 			applied += pattern.line + '\n';
 		}
 		applied += '</pre>';
-		// Only output the first 500 mismatches.
-		if (failCount < 500)
-			table += '|-\n| [[' + wikititle + ']]\n| ' + title + '\n| ' + abbrv + '\n' +
-				'| ' + result + '\n| ' + language + '\n| ' + country + '\n| ' + applied + '\n| \n';
-		//table += '|-\n{{ISO 4 mismatch |pagename=' + test[0] + ' |title=' + test[1] +
-		//		' |abbreviation=' + test[2] + ' |bot-guess=' + result + ' |language=' + test[3] +
-		//		' |country=' + test[4] + ' |matches=' + applied + '}}\n';
+		let comment = '';
+		if (infoboxID != 1)
+			comment = 'j.-infobox-#' + (new String(infoboxID));
+		// Only output the first few mismatches.
+		if (failCount < 100)
+		//	table += '|-\n| [[' + wikititle + ']]\n| ' + title + '\n| ' + abbrv + '\n' +
+		//		'| ' + result + '\n| ' + language + '\n| ' + country + '\n| ' + applied + '\n| \n';
+			table += '|-\n{{ISO 4 mismatch |pagename=' + wikititle + ' |title=' + title +
+					' |abbreviation=' + abbrv + ' |bot-guess=' + result + '}}\n' +
+					'| ' + language + '\n| ' + country + '\n| ' + applied + '\n'+
+					'| ' + comment + '\n';
 	}
 }
 table += '|}\n';
+// {| id="toc" border="0"
+//! '''Mismatches''': &nbsp;
+//| 0xx [[/ISO_4/1|1xx]] [[/ISO_4/1|1xx]]... &nbsp;|}
 
 console.log(table);
 console.warn('Of ' + totalCount + ' tests, ' + nullAbbrv + ' nulls, ' +
