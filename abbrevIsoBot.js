@@ -9,6 +9,8 @@
 let fs = require('fs');
 let AbbrevIso = require('./nodeBundle.js');
 
+let recomputeAll = process.argv.includes('reset')
+
 let ltwa = fs.readFileSync('LTWA_20160915-modified.csv', 'utf8');
 let shortWords = fs.readFileSync('shortwords.txt', 'utf8');
 let abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
@@ -21,6 +23,8 @@ if (!('abbrevs' in state))
 	throw "Invalid bot state file.";
 
 for (const title in state['abbrevs']) {
+	if (!recomputeAll && typeof(state['abbrevs'][title]) === 'object')
+		continue
 	let t = title.normalize('NFC');
 	let result = {};
 	result['all'] = abbrevIso.makeAbbreviation(t);
