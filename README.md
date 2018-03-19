@@ -39,7 +39,7 @@ Two files must also be loaded:
 <script>
 	let ltwaAjax = $.ajax({
 		mimeType: 'text/plain; charset=utf-8',
-		url: 'LTWA_20160915-modified.csv',
+		url: 'LTWA_20170914-modified.csv',
 		dataType: 'text',
 	});
 	let shortWordsAjax = $.ajax({
@@ -63,7 +63,7 @@ Two files must also be loaded:
 let fs = require('fs');
 let AbbrevIso = require('./nodeBundle.js');
 
-let ltwa = fs.readFileSync('LTWA_20160915-modified.csv', 'utf8');
+let ltwa = fs.readFileSync('LTWA_20170914-modified.csv', 'utf8');
 let shortWords = fs.readFileSync('shortwords.txt', 'utf8');
 let abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
 

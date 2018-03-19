@@ -11,7 +11,7 @@ let AbbrevIso = require('./nodeBundle.js');
 
 let recomputeAll = process.argv.includes('reset')
 
-let ltwa = fs.readFileSync('LTWA_20160915-modified.csv', 'utf8');
+let ltwa = fs.readFileSync('LTWA_20170914-modified.csv', 'utf8');
 let shortWords = fs.readFileSync('shortwords.txt', 'utf8');
 let abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
 
