@@ -15,7 +15,7 @@ import wikiBotState as state
 
 # Each list contains tuples: [page title, infobox title, infobox abbrev, ..?].
 __report = {
-    # Titles containing colons, skipped for safety.
+    # Titles containing colons early on, skipped for safety.
     'colon': [],
     # Trivial abbrevs (dotted abbreviations with no dots), skipped for safety.
     # Also in tuple: dict of all existing redirects (from rTitle to rContent).
@@ -120,18 +120,18 @@ def reportSuperfluousRedirect(pageTitle, redirectTitle, redirectContent,
 
 def reportProperMismatch(pageTitle, infoboxTitle,
                          infoboxAbbrev, computedAbbrev,
-                         computedLang, matchingPatterns):
+                         computedLang, matchingPatterns, hasISO4Redirect):
     """Report abbrev mismatch, where switching the language would not help."""
     global __report
     __report['mismatch'].append([pageTitle, infoboxTitle,
                                  infoboxAbbrev, computedAbbrev,
-                                 computedLang, matchingPatterns])
+                                 computedLang, matchingPatterns, hasISO4Redirect])
 
 
 def reportLanguageMismatch(pageTitle, infoboxTitle, infoboxAbbrev,
                            computedAbbrev, otherComputedAbbrev,
                            infoboxLanguage, infoboxCountry,
-                           computedLanguage, matchingPatterns):
+                           computedLanguage, matchingPatterns, hasISO4Redirect):
     """Report abbrev mismatch which would not be a mismatch if we switched
     the guessed (computed) language.
 
@@ -146,7 +146,7 @@ def reportLanguageMismatch(pageTitle, infoboxTitle, infoboxAbbrev,
     __report['mismatchLang'].append([pageTitle, infoboxTitle, infoboxAbbrev,
                                      computedAbbrev, otherComputedAbbrev,
                                      infoboxLanguage, infoboxCountry,
-                                     computedLanguage, matchingPatterns])
+                                     computedLanguage, matchingPatterns, hasISO4Redirect])
 
 
 def wikiEscape(s):
@@ -223,7 +223,9 @@ def getShortMismatchReport():
          "! scope='column' style='width: 400px;' | matching LTWA patterns\n")
     i = 0
     for wikititle, infotitle, iabbrev, cabbrev, clang, \
-            matchingPatterns in sorted(__report['mismatch']):
+            matchingPatterns, hasISO4Redirect in sorted(__report['mismatch']):
+        if hasISO4Redirect:
+            continue
         i += 1
         if infotitle == wikititle:
             infotitle = ''
@@ -240,7 +242,17 @@ def getShortMismatchReport():
 
 
 def getLongMismatchReport():
-    r = ("== The first 300 mismatches ==\n"
+    r = ("== The first 200 mismatches ==\n"
+         "{| class='wikitable'\n|-\n"
+         "!page title\n!infobox title\n"
+         "!infobox abbrv\n!bot guess\n!bot lang\n"
+         "! scope='column' style='width: 400px;' "
+         "| matching LTWA patterns\n")
+    q = ("=== with existing redirect marked as ISO-4 ===\n"
+         "We separately list mismatches when there already is a redirect "
+         "categorized as ISO-4 (coming from the infobox abbrev), since it was "
+         "probably edited by a human with more care, and because wrongly "
+         "categorized redirects need to be fixed.\n"
          "{| class='wikitable'\n|-\n"
          "!page title\n!infobox title\n"
          "!infobox abbrv\n!bot guess\n!bot lang\n"
@@ -248,42 +260,55 @@ def getLongMismatchReport():
          "| matching LTWA patterns\n")
     i = 0
     for wikititle, infotitle, iabbrev, cabbrev, clang, \
-            matchingPatterns in sorted(__report['mismatch']):
+            matchingPatterns, hasISO4Redirect in sorted(__report['mismatch']):
         i += 1
         if infotitle == wikititle:
             infotitle = ''
         if infotitle:
             infotitle = '{{-r|' + wikiEscape(infotitle) + '}}'
-        if i <= 300:
-            r += ("|-\n| [[" + wikititle + "]]"
+        if i <= 200:
+            s = ("|-\n| [[" + wikititle + "]]"
                   + " || " + infotitle
                   + " || {{-r|" + wikiEscape(iabbrev) + "}}"
                   + " || {{-r|" + wikiEscape(cabbrev) + "}}"
                   + " || " + (clang or '??')
                   + " || <pre style='white-space: pre'>"
                   + matchingPatterns + "</pre>\n")
-    r += "|}\n\n"
-    return r
+            if not hasISO4Redirect:
+                r += s
+            else:
+                q += s
+    return r + "|}\n\n" + q + "|}\n\n"
 
 
 def getLanguageMismatchReport():
     r = ("== Wrong language rules? ==\n"
-         "Mismatches where just changing the language between 'eng' and 'all' "
-         "would give a match (this affect which rules from the [[LTWA]] are "
-         "used). This means that either the bot wrongly guessed the language "
-         "to use (based on country and language infobox params), or that the "
-         "editor applied non-English rules to an English title.\n"
+         "First 50 mismatches where just changing the language between 'eng'"
+         " and 'all' would give a match (this affect which rules from the "
+         "[[LTWA]] are used). This means that either the bot wrongly guessed "
+         " the language to use (based on country and language infobox params),"
+         " or that the editor applied non-English rules to an English title.\n"
          "{| class='wikitable'\n|-\n"
          "!page title\n!infobox title\n"
          "!infobox abbrv\n!bot guess\n!IJ lang\n!IJ country\n!bot lang\n"
          "! scope='column' style='width: 400px;' | matching LTWA patterns\n")
+    q = ("=== with existing redirects marked as ISO-4 ===\n"
+         "{| class='wikitable'\n|-\n"
+         "!page title\n!infobox title\n"
+         "!infobox abbrv\n!bot guess\n!IJ lang\n!IJ country\n!bot lang\n"
+         "! scope='column' style='width: 400px;' | matching LTWA patterns\n")
+    i = 0
     for wikititle, infotitle, iabbrev, cabbrev, othercabbrev, ilang, icountry,\
-            clang, matchingPatterns in sorted(__report['mismatchLang']):
+            clang, matchingPatterns, hasISO4Redirect \
+            in sorted(__report['mismatchLang']):
+        i += 1
+        if i > 50:
+            break
         if infotitle == wikititle:
             infotitle = ''
         else:
             infotitle = '{{-r|' + wikiEscape(infotitle) + '}}'
-        r += ("|-\n| [[" + wikititle + "]]"
+        s = ("|-\n| [[" + wikititle + "]]"
               + " || " + infotitle
               + " || {{-r|" + wikiEscape(iabbrev) + "}}"
               + " || {{-r|" + wikiEscape(cabbrev) + "}}"
@@ -292,13 +317,16 @@ def getLanguageMismatchReport():
               + " || " + (clang or '??')
               + " || <pre style='white-space: pre'>"
               + matchingPatterns + "</pre>\n")
-    r += "|}\n"
-    return r
+        if not hasISO4Redirect:
+            r += s
+        else:
+            q += s
+    return r + "|}\n" + q + "|}\n"
 
 
 def getColonInTitleReport():
     r = ("== Abbreviations containing colons ==\n"
-         "(skipped by the bot for safety)\n"
+         "(within first 4 characters; skipped by the bot for safety)\n"
          "{| class='wikitable'\n|-\n"
          "! page title !! infobox title !! infobox abbrv\n")
     for wikititle, infotitle, iabbrev in sorted(__report['colon']):
