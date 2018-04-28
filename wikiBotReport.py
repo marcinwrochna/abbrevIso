@@ -381,7 +381,8 @@ def getSuperfluousRedirectReport():
     r = ("== Existing unexpected ISO-4 redirects ==\n"
          "Redirects marked as ISO-4 that the bot would not add. "
          "Very different ones are probably valid, like from former titles "
-         "or other language. Similar ones are probably a mistake. "
+         "or other language, so we skip those from the report. "
+         "Similar ones are probably a mistake. "
          "For ''PLoS'' vs ''PLOS'' I'd say both are valid.\n"
          "{| class='wikitable'\n|-\n"
          "! page title !! the redirect !! infobox abbreviation\n")

@@ -10,6 +10,7 @@ import logging
 import re
 import sys
 from unicodedata import normalize
+import Levenshtein
 
 import pywikibot
 import pywikibot.data.api
@@ -29,7 +30,7 @@ STATE_FILE_NAME = 'abbrevBotState.json'
 site = None # pywikibot's main object.
 
 def main():
-    global site
+    global site, onlySimulateEdits
     logging.basicConfig(level=logging.WARNING)
     state.loadOrInitState(STATE_FILE_NAME)
     # Initialize pywikibot.
@@ -42,7 +43,8 @@ def main():
     elif sys.argv[1] == 'scrape':
         doScrape()
     elif sys.argv[1] == 'report':
-        doScrape(writeReport=True)
+        onlySimulateEdits = True
+        doScrape(fixPages=True, writeReport=True)
     elif sys.argv[1] == 'fixpages':
         doScrape(fixPages=True, writeReport=True)
     else:
@@ -212,10 +214,19 @@ def fixPageRedirects(page, editLimit=10, simulateOnly=True):
                     isExpected = True
                     break
             if not isExpected:
-                e = sorted(list(requiredRedirects.keys()))
-                expectedRTitle = e[-1] if e else ''
-                report.reportSuperfluousRedirect(
-                    title, rTitle, rContent, expectedRTitle)
+                # Find closest computed abbrev.
+                bestAbbrev = ''
+                bestDist = len(rTitle)
+                for computedAbbrev in sorted(list(requiredRedirects.keys())):
+                    dist = Levenshtein.distance(rTitle, computedAbbrev)
+                    if (dist < bestDist):
+                        bestDist = dist
+                        bestAbbrev = computedAbbrev
+                # Skip if closest abbrev. is far (assume it's from a former
+                # title, since there's a ton of cases like that).
+                if bestDist <= 8:
+                    report.reportSuperfluousRedirect(
+                        title, rTitle, rContent, bestAbbrev)
     return nEditedPages
 
 

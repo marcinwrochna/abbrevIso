@@ -5,7 +5,7 @@ It is written in Python 3 using the [pywikibot](https://github.com/wikimedia/pyw
 Since the abbrevISO library is impemented in JavaScript, the Python bot maintains a state in a .json file and a small Node.js script reads the required titles and writes computed abbreviations into the file.
 
 ## Running the bot
-You will need to install the libraries: `pip install mwparserfromhell pywikibot` (possibly `pip3` with option `--user`)
+You will need to install the libraries: `pip install mwparserfromhell pywikibot python-Levenshtein` (possibly `pip3` with option `--user`)
 and have AbbrevIso.js working: `rollup AbbrevIso.js -o nodeBundle.js --f cjs --name AbbrevIso`
 
 Pywikibot requires [some configuration](https://github.com/wikimedia/pywikibot), you can test it by running `python3 wikiBot.py test` (change the code for the write to be non-trivial).
