@@ -98,6 +98,13 @@ def doScrape(fixPages=False, writeReport=False):
         report.doReport(site)
 
 
+def stripTitle(t):
+    """Remove disambuig comments from wiki title (before computing abbreviation).
+    """
+    t = re.sub(r'\s*\(.*(ournal|agazine|eriodical|eview)s?\)', '', t)
+    return t
+
+
 def scrapePage(page):
     """Scrape a page's infoboxes and redirects, save them in the `state`.
     """
@@ -116,12 +123,7 @@ def scrapePage(page):
         pageData['redirects'][r.title()] = r.text
         # r.getRedirectTarget().title()
     state.savePageData(page.title(), pageData)
-    # Remove disambuig comments from wiki title before computing abbreviation.
-    title = re.sub(
-        r'\s*\(.*(ournal|agazine|eriodical|eview)s?\)',
-        '',
-        page.title())
-    state.saveTitleToAbbrev(title)
+    state.saveTitleToAbbrev(stripTitle(page.title()))
     print('', flush=True)
 
 
@@ -245,34 +247,32 @@ def getRequiredRedirects(page):
     result = {}
     skip = False
     for infobox in pageData['infoboxes']:
-        if 'title' in infobox:
-            name = infobox['title']
-        else:
-            name = re.sub(r'\s*\(.*(ournal|agazine|eriodical|eview)s?\)',
-                          '', title)
-        if 'abbreviation' not in infobox:
-            continue
         iTitle = infobox.get('title', '')
-        iAbbrev = infobox['abbreviation']
+        if iTitle:
+            name = iTitle
+        else:
+            name = stripTitle(title)
+        iAbbrev = infobox.get('abbreviation', '')
         iAbbrevDotless = iAbbrev.replace('.', '')
         if iAbbrev == '':
             print('--Abbreviation param empty, ignoring [[' + title + ']].')
             skip = True
             continue
-        if ':' in iAbbrev:
-            print('--Abbreviation contains colon, ignoring [[' + title + ']].')
+        if ':' in iAbbrev[:5]:
+            print('--Abbreviation contains early colon, ignoring [[' + title + ']].')
             report.reportTitleWithColon(
                 title, infobox.get('title', ''), iAbbrev)
             skip = True
             continue
         # If a valid ISO 4 redirect already exists for dotted version,
         # there should be one for the dotless version too.
+        hasISO4Redirect = False
         if iAbbrev in pageData['redirects'] \
                 and isValidISO4Redirect(pageData['redirects'][iAbbrev], title)\
                 and iAbbrevDotless != iAbbrev:
             result[iAbbrev] = (pageData['redirects'][iAbbrev], iTitle)
             result[iAbbrevDotless] = (rNewContent, iTitle)
-            continue
+            hasISO4Redirect = True
         # If the abbreviation matches the computed one,
         # there should be a dotted and a dotless redirect.
         try:
@@ -293,12 +293,12 @@ def getRequiredRedirects(page):
                     title, infobox.get('title', ''),
                     iAbbrev, cAbbrev, otherAbbrevs[0],
                     infobox.get('language', ''), infobox.get('country', ''),
-                    cLang, state.getMatchingPatterns(name))
+                    cLang, state.getMatchingPatterns(name), hasISO4Redirect)
             else:
                 report.reportProperMismatch(
                     title, infobox.get('title', ''),
                     iAbbrev, cAbbrev, cLang,
-                    state.getMatchingPatterns(name))
+                    state.getMatchingPatterns(name), hasISO4Redirect)
             continue
         if iAbbrevDotless == iAbbrev:
             print('--Abbreviation is trivial (has no dots), '
@@ -307,7 +307,7 @@ def getRequiredRedirects(page):
             report.reportTrivialAbbrev(
                 title, infobox.get('title', ''),
                 iAbbrev, pageData['redirects'])
-        else:
+        elif not hasISO4Redirect:
             iTitle = infobox.get('title', '')
             result[iAbbrev] = (rNewContent, iTitle)
             result[iAbbrevDotless] = (rNewContent, iTitle)
@@ -436,7 +436,7 @@ def getInfoboxJournals(page):
                 paramName = str(param.name).lower().strip()
                 if paramName in ['title', 'issn', 'abbreviation', 'language',
                                  'country', 'former_name', 'bluebook']:
-                    infobox[paramName] = str(param.value).strip()
+                    infobox[paramName] = re.sub(r'<!--.*-->', '', str(param.value)).strip()
             yield infobox
 
 
