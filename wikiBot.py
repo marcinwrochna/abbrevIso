@@ -47,6 +47,9 @@ def main():
         doScrape(fixPages=True, writeReport=True)
     elif sys.argv[1] == 'fixpages':
         doScrape(fixPages=True, writeReport=True)
+    elif sys.argv[1] == 'fill':
+        onlySimulateEdits = True
+        doFillAbbrevs()
     else:
         printHelp()
     state.saveState(STATE_FILE_NAME)
@@ -70,6 +73,71 @@ def doTest():
         watch="nochange",
         nocreate=True)
 
+
+def doFillAbbrevs():
+    """Fill empty abbreviations in some automatizable cases.
+
+    Currently the cases are:
+    * abbreviation is equal to title, possibly without articles (a/the)
+    """
+    global site
+    cat = 'Category:Infobox journals with missing ISO 4 abbreviations'
+    cat = pywikibot.Category(site, cat)
+    nScraped = 0  # Number of scraped pages (excluding redirects).
+    nEdited = 0  # Number of edits (including on redirects).
+    for page in cat.articles(namespaces=0, total=scrapeLimit, content=True):
+        print('--Scraping:\t', nScraped, '\t')
+        print(page.title(), flush=True)
+        i = 0
+        for infobox in getInfoboxJournals(page):
+            if infobox.get('abbreviation', '') != '':
+                print('--Skipping infobox that actually has non-empty abbrev')
+                continue;
+            title = stripTitle(page.title())
+            if 'title' in infobox and infobox['title'] != title:
+                print('--Skipping infobox with different title than article', infobox['title'])
+                continue
+            try:
+                cLang = utils.getLanguage(infobox)
+                cAbbrev = state.getAbbrev(title, cLang)
+            except state.NotComputedYetError:
+                print('No computed abbreviation stored for',
+                      '"' + title + '"',
+                      ', please rerun abbrevIsoBot.js .')
+                state.saveTitleToAbbrev(stripTitle(page.title()))
+                continue
+            # If abbreviation is equal to title, up to "a/the" articles:
+            if cAbbrev == re.sub(r'(The|the|A|a)\s+', '', title):
+                print('--Filling "'+ title +'" with abbrev "' + cAbbrev +'"')
+                page.text = fillAbbreviation(page.text, i, cAbbrev)
+                try:
+                    page.save(
+                        u'Filling trivial ISO-4 abbreviation. '
+                            + u'Report bugs and suggestions '
+                            + u'to [[User talk:TokenzeroBot]]',
+                        minor=True,
+                        botflag=True)
+                    print('--save modify OK---------------------------')
+                except pywikibot.PageNotSaved:
+                    print('--SAVE MODIFY FAILED-----------------------')
+            i = i + 1
+        nScraped = nScraped + 1
+        if nScraped >= scrapeLimit:
+            break
+
+def fillAbbreviation(pageText, whichInfobox, abbrev):
+    """Return pageText with changed abbreviation in specified infobox."""
+    p = mwparserfromhell.parse(pageText)
+    i = 0
+    for t in p.filter_templates():
+        if t.name.matches('infobox journal') or \
+           t.name.matches('Infobox Journal'):
+            if i == whichInfobox:
+                if t.has_param('title') and t.get('title')[0] == ' ':
+                    abbrev = ' ' + abbrev
+                t.add('abbreviation', abbrev, preserve_spacing=True)
+            i = i + 1
+    return str(p)
 
 def doScrape(fixPages=False, writeReport=False):
     """Scrape all pages transcluding Infobox Journal, update `state` and
