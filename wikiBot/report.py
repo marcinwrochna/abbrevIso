@@ -9,8 +9,7 @@ from unicodedata import normalize
 
 import pywikibot
 
-import wikiBotUtils as utils
-import wikiBotState as state
+import utils, state
 
 
 # Each list contains tuples: [page title, infobox title, infobox abbrev, ..?].

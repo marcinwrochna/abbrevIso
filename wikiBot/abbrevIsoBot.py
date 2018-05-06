@@ -15,9 +15,7 @@ import pywikibot
 import pywikibot.data.api
 import mwparserfromhell
 
-import wikiBotUtils as utils
-import wikiBotReport as report
-import wikiBotState as state
+import utils, report, state
 
 
 # Some basic config
