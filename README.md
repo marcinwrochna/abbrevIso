@@ -8,7 +8,7 @@ _International Journal of Geographical Information Science → Int. J. Geogr. In
 _Zeitschrift für deutsches Altertum und deutsche Literatur → Z. dtsch. Altert. dtsch. Lit._  
 _4OR-A Quarterly Journal of Operations Research → 4OR-Q. J. Oper. Res._
 
-There is also a [Python bot](wikiBot.md) using this library for maintaining redirects on Wikipedia.
+There is also a [Python bot](wikiBot/README.md) using this library for maintaining redirects on Wikipedia.
 
 ## Using
 `abbrevIso.makeAbbreviation(s)` outputs the computed abbreviation for the given title `s`.

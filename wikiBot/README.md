@@ -20,4 +20,4 @@ Run `python3 wikiBot.py fixpages` to scrape again, making fixes along the way ac
 Run `python3 wikiBot.py report` to do the same, but only simulating edits: we only write the reports.
 Since both `fixpages` and `report` scrape evertyhing, you don't need to run `scrape` again. You will need to run `./abbrevIsoBot.js` in case new titles appear.
 
-See the code (`wikiBot.py`) for some basic configuration and more.
+See the code (`abbrevIsoBot.py`) for some basic configuration and more.

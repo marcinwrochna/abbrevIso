@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-# TODO pylint, flake8, mypy (types)
 """
 A bot for scraping Wikipedia infobox journals and fixing redirects from
 ISO 4 abbreviations of journal titles.
