@@ -20,7 +20,7 @@ import utils, report, state
 
 # Some basic config
 scrapeLimit = 10000  # Max number of pages to scrape.
-totalEditLimit = 100  # Max number of edits to make (in one run of the script).
+totalEditLimit = 20  # Max number of edits to make (in one run of the script).
 onlySimulateEdits = False  # If true, only print what we would do, don't edit.
 STATE_FILE_NAME = 'abbrevBotState.json'
 
@@ -45,7 +45,6 @@ def main():
     elif sys.argv[1] == 'fixpages':
         doScrape(fixPages=True, writeReport=True)
     elif sys.argv[1] == 'fill':
-        onlySimulateEdits = True
         doFillAbbrevs()
     else:
         printHelp()
@@ -107,20 +106,25 @@ def doFillAbbrevs():
             if cAbbrev == re.sub(r'(The|the|A|a)\s+', '', title):
                 print('--Filling "'+ title +'" with abbrev "' + cAbbrev +'"')
                 page.text = fillAbbreviation(page.text, i, cAbbrev)
-                try:
-                    page.save(
-                        u'Filling trivial ISO-4 abbreviation. '
-                            + u'Report bugs and suggestions '
-                            + u'to [[User talk:TokenzeroBot]]',
-                        minor=True,
-                        botflag=True)
-                    print('--save modify OK---------------------------')
-                except pywikibot.PageNotSaved:
-                    print('--SAVE MODIFY FAILED-----------------------')
+                if not onlySimulateEdits:
+                    try:
+                        page.save(
+                            u'Filling trivial ISO-4 abbreviation. '
+                                + u'Report bugs and suggestions '
+                                + u'to [[User talk:TokenzeroBot]]',
+                            minor=True,
+                            botflag=True)
+                        print('--save modify OK---------------------------')
+                    except pywikibot.PageNotSaved:
+                        print('--SAVE MODIFY FAILED-----------------------')
+                    nEdited = nEdited + 1
+                    if nEdited >= totalEditLimit:
+                        return
             i = i + 1
-        nScraped = nScraped + 1
-        if nScraped >= scrapeLimit:
-            break
+    nScraped = nScraped + 1
+    if nScraped >= scrapeLimit:
+        return
+
 
 def fillAbbreviation(pageText, whichInfobox, abbrev):
     """Return pageText with changed abbreviation in specified infobox."""
@@ -135,6 +139,7 @@ def fillAbbreviation(pageText, whichInfobox, abbrev):
                 t.add('abbreviation', abbrev, preserve_spacing=True)
             i = i + 1
     return str(p)
+
 
 def doScrape(fixPages=False, writeReport=False):
     """Scrape all pages transcluding Infobox Journal, update `state` and
@@ -319,8 +324,8 @@ def getRequiredRedirects(page):
             name = stripTitle(title)
         iAbbrev = infobox.get('abbreviation', '')
         iAbbrevDotless = iAbbrev.replace('.', '')
-        if iAbbrev == '':
-            print('--Abbreviation param empty, ignoring [[' + title + ']].')
+        if iAbbrev == '' or iAbbrev == 'no':
+            print('--Abbreviation param empty or "no", ignoring [[' + title + ']].')
             skip = True
             continue
         if ':' in iAbbrev[:5]:
@@ -390,18 +395,24 @@ def isValidISO4Redirect(rContent, title):
     rContent = rContent.replace('&#38;', '&')
     rContent = rContent.replace('&#39;', '\'')
     rContent = rContent.replace('_', ' ')
-    # Ignore whitespace.
+    # Ignore double whitespace.
     rContent = re.sub(r'((?<!\w)\s|\s(?![\s\w]))', '', rContent.strip())
     title = re.sub(r'((?<!\w)\s|\s(?![\s\w]))', '', title.strip())
     # Ignore capitalization.
     rContent = rContent.replace('redirect', 'REDIRECT')
     rContent = rContent.replace('Redirect', 'REDIRECT')
-    # Ignore `(un)printworthy` rcats.
+    # Ignore expected rcats.
     rContent = re.sub(r'{{R(EDIRECT)? (un)?printworthy}}', '', rContent)
     rContent = re.sub(r'{{R(EDIRECT)? u?pw?}}', '', rContent)
+    rContent = re.sub(r'{{R from move}}', rContent)
+    rContent = re.sub(r'{{R from bluebook}}', rContent)
+    rContent = re.sub(r'{{R from MEDLINE abbreviation}}', rContent)
     # Ignore variants which include the rcat shell.
     rContent = rContent.replace('{{REDIRECT category shell',
                                 '{{REDIRECT shell')
+    # Ignore synonims of the rcat.
+    rContent = rContent.replace('{{R from ISO 4 abbreviation',
+                                '{{R from ISO 4')
     rWithoutShell = '#REDIRECT[[' + title + ']]{{R from ISO 4}}'
     rWithShell = '#REDIRECT[[' + title + ']]' \
                  + '{{REDIRECT shell|{{R from ISO 4}}}}'
