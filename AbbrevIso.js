@@ -352,7 +352,8 @@ export class AbbrevIso {
 		// Articles, as opposed to other short words, are removed from the
 		// beginning also, and are not preserved in single word titles.
 		const articles = ['a', 'an', 'the', 'der', 'die', 'das', 'den', 'dem',
-				'des', 'le', 'la', 'les', 'el', 'il'];
+				'des', 'le', 'la', 'les', 'el', 'il', 'lo', 'los', 'de', 'het',
+				'els', 'l\'', 'ses', 'es', 'gli'];
 		for (const word of articles) {
 			value = value.replace(new RegExp(
 					'((^|' + collation.boundariesRegex.source + '))' + word.trim() + '\\s',
