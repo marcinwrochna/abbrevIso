@@ -353,13 +353,13 @@ export class AbbrevIso {
 		// beginning also, and are not preserved in single word titles.
 		const articles = ['a', 'an', 'the', 'der', 'die', 'das', 'den', 'dem',
 				'des', 'le', 'la', 'les', 'el', 'il', 'lo', 'los', 'de', 'het',
-				'els', 'l\'', 'ses', 'es', 'gli'];
+				'els', 'ses', 'es', 'gli'];
 		for (const word of articles) {
 			value = value.replace(new RegExp(
-					'((^|' + collation.boundariesRegex.source + '))' + word.trim() + '\\s',
+					'((^|' + collation.boundariesRegex.source + '))' + word + '\\s',
 					'gu'), '$1');
 			// Also try the word with the first letter capitalized.
-			let cWord = word.trim().charAt(0).toUpperCase() + word.trim().substr(1);
+			let cWord = word.charAt(0).toUpperCase() + word.trim().substr(1);
 			value = value.replace(new RegExp(
 					'((^|' + collation.boundariesRegex.source + '))' + cWord + '\\s',
 					'gu'), '$1');
