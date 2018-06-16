@@ -4,30 +4,38 @@
 A bot for scraping Wikipedia infobox journals and fixing redirects from
 ISO 4 abbreviations of journal titles.
 """
-from __future__ import unicode_literals
 import logging
 import re
 import sys
+from typing import Generator, Dict
 from unicodedata import normalize
-import Levenshtein
 
+import Levenshtein
 import pywikibot
 import pywikibot.data.api
 import mwparserfromhell
 
-import utils, report, state
+import utils
+import report
+import state
 
 
-# Some basic config
-scrapeLimit = 10000  # Max number of pages to scrape.
-totalEditLimit = 20  # Max number of edits to make (in one run of the script).
-onlySimulateEdits = False  # If true, only print what we would do, don't edit.
+# ==Some basic config==
+# Max number of pages to scrape.
+SCRAPE_LIMIT = 10000
+# Max number of edits to make (in one run of the script).
+TOTAL_EDIT_LIMIT = 20
+# If true, only print what we would do, don't edit.
+ONLY_SIMULATE_EDITS = False
 STATE_FILE_NAME = 'abbrevBotState.json'
 
-site = None # pywikibot's main object.
+# pywikibot's main object.
+site = None
 
-def main():
-    global site, onlySimulateEdits
+
+def main() -> None:
+    """The main function."""
+    global site  # pylint: disable=global-statement
     logging.basicConfig(level=logging.WARNING)
     state.loadOrInitState(STATE_FILE_NAME)
     # Initialize pywikibot.
@@ -40,7 +48,8 @@ def main():
     elif sys.argv[1] == 'scrape':
         doScrape()
     elif sys.argv[1] == 'report':
-        onlySimulateEdits = True
+        global ONLY_SIMULATE_EDITS  # pylint: disable=global-statement
+        ONLY_SIMULATE_EDITS = True
         doScrape(fixPages=True, writeReport=True)
     elif sys.argv[1] == 'fixpages':
         doScrape(fixPages=True, writeReport=True)
@@ -51,47 +60,46 @@ def main():
     state.saveState(STATE_FILE_NAME)
 
 
-def printHelp():
+def printHelp() -> None:
     """Prints a simple help message on available commands."""
     print("Use exactly one command of: scrape, fixpages, report, test")
 
 
-def doTest():
+def doTest() -> None:
     """Test a bot edit (in userspace sandbox), e.g. to check flags."""
-    global site
     # print(state.dump())
     page = pywikibot.Page(site, u"User:TokenzeroBot/sandbox")
     page.text = 'Testing bot.'
     page.save(
-        u'Testing bot',
+        'Testing bot',
         minor=False,
         botflag=True,
         watch="nochange",
         nocreate=True)
 
 
-def doFillAbbrevs():
+def doFillAbbrevs() -> None:
     """Fill empty abbreviations in some automatizable cases.
 
     Currently the cases are:
     * abbreviation is equal to title, possibly without articles (a/the)
     """
-    global site
-    cat = 'Category:Infobox journals with missing ISO 4 abbreviations'
-    cat = pywikibot.Category(site, cat)
+    catName = 'Category:Infobox journals with missing ISO 4 abbreviations'
+    cat = pywikibot.Category(site, catName)
     nScraped = 0  # Number of scraped pages (excluding redirects).
     nEdited = 0  # Number of edits (including on redirects).
-    for page in cat.articles(namespaces=0, total=scrapeLimit, content=True):
+    for page in cat.articles(namespaces=0, total=SCRAPE_LIMIT, content=True):
         print('--Scraping:\t', nScraped, '\t')
         print(page.title(), flush=True)
         i = 0
         for infobox in getInfoboxJournals(page):
             if infobox.get('abbreviation', '') != '':
                 print('--Skipping infobox that actually has non-empty abbrev')
-                continue;
+                continue
             title = stripTitle(page.title())
             if 'title' in infobox and infobox['title'] != title:
-                print('--Skipping infobox with different title than article', infobox['title'])
+                print('--Skipping infobox with different title than article',
+                      infobox['title'])
                 continue
             try:
                 cLang = utils.getLanguage(infobox)
@@ -104,29 +112,29 @@ def doFillAbbrevs():
                 continue
             # If abbreviation is equal to title, up to "a/the" articles:
             if cAbbrev == re.sub(r'(The|the|A|a)\s+', '', title):
-                print('--Filling "'+ title +'" with abbrev "' + cAbbrev +'"')
+                print('--Filling "{}" with abbrev "{}"'.format(title, cAbbrev))
                 page.text = fillAbbreviation(page.text, i, cAbbrev)
-                if not onlySimulateEdits:
+                if not ONLY_SIMULATE_EDITS:
                     try:
                         page.save(
-                            u'Filling trivial ISO-4 abbreviation. '
-                                + u'Report bugs and suggestions '
-                                + u'to [[User talk:TokenzeroBot]]',
+                            'Filling trivial ISO-4 abbreviation. '
+                            'Report bugs and suggestions '
+                            'to [[User talk:TokenzeroBot]]',
                             minor=True,
                             botflag=True)
                         print('--save modify OK---------------------------')
                     except pywikibot.PageNotSaved:
                         print('--SAVE MODIFY FAILED-----------------------')
                     nEdited = nEdited + 1
-                    if nEdited >= totalEditLimit:
+                    if nEdited >= TOTAL_EDIT_LIMIT:
                         return
             i = i + 1
     nScraped = nScraped + 1
-    if nScraped >= scrapeLimit:
+    if nScraped >= SCRAPE_LIMIT:
         return
 
 
-def fillAbbreviation(pageText, whichInfobox, abbrev):
+def fillAbbreviation(pageText: str, whichInfobox: int, abbrev: str) -> str:
     """Return pageText with changed abbreviation in specified infobox."""
     p = mwparserfromhell.parse(pageText)
     i = 0
@@ -145,8 +153,7 @@ def doScrape(fixPages=False, writeReport=False):
     """Scrape all pages transcluding Infobox Journal, update `state` and
     fix redirects to pages if `fixPages` is True.
     """
-    global site
-    gen = getPagesWithInfoboxJournals(scrapeLimit)
+    gen = getPagesWithInfoboxJournals(SCRAPE_LIMIT)
     nScraped = 0  # Number of scraped pages (excluding redirects).
     nEdited = 0  # Number of edits (including on redirects).
     for page in gen:
@@ -156,13 +163,13 @@ def doScrape(fixPages=False, writeReport=False):
         if fixPages:
             r = fixPageRedirects(
                 page,
-                editLimit=totalEditLimit - nEdited,
-                simulateOnly=onlySimulateEdits)
+                editLimit=TOTAL_EDIT_LIMIT - nEdited,
+                simulateOnly=ONLY_SIMULATE_EDITS)
             nEdited += r
-            if nEdited >= totalEditLimit:
+            if nEdited >= TOTAL_EDIT_LIMIT:
                 break
         nScraped = nScraped + 1
-        if nScraped >= scrapeLimit:
+        if nScraped >= SCRAPE_LIMIT:
             break
     if writeReport:
         report.doReport(site)
@@ -178,7 +185,6 @@ def stripTitle(t):
 def scrapePage(page):
     """Scrape a page's infoboxes and redirects, save them in the `state`.
     """
-    global site
     pageData = {'infoboxes': [], 'redirects': {}}
     # Iterate over {{infobox journal}}s on `page`.
     for infobox in getInfoboxJournals(page):
@@ -202,7 +208,6 @@ def fixPageRedirects(page, editLimit=10, simulateOnly=True):
 
     If `simulateOnly` is true, we only print what we would do.
     """
-    global site
     title = page.title()
     pageData = state.getPageData(title)
     rNewContent = '#REDIRECT [[' + title + ']]\n{{R from ISO 4}}'
@@ -213,12 +218,12 @@ def fixPageRedirects(page, editLimit=10, simulateOnly=True):
         if rTitle not in pageData['redirects']:
             if pywikibot.Page(site, rTitle).exists():
                 print('--Skipping existing page [[' + rTitle + ']] '
-                      + '(not a redirect to [[' + title + ']]).')
+                      '(not a redirect to [[' + title + ']]).')
                 report.reportExistingOtherPage(title, iTitle, rTitle)
                 continue
             print('--Creating redirect '
-                  + 'from [[' + rTitle + ']] to [[' + title + ']]. '
-                  + 'Created content:\n' + rNewContent + '\n-----',
+                  'from [[' + rTitle + ']] to [[' + title + ']]. '
+                  'Created content:\n' + rNewContent + '\n-----',
                   flush=True)
             if nEditedPages >= editLimit:
                 return nEditedPages
@@ -228,9 +233,9 @@ def fixPageRedirects(page, editLimit=10, simulateOnly=True):
                 rPage.text = rNewContent
                 try:
                     rPage.save(
-                        u'Creating redirect from ISO 4 abbreviation. '
-                        + u'Report bugs and suggestions '
-                        + u' to [[User talk:TokenzeroBot]]',
+                        'Creating redirect from ISO 4 abbreviation. '
+                        'Report bugs and suggestions '
+                        'to [[User talk:TokenzeroBot]]',
                         minor=False,
                         botflag=True,
                         watch="nochange",
@@ -242,12 +247,13 @@ def fixPageRedirects(page, editLimit=10, simulateOnly=True):
             rOldContent = pageData['redirects'][rTitle]
             if isValidISO4Redirect(rOldContent, title):
                 print('--Skipping existing valid redirect '
-                      + 'from [[' + rTitle + ']] to [[' + title + ']].')
+                      'from [[' + rTitle + ']] to [[' + title + ']].')
             elif isReplaceableRedirect(rOldContent, title, rTitle):
                 print('--Replacing existing redirect '
-                      + 'from [[' + rTitle + ']] to [[' + title + ']]. '
-                      + 'Original content:\n' + rOldContent + '\n----- '
-                      + 'New content:\n' + rNewContent + '\n-----', flush=True)
+                      'from [[' + rTitle + ']] to [[' + title + ']]. '
+                      'Original content:\n' + rOldContent + '\n----- '
+                      'New content:\n' + rNewContent + '\n-----',
+                      flush=True)
                 if nEditedPages >= editLimit:
                     return nEditedPages
                 nEditedPages = nEditedPages + 1
@@ -256,9 +262,9 @@ def fixPageRedirects(page, editLimit=10, simulateOnly=True):
                     rPage.text = rNewContent
                     try:
                         rPage.save(
-                            u'Marking as {{R from ISO 4}}. '
-                            + u'Report bugs and suggestions '
-                            + u'to [[User talk:TokenzeroBot]]',
+                            'Marking as {{R from ISO 4}}. '
+                            'Report bugs and suggestions '
+                            'to [[User talk:TokenzeroBot]]',
                             minor=False,
                             botflag=True,
                             watch="nochange",
@@ -268,7 +274,7 @@ def fixPageRedirects(page, editLimit=10, simulateOnly=True):
                         print('--SAVE MODIFY FAILED-----------------------')
             else:
                 print('--Skipping existing dubious redirect '
-                      + 'from [[' + rTitle + ']] to [[' + title + ']].')
+                      'from [[' + rTitle + ']] to [[' + title + ']].')
                 report.reportExistingOtherRedirect(
                     title, iTitle, rTitle, rOldContent)
     if nEditedPages > 0:
@@ -281,7 +287,7 @@ def fixPageRedirects(page, editLimit=10, simulateOnly=True):
             # Ignore rTitle that contain a computed abbreviation as a
             # substring, assume that it's some valid variation on a subtitle.
             isExpected = False
-            for computedAbbrev in requiredRedirects.keys():
+            for computedAbbrev in requiredRedirects:
                 if re.sub(r'\s*[:(].*', '', computedAbbrev) in rTitle:
                     isExpected = True
                     break
@@ -289,9 +295,9 @@ def fixPageRedirects(page, editLimit=10, simulateOnly=True):
                 # Find closest computed abbrev.
                 bestAbbrev = ''
                 bestDist = len(rTitle)
-                for computedAbbrev in sorted(list(requiredRedirects.keys())):
+                for computedAbbrev in sorted(requiredRedirects):
                     dist = Levenshtein.distance(rTitle, computedAbbrev)
-                    if (dist < bestDist):
+                    if dist < bestDist:
                         bestDist = dist
                         bestAbbrev = computedAbbrev
                 # Skip if closest abbrev. is far (assume it's from a former
@@ -310,7 +316,6 @@ def getRequiredRedirects(page):
         `skip` indicates that we had to skip an infobox, so the result is most
         probably not exhaustive (so we won't report extra existing redirects).
     """
-    global site
     title = page.title()
     pageData = state.getPageData(title)
     rNewContent = '#REDIRECT [[' + title + ']]\n{{R from ISO 4}}'
@@ -325,11 +330,11 @@ def getRequiredRedirects(page):
         iAbbrev = infobox.get('abbreviation', '')
         iAbbrevDotless = iAbbrev.replace('.', '')
         if iAbbrev == '' or iAbbrev == 'no':
-            print('--Abbreviation param empty or "no", ignoring [[' + title + ']].')
+            print('--Abbrev param empty or "no", ignoring [[' + title + ']].')
             skip = True
             continue
         if ':' in iAbbrev[:5]:
-            print('--Abbreviation contains early colon, ignoring [[' + title + ']].')
+            print('--Abbrev contains early colon, ignoring [[' + title + ']].')
             report.reportTitleWithColon(
                 title, infobox.get('title', ''), iAbbrev)
             skip = True
@@ -350,7 +355,7 @@ def getRequiredRedirects(page):
             cAbbrev = state.getAbbrev(name, cLang)
         except state.NotComputedYetError:
             print('No computed abbreviation stored for "' + name + '", '
-                  + 'please rerun abbrevIsoBot.js .')
+                  'please rerun abbrevIsoBot.js .')
             skip = True
             continue
         if not utils.isSoftMatch(iAbbrev, cAbbrev):
@@ -372,7 +377,7 @@ def getRequiredRedirects(page):
             continue
         if iAbbrevDotless == iAbbrev:
             print('--Abbreviation is trivial (has no dots), '
-                  + 'to avoid confusion we\'re ignoring [[' + title + ']].')
+                  'to avoid confusion we\'re ignoring [[' + title + ']].')
             skip = True
             report.reportTrivialAbbrev(
                 title, infobox.get('title', ''),
@@ -404,9 +409,9 @@ def isValidISO4Redirect(rContent, title):
     # Ignore expected rcats.
     rContent = re.sub(r'{{R(EDIRECT)? (un)?printworthy}}', '', rContent)
     rContent = re.sub(r'{{R(EDIRECT)? u?pw?}}', '', rContent)
-    rContent = re.sub(r'{{R from move}}', rContent)
-    rContent = re.sub(r'{{R from bluebook}}', rContent)
-    rContent = re.sub(r'{{R from MEDLINE abbreviation}}', rContent)
+    rContent = re.sub(r'{{R from move}}', '', rContent)
+    rContent = re.sub(r'{{R from bluebook}}', '', rContent)
+    rContent = re.sub(r'{{R from MEDLINE abbreviation}}', '', rContent)
     # Ignore variants which include the rcat shell.
     rContent = rContent.replace('{{REDIRECT category shell',
                                 '{{REDIRECT shell')
@@ -419,7 +424,7 @@ def isValidISO4Redirect(rContent, title):
     return rContent == rWithoutShell or rContent == rWithShell
 
 
-def isReplaceableRedirect(rContent, title, rTitle):
+def isReplaceableRedirect(rContent, title, _rTitle):
     """Return whether the content of a given redirect page can be
     automatically replaced.
 
@@ -445,9 +450,9 @@ def isReplaceableRedirect(rContent, title, rTitle):
     # E.g. don't change pages having an {{R from move}}.
     #    rContent = re.sub(r'{{R from[a-zA-Z4\s]*}}', '', rContent, 1)
     rContent = re.sub(r'{{R from (ISO 4|abb[a-z]*|shortening|initialism'
-                      + r'|short name|alternat[a-z]* spelling'
-                      + r'|systematic abbreviation|other capitalisation'
-                      + '|other spelling)}}',
+                      r'|short name|alternat[a-z]* spelling'
+                      r'|systematic abbreviation|other capitalisation'
+                      r'|other spelling)}}',
                       '',
                       rContent,
                       1)
@@ -463,7 +468,6 @@ def isReplaceableRedirect(rContent, title, rTitle):
 def getPagesWithInfoboxJournals(limit):
     """ Get generator yielding all Pages that include an {{infobox journal}}.
     """
-    global site
     ns = site.namespaces['Template']  # 10
     template = pywikibot.Page(site, 'Template:Infobox journal', ns=ns)
     return template.embeddedin(
@@ -490,7 +494,8 @@ def getPagesWithInfoboxJournals(limit):
     #       cat, recurse=True, total=15000, namespaces=0)
 
 
-def getInfoboxJournals(page):
+def getInfoboxJournals(page: pywikibot.Page) \
+        -> Generator[Dict[str, str], None, None]:
     """Yields all {{infobox journal}}s used in `page`.
 
     Each as a dict from param to value."""
@@ -502,7 +507,7 @@ def getInfoboxJournals(page):
 
     # Iterate over {{infobox journal}} template instances on `page`.
     # We ignore synonims of [[Template:Infobox journals]], see:
-    #   https://en.wikipedia.org/w/index.php?title=Special:WhatLinksHere/Template:Infobox_journal&hidetrans=1&hidelinks=1
+    # https://en.wikipedia.org/w/index.php?title=Special:WhatLinksHere/Template:Infobox_journal&hidetrans=1&hidelinks=1
     for t in p.filter_templates():
         # mwpfh only normalizes the first letter.
         if t.name.matches('infobox journal') or \
@@ -512,7 +517,8 @@ def getInfoboxJournals(page):
                 paramName = str(param.name).lower().strip()
                 if paramName in ['title', 'issn', 'abbreviation', 'language',
                                  'country', 'former_name', 'bluebook']:
-                    infobox[paramName] = re.sub(r'<!--.*-->', '', str(param.value)).strip()
+                    infobox[paramName] = re.sub(r'<!--.*-->', '',
+                                                str(param.value)).strip()
             yield infobox
 
 
@@ -528,14 +534,14 @@ def getRedirectsToPage(pageTitle, namespaces=None, total=None, content=False):
     Note also we disregard double redirects: these are few and
     eventually resolved by dedicated bots.
     """
-    global site
-    return site._generator(pywikibot.data.api.PageGenerator,
-                           type_arg="redirects",
-                           titles=pageTitle,
-                           grdprop="pageid|title|fragment",
-                           namespaces=namespaces,
-                           total=total,
-                           g_content=content)
+    return site._generator(  # pylint: disable=protected-access
+        pywikibot.data.api.PageGenerator,
+        type_arg="redirects",
+        titles=pageTitle,
+        grdprop="pageid|title|fragment",
+        namespaces=namespaces,
+        total=total,
+        g_content=content)
 
 
 if __name__ == "__main__":

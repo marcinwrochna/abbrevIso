@@ -2,39 +2,39 @@
 """ A module for the state, shared between runs and with abbrevIsoBot.js."""
 
 import json
+from typing import Any, Dict
 
-"""`state` is a global variable maintained between runs.
-    state = {
-        'pages': {
-            'Wiki Page Title': {
-                'infoboxes': [{'title': 'IJ Title',
-                               'issn': ...,
-                               'abbreviation': ...,
-                               ...},
-                              ...
-                ],
-                'redirects': {
-                    'Redirect Page Title': 'Redirect Page Wikitext Content',
-                    ...
-                },
-            },
-            ...
-        },
-        'abbrevs': {
-            'Wiki Page or Infobox Tile': {
-                'eng': 'abbrevISO-computed abbreviation
-                    using only eng,mul,lat,und LTWA rules',
-                'all': 'using all rules'
-            },
-            ...
-        }
-"""
-__state = {}
+# `state` is a global variable maintained between runs.
+# state = {
+#     'pages': {
+#         'Wiki Page Title': {
+#             'infoboxes': [{'title': 'IJ Title',
+#                            'issn': ...,
+#                            'abbreviation': ...,
+#                            ...},
+#                           ...
+#             ],
+#             'redirects': {
+#                 'Redirect Page Title': 'Redirect Page Wikitext Content',
+#                 ...
+#             },
+#         },
+#         ...
+#     },
+#     'abbrevs': {
+#         'Wiki Page or Infobox Tile': {
+#             'eng': 'abbrevISO-computed abbreviation
+#                 using only eng,mul,lat,und LTWA rules',
+#             'all': 'using all rules'
+#         },
+#         ...
+#     }
+__state = {}  # type: Dict[str, Dict[str, Any]]
 
 
-def loadOrInitState(stateFileName):
+def loadOrInitState(stateFileName: str) -> None:
     """Load `state` from `STATE_FILE_NAME` or create a new one."""
-    global __state
+    global __state  # pylint: disable=global-statement
     opened = False
     try:
         with open(stateFileName, 'rt') as f:
@@ -50,20 +50,19 @@ def loadOrInitState(stateFileName):
             __state = {'pages': {}, 'abbrevs': {}}
 
 
-def saveState(stateFileName):
+def saveState(stateFileName: str) -> None:
     """Save `state` to `STATE_FILE_NAME`."""
     with open(stateFileName, 'wt') as f:
         json.dump(__state, f)
 
 
-def dump():
+def dump() -> str:
     """Return formatted JSON of the state."""
     return json.dumps(__state, indent="\t")
 
 
-def saveTitleToAbbrev(title):
+def saveTitleToAbbrev(title: str) -> None:
     """Save `title` for computing its abbrev later, by running abbrevIso.js."""
-    global __state
     if title not in __state['abbrevs']:
         __state['abbrevs'][title] = False
 
@@ -72,39 +71,39 @@ class NotComputedYetError(LookupError):
     """Raised when abbreviations for a title have not been computed yet."""
 
 
-def hasAbbrev(name):
-    """Return whetever the abbrev for given name is saved and computed."""
-    return name in __state['abbrevs'] and __state['abbrevs'][name] is not False
+def hasAbbrev(title: str) -> bool:
+    """Return whetever the abbrev for given title is saved and computed."""
+    return (title in __state['abbrevs'] and
+            __state['abbrevs'][title] is not False)
 
 
-def getAbbrev(name, language):
-    """Return abbreviation for given name (page or infobox title).
+def getAbbrev(title: str, language: str) -> str:
+    """Return abbreviation for given (page or infobox) title.
 
     `language` should be 'all' or 'eng', depending on which LTWA rules to use.
     """
-    if name not in __state['abbrevs'] or not __state['abbrevs'][name]:
+    if title not in __state['abbrevs'] or not __state['abbrevs'][title]:
         raise NotComputedYetError
-    return __state['abbrevs'][name][language]
-    # TODO make name, pageTitle, title, ... consistent
+    return __state['abbrevs'][title][language]
 
 
-def getAllAbbrevs(name):
-    """Return dict from language to abbrev, for a given name to abbreviate."""
-    if name not in __state['abbrevs'] or not __state['abbrevs'][name]:
+def getAllAbbrevs(title: str) -> Dict[str, str]:
+    """Return dict from language to abbrev, for a given title to abbreviate."""
+    if title not in __state['abbrevs'] or not __state['abbrevs'][title]:
         raise NotComputedYetError
-    result = __state['abbrevs'][name].copy()
+    result = __state['abbrevs'][title].copy()
     result.pop('matchingPatterns')
     return result
 
 
-def getMatchingPatterns(name):
-    """Return matching LTWA patterns for given name (title) to abbreviate."""
-    if name not in __state['abbrevs'] or not __state['abbrevs'][name]:
+def getMatchingPatterns(title: str) -> str:
+    """Return matching LTWA patterns for given title to abbreviate."""
+    if title not in __state['abbrevs'] or not __state['abbrevs'][title]:
         raise NotComputedYetError
-    return __state['abbrevs'][name]['matchingPatterns']
+    return __state['abbrevs'][title]['matchingPatterns']
 
 
-def savePageData(pageTitle, pageData):
+def savePageData(pageTitle: str, pageData: Dict[str, Any]) -> None:
     """Save a scraped page's data.
 
     `pageData` is of the following form:
@@ -118,15 +117,14 @@ def savePageData(pageTitle, pageData):
             }
         }
     """
-    global __state
     __state['pages'][pageTitle] = pageData
 
 
-def getPageData(pageTitle):
+def getPageData(pageTitle: str) -> Dict[str, Any]:
     """Return latest saved page data (in a scrape run of the script)."""
     return __state['pages'][pageTitle]
 
 
-def getPagesDict():
+def getPagesDict() -> Dict[str, Dict[str, Any]]:
     """Return dictionary from pageTitle to pageData."""
     return __state['pages']

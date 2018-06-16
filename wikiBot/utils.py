@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 """ Common utility functions: getLanguage() and isSoftMatch(). """
+
 import re
+from typing import Dict
 
 
-def getLanguage(infobox):
+def getLanguage(infobox: Dict[str, str]) -> str:
     """Guess the language of an IJ's title.
 
     Returns 'eng' or 'all'. This affects which LTWA rules we use when
@@ -23,7 +25,7 @@ def getLanguage(infobox):
     return 'all'
 
 
-def isSoftMatch(infoboxAbbrev, computedAbbrev):
+def isSoftMatch(infoboxAbbrev: str, computedAbbrev: str) -> bool:
     """Return whether an abbreviation can be considered correct according
     to the computed one.
 
