@@ -47,10 +47,6 @@ def main() -> None:
         doTest()
     elif sys.argv[1] == 'scrape':
         doScrape()
-    elif sys.argv[1] == 'report':
-        global ONLY_SIMULATE_EDITS  # pylint: disable=global-statement
-        ONLY_SIMULATE_EDITS = True
-        doScrape(fixPages=True, writeReport=True)
     elif sys.argv[1] == 'fixpages':
         doScrape(fixPages=True, writeReport=True)
     elif sys.argv[1] == 'fill':

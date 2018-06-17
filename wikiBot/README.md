@@ -8,16 +8,14 @@ Since the abbrevISO library is impemented in JavaScript, the Python bot maintain
 You will need to install the libraries: `pip install mwparserfromhell pywikibot python-Levenshtein` (possibly `pip3` with option `--user`)
 and have AbbrevIso.js working: `rollup AbbrevIso.js -o nodeBundle.js --f cjs --name AbbrevIso`
 
-Pywikibot requires [some configuration](https://github.com/wikimedia/pywikibot), you can test it by running `python3 wikiBot.py test` (change the code for the write to be non-trivial).
+Pywikibot requires [some configuration](https://github.com/wikimedia/pywikibot), you can test it by running `python3 abbrevIsoBot.py test` (change the code for the write to be non-trivial).
 
-Run `python3 wikiBot.py scrape` to scrape all the required pages and redirects. There are around 7500 pages and roughly 2 redirects per page, so with pywikibot defaults this runs about an hour.
+Run `python3 abbrevIsoBot.py scrape` to scrape all the required pages and redirects. There are around 7500 pages and roughly 2 redirects per page, so with pywikibot defaults this runs about an hour.
 The state file is now full.
 
 Run `./abbrevIsoBot.js` to compute the abbreviations in the state file. The first time is very resource-intensive, it may take another hour. Rerunning the script will only compute missing abbreviations. To recompute all, run `./abbrevIsoBot.js reset`.
 
-Run `python3 wikiBot.py fixpages` to scrape again, making fixes along the way according to computed abbrevs and make the reports.
-
-Run `python3 wikiBot.py report` to do the same, but only simulating edits: we only write the reports.
-Since both `fixpages` and `report` scrape evertyhing, you don't need to run `scrape` again. You will need to run `./abbrevIsoBot.js` in case new titles appear.
+Run `python3 abbrevIsoBot.py fixpages` to scrape again, making fixes along the way according to computed abbrevs and make the reports.
+Since `fixpages` scrapes evertyhing, you don't need to run `scrape` again. You will need to run `./abbrevIsoBot.js` in case new titles appear.
 
 See the code (`abbrevIsoBot.py`) for some basic configuration and more.
