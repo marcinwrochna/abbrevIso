@@ -15,7 +15,12 @@ import state
 # Max number of pages to scrape.
 SCRAPE_LIMIT = 10000
 # Max number of edits to make (in one run of the script).
-TOTAL_EDIT_LIMIT = 1
+PLAIN_EDIT_LIMIT = 1
+PLAIN_EDIT_DONE = 0
+JOURNAL_EDIT_LIMIT = 1
+JOURNAL_EDIT_DONE = 0
+HATNOTE_EDIT_LIMIT = 1
+HATNOTE_EDIT_DONE = 0
 # If true, only print what we would do, don't edit.
 ONLY_SIMULATE_EDITS = True
 STATE_FILE_NAME = 'abbrevBotState.json'
@@ -132,6 +137,10 @@ def addOmicsHatnote(aTitle: str, title: str) -> None:
     """
     print('Adding hatnote to [[' + aTitle + ']]')
     if not ONLY_SIMULATE_EDITS:
+        global HATNOTE_EDIT_DONE
+        HATNOTE_EDIT_DONE = HATNOTE_EDIT_DONE + 1
+        if HATNOTE_EDIT_DONE > HATNOTE_EDIT_LIMIT:
+            return
         hatnote = (
             '{{Confused|text=[[' + title + ']],'
             ' published by the [[OMICS Publishing Group]]}}\n')
@@ -160,6 +169,16 @@ def createOmicsRedirect(rTitle: str) -> None:
         '[[Category:OMICS Publishing Group academic journals]]\n')
     rNewTalkContent = '{{WPJournals}}'
     if not ONLY_SIMULATE_EDITS:
+        if 'journal' in rTitle:
+            global JOURNAL_EDIT_DONE
+            JOURNAL_EDIT_DONE = JOURNAL_EDIT_DONE + 1
+            if JOURNAL_EDIT_DONE > JOURNAL_EDIT_LIMIT:
+                return
+        else:
+            global PLAIN_EDIT_DONE
+            PLAIN_EDIT_DONE = PLAIN_EDIT_DONE + 1
+            if PLAIN_EDIT_DONE > PLAIN_EDIT_LIMIT:
+                return
         rPage = pywikibot.Page(site, rTitle)
         rPage.text = rNewContent
         rPage.save(

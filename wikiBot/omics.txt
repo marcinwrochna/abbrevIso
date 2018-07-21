@@ -1,3 +1,4 @@
+
 Abnormal and Behavioural Psychology
 Acta Chimica and Pharmaceutica Indica
 Acta Psychopathologica
@@ -43,7 +44,7 @@ Arabian Journal of Business and Management Review
 Archives in Cancer Research
 Archives in Chemical Research
 Archives of Clinical Microbiology
-Archives of Digestive disorders
+Archives of Digestive Disorders
 Archives of Inflammation
 Archives of Medicine
 Archives of Parasitology
@@ -144,7 +145,7 @@ Epilepsy Journal
 European Journal of Applied Engineering and Scientific Research
 European Journal of Experimental Biology
 European Journal of Sports and Exercise Science
-Evidence based medicine and practice
+Evidence Based Medicine and Practice
 Expert Opinion On Environmental Biology
 Family Medicine & Medical Science Research
 Fermentation Technology
@@ -160,7 +161,7 @@ Global Journal of Nursing & Forensic Studies
 Global Journal of Research and Review
 Global Journal of Technology and Optimization
 Gynecology & Obstetrics
-Gynecology & Obstetrics Case report
+Gynecology & Obstetrics Case Reports
 HIV: Current Research
 Hair Therapy & Transplantation
 Head and Neck Cancer Research
@@ -231,7 +232,12 @@ Interventional Cardiology Journal
 Irrigation & Drainage Systems Engineering
 JBR Journal of Clinical Diagnosis and Research
 JBR Journal of Interdisciplinary Medicine and Dental Science
-JOP. Journal of the Pancreas
+JOP Journal of the Pancreas
+
+Journal of Clinical Diagnosis and Research
+Journal of Interdisciplinary Medicine and Dental Science
+Journal of the Pancreas
+
 Journal of AIDS & Clinical Research
 Journal of Accounting & Marketing
 Journal of Addiction Research & Therapy
@@ -242,7 +248,7 @@ Journal of Advanced Chemical Engineering
 Journal of Aeronautics & Aerospace Engineering
 Journal of Aesthetic & Reconstructive Surgery
 Journal of Aging Science
-Journal of Aging and geriatric psychiatry
+Journal of Aging and Geriatric Psychiatry
 Journal of Agricultural Science and Food Research
 Journal of Alcoholism & Drug Dependence
 Journal of Allergy & Therapy
@@ -438,7 +444,7 @@ Journal of Heart and Cardiovascular Research
 Journal of Heavy Metal Toxicity and Diseases
 Journal of Hematology & Thromboembolic Diseases
 Journal of Hepatitis
-Journal of Hepatology and Gastrointestinal disorders
+Journal of Hepatology and Gastrointestinal Disorders
 Journal of Horticulture
 Journal of Hotel & Business Management
 Journal of Hydrogeology & Hydrologic Engineering
@@ -598,7 +604,7 @@ Journal of Reproductive Endocrinology & Infertility
 Journal of Research and Development
 Journal of Respiratory Medicine
 Journal of Scientific and Industrial Metrology
-Journal of Sexual & Reproductive Medicine subscription
+Journal of Sexual & Reproductive Medicine
 Journal of Sleep Disorders & Therapy
 Journal of Sleep Disorders : Treatment and Care
 Journal of Socialomics
@@ -654,14 +660,14 @@ Macromolecules: An Indian Journal
 Malaria Control & Elimination
 Mass Spectrometry & Purification Techniques
 Materials Science: An Indian Journal
-Maternal and pediatric nutrition
+Maternal and Pediatric Nutrition
 Medical & Clinical Reviews
 Medical & Surgical Urology
 Medical Microbiology Reports
 Medical Mycology: Open Access
 Medical Reports & Case Studies
 Medical Safety & Global Health
-Medical case reports
+Medical Case Reports
 Medicinal & Aromatic Plants
 Medicinal Chemistry
 Metabolomics: Open Access
@@ -756,7 +762,7 @@ Rheumatology: Current Research
 Rice Research: Open Access
 Scientific Reviews and Chemical Communications
 Single Cell Biology
-Skin diseases & Skin Care
+Skin Diseases & Skin Care
 Sociology and Criminology-Open Access
 Spine Research
 Stroke Research & Therapy
@@ -779,3 +785,4 @@ Virology & Mycology
 Virology: Current Research
 Vitamins & Minerals
 World Journal of Pharmacology and Toxicology
+
