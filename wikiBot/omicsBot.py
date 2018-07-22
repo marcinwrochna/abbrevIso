@@ -16,14 +16,14 @@ import state
 # Max number of pages to scrape.
 SCRAPE_LIMIT = 10000
 # Max number of edits to make (in one run of the script).
-PLAIN_EDIT_LIMIT = 1
+PLAIN_EDIT_LIMIT = 10000
 PLAIN_EDIT_DONE = 0
-JOURNAL_EDIT_LIMIT = 1
+JOURNAL_EDIT_LIMIT = 1000
 JOURNAL_EDIT_DONE = 0
-HATNOTE_EDIT_LIMIT = 1
+HATNOTE_EDIT_LIMIT = 1000
 HATNOTE_EDIT_DONE = 0
 # If true, only print what we would do, don't edit.
-ONLY_SIMULATE_EDITS = True
+ONLY_SIMULATE_EDITS = False
 STATE_FILE_NAME = 'abbrevBotState.json'
 
 # pywikibot's main object.
@@ -95,8 +95,9 @@ def doOmicsRedirects(title: str) -> None:
         print('No computed abbreviation stored for "' + title + '", '
               'please rerun abbrevIsoBot.js .')
         return
-    rTitles.add((cAbbrev, 'iso4'))
-    rTitles.add((cAbbrev.replace('.', ''), 'iso4'))
+    if cAbbrev != title:
+        rTitles.add((cAbbrev, 'iso4'))
+        rTitles.add((cAbbrev.replace('.', ''), 'iso4'))
 
     # Skip if any of the redirect titles already exists.
     skip = False
@@ -136,10 +137,12 @@ def doOmicsHatnotes(title: str) -> None:
                     isJournal = True
                     break
             if isJournal:
-                addOmicsHatnote(aTitle, title)
+                if not aPage.isRedirectPage():
+                    addOmicsHatnote(aTitle, title)
             else:
                 aTitle = aTitle + ' (journal)'
-                if pywikibot.Page(site, aTitle).exists():
+                aPage = pywikibot.Page(site, aTitle)
+                if aPage.exists() and not aPage.isRedirectPage():
                     addOmicsHatnote(aTitle, title)
 
 
@@ -147,19 +150,19 @@ def addOmicsHatnote(aTitle: str, title: str) -> None:
     """Add hatnote to [[aTitle]] warning about possible confusion
     with OMICS [[title]].
     """
+    page = pywikibot.Page(site, aTitle)
+    if '{{Confused|' in page.text or '{{confused|' in page.text:
+        print('Skip: {{confused}} hatnote already on [[' + aTitle + ']]')
+        return
     print('Adding hatnote to [[' + aTitle + ']]')
     if not ONLY_SIMULATE_EDITS:
         global HATNOTE_EDIT_DONE
-        HATNOTE_EDIT_DONE = HATNOTE_EDIT_DONE + 1
+        HATNOTE_EDIT_DONE += 1
         if HATNOTE_EDIT_DONE > HATNOTE_EDIT_LIMIT:
             return
         hatnote = (
             '{{Confused|text=[[' + title + ']],'
             ' published by the [[OMICS Publishing Group]]}}\n')
-        page = pywikibot.Page(site, aTitle)
-        if '{{Confused|' in page.text or '{{confused|' in page.text:
-            print('Skip: {{confused}} hatnote already on [[' + aTitle + ']]')
-            return
         page.text = hatnote + page.text
         page.save(
             'Add hatnote to OMICS predatory clone. '

@@ -151,7 +151,8 @@ def wikiEscape(s):
     """ Escape wikitext (into wikitext that will show the raw code). """
     return s.replace('<', '&lt;').replace('>', '&gt;') \
             .replace('{{', '{<nowiki />{').replace('}}', '}<nowiki />}') \
-            .replace('[[', '[<nowiki />[').replace(']]', ']<nowiki />]')
+            .replace('[[', '[<nowiki />[').replace(']]', ']<nowiki />]') \
+            .replace('|', '{{!}}')
 
 
 def printReportOnInfoboxPerPageNumbers():
