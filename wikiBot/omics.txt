@@ -1,4 +1,3 @@
-
 Abnormal and Behavioural Psychology
 Acta Chimica and Pharmaceutica Indica
 Acta Psychopathologica
@@ -233,11 +232,9 @@ Irrigation & Drainage Systems Engineering
 JBR Journal of Clinical Diagnosis and Research
 JBR Journal of Interdisciplinary Medicine and Dental Science
 JOP Journal of the Pancreas
-
 Journal of Clinical Diagnosis and Research
 Journal of Interdisciplinary Medicine and Dental Science
 Journal of the Pancreas
-
 Journal of AIDS & Clinical Research
 Journal of Accounting & Marketing
 Journal of Addiction Research & Therapy
@@ -785,4 +782,3 @@ Virology & Mycology
 Virology: Current Research
 Vitamins & Minerals
 World Journal of Pharmacology and Toxicology
-

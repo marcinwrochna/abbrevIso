@@ -4,6 +4,7 @@
 A bot for handling OMICS journal titles: adding redirects and hatnotes.
 """
 import logging
+import sys
 
 import pywikibot
 import pywikibot.data.api
@@ -39,6 +40,7 @@ def main() -> None:
         for title in f:
             doOmicsRedirects(title)
             doOmicsHatnotes(title)
+            sys.stdout.flush()
     state.saveState(STATE_FILE_NAME)
 
 
@@ -66,14 +68,23 @@ def doOmicsRedirects(title: str) -> None:
             print('Skip: [[' + title + ']] already exists, '
                   'title already has "journal".')
             return
+        isJournal = False
+        for cat in page.categories():
+            if 'journal' in cat.title().lower():
+                isJournal = True
+                break
+        if isJournal:
+            print('Skip: [[' + title + ']] already exists, '
+                  'has category containing "journal".')
+            return
 
-    rTitles = set([title])
+    rTitles = set([(title, 'plain')])
 
     # Also handle 'and' vs '&' variant.
     if ' and ' in title:
-        rTitles.add(title.replace(' and ', ' & '))
+        rTitles.add((title.replace(' and ', ' & '), 'and'))
     elif ' & ' in title and 'Acta' not in title:
-        rTitles.add(title.replace(' & ', ' and '))
+        rTitles.add((title.replace(' & ', ' and '), 'and'))
 
     # Create ISO-4 redirects, enable multiling for 'Acta'
     state.saveTitleToAbbrev(title)
@@ -84,11 +95,12 @@ def doOmicsRedirects(title: str) -> None:
         print('No computed abbreviation stored for "' + title + '", '
               'please rerun abbrevIsoBot.js .')
         return
-    rTitles.add(cAbbrev)
+    rTitles.add((cAbbrev, 'iso4'))
+    rTitles.add((cAbbrev.replace('.', ''), 'iso4'))
 
     # Skip if any of the redirect titles already exists.
     skip = False
-    for rTitle in rTitles:
+    for (rTitle, rType) in rTitles:
         if addJournal:
             rTitle = rTitle + ' (journal)'
         if pywikibot.Page(site, rTitle).exists():
@@ -99,10 +111,10 @@ def doOmicsRedirects(title: str) -> None:
         return
 
     # Create the redirects.
-    for rTitle in rTitles:
+    for (rTitle, rType) in rTitles:
         if addJournal:
             rTitle = rTitle + ' (journal)'
-        createOmicsRedirect(rTitle)
+        createOmicsRedirect(rTitle, rType)
 
 
 def doOmicsHatnotes(title: str) -> None:
@@ -159,7 +171,7 @@ def addOmicsHatnote(aTitle: str, title: str) -> None:
             nocreate=True)
 
 
-def createOmicsRedirect(rTitle: str) -> None:
+def createOmicsRedirect(rTitle: str, rType: str) -> None:
     """Create redirect from [[rTitle]] to [[OMICS Publishing Group]].
     Also create talk page with {{WPJournals}}
     """
@@ -167,16 +179,18 @@ def createOmicsRedirect(rTitle: str) -> None:
     rNewContent = (
         '#REDIRECT[[OMICS Publishing Group]]\n'
         '[[Category:OMICS Publishing Group academic journals]]\n')
+    if rType == 'iso4':
+        rNewContent += '{{R from ISO 4}}\n'
     rNewTalkContent = '{{WPJournals}}'
     if not ONLY_SIMULATE_EDITS:
         if 'journal' in rTitle:
             global JOURNAL_EDIT_DONE
-            JOURNAL_EDIT_DONE = JOURNAL_EDIT_DONE + 1
+            JOURNAL_EDIT_DONE += 1
             if JOURNAL_EDIT_DONE > JOURNAL_EDIT_LIMIT:
                 return
         else:
             global PLAIN_EDIT_DONE
-            PLAIN_EDIT_DONE = PLAIN_EDIT_DONE + 1
+            PLAIN_EDIT_DONE += 1
             if PLAIN_EDIT_DONE > PLAIN_EDIT_LIMIT:
                 return
         rPage = pywikibot.Page(site, rTitle)
