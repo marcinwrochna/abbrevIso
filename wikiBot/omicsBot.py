@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
-"""
-A bot for handling OMICS journal titles: adding redirects and hatnotes.
-"""
+"""A bot for handling OMICS journal titles: adding redirects and hatnotes."""
 import logging
 import sys
 
@@ -31,7 +28,7 @@ site = None
 
 
 def main() -> None:
-    """The main function."""
+    """Execute the bot."""
     global site  # pylint: disable=global-statement
     logging.basicConfig(level=logging.WARNING)
     state.loadOrInitState(STATE_FILE_NAME)
@@ -147,9 +144,7 @@ def doOmicsHatnotes(title: str) -> None:
 
 
 def addOmicsHatnote(aTitle: str, title: str) -> None:
-    """Add hatnote to [[aTitle]] warning about possible confusion
-    with OMICS [[title]].
-    """
+    """Add hatnote to [[aTitle]] about confusion risk with OMICS [[title]]."""
     page = pywikibot.Page(site, aTitle)
     if '{{Confused|' in page.text or '{{confused|' in page.text:
         print('Skip: {{confused}} hatnote already on [[' + aTitle + ']]')
@@ -176,7 +171,8 @@ def addOmicsHatnote(aTitle: str, title: str) -> None:
 
 def createOmicsRedirect(rTitle: str, rType: str) -> None:
     """Create redirect from [[rTitle]] to [[OMICS Publishing Group]].
-    Also create talk page with {{WPJournals}}
+
+    Also create talk page with {{WPJournals}}.
     """
     print('Creating redirect from [[' + rTitle + ']]')
     rNewContent = (

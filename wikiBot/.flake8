@@ -1,0 +1,10 @@
+[flake8]
+ignore = F401,I202
+import-order-style = google
+exclude =
+    .git,
+    __pycache__,
+    *cache*
+    venv,
+    logs
+

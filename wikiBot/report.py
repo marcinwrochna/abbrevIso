@@ -10,8 +10,8 @@ from unicodedata import normalize
 
 import pywikibot
 
-import utils
 import state
+import utils
 
 
 # Each list contains tuples: [page title, infobox title, infobox abbrev, ..?].
@@ -75,16 +75,20 @@ def doReport(site: pywikibot.Site) -> None:
 
 def reportTitleWithColon(pageTitle, infoboxTitle, infoboxAbbrev):
     """Report infobox abbreviation that contains a colon.
+
     These may be tricky dependent titles or mishandled as interwiki links,
-    so we just skip and report them."""
+    so we just skip and report them.
+    """
     __report['colon'].append([pageTitle, infoboxTitle, infoboxAbbrev])
 
 
 def reportTrivialAbbrev(pageTitle, infoboxTitle, infoboxAbbrev,
                         allRedirects):
-    """Report abbrev that has not dots (nothing abbreviated except possibly
-    for cutting short word). These are usually from journals that have
-    just one or two words of a scientific term as their title (e.g. Nature),
+    """Report abbrev that has not dots.
+
+    (Nothing abbreviated except possibly for cutting short word).
+    These are usually from journals that have just one or two words of
+    a scientific term as their title (e.g. Nature),
     so creating a redirect could lead to confusion.
     """
     __report['nodots'].append([pageTitle, infoboxTitle, infoboxAbbrev,
@@ -92,16 +96,19 @@ def reportTrivialAbbrev(pageTitle, infoboxTitle, infoboxAbbrev,
 
 
 def reportExistingOtherPage(pageTitle, infoboxTitle, redirectTitle):
-    """Report a page that already exists in place of a redirect and does not
-    redirect to the page we came from. These are usually disambuigation pages.
+    """Report existing page that does not redirect to the page we came from.
+
+    These are usually disambuigation pages.
     """
     __report['existingpage'].append([pageTitle, infoboxTitle, redirectTitle])
 
 
 def reportExistingOtherRedirect(pageTitle, infoboxTitle,
                                 redirectTitle, redirectContent):
-    """Report a redirect (to the page we came from) that already exists,
-    but with some unexpected rcats or parameters (like {{R from move}}).
+    """Report unexpected redirect to the page we came from that already exists.
+
+    Unexpected means with some unexpected rcats or parameters
+    (like {{R from move}}).
     """
     __report['existingredirect'].append([pageTitle, infoboxTitle,
                                          redirectTitle, redirectContent])
@@ -110,7 +117,9 @@ def reportExistingOtherRedirect(pageTitle, infoboxTitle,
 def reportSuperfluousRedirect(pageTitle, redirectTitle, redirectContent,
                               exampleExpectedRedirectTitle):
     """Report existing redirects marked as ISO-4 that we would not add.
-    `exampleExpectedRedirectTitle` is one of the required redirect titles."""
+
+    `exampleExpectedRedirectTitle` is one of the required redirect titles.
+    """
     __report['iso4redirect'].append([pageTitle, redirectTitle, redirectContent,
                                      exampleExpectedRedirectTitle])
 
@@ -130,7 +139,9 @@ def reportLanguageMismatch(pageTitle, infoboxTitle, infoboxAbbrev,
                            infoboxLanguage, infoboxCountry,
                            computedLanguage, matchingPatterns,
                            hasISO4Redirect):
-    """Report abbrev mismatch which would not be a mismatch if we switched
+    """Report abbrev mismatch caused by language.
+
+    That is, report mismatches that would not be a mismatch if we switched
     the guessed (computed) language.
 
     `computedLang` was computed based on `infoboxLanguage` and `infoboxCountry`
@@ -148,7 +159,7 @@ def reportLanguageMismatch(pageTitle, infoboxTitle, infoboxAbbrev,
 
 
 def wikiEscape(s):
-    """ Escape wikitext (into wikitext that will show the raw code). """
+    """Escape wikitext (into wikitext that will show the raw code)."""
     return s.replace('<', '&lt;').replace('>', '&gt;') \
             .replace('{{', '{<nowiki />{').replace('}}', '}<nowiki />}') \
             .replace('[[', '[<nowiki />[').replace(']]', ']<nowiki />]') \
@@ -160,10 +171,10 @@ def printReportOnInfoboxPerPageNumbers():
     print("==Number of infoboxes per page==")
     result = {}
     for title, page in state.getPagesDict().items():
-        l = len(page['infoboxes'])
-        if l not in result:
-            result[l] = []
-        result[l].append(title)
+        length = len(page['infoboxes'])
+        if length not in result:
+            result[length] = []
+        result[length].append(title)
     for i in result:
         print("There are", len(result[i]), "pages with", i, "infoboxes.")
         if i == 0 or i >= 5:
@@ -172,9 +183,7 @@ def printReportOnInfoboxPerPageNumbers():
 
 
 def getOverallStats():
-    """ Return wikistring describing the numbers of infobox-journals, matching,
-    mismatching, etc.
-    """
+    """Return wikitext with number of infobox-journals, mismatches, etc."""
     nTotal = 0  # In total.
     nIJsWithoutAbbrev = 0  # With no (human) abbreviation parameter.
     nIJsWithMissingAbbrev = 0  # With no computed abbreviation.
@@ -365,7 +374,7 @@ def getTrivialAbbrevReport():
          "{| class='wikitable'\n|-\n"
          "! page title !! infobox title !! infobox abbrv !! ISO-4 redirects\n")
     for wikititle, infotitle, iabbrev, redirects in sorted(__report['nodots']):
-        if infotitle == wikititle or infotitle == iabbrev or infotitle == '':
+        if infotitle in (wikititle, iabbrev, ''):
             infotitle = ''
         else:
             infotitle = "{{-r|" + wikiEscape(infotitle) + "}}"

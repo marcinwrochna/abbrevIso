@@ -1,23 +1,23 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
-"""
-A bot for scraping Wikipedia infobox journals and fixing redirects from
-ISO 4 abbreviations of journal titles.
+"""Wikipedia bot for handling journal abbrevs: redirects and infoboxes.
+
+The bot scrapes {{infobox journal}}s, computes ISO 4 abbreviations of titles,
+creates and fixes redirects and the `abbreviation` parameter.
 """
 import logging
 import re
 import sys
-from typing import Generator, Dict
+from typing import Dict, Generator
 from unicodedata import normalize
 
 import Levenshtein
+import mwparserfromhell
 import pywikibot
 import pywikibot.data.api
-import mwparserfromhell
 
-import utils
 import report
 import state
+import utils
 
 
 # ==Some basic config==
@@ -34,7 +34,7 @@ site = None
 
 
 def main() -> None:
-    """The main function."""
+    """Execute the bot."""
     global site  # pylint: disable=global-statement
     logging.basicConfig(level=logging.WARNING)
     state.loadOrInitState(STATE_FILE_NAME)
@@ -57,7 +57,7 @@ def main() -> None:
 
 
 def printHelp() -> None:
-    """Prints a simple help message on available commands."""
+    """Print a simple help message on available commands."""
     print("Use exactly one command of: scrape, fixpages, report, test")
 
 
@@ -145,9 +145,12 @@ def fillAbbreviation(pageText: str, whichInfobox: int, abbrev: str) -> str:
     return str(p)
 
 
-def doScrape(fixPages=False, writeReport=False):
-    """Scrape all pages transcluding Infobox Journal, update `state` and
-    fix redirects to pages if `fixPages` is True.
+def doScrape(fixPages: bool = False, writeReport: bool = False):
+    """Scrape all infobox journals, update `state` and fix redirects.
+
+    Args:
+        fixPages: Whether to actually fix any pages, or only scrape.
+        writePages: Whether to write the reports.
     """
     gen = getPagesWithInfoboxJournals(SCRAPE_LIMIT)
     nScraped = 0  # Number of scraped pages (excluding redirects).
@@ -172,15 +175,13 @@ def doScrape(fixPages=False, writeReport=False):
 
 
 def stripTitle(t):
-    """Remove disambuig comments from wiki title (before computing abbreviation).
-    """
+    """Remove disambuig comments from wiki title (before computing abbrev)."""
     t = re.sub(r'\s*\(.*(ournal|agazine|eriodical|eview)s?\)', '', t)
     return t
 
 
 def scrapePage(page):
-    """Scrape a page's infoboxes and redirects, save them in the `state`.
-    """
+    """Scrape a page's infoboxes and redirects, save them in the `state`."""
     pageData = {'infoboxes': [], 'redirects': {}}
     # Iterate over {{infobox journal}}s on `page`.
     for infobox in getInfoboxJournals(page):
@@ -386,11 +387,11 @@ def getRequiredRedirects(page):
 
 
 def isValidISO4Redirect(rContent, title):
-    """Return whether the content of a given redirect page is already
-    just a simple variation of what we would put.
+    """Check if given redirect is a simple variation of what we would put.
 
-    `rContent` -- wikitext context of the redirect
-    `title` -- title of the target page
+    Args:
+        rContent: Wikitext content of the redirect.
+        title: Title of the target page.
     """
     # Ignore special characters variants.
     rContent = rContent.replace('&#38;', '&')
@@ -421,8 +422,7 @@ def isValidISO4Redirect(rContent, title):
 
 
 def isReplaceableRedirect(rContent, title, _rTitle):
-    """Return whether the content of a given redirect page can be
-    automatically replaced.
+    """Check if the content of a given redirect can be automatically replaced.
 
     Examples of not replaceable content:
         redirects to specific article sections, to disambuigs,
@@ -462,8 +462,7 @@ def isReplaceableRedirect(rContent, title, _rTitle):
 
 
 def getPagesWithInfoboxJournals(limit):
-    """ Get generator yielding all Pages that include an {{infobox journal}}.
-    """
+    """Get generator yielding all Pages that include an {{infobox journal}}."""
     ns = site.namespaces['Template']  # 10
     template = pywikibot.Page(site, 'Template:Infobox journal', ns=ns)
     return template.embeddedin(
@@ -492,9 +491,10 @@ def getPagesWithInfoboxJournals(limit):
 
 def getInfoboxJournals(page: pywikibot.Page) \
         -> Generator[Dict[str, str], None, None]:
-    """Yields all {{infobox journal}}s used in `page`.
+    """Yield all {{infobox journal}}s used in `page`.
 
-    Each as a dict from param to value."""
+    Each as a dict from param to value.
+    """
     # We could use the pywikibot interface mwparserfromhell instead, but it may
     # fall-back to regex, reorder parameters, and mwph is better documented.
     #   p = pywikibot.textlib.extract_templates_and_params(page.text)
@@ -519,7 +519,7 @@ def getInfoboxJournals(page: pywikibot.Page) \
 
 
 def getRedirectsToPage(pageTitle, namespaces=None, total=None, content=False):
-    """Yields all pages that are redirects to `page`.
+    """Yield all pages that are redirects to `page`.
 
     Note that page.backlinks(filterRedirects=True) should not be used!
     It also returns pages that include a link to `page` and happend to
