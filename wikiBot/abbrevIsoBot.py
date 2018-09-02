@@ -100,10 +100,8 @@ def doFillAbbrevs() -> None:
             try:
                 cLang = utils.getLanguage(infobox)
                 cAbbrev = state.getAbbrev(title, cLang)
-            except state.NotComputedYetError:
-                print('No computed abbreviation stored for',
-                      '"' + title + '"',
-                      ', please rerun abbrevIsoBot.js .')
+            except state.NotComputedYetError as err:
+                print(err.message)
                 state.saveTitleToAbbrev(stripTitle(page.title()))
                 continue
             # If abbreviation is equal to title, up to "a/the" articles:
@@ -350,9 +348,8 @@ def getRequiredRedirects(page):
         try:
             cLang = utils.getLanguage(infobox)
             cAbbrev = state.getAbbrev(name, cLang)
-        except state.NotComputedYetError:
-            print('No computed abbreviation stored for "' + name + '", '
-                  'please rerun abbrevIsoBot.js .')
+        except state.NotComputedYetError as err:
+            print(err.message)
             skip = True
             continue
         if not utils.isSoftMatch(iAbbrev, cAbbrev):

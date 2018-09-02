@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-""" A module for the state, shared between runs and with abbrevIsoBot.js."""
+"""A module for the state, shared between runs and with abbrevIsoBot.js."""
 
 import json
 from typing import Any, Dict
@@ -70,6 +70,11 @@ def saveTitleToAbbrev(title: str) -> None:
 class NotComputedYetError(LookupError):
     """Raised when abbreviations for a title have not been computed yet."""
 
+    def __init__(self, title: str) -> None:
+        super().__init__(title)
+        self.message = ('No computed abbreviation stored for "' + title + '", '
+                        'please rerun abbrevIsoBot.js .')
+
 
 def hasAbbrev(title: str) -> bool:
     """Return whetever the abbrev for given title is saved and computed."""
@@ -83,14 +88,14 @@ def getAbbrev(title: str, language: str) -> str:
     `language` should be 'all' or 'eng', depending on which LTWA rules to use.
     """
     if title not in __state['abbrevs'] or not __state['abbrevs'][title]:
-        raise NotComputedYetError
+        raise NotComputedYetError(title)
     return __state['abbrevs'][title][language]
 
 
 def getAllAbbrevs(title: str) -> Dict[str, str]:
     """Return dict from language to abbrev, for a given title to abbreviate."""
     if title not in __state['abbrevs'] or not __state['abbrevs'][title]:
-        raise NotComputedYetError
+        raise NotComputedYetError(title)
     result = __state['abbrevs'][title].copy()
     result.pop('matchingPatterns')
     return result
@@ -99,7 +104,7 @@ def getAllAbbrevs(title: str) -> Dict[str, str]:
 def getMatchingPatterns(title: str) -> str:
     """Return matching LTWA patterns for given title to abbreviate."""
     if title not in __state['abbrevs'] or not __state['abbrevs'][title]:
-        raise NotComputedYetError
+        raise NotComputedYetError(title)
     return __state['abbrevs'][title]['matchingPatterns']
 
 

@@ -1,5 +1,5 @@
 [flake8]
-ignore = F401,I202
+ignore = F401,I202,D107
 import-order-style = google
 exclude =
     .git,
