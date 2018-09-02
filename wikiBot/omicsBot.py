@@ -202,8 +202,8 @@ def createOmicsRedirect(title: str, rType: str,
             save(rPage, rNewContent,
                  'Create redirect from predatory publisher\'s journal.',
                  overwrite=False, limitType='create')
-            if not rTalkPage.exists():
-                content = '{{WPJournals}}'
+            if rType == 'plain' and not rTalkPage.exists():
+                content = '{{WPJournals|class=redirect}}'
                 save(rTalkPage, content,
                      'Create redirect from predatory publisher\'s journal.',
                      overwrite=False, limitType='talk')
@@ -214,9 +214,9 @@ def createOmicsRedirect(title: str, rType: str,
         if not tryOnly:
             if rTalkPage.exists():
                 print('Done: [[' + title + ']].')
-            else:
+            elif rType == 'plain':
                 print('Done, but creating talk page: [[' + title + ']].')
-                content = '{{WPJournals}}'
+                content = '{{WPJournals|class=redirect}}'
                 save(rTalkPage, content,
                      'Create redirect from predatory publisher\'s journal.',
                      overwrite=False, limitType='talk')
@@ -246,8 +246,8 @@ def createOmicsRedirect(title: str, rType: str,
         save(rPage, rNewContent,
              'Fix redirect from predatory publisher\'s journal.',
              overwrite=True, limitType='fix')
-        if not rTalkPage.exists():
-            content = '{{WPJournals}}'
+        if rType == 'plain' and not rTalkPage.exists():
+            content = '{{WPJournals|class=redirect}}'
             save(rTalkPage, content,
                  'Fix redirect from predatory publisher\'s journal.',
                  overwrite=False, limitType='talk')
