@@ -11,16 +11,14 @@ import state
 
 
 # ==Some basic config==
-# Max number of pages to scrape.
-SCRAPE_LIMIT = 10000
 # Max number of edits to make (in one run of the script).
-EDITS_LIMITS = {'create': 15, 'talk': 15, 'fix': 15, 'hatnote': 0}
+EDITS_LIMITS = {'create': 10000, 'talk': 10000, 'fix': 10000, 'hatnote': 0}
 EDITS_DONE = {'create': 0, 'talk': 0, 'fix': 0, 'hatnote': 0}
 # If true, only print what we would do, don't edit.
 ONLY_SIMULATE_EDITS = False
 STATE_FILE_NAME = 'abbrevBotState.json'
 # Whether to tag edits as 'bot trial' in Wikipedia.
-BOT_TRIAL = True
+BOT_TRIAL = False
 
 # pywikibot's main object.
 site = None
@@ -32,16 +30,27 @@ def main() -> None:
     logging.basicConfig(level=logging.WARNING)
     state.loadOrInitState(STATE_FILE_NAME)
     site = pywikibot.Site('en')
-    filename = 'srp.txt'
-    rTarget = 'Scientific Research Publishing'
-    rCat = 'Scientific Research Publishing academic journals'
-    # filename = 'omics.txt'
-    # rTarget = 'OMICS Publishing Group'
-    # rCat = 'OMICS Publishing Group academic journals'
-    # filename = 'baishideng.txt'
-    # rTarget = 'Baishideng Publishing Group'
-    # rCat = ''
-    with open(filename) as f:
+    #filename = 'srp.txt'
+    #rTarget = 'Scientific Research Publishing'
+    #filename = 'omics.txt'
+    #rTarget = 'OMICS Publishing Group'
+    #filename = 'baishideng.txt'
+    #rTarget = 'Baishideng Publishing Group'
+    #filename = 'ame.txt'
+    #rTarget = 'AME Publishing Company'
+    #filename = 'e.txt'
+    #rTarget = 'e-Century Publishing Corporation'
+    #filename = 'jacobs.txt'
+    #rTarget = 'Jacobs Publishers'
+    #filename = 'pulsus.txt'
+    #rTarget = 'Pulsus Group'
+    filename = 'spg.txt'
+    rTarget = 'Science Publishing Group'
+    #filename = 'BenthamOpen.txt'
+    #rTarget = 'Bentham Science Publishers'
+    #rCat = 'Bentham Open academic journals'
+    rCat = rTarget + ' academic journals'
+    with open('lists/' + filename) as f:
         for title in f:
             title = title.strip()
             if not title:
@@ -57,6 +66,11 @@ def doOmicsRedirects(title: str, rTarget: str, rCat: str) -> None:
     # If [[title]] exists, add '(journal)', unless its a redirect
     # (either one we did, maybe to be fixed, or an unexpected one we'll skip).
     addJournal = False
+    if '(journal)' in title:
+        title = title.replace('(journal)', '').strip()
+        addJournal = True
+    if '(' in title:
+        print('Skip: [[' + title + ']] has unexpected disambuig.')
     page = pywikibot.Page(site, title)
     if page.exists() and not page.isRedirectPage():
         addJournal = True
@@ -64,10 +78,11 @@ def doOmicsRedirects(title: str, rTarget: str, rCat: str) -> None:
             print('Skip: [[' + title + ']] already exists, '
                   'title already has "journal".')
             return
-        if 'journal' in [cat.title().lower() for cat in page.categories()]:
-            print('Skip: [[' + title + ']] already exists, '
-                  'has category containing "journal".')
-            return
+        for cat in page.categories():
+            if 'journal' in cat.title().lower():
+                print('Skip: [[' + title + ']] already exists, '
+                      'has category containing "journal".')
+                return
 
     # List of redirect pages to create, together with their type.
     rTitles = set([(title, 'plain')])
@@ -77,6 +92,15 @@ def doOmicsRedirects(title: str, rTarget: str, rCat: str) -> None:
         rTitles.add((title.replace(' and ', ' & '), 'and'))
     elif ' & ' in title and 'Acta' not in title:
         rTitles.add((title.replace(' & ', ' and '), 'and'))
+
+    # Handle variant without 'The' at the beginning.
+    if title.startswith('The '):
+        rTitle = title.replace('The ', '')
+        rTitles.add((rTitle, 'the'))
+        if ' and ' in rTitle:
+            rTitles.add((rTitle.replace(' and ', ' & '), 'theand'))
+        elif ' & ' in rTitle and 'Acta' not in rTitle:
+            rTitles.add((rTitle.replace(' & ', ' and '), 'theand'))
 
     # Handle ISO-4 abbreviated variants.
     state.saveTitleToAbbrev(title)
@@ -92,7 +116,7 @@ def doOmicsRedirects(title: str, rTarget: str, rCat: str) -> None:
 
     # Skip if any of the redirect variants exists and is unfixable.
     for (rTitle, rType) in rTitles:
-        if addJournal:
+        if addJournal and rType != 'iso4':
             rTitle = rTitle + ' (journal)'
 
         r = createOmicsRedirect(rTitle, rType, rTarget, rCat, tryOnly=True)
@@ -102,7 +126,7 @@ def doOmicsRedirects(title: str, rTarget: str, rCat: str) -> None:
 
     # Create the redirects.
     for (rTitle, rType) in rTitles:
-        if addJournal:
+        if addJournal and rType != 'iso4':
             rTitle = rTitle + ' (journal)'
         createOmicsRedirect(rTitle, rType, rTarget, rCat, tryOnly=False)
 
@@ -183,11 +207,16 @@ def createOmicsRedirect(title: str, rType: str,
     rText = '#REDIRECT[[' + target + ']]\n'
     rCat = '[[Category:' + category + ']]\n' if category else ''
     rIsoCat = '{{R from ISO 4}}\n'
-    if ' & ' in title:
-        rSort = '{{DEFAULTSORT:' + title.replace(' & ', ' and ') + '}}\n'
+    rSortTitle = title
+    if rSortTitle.startswith('The ') and '(' not in title:
+        rSortTitle = rSortTitle.replace('The ', '') + ', The'
+    if ' & ' in rSortTitle:
+        rSortTitle = rSortTitle.replace(' & ', ' and ')
+    if rSortTitle != title:
+        rSort = '{{DEFAULTSORT:' + rSortTitle + '}}\n'
 
     rNewContent = rText
-    if ' & ' in title:
+    if rSortTitle != title:
         rNewContent += rSort
     if rType == 'plain':
         rNewContent += rCat
@@ -210,7 +239,7 @@ def createOmicsRedirect(title: str, rType: str,
         return 'create'
     # If rPage exists, check if we would add basically the same.
     text = rPage.text
-    if re.sub(r'\s', '', text, re.M) == re.sub(r'\s', '', rNewContent, re.M):
+    if re.sub(r'\s', '', text, re.M).strip() == re.sub(r'\s', '', rNewContent, re.M).strip():
         if not tryOnly:
             if rTalkPage.exists():
                 print('Done: [[' + title + ']].')
@@ -225,9 +254,8 @@ def createOmicsRedirect(title: str, rType: str,
     if rCat:
         text = text.replace(rCat.strip(), '')
     text = text.replace(rIsoCat.strip(), '')
-    if ' & ' in title:
-        text = text.replace(rSort.strip(), '')
-    if re.sub(r'\s', '', text, re.M) != re.sub(r'\s', '', rText, re.M):
+    text = re.sub(r'\{\{DEFAULTSORT:[^\}]*\}\}', '', text)
+    if re.sub(r'\s', '', text, re.M).strip() != re.sub(r'\s', '', rText, re.M).strip():
         print('Not fixable: [[' + title + ']]  (type=' + rType + ').')
         print('---IS-------------')
         print(rPage.text)
@@ -274,7 +302,7 @@ def save(page: pywikibot.Page, content: str,
               minor=False,
               botflag=True,
               watch="nochange",
-              createOnly=False if overwrite else True,
+              createonly=False if overwrite else True,
               nocreate=True if overwrite else False,
               tags='bot trial' if BOT_TRIAL else None)
     return True
