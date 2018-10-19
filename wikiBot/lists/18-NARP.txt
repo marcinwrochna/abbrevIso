@@ -1,0 +1,530 @@
+target = Category:North American Research Publishing academic journals
+category =        North American Research Publishing academic journals
+---
+    North American Open Accounting & Taxation Research Journal
+    North American Open Accounting Research Journal
+    North American Open Addiction & Therapy Research Journal
+    North American Open Addiction Research Journal
+    North American Open Administration Science Research Journal
+    North American Open Advanced Agricultural Engineering Research Journal
+    North American Open Advanced Agricultural Research Journal
+    North American Open Advanced Analysis Research Journal
+    North American Open Advanced Biochemistry & Microbiology Research Journal
+    North American Open Advanced Bioengineering Research Journal
+    North American Open Advanced Biotechnology Research Journal
+    North American Open Advanced Calculus Research Journal
+    North American Open Advanced Cell Biology Research Journal
+    North American Open Advanced Engineering Research Journal
+    North American Open Advanced Mathematics & Physics Research Journal
+    North American Open Advanced Mathematics Research Journal
+    North American Open Advanced Mechanical Engineering Research Journal
+    North American Open Advanced Mechanics Research Journal
+    North American Open Advanced Nanomaterials Research Journal
+    North American Open Advanced Physics Research Journal
+    North American Open Advanced Software Engineering Research Journal
+    North American Open Aerospace Engineering Research Journal
+    North American Open Aging Research Journal
+    North American Open Agricultural Biotechnology & Sustainable Development Research Journal
+    North American Open Agricultural Chemistry Research Journal
+    North American Open Agricultural Development & Economics Research Journal
+    North American Open Agricultural Engineering & Biotechnology Research Journal
+    North American Open Agricultural Extension & Rural Development Research Journal
+    North American Open Agricultural Management & Economics Research Journal
+    North American Open Agricultural Process Engineering Research Journal
+    North American Open Agricultural Processing Research Journal
+    North American Open Agricultural Production Engineering Research Journal
+    North American Open Agricultural Sciences & Technology Research Journal
+    North American Open Agricultural Waste & Management Research Journal
+    North American Open Agriculture & Biology Research Journal
+    North American Open Agriculture & Development Research Journal
+    North American Open Agriculture & Economics Research Journal
+    North American Open Agriculture & Finance Research Journal
+    North American Open Agriculture & Food Chemistry Research Journal
+    North American Open Agriculture & Food Technology Research Journal
+    North American Open Agriculture & Forestry Research Journal
+    North American Open Agriculture & Management Research Journal
+    North American Open Agriculture & Soil Science Research Journal
+    North American Open Agriculture Engineering Research Journal
+    North American Open Agriculture Research Journal
+    North American Open Agro-Industrial Engineering Research Journal
+    North American Open Agronomy Research Journal
+    North American Open Air Conditioning Engineering Research Journal
+    North American Open Alternative Energy & Petroleum Technology Research Journal
+    North American Open Alternative Energy Research Journal
+    North American Open Alzheimer's Research Journal
+    North American Open Analytic Geometry Research Journal
+    North American Open Analytical Biochemistry Research Journal
+    North American Open Analytical Chemistry Research Journal
+    North American Open Analytical Science and Engineering Research Journal
+    North American Open Anatomy & Physiology Research Journal
+    North American Open Animal & Environmental Biology Research Journal
+    North American Open Animal Health & Veterinary Medicine Research Journal
+    North American Open Animal Physiology Research Journal
+    North American Open Animal Science Research Journal
+    North American Open Anthropology Research Journal
+    North American Open Applications of Discrete Mathematics Research Journal
+    North American Open Applied Agricultural Engineering Research Journal
+    North American Open Applied Agricultural Research Journal
+    North American Open Applied Anthropology Research Journal
+    North American Open Applied Chemical Engineering Research Journal
+    North American Open Applied Chemical Science Research Journal
+    North American Open Applied Chemistry Research Journal
+    North American Open Applied Electronics & Interfacing Research Journal
+    North American Open Applied Engineering Research Journal
+    North American Open Applied Engineering in Agriculture Research Journal
+    North American Open Applied Environmental Sciences Research Journal
+    North American Open Applied Physics Research Journal
+    North American Open Applied Science & Technology Research Journal
+    North American Open Applied Sociology Research Journal
+    North American Open Applied Statistics Research Journal
+    North American Open Aquaculture Engineering Research Journal
+    North American Open Aquatic Ecology Research Journal
+    North American Open Archaeology Research Journal
+    North American Open Architectural Engineering Research Journal
+    North American Open Arthritis & Therapy Research Journal
+    North American Open Arts & Literature Research Journal
+    North American Open Arts Research Journal
+    North American Open Astrobiology Research Journal
+    North American Open Astronomy & Astrophysics Research Journal
+    North American Open Astronomy Research Journal
+    North American Open Astrophysics Research Journal
+    North American Open Atomic, Molecular & Optical Physics Research Journal
+    North American Open Automotive Engineering Research Journal
+    North American Open Baking Process Technology Research Journal
+    North American Open Banking and Accounting Research Journal
+    North American Open Banking and Management Research Journal
+    North American Open Basic & Applied Science Research Journal
+    North American Open Basic Sciences of Medicine Research Journal
+    North American Open Behavioral Health & Neuroscience Research Journal
+    North American Open Behavioural Sciences Research Journal
+    North American Open Biochemistry & Biotechnology Research Journal
+    North American Open Biochemistry Research Journal
+    North American Open Biodiversity and Conservation Research Journal
+    North American Open Biofertilizers & Biopesticides Research Journal
+    North American Open Biological Chemistry Research Journal
+    North American Open Biological Engineering Research Journal
+    North American Open Biological Sciences Research Journal
+    North American Open Biomedical Engineering Research Journal
+    North American Open Biophysics Research Journal
+    North American Open Bioresource Technology Research Journal
+    North American Open Biosecurity Research Journal
+    North American Open Biotechnology & Bioengineering Research Journal
+    North American Open Biotechnology Research Journal
+    North American Open Botany Research Journal
+    North American Open Brain & Cognitive Sciences Research Journal
+    North American Open Business & Management Research Journal
+    North American Open Business & Marketing Research Journal
+    North American Open Business & Rural Development Studies Research Journal
+    North American Open Business & Technology Research Journal
+    North American Open Business Administration & Management Research Journal
+    North American Open Business Administration Research Journal
+    North American Open Business Development Research Journal
+    North American Open Business Management & Information Technology Research Journal
+    North American Open Business Research Journal
+    North American Open Business, Economics & Finance Research Journal
+    North American Open Cancer & Tumor Research Journal
+    North American Open Cancer Research Journal
+    North American Open Carbon Nanotechnology Research Journal
+    North American Open Cardiovascular Disease Research Journal
+    North American Open Catalyst Research Journal
+    North American Open Cell & Animal Biology Research Journal
+    North American Open Cell Biology & Genetics Research Journal
+    North American Open Cell Biology Research Journal
+    North American Open Ceramic Engineering Research Journal
+    North American Open Cereals & Oilseeds Research Journal
+    North American Open Chemical Engineering & Materials Science Research Journal
+    North American Open Chemical Engineering & Processing Technology Research Journal
+    North American Open Chemical Engineering Research Journal
+    North American Open Chemical Science Research Journal
+    North American Open Chemistry & Chemical Engineering Research Journal
+    North American Open Chemistry & Materials Science Research Journal
+    North American Open Chemistry Research Journal
+    North American Open Chemosphere Research Journal
+    North American Open Circuits & Systems Research Journal
+    North American Open Civil & Environmental Engineering Research Journal
+    North American Open Civil Engineering & Construction Technology Research Journal
+    North American Open Civil Engineering Research Journal
+    North American Open Civil Mechanical Engineering Research Journal
+    North American Open Classical Physics Research Journal
+    North American Open Cleaner Production Research Journal
+    North American Open Climate Change & Ecological Research Journal
+    North American Open Climate Change Research Journal
+    North American Open Clinical Immunopathology & Immunology Research Journal
+    North American Open Clinical Medicine Research Journal
+    North American Open Clinical Pathology Research Journal
+    North American Open Clinical Practice Research Journal
+    North American Open Clinical Reviews & Opinions Research Journal
+    North American Open Clothing Science Research Journal
+    North American Open Coal Science & Engineering Research Journal
+    North American Open Colloid & Interface Science Research Journal
+    North American Open Composite Materials Research Journal
+    North American Open Composting Technology Research Journal
+    North American Open Computation Techniques in the Materials Science Research Journal
+    North American Open Computational Intelligence in Bioinformatics Research Journal
+    North American Open Computational Linear Algebra Research Journal
+    North American Open Computational Physics Research Journal
+    North American Open Computational Science & Engineering Research Journal
+    North American Open Computer & Internet Security System Research Journal
+    North American Open Computer Engineering Research Journal
+    North American Open Computer Science & Application Research Journal
+    North American Open Computer Science & Technology Research Journal
+    North American Open Computer Science Research Journal
+    North American Open Computers & Civil Engineering Research Journal
+    North American Open Computers & Electrical Engineering Research Journal
+    North American Open Computers & Mechanical Engineering Research Journal
+    North American Open Condensed Matter Physics Research Journal
+    North American Open Construction Engineering & Management Research Journal
+    North American Open Control Science & Engineering Research Journal
+    North American Open Creative Education Research Journal
+    North American Open Database Theory & Application Research Journal
+    North American Open Demographic Research Journal
+    North American Open Depression Research Journal
+    North American Open Dermatology & Venereology Research Journal
+    North American Open Design Engineering Research Journal
+    North American Open Developing Country Education Research Journal
+    North American Open Developmental Microbiology Research Journal
+    North American Open Diabetes & Endocrinology Research Journal
+    North American Open Digital Signal Engineering Research Journal
+    North American Open Drying Process Engineering Research Journal
+    North American Open Dynamics of Fluids Engineering Research Journal
+    North American Open Ear, Nose & Throat Research Journal
+    North American Open Earth & Planetary Science Research Journal
+    North American Open Earth Science & Engineering Research Journal
+    North American Open Earthquake Engineering Research Journal
+    North American Open Ecohydrology & Climate Change Research Journal
+    North American Open Ecology Research Journal
+    North American Open Economics & Finance Research Journal
+    North American Open Economics Research Journal
+    North American Open Ecosystem Research Journal
+    North American Open Educational Research Journal
+    North American Open Educational Sustainability, Management & Leadership Research Journal
+    North American Open Electrical & Electronics Engineering Research Journal
+    North American Open Electrochemical Science Research Journal
+    North American Open Electromagnetic Science Research Journal
+    North American Open Electronics Cooling & Thermal Control Research Journal
+    North American Open Energy & Combustion Science Research Journal
+    North American Open Energy & Economics Research Journal
+    North American Open Energy & Power Research Journal
+    North American Open Energy Conversion & Management Research Journal
+    North American Open Energy Engineering Research Journal
+    North American Open Energy Management & Policy Research Journal
+    North American Open Energy Research Journal
+    North American Open Energy Science & Technology Research Journal
+    North American Open Energy, Sustainability & Environment Research Journal
+    North American Open Engineering & Computer Innovations Research Journal
+    North American Open Engineering & Manufacturing Science Research Journal
+    North American Open Engineering & Technology Research Journal
+    North American Open Engineering Studies Research Journal
+    North American Open Engineering Technology Research Journal
+    North American Open English & Literature Research Journal
+    North American Open Entomology Research Journal
+    North American Open Environment & Agriculture Research Journal
+    North American Open Environment & Applied Science Research Journal
+    North American Open Environment & Development Economics Research Journal
+    North American Open Environment & Energy Research Journal
+    North American Open Environmental & Earth Sciences Research Journal
+    North American Open Environmental & Occupational Health Sciences Research Journal
+    North American Open Environmental Chemistry Research Journal
+    North American Open Environmental Control Engineering Research Journal
+    North American Open Environmental Engineering & Management Research Journal
+    North American Open Environmental Engineering Research Journal
+    North American Open Environmental Forensics Research Journal
+    North American Open Environmental Health Science Research Journal
+    North American Open Environmental Health Sciences & Toxicology Research Journal
+    North American Open Environmental Protection & Management Science Research Journal
+    North American Open Environmental Protection Research Journal
+    North American Open Environmental Science & Development Research Journal
+    North American Open Environmental Science & Engineering Research Journal
+    North American Open Environmental Science & Technology Research Journal
+    North American Open Environmental Science & Water Resources Research Journal
+    North American Open Environmental Science Research Journal
+    North American Open Environmental Toxicology Research Journal
+    North American Open Experimental Oncology Research Journal
+    North American Open Farm Structures Engineering Research Journal
+    North American Open Finance & Accounting Research Journal
+    North American Open Finance & Banking Research Journal
+    North American Open Finance & Management Research Journal
+    North American Open Finance Research Journal
+    North American Open Fish Process Engineering Research Journal
+    North American Open Fisheries & Aquaculture Research Journal
+    North American Open Fisheries Research Journal
+    North American Open Fluid Dynamics Research Journal
+    North American Open Food & Nutrition Research Journal
+    North American Open Food & Public Health Research Journal
+    North American Open Food Bioprocess Engineering Research Journal
+    North American Open Food Chemistry Research Journal
+    North American Open Food Process Engineering Research Journal
+    North American Open Food Science & Technology Research Journal
+    North American Open Foreign Trade & Policy Research Journal
+    North American Open Forensic Medicine Research Journal
+    North American Open Forensic Science Research Journal
+    North American Open Forest & Mountain Ecology Research Journal
+    North American Open Forestry & Plant Science Research Journal
+    North American Open Forestry Science Research Journal
+    North American Open Foundation Mathematics Research Journal
+    North American Open Frontiers in Science Research Journal
+    North American Open Fuel & Energy Research Journal
+    North American Open Fuel Processing Technology Research Journal
+    North American Open Fuels Research Journal
+    North American Open Game Theory Research Journal
+    North American Open Gastroenterology & Hepatology Research Journal
+    North American Open General Engineering Research Journal
+    North American Open Genetics Engineering Research Journal
+    North American Open Genetics Research Journal
+    North American Open Geographic Information System Research Journal
+    North American Open Geography & Natural Disasters Research Journal
+    North American Open Geography Research Journal
+    North American Open Globalization & Industrial Technology Research Journal
+    North American Open Grain Handling Technology Research Journal
+    North American Open Grain Storage Engineering Research Journal
+    North American Open Green Chemistry Research Journal
+    North American Open HIV & AIDS Research Journal
+    North American Open Hazard & Disaster Management Research Journal
+    North American Open Hazardous Materials Research Journal
+    North American Open Health Science Research Journal
+    North American Open Heat & Mass Transfer Research Journal
+    North American Open Herbal Medicine Research Journal
+    North American Open Histology Research Journal
+    North American Open History & Culture Research Journal
+    North American Open History Research Journal
+    North American Open Horticulture & Forestry Research Journal
+    North American Open Hospitality Administration & Management Research Journal
+    North American Open Human Geography Research Journal
+    North American Open Human Physiology Research Journal
+    North American Open Human Resource Development Research Journal
+    North American Open Human Resource Management Research Journal
+    North American Open Humanities & Social Science Research Journal
+    North American Open Hydraulic Engineering Research Journal
+    North American Open Industrial & Processing Technology Research Journal
+    North American Open Industrial & Production Engineering Research Journal
+    North American Open Industrial & Technology Management Research Journal
+    North American Open Industrial Chemistry Research Journal
+    North American Open Industrial Engineering & Management Research Journal
+    North American Open Industrial Engineering & Technology Research Journal
+    North American Open Industrial Technology Research Journal
+    North American Open Infectious Diseases & Immunity Research Journal
+    North American Open Information & Communications Technology Research Journal
+    North American Open Information & Computation Technology Research Journal
+    North American Open Information Science & Application Research Journal
+    North American Open Information Science & Education Research Journal
+    North American Open Information Science & Internet Technology Journal
+    North American Open Information Science & Technology Research Journal
+    North American Open Information Science Research Journal
+    North American Open Information Technology & Library Science Research Journal
+    North American Open Information Technology & Operations Management Research Journal
+    North American Open Informetrics Research Journal
+    North American Open Inorganic Chemistry Research Journal
+    North American Open Instrumentation Science Research Journal
+    North American Open Internal Medicine Research Journal
+    North American Open Lakes & Rivers Research Journal
+    North American Open Languages & Culture Research Journal
+    North American Open Law Research Journal
+    North American Open Leadership Research Journal
+    North American Open Librarianship & Information Science Research Journal
+    North American Open Library Administration Research Journal
+    North American Open Library History & Metadata Research Journal
+    North American Open Library Management Research Journal
+    North American Open Linear Algebra & Matrix Theory Research Journal
+    North American Open Linguistics Research Journal
+    North American Open Livestock Product & Technology Research Journal
+    North American Open Livestock Production Research Journal
+    North American Open Management & Technology Research Journal
+    North American Open Management Research Journal
+    North American Open Marine Engineering Research Journal
+    North American Open Marine Geosciences Research Journal
+    North American Open Marine Science Research Journal
+    North American Open Marketing & Management Research Journal
+    North American Open Marketing Research Journal
+    North American Open Materials Chemistry Research Journal
+    North American Open Materials Science Research Journal
+    North American Open Mathematical Finance Research Journal
+    North American Open Mathematical Modelling & Applied Computing Research Journal
+    North American Open Mathematics & Physical Science Research Journal
+    North American Open Mathematics Research Journal
+    North American Open Mechanical Engineering Research Journal
+    North American Open Media & Mass Communication Research Journal
+    North American Open Medical & Diagnostic Biochemistry Research Journal
+    North American Open Medical Case Studies Research Journal
+    North American Open Medical Genetics & Genomics Research Journal
+    North American Open Medical Laboratory & Diagnosis Research Journal
+    North American Open Medical Practice & Reviews Research Journal
+    North American Open Medical Science & Public Health Research Journal
+    North American Open Medical Science & Technology Research Journal
+    North American Open Medical Sciences & Medicine Research Journal
+    North American Open Medicinal Chemistry Research Journal
+    North American Open Medicinal Plant Research Journal
+    North American Open Metabolic Biochemistry Research Journal
+    North American Open Metabolomics & Systems Biology Research Journal
+    North American Open Metal & Steel Research Journal
+    North American Open Microbial Ecology Research Journal
+    North American Open Microbiology & Antimicrobials Research Journal
+    North American Open Microbiology Research Journal
+    North American Open Microeconomics & Macroeconomics Research Journal
+    North American Open Microelectronics & Solid State Electronics Research Journal
+    North American Open Microscopy & Cytometry Research Journal
+    North American Open Mineral Science Research Journal
+    North American Open Minerals, Materials Characterization & Engineering Research Journal
+    North American Open Mining & Mineral Engineering Research Journal
+    North American Open Modern Language Research Journal
+    North American Open Modern Nonlinear Theory & Application Research Journal
+    North American Open Molecular Biology Research Journal
+    North American Open Molecular Catalysis Research Journal
+    North American Open Molecular Chemistry Research Journal
+    North American Open Molecular Genetics Research Journal
+    North American Open Molecular Medicine Research Journal
+    North American Open Molecular Nanotechnology Research Journal
+    North American Open Multidisciplinary Research Journal
+    North American Open Multimedia Research Journal
+    North American Open Music & Dance Research Journal
+    North American Open NGO Research Journal
+    North American Open Nanomaterials Research Journal
+    North American Open Nanoscience Research Journal
+    North American Open Natural Science Research Journal
+    North American Open Networking & Computer Engineering Research Journal
+    North American Open Neurochemistry Research Journal
+    North American Open Neuroscience Research Journal
+    North American Open Nuclear Engineering Research Journal
+    North American Open Nuclear Science Research Journal
+    North American Open Nursing & Midwifery Research Journal
+    North American Open Nursing Science Research Journal
+    North American Open Nutrition & Metabolism Research Journal
+    North American Open Obstetrics & Gynecology Research Journal
+    North American Open Ocean & Oceanography Research Journal
+    North American Open Ocean Engineering Research Journal
+    North American Open Oceans & Oceanography Research Journal
+    North American Open Operations Management & Services Research Journal
+    North American Open Operations Research Journal
+    North American Open Ophthalmology Research Journal
+    North American Open Optics & Nanophotonics Research Journal
+    North American Open Optics Science Research Journal
+    North American Open Optoelectronic Engineering Research Journal
+    North American Open Oral Hygiene & Dentistry Research Journal
+    North American Open Organic Chemistry Research Journal
+    North American Open Parasitology Immunology Research Journal
+    North American Open Parasitology Research Journal
+    North American Open Peace & Development Research Journal
+    North American Open Pediatric Science Research Journal
+    North American Open Petroleum & Gas Engineering Research Journal
+    North American Open Pharmaceutical Biotechnology Research Journal
+    North American Open Pharmaceutical, Biological & Chemical Sciences Research Journal
+    North American Open Pharmacology & Microbiology Research Journal
+    North American Open Pharmacology & Pharmacy Research Journal
+    North American Open Pharmacy Research Journal
+    North American Open Philosophy Research Journal
+    North American Open Physical & Analytical Science Research Journal
+    North American Open Physical Chemistry Research Journal
+    North American Open Physical Science Research Journal
+    North American Open Physiology & Pathophysiology Research Journal
+    North American Open Physiology Research Journal
+    North American Open Phytotherapy & Pharmacognosy Research Journal
+    North American Open Plant & Soil Science Research Journal
+    North American Open Plant Breeding & Crop Science Research Journal
+    North American Open Plant Disease & Pathology Research Journal
+    North American Open Plant Genetics Research Journal
+    North American Open Plant Science Research Journal
+    North American Open Plant Sciences Research Journal
+    North American Open Political Science Research Journal
+    North American Open Politics and International Relation Research Journal
+    North American Open Polymer Chemistry Research Journal
+    North American Open Polymer Degradation & Stability Research Journal
+    North American Open Polymer Science Research Journal
+    North American Open Postharvest Engineering Research Journal
+    North American Open Postharvest Operations Engineering Research Journal
+    North American Open Prevention & Treatment Research Journal
+    North American Open Psychiatry Research Journal
+    North American Open Psychology Research Journal
+    North American Open Psychrometry Engineering Research Journal
+    North American Open Public Health & Epidemiology Research Journal
+    North American Open Public Health Research Journal
+    North American Open Public Health, Water & Food Research Journal
+    North American Open Pure & Applied Mathematics Research Journal
+    North American Open Pure Mathematics Research Journal
+    North American Open Pyrolysis Technology Research Journal
+    North American Open Quantum Mechanics Research Journal
+    North American Open Quantum Physics Research Journal
+    North American Open Radio Engineering Journal Research Journal
+    North American Open Radiology Research Journal
+    North American Open Recycling of Organic Waste in Agriculture Research Journal
+    North American Open Religion Research Journal
+    North American Open Renewable & Sustainable Energy Research Journal
+    North American Open Renewable Energy & Smart Grid Research Journal
+    North American Open Renewable Energy Research Journal
+    North American Open Resources & Environment Research Journal
+    North American Open Resources & Recycling Research Journal
+    North American Open Rheumatology Diseases Research Journal
+    North American Open Roads & Highway Engineering Research Journal
+    North American Open Robotic Engineering Research Journal
+    North American Open Safety Engineering Research Journal
+    North American Open Science & Entrepreneurship Research Journal
+    North American Open Science & Environment Research Journal
+    North American Open Science & Technology Research Journal
+    North American Open Science, Technology & Engineering Research Journal
+    North American Open Scientific Research & Essays Journal
+    North American Open Sensor Technology Research Journal
+    North American Open Separation & Purification Technology Research Journal
+    North American Open Separation Process Engineering Research Journal
+    North American Open Smart House Research Journal
+    North American Open Social Science & Geography Research Journal
+    North American Open Social Science & Management Research Journal
+    North American Open Social Science Research Journal
+    North American Open Sociological Science Research Journal
+    North American Open Software Engineering Research Journal
+    North American Open Soil & Agricultural Research Journal
+    North American Open Soil & Crop Science Research Journal
+    North American Open Soil & Erosion Research Journal
+    North American Open Soil Science & Environmental Management Research Journal
+    North American Open Soil Science Research Journal
+    North American Open Solid-State Chemistry Research Journal
+    North American Open Solid-State Science Research Journal
+    North American Open Spinal Cord Research Journal
+    North American Open Sports Science Research Journal
+    North American Open Statistical Design & Analysis Research Journal
+    North American Open Statistics & Mathematics Research Journal
+    North American Open Statistics Research Journal
+    North American Open Stomatological Research Journal
+    North American Open Stored Product Protection Engineering Research Journal
+    North American Open Stored Products & Postharvest Research Journal
+    North American Open Stroke Research Journal
+    North American Open Studies & Development Research Journal
+    North American Open Surface & Coatings Technology Research Journal
+    North American Open Surface Science Research Journal
+    North American Open Surgical Application Research Journal
+    North American Open Sustainability Research Journal
+    North American Open Sustainable Agriculture Research Journal
+    North American Open Synthetic Chemistry Research Journal
+    North American Open Technology Education Research Journal
+    North American Open Telecommunication Engineering Research Journal
+    North American Open Textile Science Research Journal
+    North American Open Theoretical Chemistry Research Journal
+    North American Open Theoretical Physics Research Journal
+    North American Open Thermal & Catalytic Process Research Journal
+    North American Open Thermal Engineering Research Journal
+    North American Open Thermodynamics Research Journal
+    North American Open Tourism & Business Research Journal
+    North American Open Tourism Management Research Journal
+    North American Open Traffic & Transportation Engineering Research Journal
+    North American Open Transfusion Science Research Journal
+    North American Open Transportation Engineering Research Journal
+    North American Open Tumor Therapy Research Journal
+    North American Open Urology & Nephrology Research Journal
+    North American Open Vaccine & Vaccination Research Journal
+    North American Open Vector Biology Research Journal
+    North American Open Veterinary Medicine Research Journal
+    North American Open Veterinary Science & Animal Health Research Journal
+    North American Open Virology Research Journal
+    North American Open Vocational Education Research Journal
+    North American Open Waste Management & Technology Research Journal
+    North American Open Waste Management Research Journal
+    North American Open Waste Recycling Engineering Research Journal
+    North American Open Waste to Energy Research Journal
+    North American Open Water Resources & Environmental Engineering Research Journal
+    North American Open Water Science Research Journal
+    North American Open Water, Soil & Air Pollution Research Journal
+    North American Open Web & Database Technology Research Journal
+    North American Open Web & Grid Services Research Journal
+    North American Open Web Engineering Research Journal
+    North American Open Wildlife Ecology Research Journal
+    North American Open Wireless & Mobile Communications Engineering Research Journal
+    North American Open Wireless Networks & Applications Research Journal
+    North American Open Wireless Networks & Communications Research Journal
+    North American Open Zoology Research Journal

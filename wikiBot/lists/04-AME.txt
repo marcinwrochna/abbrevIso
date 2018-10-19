@@ -1,3 +1,6 @@
+target = AME Publishing Company
+category = AME Publishing Company academic journals
+---
 AME Case Reports
 AME Medical Journal
 Annals of Blood

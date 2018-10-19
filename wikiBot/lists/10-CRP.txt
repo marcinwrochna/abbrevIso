@@ -1,0 +1,469 @@
+target = Category:Canadian Research Publication academic journals
+category =        Canadian Research Publication academic journals
+---
+    Canadian Open Accounting Journal
+    Canadian Open Accounting and Taxation Journal
+    Canadian Open Advanced Agricultural and Biological Science Journal
+    Canadian Open Advanced Analysis Journal
+    Canadian Open Advanced Bioengineering Journal
+    Canadian Open Advanced Biotechnology Journal
+    Canadian Open Advanced Mathematics Journal
+    Canadian Open Advanced Mechanical Engineering Journal
+    Canadian Open Advanced Mechanics Journal
+    Canadian Open Advanced Nanomaterials Journal
+    Canadian Open Advanced Software Engineering Journal
+    Canadian Open Aerospace Engineering Journal
+    Canadian Open Agricultural Biotechnology and Sustainable Development Journal
+    Canadian Open Agricultural Chemistry Journal
+    Canadian Open Agricultural Development and Economics Journal
+    Canadian Open Agricultural Economics Journal
+    Canadian Open Agricultural Economics and Finance Journal
+    Canadian Open Agricultural Engineering & Biotechnology Journal
+    Canadian Open Agricultural Extension and Rural Development Journal
+    Canadian Open Agricultural Management and Economics Journal
+    Canadian Open Agricultural Process Engineering Journal
+    Canadian Open Agricultural Processing Journal
+    Canadian Open Agricultural Production Engineering Journal
+    Canadian Open Agricultural Science Journal
+    Canadian Open Agricultural Sciences & Technology Journal
+    Canadian Open Agricultural and Soil Science Journal
+    Canadian Open Agriculture Engineering Journal
+    Canadian Open Agriculture and Biological Science Journal
+    Canadian Open Agriculture and Finance Journal
+    Canadian Open Agriculture and Food Technology Journal
+    Canadian Open Agriculture and Forestry Journal
+    Canadian Open Agriculture and Management Journal
+    Canadian Open Agro-Industrial Engineering Journal
+    Canadian Open Agronomy Research Journal
+    Canadian Open Air Conditioning Engineering Journal
+    Canadian Open Air, Water and Soil Pollution Journal
+    Canadian Open Alternative Energy Journal
+    Canadian Open Alternative Energy and Petroleum Technology Journal
+    Canadian Open Analytic Geometry Journal
+    Canadian Open Analytical Biochemistry Journal
+    Canadian Open Analytical Chemistry Journal
+    Canadian Open Anatomy Journal
+    Canadian Open Anatomy and Physiology Journal
+    Canadian Open Animal Health and Veterinary Medicine Journal
+    Canadian Open Animal Physiology Journal
+    Canadian Open Animal Sciences Journal
+    Canadian Open Anthropology Journal
+    Canadian Open Anthropology Journal
+    Canadian Open Applications of Discrete Mathematics Journal
+    Canadian Open Applied Agricultural Engineering Journal
+    Canadian Open Applied Agricultural Journal
+    Canadian Open Applied Chemical Science Journal
+    Canadian Open Applied Chemistry Journal
+    Canadian Open Applied Electronics and Interfacing Journal
+    Canadian Open Applied Engineering Journal
+    Canadian Open Applied Engineering in Agriculture Journal
+    Canadian Open Applied Environmental Sciences Journal
+    Canadian Open Applied Sociology Journal
+    Canadian Open Aquaculture Engineering Journal
+    Canadian Open Aquatic Ecology Journal
+    Canadian Open Archaeology Journal
+    Canadian Open Architectural Engineering Journal
+    Canadian Open Arthritis and Therapy Journal
+    Canadian Open Arts Journal
+    Canadian Open Astrobiology Journal
+    Canadian Open Astronomy Journal
+    Canadian Open Astrophysics Journal
+    Canadian Open Atomic, Molecular, and Optical Physics Journal
+    Canadian Open Automotive Engineering Journal
+    Canadian Open Baking Process Technology Journal
+    Canadian Open Banking and Finance Journal
+    Canadian Open Basic Sciences of Medicine Journal
+    Canadian Open Basic and Applied Sciences Journal
+    Canadian Open Behavioral Health and Neuroscience Journal
+    Canadian Open Biochemistry Journal
+    Canadian Open Biochemistry and Biotechnology Journal
+    Canadian Open Biodiversity Conservation Journal
+    Canadian Open Biological Engineering Journal
+    Canadian Open Biological Sciences Journal
+    Canadian Open Biomedical Engineering Journal
+    Canadian Open Biomolecular Chemistry Journal
+    Canadian Open Biophysics Journal
+    Canadian Open Bioresource Technology Journal
+    Canadian Open Biosecurity Journal
+    Canadian Open Biotechnology and Bioengineering Journal
+    Canadian Open Botany Journal
+    Canadian Open Brain and Cognitive Sciences Journal
+    Canadian Open Business Administration and Management Journal
+    Canadian Open Business Development Journal
+    Canadian Open Business Journal
+    Canadian Open Business Management and Information Technology Journal
+    Canadian Open Business and Finance Journal
+    Canadian Open Business and Rural Development Studies Journal
+    Canadian Open Business, Management and Finance Journal
+    Canadian Open Calculus Journal
+    Canadian Open Cancer & Tumor Journal
+    Canadian Open Cancer Journal
+    Canadian Open Carbon Nanotechnology Journal
+    Canadian Open Catalysis Journal
+    Canadian Open Cell Biology Journal
+    Canadian Open Cell Biology and Genetics Journal
+    Canadian Open Cell and Animal Biology Journal
+    Canadian Open Ceramic Engineering Journal
+    Canadian Open Cereals and Oilseeds Journal
+    Canadian Open Chemical Engineering Journal
+    Canadian Open Chemical Engineering and Materials Science Journal
+    Canadian Open Chemical Engineering and Processing Technology Journal
+    Canadian Open Chemical Science Journal
+    Canadian Open Chemistry Journal
+    Canadian Open Chemistry and Chemical Engineering Journal
+    Canadian Open Chemistry and Materials Science Journal
+    Canadian Open Chemosphere Journal
+    Canadian Open Circuits and Systems Journal
+    Canadian Open Civil Engineering Journal
+    Canadian Open Civil Engineering and Construction Technology Journal
+    Canadian Open Civil Mechanical Engineering Journal
+    Canadian Open Classical Physics Journal
+    Canadian Open Cleaner Production Journal
+    Canadian Open Climate Change Journal
+    Canadian Open Climate Change and Ecological Science Journal
+    Canadian Open Clinical Immunopathology & Immunology Journal
+    Canadian Open Clinical Medicine Journal
+    Canadian Open Clinical Pathology Journal
+    Canadian Open Clinical Practice Journal
+    Canadian Open Clinical Reviews and Opinions Journal
+    Canadian Open Clothing Science Journal
+    Canadian Open Coal Science and Engineering Journal
+    Canadian Open Colloid and Interface Science Journal
+    Canadian Open Composite Materials Journal
+    Canadian Open Composting Technology Journal
+    Canadian Open Computation Techniques in the Materials Sciences Journal
+    Canadian Open Computational Intelligence in Bioinformatics Journal
+    Canadian Open Computational Linear Algebra Journal
+    Canadian Open Computational Physics Journal
+    Canadian Open Computational Science and Engineering Journal
+    Canadian Open Computer & Civil Engineering Journal
+    Canadian Open Computer & Electrical Engineering Journal
+    Canadian Open Computer & Mechanical Engineering Journal
+    Canadian Open Computer Engineering Journal
+    Canadian Open Computer Science and Application Journal
+    Canadian Open Computer and Internet Security System Journal
+    Canadian Open Condensed Matter Physics Journal
+    Canadian Open Construction Engineering and Management Journal
+    Canadian Open Control Science and Engineering Journal
+    Canadian Open Creative Education Journal
+    Canadian Open Crop Science Journal
+    Canadian Open Database Theory and Application Journal
+    Canadian Open Dental Science Journal
+    Canadian Open Depression Journal
+    Canadian Open Dermatology and Venereology Journal
+    Canadian Open Design Engineering Journal
+    Canadian Open Development Studies Journal
+    Canadian Open Developmental Microbiology and Molecular Biology Journal
+    Canadian Open Diabetes and Endocrinology Journal
+    Canadian Open Digital Signal Engineering Journal
+    Canadian Open Drying Process Engineering Journal
+    Canadian Open Dynamics of Fluids Engineering Journal
+    Canadian Open Ear, Nose and Throat Journal
+    Canadian Open Earth Science and Engineering Journal
+    Canadian Open Earth and Planetary Science Journal
+    Canadian Open Earthquake Engineering Journal
+    Canadian Open Ecohydrology and Climate Change Journal
+    Canadian Open Economics Journal
+    Canadian Open Economics and Finance Journal
+    Canadian Open Economics and Politics Journal
+    Canadian Open Ecosystem Journal
+    Canadian Open Educational Research Journal
+    Canadian Open Educational Science & Development Journal
+    Canadian Open Electrical and Electronics Engineering Journal
+    Canadian Open Electromagnetic Science Journal
+    Canadian Open Electronics Cooling and Thermal Control Journal
+    Canadian Open Energy Conversion and Management Journal
+    Canadian Open Energy Engineering Journal
+    Canadian Open Energy Journal
+    Canadian Open Energy Management and Policy Journal
+    Canadian Open Energy Science and Technology Journal
+    Canadian Open Energy and Combustion Science Journal
+    Canadian Open Energy and Power Journal
+    Canadian Open Engineering Studies Journal
+    Canadian Open Engineering Technology Journal
+    Canadian Open Engineering and Computer Innovations Journal
+    Canadian Open Engineering and Manufacturing Science Journal
+    Canadian Open Engineering and Technology Journal
+    Canadian Open English and Literature Journal
+    Canadian Open Entomology Journal
+    Canadian Open Environment & Earth Science Journal
+    Canadian Open Environment and Applied Science Journal
+    Canadian Open Environment and Energy Journal
+    Canadian Open Environment and Science Journal
+    Canadian Open Environment and Sustainable Agriculture Journal
+    Canadian Open Environmental Chemistry Journal
+    Canadian Open Environmental Control Engineering Journal
+    Canadian Open Environmental Engineering Journal
+    Canadian Open Environmental Engineering and Management Journal
+    Canadian Open Environmental Forensics Journal
+    Canadian Open Environmental Health Sciences & Toxicology Journal
+    Canadian Open Environmental Protection Journal
+    Canadian Open Environmental Protection and Management Science Journal
+    Canadian Open Environmental Protection and Waste Management Journal
+    Canadian Open Environmental Science & Technology Journal
+    Canadian Open Environmental Science and Development Journal
+    Canadian Open Environmental Science and Economics Journal
+    Canadian Open Environmental Science and Engineering Journal
+    Canadian Open Environmental and Civil Engineering Journal
+    Canadian Open Experimental Oncology Journal
+    Canadian Open Farm Structures Engineering Journal
+    Canadian Open Finance Journal
+    Canadian Open Finance and Accounting Journal
+    Canadian Open Finance and Banking Journal
+    Canadian Open Finance and Management Journal
+    Canadian Open Fish Process Engineering Journal
+    Canadian Open Fisheries Journal
+    Canadian Open Fisheries and Aquaculture Journal
+    Canadian Open Fluid Dynamics Journal
+    Canadian Open Food Bioprocess Engineering Journal
+    Canadian Open Food Chemistry Journal
+    Canadian Open Food Process Engineering Journal
+    Canadian Open Food Science and Technology Journal
+    Canadian Open Food and Public Health Journal
+    Canadian Open Foreign Trade and Policy Journal
+    Canadian Open Forensic Medicine Journal
+    Canadian Open Forensic Science Journal
+    Canadian Open Forest and Mountain Ecology Journal
+    Canadian Open Forestry Journal
+    Canadian Open Foundation Mathematics Journal
+    Canadian Open Frontiers in Science Journal
+    Canadian Open Fuel Processing Technology Journal
+    Canadian Open Fuel and Energy Journal
+    Canadian Open Fuels Journal
+    Canadian Open Game Theory Journal
+    Canadian Open Gastroenterology and Hepatology Journal
+    Canadian Open Gender and Development Journal
+    Canadian Open General Engineering Journal
+    Canadian Open General Microbiology Journal
+    Canadian Open Genetics Engineering Journal
+    Canadian Open Genetics Journal
+    Canadian Open Geographic Information System Journal
+    Canadian Open Geography & Regional Planning Journal
+    Canadian Open Geography Journal
+    Canadian Open Geological Engineering Journal
+    Canadian Open Grain Storage Engineering Journal
+    Canadian Open HIV & AIDS Journal
+    Canadian Open Handling Technology Journal
+    Canadian Open Hazard and Disaster Management Journal
+    Canadian Open Hazardous Materials Journal
+    Canadian Open Health and Epidemiology Journal
+    Canadian Open Heat and Mass Transfer Journal
+    Canadian Open Herbal Medicine Journal
+    Canadian Open Histology Journal
+    Canadian Open History and Culture Journal
+    Canadian Open History and Development Studies Journal
+    Canadian Open Home and Community Journal
+    Canadian Open Horticulture and Forestry Journal
+    Canadian Open Hospitality Administration and Management Journal
+    Canadian Open Human Geography Journal
+    Canadian Open Human Resource Development Journal
+    Canadian Open Human Resource Management Journal
+    Canadian Open Humanities & Social Science Journal
+    Canadian Open Hydraulic Engineering Journal
+    Canadian Open Industrial & Production Engineering Journal
+    Canadian Open Industrial Chemistry Journal
+    Canadian Open Industrial Engineering & Technology Journal
+    Canadian Open Industrial Technology Journal
+    Canadian Open Infectious Diseases and Immunity Journal
+    Canadian Open Information & Communications Technology Journal
+    Canadian Open Information Science & Technology Journal
+    Canadian Open Information Science Journal
+    Canadian Open Information Science and Application Journal
+    Canadian Open Information Science and Education Journal
+    Canadian Open Information Science and Internet Technology Journal
+    Canadian Open Information Technology & Operations Management Journal
+    Canadian Open Information Technology and Library Science Journal
+    Canadian Open Information and Computation Technology Journal
+    Canadian Open Informetrics Journal
+    Canadian Open Inorganic Chemistry Journal
+    Canadian Open Instrumentation Science Journal
+    Canadian Open Intelligent Learning Systems and Applications Journal
+    Canadian Open Internal Medicine Journal
+    Canadian Open Languages and Culture Journal
+    Canadian Open Law Journal
+    Canadian Open Leadership Journal
+    Canadian Open Leadership and Organizational Studies Journal
+    Canadian Open Library Administration Journal
+    Canadian Open Library History and Metadata Journal
+    Canadian Open Library Management Journal
+    Canadian Open Life Sciences Journal
+    Canadian Open Linear Algebra & Matrix Theory Journal
+    Canadian Open Linguistics Journal
+    Canadian Open Livestock Production Journal
+    Canadian Open Management Journal
+    Canadian Open Management and Technology Journal
+    Canadian Open Marine Engineering Journal
+    Canadian Open Marine Geosciences Journal
+    Canadian Open Marine Science Journal
+    Canadian Open Marketing Journal
+    Canadian Open Materials Chemistry Journal
+    Canadian Open Materials Science Journal
+    Canadian Open Mathematical Finance Journal
+    Canadian Open Mathematical Modeling and Applied Computing Journal
+    Canadian Open Mathematics Journal
+    Canadian Open Mathematics and Physical Science Journal
+    Canadian Open Mathematics and Physics Journal
+    Canadian Open Mechanical Engineering Journal
+    Canadian Open Media and Mass Communication Journal
+    Canadian Open Medical Case Studies Journal
+    Canadian Open Medical Genetics and Genomics Journal
+    Canadian Open Medical Laboratory and Diagnosis Journal
+    Canadian Open Medical Practice and Reviews Journal
+    Canadian Open Medical Sciences & Medicine Journal
+    Canadian Open Medical and Diagnostic Biochemistry Journal
+    Canadian Open Medicinal Plant Journal
+    Canadian Open Metabolic Biochemistry Journal
+    Canadian Open Metabolomics and Systems Biology Journal
+    Canadian Open Metal and Steel Technology Journal
+    Canadian Open Microbial Ecology Journal
+    Canadian Open Microbiology Journal
+    Canadian Open Microbiology and Antimicrobials Journal
+    Canadian Open Microeconomics and Macroeconomics Journal
+    Canadian Open Microelectronics and Solid State Electronics Journal
+    Canadian Open Microscopy and Cytometry Journal
+    Canadian Open Mineral Science Journal
+    Canadian Open Minerals & Materials Characterization & Engineering Journal
+    Canadian Open Mining and Mineral Engineering Journal
+    Canadian Open Modern Language Journal
+    Canadian Open Modern Nonlinear Theory and Application Journal
+    Canadian Open Molecular Biology Journal
+    Canadian Open Molecular Catalysis Journal
+    Canadian Open Molecular Genetics Journal
+    Canadian Open Molecular Medicine Journal
+    Canadian Open Molecular Nanotechnology Journal
+    Canadian Open Multimedia Journal
+    Canadian Open Music and Dance Journal
+    Canadian Open NGO Journal
+    Canadian Open Nanomaterials Journal
+    Canadian Open Nanoscience Journal
+    Canadian Open Natural Science Journal
+    Canadian Open Networking & Computer Engineering Journal
+    Canadian Open Neurochemistry Journal
+    Canadian Open Neuroscience Journal
+    Canadian Open Nuclear Engineering Journal
+    Canadian Open Nuclear Science Journal
+    Canadian Open Nursing Science Journal
+    Canadian Open Nursing and Midwifery Journal
+    Canadian Open Nutrition and Metabolism Journal
+    Canadian Open Obstetrics and Gynecology Journal
+    Canadian Open Ocean Engineering Journal
+    Canadian Open Ocean and Oceanography Journal
+    Canadian Open Oceans and Oceanography Journal
+    Canadian Open Operational Research Journal
+    Canadian Open Operations Management and Services Journal
+    Canadian Open Ophthalmology Journal
+    Canadian Open Optics Science Journal
+    Canadian Open Optics and Nanophotonics Journal
+    Canadian Open Optoelectronic Engineering Journal
+    Canadian Open Oral Hygiene & Dentistry Journal
+    Canadian Open Organic Chemistry Journal
+    Canadian Open Organic Waste in Agriculture Journal
+    Canadian Open Orthopaedics and Traumatology Journal
+    Canadian Open Pain Management Journal
+    Canadian Open Parasitological Journal
+    Canadian Open Parasitology Journal
+    Canadian Open Peace and Development Journal
+    Canadian Open Petroleum and Gas Engineering Journal
+    Canadian Open Pharmaceutical Biotechnology Journal
+    Canadian Open Pharmaceutical, Biological and Chemical Sciences Journal
+    Canadian Open Pharmacology & Pharmacy Journal
+    Canadian Open Pharmacology and Microbiology Journal
+    Canadian Open Pharmacy Journal
+    Canadian Open Philosophy Journal
+    Canadian Open Physical Chemistry Journal
+    Canadian Open Physics Journal
+    Canadian Open Physiology and Pathophysiology Journal
+    Canadian Open Phytotherapy & Pharmacognosy Journal
+    Canadian Open Plant Breeding and Crop Science Journal
+    Canadian Open Plant Disease and Pathology Journal
+    Canadian Open Plant Genetics Journal
+    Canadian Open Plant Sciences Journal
+    Canadian Open Political Science Journal
+    Canadian Open Polymer Degradation and Stability Journal
+    Canadian Open Polymer Science Journal
+    Canadian Open Postharvest Engineering Journal
+    Canadian Open Postharvest Operations Engineering Journal
+    Canadian Open Prevention and Treatment Journal
+    Canadian Open Psychiatry Journal
+    Canadian Open Psychology Journal
+    Canadian Open Psychometric Engineering Journal
+    Canadian Open Public Health Journal
+    Canadian Open Pure Mathematics Journal
+    Canadian Open Pyrolysis Technology Journal
+    Canadian Open Quantum Mechanics Journal
+    Canadian Open Quantum Physics Journal
+    Canadian Open Radio Engineering Journal
+    Canadian Open Radiology Journal
+    Canadian Open Religion Journal
+    Canadian Open Remote Sensing Journal
+    Canadian Open Renewable & Sustainable Energy Journal
+    Canadian Open Renewable Energy Journal
+    Canadian Open Renewable Energy and Smart Grid Journal
+    Canadian Open Resources and Environment Journal
+    Canadian Open Resources and Recycling Journal
+    Canadian Open Rheumatology Diseases Journal
+    Canadian Open Rivers and Lakes Journal
+    Canadian Open Roads and Highway Engineering Journal
+    Canadian Open Robotic Engineering Journal
+    Canadian Open Safety Engineering Journal
+    Canadian Open Science and Entrepreneurship Journal
+    Canadian Open Science and Environment Journal
+    Canadian Open Science and Technology Journal
+    Canadian Open Scientific Research and Essays Journal
+    Canadian Open Sensor Technology Journal
+    Canadian Open Separation Process Engineering Journal
+    Canadian Open Separation and Purification Technology Journal
+    Canadian Open Smart House Journal
+    Canadian Open Social Science Journal
+    Canadian Open Sociological Science Journal
+    Canadian Open Software Engineering Journal
+    Canadian Open Soil Science Journal
+    Canadian Open Soil Science and Environmental Management Journal
+    Canadian Open Soil and Erosion Journal
+    Canadian Open Solid-State Chemistry Journal
+    Canadian Open Solid-State Science Journal
+    Canadian Open Spinal Cord Journal
+    Canadian Open Sports Science Journal
+    Canadian Open Statistical Design and Analysis Journal
+    Canadian Open Statistics Journal
+    Canadian Open Statistics and Mathematics Journal
+    Canadian Open Stomatological Journal
+    Canadian Open Stored Product Protection Engineering Journal
+    Canadian Open Stored Products and Postharvest Journal
+    Canadian Open Stroke Journal
+    Canadian Open Studies and Development Journal
+    Canadian Open Surface Engineered Materials and Advanced Technology Journal
+    Canadian Open Surface Science Journal
+    Canadian Open Surface and Coatings Technology Science Journal
+    Canadian Open Surgical Application Journal
+    Canadian Open Synthetic Chemistry Journal
+    Canadian Open Technology Education Journal
+    Canadian Open Telecommunication Engineering Journal
+    Canadian Open Textile Science Journal
+    Canadian Open Theoretical Chemistry Journal
+    Canadian Open Theoretical Physics Journal
+    Canadian Open Thermal Engineering Journal
+    Canadian Open Thermal and Catalytic Process Journal
+    Canadian Open Thermodynamics Journal
+    Canadian Open Tourism Management Journal
+    Canadian Open Traffic and Transportation Engineering Journal
+    Canadian Open Transfusion Science Journal
+    Canadian Open Transportation Engineering Journal
+    Canadian Open Tumor Therapy Journal
+    Canadian Open Urban and Regional Development Journal
+    Canadian Open Vector Biology Journal
+    Canadian Open Veterinary Science Journal
+    Canadian Open Vocational Education Journal
+    Canadian Open Waste Recycling Engineering Journal
+    Canadian Open Waste to Energy Journal
+    Canadian Open Water Journal
+    Canadian Open Water Resources and Environmental Engineering Journal
+    Canadian Open Web Engineering Journal
+    Canadian Open Web and Grid Services Journal
+    Canadian Open Wildlife Ecology Journal
+    Canadian Open Wireless Networks and Applications Journal
+    Canadian Open Wireless Networks and Communications Journal
+    Canadian Open Wireless and Mobile Communications Engineering Journal
+    Canadian Open Womens Health Journal
+    Canadian Open Worldwide Waste Management Journal
+    Canadian Open Zoology Journal

@@ -1,0 +1,475 @@
+target = Category:Asian and American Research Publishing Group academic journals
+category =        Asian and American Research Publishing Group academic journals
+---
+    Asian American AIDS & HIV Research Journal
+    Asian American Accounting Research Journal
+    Asian American Accounting and Information Systems Research Journal
+    Asian American Acoustics Research Journal
+    Asian American Addiction Research Journal
+    Asian American Administrative Sciences Research Journal
+    Asian American Advanced Agricultural Research Journal
+    Asian American Advanced Astronomy Research Journal
+    Asian American Advanced Calculus Research Journal
+    Asian American Advanced Catalysis Research Journal
+    Asian American Advanced Computer Research Journal
+    Asian American Advanced Linguistics Research Journal
+    Asian American Advanced Mechanics Research Journal
+    Asian American Advanced Physics Research Journal
+    Asian American Aerospace Engineering Research Journal
+    Asian American Aging Research Journal
+    Asian American Agricultural Economics Research Journal
+    Asian American Agricultural Engineering Research Journal
+    Asian American Agricultural Science & Technology Research Journal
+    Asian American Agricultural and Biological Research Journal
+    Asian American Agriculture Research Journal
+    Asian American Agriculture and Environmental Research Journal
+    Asian American Agriculture and Food Technology Research Journal
+    Asian American Agriculture and Rural Development Research Journal
+    Asian American Agriculture and Sustainability Research Journal
+    Asian American Agricultureal Chemistry Research Journal
+    Asian American Agronomy Research Journal
+    Asian American Algorithm Research Journal
+    Asian American Allergy Research Journal
+    Asian American Alternative Energy Research Journal
+    Asian American Alzheimer's Disease Research Journal
+    Asian American Analytical Chemistry Research Journal
+    Asian American Anatomy Research Journal
+    Asian American Andrology Research Journal
+    Asian American Anesthesiology Research Journal
+    Asian American Animal Physiology Research Journal
+    Asian American Animal Science Research Journal
+    Asian American Anthropology Research Journal
+    Asian American Antimicrobial Agents Research Journal
+    Asian American Antioxidants Research Journal
+    Asian American Applied Analysis Research Journal
+    Asian American Applied Chemistry Research Journal
+    Asian American Applied Engineering Research Journal
+    Asian American Applied Informatics Research Journal
+    Asian American Applied Mathematics Research Journal
+    Asian American Applied Science Research Journal
+    Asian American Aquaculture & Fisheries Research Journal
+    Asian American Archaeology Research Journal
+    Asian American Architecture Research Journal
+    Asian American Area Studies Research Journal
+    Asian American Arthritis Research Journal
+    Asian American Artificial Intelligence Research Journal
+    Asian American Atherosclerosis & Thrombosis Research Journal
+    Asian American Atmospheric Science Research Journal
+    Asian American Autoimmunity Research Journal
+    Asian American Automation and Control Science Research Journal
+    Asian American Banking Research Journal
+    Asian American Banking and Business Research Journal
+    Asian American Behavioral Science Research Journal
+    Asian American Bioactive Compounds Research Journal
+    Asian American Biochemistry Research Journal
+    Asian American Bioengineering Research Journal
+    Asian American Bioinformatics Research Journal
+    Asian American Biological Chemistry Research Journal
+    Asian American Biology & Cell Development Research Journal
+    Asian American Biology Research Journal
+    Asian American Biomarkers Research Journal
+    Asian American Biomaterials Research Journal
+    Asian American Biomedical Engineering Research Journal
+    Asian American Biomolecules Research Journal
+    Asian American Bioresource Technology Research Journal
+    Asian American Biosecurity Research Journal
+    Asian American Biosensors Research Journal
+    Asian American Biotechnology Research Journal
+    Asian American Bone Research Journal
+    Asian American Botany Research Journal
+    Asian American Breast Cancer Research Journal
+    Asian American Business Research Journal
+    Asian American Business and Trade Research Journal
+    Asian American Cancer & Tumor Research Journal
+    Asian American Cancer Immunology Research Journal
+    Asian American Cancer Research Journal
+    Asian American Carbon Dioxide Research Journal
+    Asian American Cardiovascular & Thoracic Surgery Research Journal
+    Asian American Cardiovascular Imaging Research Journal
+    Asian American Cardiovascular Medicine Research Journal
+    Asian American Catalyst Research Journal
+    Asian American Cell Biology Research Journal
+    Asian American Cell Signaling Research Journal
+    Asian American Ceramic Science & Engineering Research Journal
+    Asian American Chemical & Biomedical Research Journal
+    Asian American Chemical Engineering Research Journal
+    Asian American Chemical Genomics Research Journal
+    Asian American Chemical Physics Research Journal
+    Asian American Chemistry Research Journal
+    Asian American Chemotherapy Research Journal
+    Asian American Chromatography Research Journal
+    Asian American Chromosphere Research Journal
+    Asian American Circulation and Vascular Research Journal
+    Asian American Civil & Mechanical Engineering Research Journal
+    Asian American Civil Engineering Research Journal
+    Asian American Climate Change Research Journal
+    Asian American Clinical Cancer Research Journal
+    Asian American Clinical Chemistry Research Journal
+    Asian American Clinical Trials Research Journal
+    Asian American Coal Science Research Journal
+    Asian American Colloid Science Research Journal
+    Asian American Colorectal Cancer Research Journal
+    Asian American Commerce Research Journal
+    Asian American Communication Research Journal
+    Asian American Complementary Medicine Research Journal
+    Asian American Computational and Applied Mathematics Research Journal
+    Asian American Computer & Library Science Research Journal
+    Asian American Computer Engineering Research Journal
+    Asian American Computer Science Research Journal
+    Asian American Computer Technology Research Journal
+    Asian American Computers and Civil Engineering Research Journal
+    Asian American Computers and Electrical Engineering Research Journal
+    Asian American Computers and Mechanical Engineering Research Journal
+    Asian American Condensed Matter Physics Research Journal
+    Asian American Conference Proceedings Research Journal
+    Asian American Conservation Biology Research Journal
+    Asian American Construction and Building Technology Research Journal
+    Asian American Corrosion Research Journal
+    Asian American Criminology Research Journal
+    Asian American Critical Care Medicine Research Journal
+    Asian American Crop Science Research Journal
+    Asian American Crop and Plant Breeding Research Journal
+    Asian American Crystallography Research Journal
+    Asian American Cybernetics and Systemics Research Journal
+    Asian American Democracy and Peace Research Journal
+    Asian American Demography Research Journal
+    Asian American Dentistry Research Journal
+    Asian American Depression Research Journal
+    Asian American Dermatology Research Journal
+    Asian American Design Engineering Research Journal
+    Asian American Development Studies Research Journal
+    Asian American Devices and Systems Research Journal
+    Asian American Diabetes Research Journal
+    Asian American Diseases Research Journal
+    Asian American Drug Delivery Research Journal
+    Asian American Drug Discovery Research Journal
+    Asian American Drug Metabolism Research Journal
+    Asian American Drug Resistance Research Journal
+    Asian American Drug Safety Research Journal
+    Asian American Earth Science Research Journal
+    Asian American Earthquake Engineering Research Journal
+    Asian American Ecology Research Journal
+    Asian American Ecology and Environment Research Journal
+    Asian American Economics Research Journal
+    Asian American Educational Research Journal
+    Asian American Electrical & Electronic Engineering Research Journal
+    Asian American Electrochemistry Research Journal
+    Asian American Electronic & Photonic Materials Research Journal
+    Asian American Emergency Medicine Research Journal
+    Asian American Endocrinology Research Journal
+    Asian American Energy Engineering Research Journal
+    Asian American Energy and Combustion Research Journal
+    Asian American Energy and Economics Research Journal
+    Asian American Energy and Power Research Journal
+    Asian American Energy and Smart Grid Research Journal
+    Asian American Energy, Power and Environment Research Journal
+    Asian American Engineering Management Research Journal
+    Asian American Engineering Mathematics Research Journal
+    Asian American English and Literature Research Journal
+    Asian American Entomology Research Journal
+    Asian American Environment and Agriculture Research Journal
+    Asian American Environment and Development Research Journal
+    Asian American Environment and Energy Research Journal
+    Asian American Environment and Science Research Journal
+    Asian American Environmental & Biological Research Journal
+    Asian American Environmental Chemistry Research Journal
+    Asian American Environmental Engineering Research Journal
+    Asian American Environmental Pollution and Toxicology Research Journal
+    Asian American Environmental Protection Research Journal
+    Asian American Environmental Sciences Research Journal
+    Asian American Environmental Sciences and Technology Research Journal
+    Asian American Environmental Studies Research Journal
+    Asian American Environmental and Civil Engineering Research Journal
+    Asian American Enzyme Inhibition Research Journal
+    Asian American Epidemiology Research Journal
+    Asian American Epidemiology Research Journal
+    Asian American Epithelial Biology & Pharmacology Research Journal
+    Asian American Ergonomics Research Journal
+    Asian American Ethics Research Journal
+    Asian American Evolution Research Journal
+    Asian American Family Studies Research Journal
+    Asian American Finance & Accounting Research Journal
+    Asian American Finance & Banking Research Journal
+    Asian American Finance & Business Research Journal
+    Asian American Finance & Economics Research Journal
+    Asian American Finance & Management Research Journal
+    Asian American Finance & Taxation Research Journal
+    Asian American Finance Research Journal
+    Asian American Finance and Trade Policy Research Journal
+    Asian American Fish Science Research Journal
+    Asian American Fluid and Dynamic Research Journal
+    Asian American Food Chemistry Research Journal
+    Asian American Food Science Research Journal
+    Asian American Food Science and Nutrition Research Journal
+    Asian American Food Science and Public Health Research Journal
+    Asian American Food Science and Technology Research Journal
+    Asian American Food Technology Research Journal
+    Asian American Forensic Science Research Journal
+    Asian American Forest Science Research Journal
+    Asian American Fuel Cell Research Journal
+    Asian American Fuel and Economics Research Journal
+    Asian American Fuels & Energy Research Journal
+    Asian American Fuels Research Journal
+    Asian American Game Theory Research Journal
+    Asian American Gastroenterology Research Journal
+    Asian American Gene Therapy Research Journal
+    Asian American General Medicine Research Journal
+    Asian American General Science Research Journal
+    Asian American Genetics Engineering Research Journal
+    Asian American Genomics Research Journal
+    Asian American Geography Research Journal
+    Asian American Geology Research Journal
+    Asian American Geology Research Journal
+    Asian American Geometry Research Journal
+    Asian American Geriatric Medicine Research Journal
+    Asian American Glycoscience Research Journal
+    Asian American Green and Sustainable Chemistry Research Journal
+    Asian American Hazardous Materials Research Journal
+    Asian American Health Services & Policy Research Journal
+    Asian American Heart Failure Research Journal
+    Asian American Heat and Mass Transfer Research Journal
+    Asian American Hematology Research Journal
+    Asian American Hepatology Research Journal
+    Asian American Herbal Medicine Research Journal
+    Asian American History and Culture Research Journal
+    Asian American Horticultural Research Journal
+    Asian American Horticulture Research Journal
+    Asian American Human Interface Technology Research Journal
+    Asian American Human Resource Management Research Journal
+    Asian American Humanities Research Journal
+    Asian American Hydraulic Engineering Research Journal
+    Asian American Hydrology Research Journal
+    Asian American Hypertension Research Journal
+    Asian American Immunology Research Journal
+    Asian American Industrial Chemistry Research Journal
+    Asian American Industrial Engineering Research Journal
+    Asian American Industrial and Manufacturing Engineering Research Journal
+    Asian American Infectious Diseases Research Journal
+    Asian American Inflammation Research Journal
+    Asian American Information Science Research Journal
+    Asian American Information Science and Internet Technology Research Journal
+    Asian American Information Science and Management Research Journal
+    Asian American Information Systems and Business Research Journal
+    Asian American Inorganic Chemistry Research Journal
+    Asian American Intelligence Research Journal
+    Asian American International Relations Research Journal
+    Asian American Internet and Security Research Journal
+    Asian American Investment Research Journal
+    Asian American Lake and River Research Journal
+    Asian American Language and Culture Research Journal
+    Asian American Law Research Journal
+    Asian American Leukemia Research Journal
+    Asian American Life Science Research Journal
+    Asian American Linear Algebra and Matrix Theory Research Journal
+    Asian American Linguistics Research Journal
+    Asian American Literature and Arts Research Journal
+    Asian American Literature and English Research Journal
+    Asian American Livestock Products Technology Research Journal
+    Asian American Livestock Research Journal
+    Asian American Longevity Science Research Journal
+    Asian American Lubricants Research Journal
+    Asian American Lung Cancer Research Journal
+    Asian American Macroeconomics & Microeconomics Research Journal
+    Asian American Macromolecules Research Journal
+    Asian American Magnetic Resonance Research Journal
+    Asian American Management Research Journal
+    Asian American Marine Biology Research Journal
+    Asian American Marine Engineering Research Journal
+    Asian American Marine Science Research Journal
+    Asian American Marketing Research Journal
+    Asian American Mass Communication Research Journal
+    Asian American Materials Science Research Journal
+    Asian American Mathematical Finance Research Journal
+    Asian American Mathematical Modeling & Applied Computing Research Journal
+    Asian American Mathematics Research Journal
+    Asian American Mechanical Engineering Research Journal
+    Asian American Mechanical and Electrical Engineering Research Journal
+    Asian American Mechanics Research Journal
+    Asian American Medical Anatomy Research Journal
+    Asian American Medical Devices Research Journal
+    Asian American Medical Education Research Journal
+    Asian American Medical Imaging Research Journal
+    Asian American Medical Informatics Research Journal
+    Asian American Medical Physics Research Journal
+    Asian American Medical Sciences Research Journal
+    Asian American Medicinal Chemistry Research Journal
+    Asian American Medicinal Plant Research Journal
+    Asian American Medicine Research Journal
+    Asian American Metal Science Research Journal
+    Asian American Micro Science Research Journal
+    Asian American Microbiology Research Journal
+    Asian American Mineralogy Research Journal
+    Asian American Mining & Mineral Processing Research Journal
+    Asian American Mobile and Wireless Technology Research Journal
+    Asian American Modeling and Computation Research Journal
+    Asian American Modern Language Research Journal
+    Asian American Molecular Biology Research Journal
+    Asian American Molecular Medicine Research Journal
+    Asian American Molecular Sciences Research Journal
+    Asian American Multidisciplinary Research Journal
+    Asian American Multimedia Research Journal
+    Asian American Music and Dance Research Journal
+    Asian American Music and Instrument Research Journal
+    Asian American Mycology Science Research Journal
+    Asian American NGO Research Journal
+    Asian American Nano Carbon Technology Research Journal
+    Asian American Nanomaterials Research Journal
+    Asian American Nanomedicine Research Journal
+    Asian American Nanoscience Research Journal
+    Asian American Natural Products Research Journal
+    Asian American Natural Science Research Journal
+    Asian American Nephrology Research Journal
+    Asian American Neurobiology Research Journal
+    Asian American Neurochemistry Research Journal
+    Asian American Neuroendocrinology Research Journal
+    Asian American Neuroimaging Research Journal
+    Asian American Neurology Research Journal
+    Asian American Neuropsychopharmacology Research Journal
+    Asian American Neuroscience Research Journal
+    Asian American Neurosurgery Research Journal
+    Asian American Nitric Oxide Research Journal
+    Asian American Nuclear & Particle Physics Research Journal
+    Asian American Nuclear Chemistry Research Journal
+    Asian American Nuclear Energy Engineering Research Journal
+    Asian American Nuclear Medicine Research Journal
+    Asian American Nuclear Science Research Journal
+    Asian American Numerical Advanced Methods Research Journal
+    Asian American Nursing Science Research Journal
+    Asian American Nutraceuticals Research Journal
+    Asian American Nutrition Research Journal
+    Asian American Obesity Research Journal
+    Asian American Occupational Health and Safety Research Journal
+    Asian American Ocean Engineering Research Journal
+    Asian American Oceanography Research Journal
+    Asian American Oncology Research Journal
+    Asian American Operational Research Journal
+    Asian American Ophthalmology Research Journal
+    Asian American Optics Research Journal
+    Asian American Organic Chemistry Research Journal
+    Asian American Ornithology Research Journal
+    Asian American Orthopaedics Research Journal
+    Asian American Otorhinolaryngology Research Journal
+    Asian American Pacing & Therapy Research Journal
+    Asian American Pain Management Research Journal
+    Asian American Paleontology Research Journal
+    Asian American Parasitology Research Journal
+    Asian American Parkinson's Disease Research Journal
+    Asian American Pathology Research Journal
+    Asian American Patient Counselling Research Journal
+    Asian American Pediatric Medicine Research Journal
+    Asian American Pediatrics Research Journal
+    Asian American Petroleum Engineering Research Journal
+    Asian American Petroleum and Gas Resources Research Journal
+    Asian American Pharmaceutical Crops Research Journal
+    Asian American Pharmacoeconomics & Health Economics Research Journal
+    Asian American Pharmacology Research Journal
+    Asian American Pharmacy Research Journal
+    Asian American Philosophy Research Journal
+    Asian American Physical Chemistry Research Journal
+    Asian American Physics & Mathematics Research Journal
+    Asian American Physics and Chemistry Research Journal
+    Asian American Physiology Research Journal
+    Asian American Plant Genetics Research Journal
+    Asian American Plant Science Research Journal
+    Asian American Plasma Physics Research Journal
+    Asian American Plastic Surgery Research Journal
+    Asian American Political Science Research Journal
+    Asian American Polymer Engineering Research Journal
+    Asian American Polymer Science Research Journal
+    Asian American Process Chemistry Research Journal
+    Asian American Process Engineering Research Journal
+    Asian American Process Technology Research Journal
+    Asian American Prostate Cancer Research Journal
+    Asian American Proteomics Research Journal
+    Asian American Psychiatry Research Journal
+    Asian American Psychology Research Journal
+    Asian American Public Health Research Journal
+    Asian American Public Health and Food Research Journal
+    Asian American Publication Research Journal
+    Asian American Pyrolysis and Thermal Research Journal
+    Asian American Quality Control Research Journal
+    Asian American Quantum Chemistry Research Journal
+    Asian American Quantum Information Science Research Journal
+    Asian American Quantum Physics Research Journal
+    Asian American Radio Engineering Research Journal
+    Asian American Radiology Research Journal
+    Asian American Reconstructive and Cosmetic Surgery Research Journal
+    Asian American Recycle and Resource Research Journal
+    Asian American Rehabilitation Research Journal
+    Asian American Religions Research Journal
+    Asian American Remote Sensing Research Journal
+    Asian American Renewable & Sustainable Energy Research Journal
+    Asian American Renewable Energy Research Journal
+    Asian American Reproductive Science Research Journal
+    Asian American Resource and Environment Research Journal
+    Asian American Respiratory Medicine Research Journal
+    Asian American Rheumatology Research Journal
+    Asian American Risks Research Journal
+    Asian American Robotics Research Journal
+    Asian American Safety Research Journal
+    Asian American Science and Technology Research Journal
+    Asian American Scientific Essay Research Journal
+    Asian American Sexual Medicine Research Journal
+    Asian American Signal Processing Research Journal
+    Asian American Sleep Research Journal
+    Asian American Smart House Research Journal
+    Asian American Social Science Research Journal
+    Asian American Societies Research Journal
+    Asian American Sociology Research Journal
+    Asian American Software Engineering Research Journal
+    Asian American Soil Science Research Journal
+    Asian American Soil and Crop Science Research Journal
+    Asian American Soil and Plant Science Research Journal
+    Asian American Spectroscopy Research Journal
+    Asian American Spinal Cord Research Journal
+    Asian American Sports Medicine Research Journal
+    Asian American Sports Sciences Research Journal
+    Asian American Statistic and Mathematics Research Journal
+    Asian American Statistics & Probability Research Journal
+    Asian American Statistics and Physics Research Journal
+    Asian American Stem Cell Research Journal
+    Asian American Strategic Studies Research Journal
+    Asian American Structural Biology Research Journal
+    Asian American Superconductors Research Journal
+    Asian American Surface Science Research Journal
+    Asian American Surgery Research Journal
+    Asian American Surgical Oncology Research Journal
+    Asian American Synthesis Process Research Journal
+    Asian American Systems Biology Research Journal
+    Asian American Systems Research Journal
+    Asian American Technology Research Journal
+    Asian American Technology and Investment Research Journal
+    Asian American Telecommunication Research Journal
+    Asian American Textile Science Research Journal
+    Asian American Theoretical Physics Research Journal
+    Asian American Thermodynamics Research Journal
+    Asian American Tissue Engineering & Regenerative Medicine Research Journal
+    Asian American Tourism Management Research Journal
+    Asian American Toxicology Research Journal
+    Asian American Toxinology Research Journal
+    Asian American Translational Medicine Research Journal
+    Asian American Transplantation Research Journal
+    Asian American Transport Phenomena Research Journal
+    Asian American Transportation Engineering Research Journal
+    Asian American Tropical Medicine Research Journal
+    Asian American Tumor Therapy Research Journal
+    Asian American Urban Studies Research Journal
+    Asian American Urology and Nephrology Research Journal
+    Asian American Vaccine and Vaccination Research Journal
+    Asian American Vascular Disease Prevention Research Journal
+    Asian American Veterinary Medicine Research Journal
+    Asian American Veterinary Science Research Journal
+    Asian American Virology Research Journal
+    Asian American Virtual Reality Research Journal
+    Asian American Vocational Education Research Journal
+    Asian American Waste Management Research Journal
+    Asian American Waste Management and Technology Research Journal
+    Asian American Waste to Energy Research Journal
+    Asian American Water Resource Research Journal
+    Asian American Water Science Research Journal
+    Asian American Web Engineering Research Journal
+    Asian American Wildlife Research Journal
+    Asian American Wireless Network Research Journal
+    Asian American Womens Health Research Journal
+    Asian American Zoology Research Journal
+    Asian American Zoology and Ecology Research Journal

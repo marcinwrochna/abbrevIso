@@ -1,3 +1,6 @@
+target = Bentham Science Publishers
+category = Bentham Open academic journals
+---
 Clinical Practice & Epidemiology in Mental Health
 Current Chemical Genomics and Translational Medicine
 Open Environmental Sciences

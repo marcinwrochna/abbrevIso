@@ -1,3 +1,6 @@
+target = Jacobs Publishers
+category = Jacobs Publishers academic journals
+---
 Jacobs Journal of AIDS/HIV
 Jacobs Journal of Addiction and Therapy
 Jacobs Journal of Agriculture

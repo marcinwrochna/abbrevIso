@@ -1,0 +1,524 @@
+target   = Category:Academic Knowledge and Research Publishing academic journals
+category =          Academic Knowledge and Research Publishing academic journals
+---
+    Academic Open Accounting & Taxation Research Journal
+    Academic Open Accounting Research Journal
+    Academic Open Addiction & Therapy Research Journal
+    Academic Open Addiction Research Journal
+    Academic Open Administration Science Research Journal
+    Academic Open Advanced Agricultural Engineering Research Journal
+    Academic Open Advanced Agricultural Research Journal
+    Academic Open Advanced Analysis Research Journal
+    Academic Open Advanced Biochemistry & Microbiology Research Journal
+    Academic Open Advanced Bioengineering Research Journal
+    Academic Open Advanced Biotechnology Research Journal
+    Academic Open Advanced Calculus Research Journal
+    Academic Open Advanced Cell Biology Research Journal
+    Academic Open Advanced Engineering Research Journal
+    Academic Open Advanced Mathematics & Physics Research Journal
+    Academic Open Advanced Mathematics Research Journal
+    Academic Open Advanced Mechanical Engineering Research Journal
+    Academic Open Advanced Mechanics Research Journal
+    Academic Open Advanced Nanomaterials Research Journal
+    Academic Open Advanced Physics Research Journal
+    Academic Open Advanced Software Engineering Research Journal
+    Academic Open Aerospace Engineering Research Journal
+    Academic Open Aging Research Journal
+    Academic Open Agricultural Biotechnology & Sustainable Development Research Journal
+    Academic Open Agricultural Chemistry Research Journal
+    Academic Open Agricultural Development & Economics Research Journal
+    Academic Open Agricultural Engineering & Biotechnology Research Journal
+    Academic Open Agricultural Extension & Rural Development Research Journal
+    Academic Open Agricultural Management & Economics Research Journal
+    Academic Open Agricultural Process Engineering Research Journal
+    Academic Open Agricultural Processing Research Journal
+    Academic Open Agricultural Production Engineering Research Journal
+    Academic Open Agricultural Sciences & Technology Research Journal
+    Academic Open Agricultural Waste & Management Research Journal
+    Academic Open Agriculture & Biology Research Journal
+    Academic Open Agriculture & Development Research Journal
+    Academic Open Agriculture & Economics Research Journal
+    Academic Open Agriculture & Finance Research Journal
+    Academic Open Agriculture & Food Technology Research Journal
+    Academic Open Agriculture & Forestry Research Journal
+    Academic Open Agriculture & Management Research Journal
+    Academic Open Agriculture & Soil Science Research Journal
+    Academic Open Agriculture Engineering Research Journal
+    Academic Open Agriculture Research Journal
+    Academic Open Agro-Industrial Engineering Research Journal
+    Academic Open Agronomy Research Journal
+    Academic Open Air Conditioning Engineering Research Journal
+    Academic Open Alternative Energy & Petroleum Technology Research Journal
+    Academic Open Alternative Energy Research Journal
+    Academic Open Alzheimer's Research Journal
+    Academic Open Analytic Geometry Research Journal
+    Academic Open Analytical Biochemistry Research Journal
+    Academic Open Analytical Chemistry Research Journal
+    Academic Open Analytical Science and Engineering Research Journal
+    Academic Open Anatomy & Physiology Research Journal
+    Academic Open Animal & Environmental Biology Research Journal
+    Academic Open Animal Health & Veterinary Medicine Research Journal
+    Academic Open Animal Physiology Research Journal
+    Academic Open Animal Science Research Journal
+    Academic Open Anthropology Research Journal
+    Academic Open Applications of Discrete Mathematics Research Journal
+    Academic Open Applied Agricultural Engineering Research Journal
+    Academic Open Applied Agricultural Research Journal
+    Academic Open Applied Anthropology Research Journal
+    Academic Open Applied Chemical Engineering Research Journal
+    Academic Open Applied Chemical Science Research Journal
+    Academic Open Applied Chemistry Research Journal
+    Academic Open Applied Electronics & Interfacing Research Journal
+    Academic Open Applied Engineering Research Journal
+    Academic Open Applied Engineering in Agriculture Research Journal
+    Academic Open Applied Environmental Sciences Research Journal
+    Academic Open Applied Physics Research Journal
+    Academic Open Applied Science & Technology Research Journal
+    Academic Open Applied Sociology Research Journal
+    Academic Open Applied Statistics Research Journal
+    Academic Open Aquaculture Engineering Research Journal
+    Academic Open Aquatic Ecology Research Journal
+    Academic Open Archaeology Research Journal
+    Academic Open Architectural Engineering Research Journal
+    Academic Open Arthritis & Therapy Research Journal
+    Academic Open Arts Research Journal
+    Academic Open Astrobiology Research Journal
+    Academic Open Astronomy & Astrophysics Research Journal
+    Academic Open Astronomy Research Journal
+    Academic Open Astrophysics Research Journal
+    Academic Open Atomic, Molecular & Optical Physics Research Journal
+    Academic Open Automotive Engineering Research Journal
+    Academic Open Baking Process Technology Research Journal
+    Academic Open Basic & Applied Science Research Journal
+    Academic Open Basic Sciences of Medicine Research Journal
+    Academic Open Behavioral Health & Neuroscience Research Journal
+    Academic Open Behavioural Sciences Research Journal
+    Academic Open Biochemistry & Biotechnology Research Journal
+    Academic Open Biochemistry Research Journal
+    Academic Open Biodiversity and Conservation Research Journal
+    Academic Open Biofertilizers & Biopesticides Research Journal
+    Academic Open Biological Chemistry Research Journal
+    Academic Open Biological Engineering Research Journal
+    Academic Open Biological Sciences Research Journal
+    Academic Open Biomedical Engineering Research Journal
+    Academic Open Biophysics Research Journal
+    Academic Open Bioresource Technology Research Journal
+    Academic Open Biosecurity Research Journal
+    Academic Open Biotechnology & Bioengineering Research Journal
+    Academic Open Biotechnology Research Journal
+    Academic Open Botany Research Journal
+    Academic Open Brain & Cognitive Sciences Research Journal
+    Academic Open Business & Management Research Journal
+    Academic Open Business & Marketing Research Journal
+    Academic Open Business & Rural Development Studies Research Journal
+    Academic Open Business & Technology Research Journal
+    Academic Open Business Administration & Management Research Journal
+    Academic Open Business Administration Research Journal
+    Academic Open Business Development Research Journal
+    Academic Open Business Management & Information Technology Research Journal
+    Academic Open Business Research Journal
+    Academic Open Business, Economics & Finance Research Journal
+    Academic Open Cancer & Tumor Research Journal
+    Academic Open Cancer Research Journal
+    Academic Open Carbon Nanotechnology Research Journal
+    Academic Open Cardiovascular Disease Research Journal
+    Academic Open Catalyst Research Journal
+    Academic Open Cell & Animal Biology Research Journal
+    Academic Open Cell Biology & Genetics Research Journal
+    Academic Open Cell Biology Research Journal
+    Academic Open Ceramic Engineering Research Journal
+    Academic Open Cereals & Oilseeds Research Journal
+    Academic Open Chemical Engineering & Materials Science Research Journal
+    Academic Open Chemical Engineering & Processing Technology Research Journal
+    Academic Open Chemical Engineering Research Journal
+    Academic Open Chemical Science Research Journal
+    Academic Open Chemistry & Chemical Engineering Research Journal
+    Academic Open Chemistry & Materials Science Research Journal
+    Academic Open Chemistry Research Journal
+    Academic Open Chemosphere Research Journal
+    Academic Open Circuits & Systems Research Journal
+    Academic Open Civil & Environmental Engineering Research Journal
+    Academic Open Civil Engineering & Construction Technology Research Journal
+    Academic Open Civil Engineering Research Journal
+    Academic Open Civil Mechanical Engineering Research Journal
+    Academic Open Classical Physics Research Journal
+    Academic Open Cleaner Production Research Journal
+    Academic Open Climate Change & Ecological Research Journal
+    Academic Open Climate Change Research Journal
+    Academic Open Clinical Immunopathology & Immunology Research Journal
+    Academic Open Clinical Medicine Research Journal
+    Academic Open Clinical Pathology Research Journal
+    Academic Open Clinical Practice Research Journal
+    Academic Open Clinical Reviews & Opinions Research Journal
+    Academic Open Clothing Science Research Journal
+    Academic Open Coal Science & Engineering Research Journal
+    Academic Open Colloid & Interface Science Research Journal
+    Academic Open Composite Materials Research Journal
+    Academic Open Composting Technology Research Journal
+    Academic Open Computation Techniques in the Materials Science Research Journal
+    Academic Open Computational Intelligence in Bioinformatics Research Journal
+    Academic Open Computational Linear Algebra Research Journal
+    Academic Open Computational Physics Research Journal
+    Academic Open Computational Science & Engineering Research Journal
+    Academic Open Computer & Internet Security System Research Journal
+    Academic Open Computer Engineering Research Journal
+    Academic Open Computer Science & Application Research Journal
+    Academic Open Computer Science & Technology Research Journal
+    Academic Open Computer Science Research Journal
+    Academic Open Computers & Civil Engineering Research Journal
+    Academic Open Computers & Electrical Engineering Research Journal
+    Academic Open Computers & Mechanical Engineering Research Journal
+    Academic Open Condensed Matter Physics Research Journal
+    Academic Open Construction Engineering & Management Research Journal
+    Academic Open Control Science & Engineering Research Journal
+    Academic Open Creative Education Research Journal
+    Academic Open Database Theory & Application Research Journal
+    Academic Open Demographic Research Journal
+    Academic Open Depression Research Journal
+    Academic Open Dermatology & Venereology Research Journal
+    Academic Open Design Engineering Research Journal
+    Academic Open Developing Country Education Research Journal
+    Academic Open Developmental Microbiology Research Journal
+    Academic Open Diabetes & Endocrinology Research Journal
+    Academic Open Digital Signal Engineering Research Journal
+    Academic Open Drying Process Engineering Research Journal
+    Academic Open Dynamics of Fluids Engineering Research Journal
+    Academic Open Ear, Nose & Throat Research Journal
+    Academic Open Earth & Planetary Science Research Journal
+    Academic Open Earth Science & Engineering Research Journal
+    Academic Open Earthquake Engineering Research Journal
+    Academic Open Ecohydrology & Climate Change Research Journal
+    Academic Open Ecology Research Journal
+    Academic Open Economics & Finance Research Journal
+    Academic Open Economics Research Journal
+    Academic Open Ecosystem Research Journal
+    Academic Open Educational Research Journal
+    Academic Open Educational Sustainability, Management & Leadership Research Journal
+    Academic Open Electrical & Electronics Engineering Research Journal
+    Academic Open Electrochemical Science Research Journal
+    Academic Open Electromagnetic Science Research Journal
+    Academic Open Electronics Cooling & Thermal Control Research Journal
+    Academic Open Energy & Combustion Science Research Journal
+    Academic Open Energy & Economics Research Journal
+    Academic Open Energy & Power Research Journal
+    Academic Open Energy Conversion & Management Research Journal
+    Academic Open Energy Engineering Research Journal
+    Academic Open Energy Management & Policy Research Journal
+    Academic Open Energy Research Journal
+    Academic Open Energy Science & Technology Research Journal
+    Academic Open Energy, Sustainability & Environment Research Journal
+    Academic Open Engineering & Computer Innovations Research Journal
+    Academic Open Engineering & Manufacturing Science Research Journal
+    Academic Open Engineering & Technology Research Journal
+    Academic Open Engineering Studies Research Journal
+    Academic Open Engineering Technology Research Journal
+    Academic Open English & Literature Research Journal
+    Academic Open Entomology Research Journal
+    Academic Open Environment & Agriculture Research Journal
+    Academic Open Environment & Applied Science Research Journal
+    Academic Open Environment & Development Economics Research Journal
+    Academic Open Environment & Energy Research Journal
+    Academic Open Environmental & Earth Sciences Research Journal
+    Academic Open Environmental & Occupational Health Sciences Research Journal
+    Academic Open Environmental Chemistry Research Journal
+    Academic Open Environmental Chemistry Research Journal
+    Academic Open Environmental Control Engineering Research Journal
+    Academic Open Environmental Engineering & Management Research Journal
+    Academic Open Environmental Engineering Research Journal
+    Academic Open Environmental Forensics Research Journal
+    Academic Open Environmental Health Sciences & Toxicology Research Journal
+    Academic Open Environmental Protection & Management Science Research Journal
+    Academic Open Environmental Protection Research Journal
+    Academic Open Environmental Science & Development Research Journal
+    Academic Open Environmental Science & Engineering Research Journal
+    Academic Open Environmental Science & Technology Research Journal
+    Academic Open Environmental Science & Water Resources Research Journal
+    Academic Open Environmental Toxicology Research Journal
+    Academic Open Experimental Oncology Research Journal
+    Academic Open Farm Structures Engineering Research Journal
+    Academic Open Finance & Accounting Research Journal
+    Academic Open Finance & Banking Research Journal
+    Academic Open Finance & Management Research Journal
+    Academic Open Finance Research Journal
+    Academic Open Fish Process Engineering Research Journal
+    Academic Open Fisheries & Aquaculture Research Journal
+    Academic Open Fisheries Research Journal
+    Academic Open Fluid Dynamics Research Journal
+    Academic Open Food & Nutrition Research Journal
+    Academic Open Food & Public Health Research Journal
+    Academic Open Food Bioprocess Engineering Research Journal
+    Academic Open Food Chemistry Research Journal
+    Academic Open Food Process Engineering Research Journal
+    Academic Open Food Science & Technology Research Journal
+    Academic Open Foreign Trade & Policy Research Journal
+    Academic Open Forensic Medicine Research Journal
+    Academic Open Forensic Science Research Journal
+    Academic Open Forest & Mountain Ecology Research Journal
+    Academic Open Forestry & Plant Science Research Journal
+    Academic Open Forestry Science Research Journal
+    Academic Open Forestry and Wildlife Journal
+    Academic Open Foundation Mathematics Research Journal
+    Academic Open Frontiers in Science Research Journal
+    Academic Open Fuel & Energy Research Journal
+    Academic Open Fuel Processing Technology Research Journal
+    Academic Open Fuels Research Journal
+    Academic Open Game Theory Research Journal
+    Academic Open Gastroenterology & Hepatology Research Journal
+    Academic Open General Engineering Research Journal
+    Academic Open Genetics Engineering Research Journal
+    Academic Open Genetics Research Journal
+    Academic Open Geographic Information System Research Journal
+    Academic Open Geography & Natural Disasters Research Journal
+    Academic Open Geography Research Journal
+    Academic Open Globalization & Industrial Technology Research Journal
+    Academic Open Grain Handling Technology Research Journal
+    Academic Open Grain Storage Engineering Research Journal
+    Academic Open Green Chemistry Research Journal
+    Academic Open HIV & AIDS Research Journal
+    Academic Open Hazard & Disaster Management Research Journal
+    Academic Open Hazardous Materials Research Journal
+    Academic Open Health Science Research Journal
+    Academic Open Heat & Mass Transfer Research Journal
+    Academic Open Herbal Medicine Research Journal
+    Academic Open Histology Research Journal
+    Academic Open History & Culture Research Journal
+    Academic Open History Research Journal
+    Academic Open Horticulture & Forestry Research Journal
+    Academic Open Hospitality Administration & Management Research Journal
+    Academic Open Human Geography Research Journal
+    Academic Open Human Resource Development Research Journal
+    Academic Open Human Resource Management Research Journal
+    Academic Open Humanities & Social Science Research Journal
+    Academic Open Hydraulic Engineering Research Journal
+    Academic Open Ideology Research Journal
+    Academic Open Industrial & Processing Technology Research Journal
+    Academic Open Industrial & Production Engineering Research Journal
+    Academic Open Industrial & Technology Management Research Journal
+    Academic Open Industrial Chemistry Research Journal
+    Academic Open Industrial Engineering & Management Research Journal
+    Academic Open Industrial Engineering & Technology Research Journal
+    Academic Open Industrial Technology Research Journal
+    Academic Open Infectious Diseases & Immunity Research Journal
+    Academic Open Information & Communications Technology Research Journal
+    Academic Open Information & Computation Technology Research Journal
+    Academic Open Information Science & Application Research Journal
+    Academic Open Information Science & Education Research Journal
+    Academic Open Information Science & Technology Research Journal
+    Academic Open Information Science Research Journal
+    Academic Open Information Technology & Library Science Research Journal
+    Academic Open Information Technology & Operations Management Research Journal
+    Academic Open Informetrics Research Journal
+    Academic Open Inorganic Chemistry Research Journal
+    Academic Open Instrumentation Science Research Journal
+    Academic Open Internal Medicine Research Journal
+    Academic Open International Relations Research Journal
+    Academic Open Lakes & Rivers Research Journal
+    Academic Open Languages & Culture Research Journal
+    Academic Open Law Research Journal
+    Academic Open Leadership Research Journal
+    Academic Open Librarianship & Information Science Research Journal
+    Academic Open Library Administration Research Journal
+    Academic Open Library History & Metadata Research Journal
+    Academic Open Library Management Research Journal
+    Academic Open Linear Algebra & Matrix Theory Research Journal
+    Academic Open Linguistics Research Journal
+    Academic Open Livestock Product & Technology Research Journal
+    Academic Open Livestock Production Research Journal
+    Academic Open Management & Technology Research Journal
+    Academic Open Management Research Journal
+    Academic Open Marine Engineering Research Journal
+    Academic Open Marine Geosciences Research Journal
+    Academic Open Marine Science Research Journal
+    Academic Open Marketing & Management Research Journal
+    Academic Open Marketing Research Journal
+    Academic Open Materials Chemistry Research Journal
+    Academic Open Materials Science Research Journal
+    Academic Open Mathematical Finance Research Journal
+    Academic Open Mathematical Modelling & Applied Computing Research Journal
+    Academic Open Mathematics & Physical Science Research Journal
+    Academic Open Mathematics Research Journal
+    Academic Open Mathematics and Physics Journal
+    Academic Open Mechanical Engineering Research Journal
+    Academic Open Media & Mass Communication Research Journal
+    Academic Open Medical & Diagnostic Biochemistry Research Journal
+    Academic Open Medical Case Studies Research Journal
+    Academic Open Medical Genetics & Genomics Research Journal
+    Academic Open Medical Laboratory & Diagnosis Research Journal
+    Academic Open Medical Practice & Reviews Research Journal
+    Academic Open Medical Science & Public Health Research Journal
+    Academic Open Medical Science & Technology Research Journal
+    Academic Open Medical Sciences & Medicine Research Journal
+    Academic Open Medicinal Chemistry Research Journal
+    Academic Open Medicinal Plant Research Journal
+    Academic Open Metabolic Biochemistry Research Journal
+    Academic Open Metabolomics & Systems Biology Research Journal
+    Academic Open Metal & Steel Research Journal
+    Academic Open Microbial Ecology Research Journal
+    Academic Open Microbiology & Antimicrobials Research Journal
+    Academic Open Microbiology Research Journal
+    Academic Open Microeconomics & Macroeconomics Research Journal
+    Academic Open Microelectronics & Solid State Electronics Research Journal
+    Academic Open Microscopy & Cytometry Research Journal
+    Academic Open Mineral Science Research Journal
+    Academic Open Minerals, Materials Characterization & Engineering Research Journal
+    Academic Open Mining & Mineral Engineering Research Journal
+    Academic Open Modern Language Research Journal
+    Academic Open Modern Nonlinear Theory & Application Research Journal
+    Academic Open Molecular Biology Research Journal
+    Academic Open Molecular Catalysis Research Journal
+    Academic Open Molecular Chemistry Research Journal
+    Academic Open Molecular Genetics Research Journal
+    Academic Open Molecular Medicine Research Journal
+    Academic Open Molecular Nanotechnology Research Journal
+    Academic Open Multimedia Research Journal
+    Academic Open Music & Dance Research Journal
+    Academic Open NGO Research Journal
+    Academic Open Nanomaterials Research Journal
+    Academic Open Nanoscience Research Journal
+    Academic Open Natural Science Research Journal
+    Academic Open Networking & Computer Engineering Research Journal
+    Academic Open Neurochemistry Research Journal
+    Academic Open Neuroscience Research Journal
+    Academic Open Nuclear Engineering Research Journal
+    Academic Open Nuclear Science Research Journal
+    Academic Open Nursing & Midwifery Research Journal
+    Academic Open Nursing Science Research Journal
+    Academic Open Nutrition & Metabolism Research Journal
+    Academic Open Obstetrics & Gynecology Research Journal
+    Academic Open Ocean & Oceanography Research Journal
+    Academic Open Ocean Engineering Research Journal
+    Academic Open Oceans & Oceanography Research Journal
+    Academic Open Operations Management & Services Research Journal
+    Academic Open Operations Research Journal
+    Academic Open Ophthalmology Research Journal
+    Academic Open Optics & Nanophotonics Research Journal
+    Academic Open Optics Science Research Journal
+    Academic Open Optoelectronic Engineering Research Journal
+    Academic Open Oral Hygiene & Dentistry Research Journal
+    Academic Open Organic Chemistry Research Journal
+    Academic Open Parasitology Immunology Research Journal
+    Academic Open Parasitology Research Journal
+    Academic Open Peace & Development Research Journal
+    Academic Open Pediatric Science Research Journal
+    Academic Open Petroleum & Gas Engineering Research Journal
+    Academic Open Pharmaceutical Biotechnology Research Journal
+    Academic Open Pharmaceutical, Biological & Chemical Sciences Research Journal
+    Academic Open Pharmacology & Microbiology Research Journal
+    Academic Open Pharmacology & Pharmacy Research Journal
+    Academic Open Pharmacy Research Journal
+    Academic Open Philosophy Research Journal
+    Academic Open Physical & Analytical Science Research Journal
+    Academic Open Physical Chemistry Research Journal
+    Academic Open Physical Science Research Journal
+    Academic Open Physiology & Pathophysiology Research Journal
+    Academic Open Physiology Research Journal
+    Academic Open Phytotherapy & Pharmacognosy Research Journal
+    Academic Open Plant & Soil Science Research Journal
+    Academic Open Plant Breeding & Crop Science Research Journal
+    Academic Open Plant Disease & Pathology Research Journal
+    Academic Open Plant Genetics Research Journal
+    Academic Open Plant Science Research Journal
+    Academic Open Plant Sciences Research Journal
+    Academic Open Political Science Research Journal
+    Academic Open Polymer Chemistry Research Journal
+    Academic Open Polymer Degradation & Stability Research Journal
+    Academic Open Polymer Science Research Journal
+    Academic Open Postharvest Engineering Research Journal
+    Academic Open Postharvest Operations Engineering Research Journal
+    Academic Open Prevention & Treatment Research Journal
+    Academic Open Psychology Research Journal
+    Academic Open Psychrometry Engineering Research Journal
+    Academic Open Public Health & Epidemiology Research Journal
+    Academic Open Public Health Research Journal
+    Academic Open Public Health, Water & Food Research Journal
+    Academic Open Pure & Applied Mathematics Research Journal
+    Academic Open Pure Mathematics Research Journal
+    Academic Open Pyrolysis Technology Research Journal
+    Academic Open Quantum Mechanics Research Journal
+    Academic Open Quantum Physics Research Journal
+    Academic Open Radio Engineering Journal Research Journal
+    Academic Open Radiology Research Journal
+    Academic Open Recycling of Organic Waste in Agriculture Research Journal
+    Academic Open Religion Research Journal
+    Academic Open Renewable & Sustainable Energy Research Journal
+    Academic Open Renewable Energy & Smart Grid Research Journal
+    Academic Open Renewable Energy Research Journal
+    Academic Open Resources & Environment Research Journal
+    Academic Open Resources & Recycling Research Journal
+    Academic Open Rheumatology Diseases Research Journal
+    Academic Open Roads & Highway Engineering Research Journal
+    Academic Open Robotic Engineering Research Journal
+    Academic Open Safety Engineering Research Journal
+    Academic Open Science & Entrepreneurship Research Journal
+    Academic Open Science & Environment Research Journal
+    Academic Open Science & Technology Research Journal
+    Academic Open Science, Technology & Engineering Research Journal
+    Academic Open Scientific Research & Essays Journal
+    Academic Open Sensor Technology Research Journal
+    Academic Open Separation & Purification Technology Research Journal
+    Academic Open Separation Process Engineering Research Journal
+    Academic Open Smart House Research Journal
+    Academic Open Social Science & Geography Research Journal
+    Academic Open Social Science & Management Research Journal
+    Academic Open Social Science Research Journal
+    Academic Open Sociological Science Research Journal
+    Academic Open Software Engineering Research Journal
+    Academic Open Soil & Agricultural Research Journal
+    Academic Open Soil & Crop Science Research Journal
+    Academic Open Soil & Erosion Research Journal
+    Academic Open Soil Science & Environmental Management Research Journal
+    Academic Open Soil Science Research Journal
+    Academic Open Solid-State Chemistry Research Journal
+    Academic Open Solid-State Science Research Journal
+    Academic Open Spinal Cord Research Journal
+    Academic Open Sports Science Research Journal
+    Academic Open Statistical Design & Analysis Research Journal
+    Academic Open Statistics & Mathematics Research Journal
+    Academic Open Statistics Research Journal
+    Academic Open Stomatological Research Journal
+    Academic Open Stored Product Protection Engineering Research Journal
+    Academic Open Stored Products & Postharvest Research Journal
+    Academic Open Stroke Research Journal
+    Academic Open Studies & Development Research Journal
+    Academic Open Surface & Coatings Technology Research Journal
+    Academic Open Surface Science Research Journal
+    Academic Open Surgical Application Research Journal
+    Academic Open Sustainability Research Journal
+    Academic Open Sustainable Agriculture Research Journal
+    Academic Open Synthetic Chemistry Research Journal
+    Academic Open Technology Education Research Journal
+    Academic Open Telecommunication Engineering Research Journal
+    Academic Open Textile Science Research Journal
+    Academic Open Theoretical Chemistry Research Journal
+    Academic Open Theoretical Physics Research Journal
+    Academic Open Thermal & Catalytic Process Research Journal
+    Academic Open Thermal Engineering Research Journal
+    Academic Open Thermodynamics Research Journal
+    Academic Open Tourism & Business Research Journal
+    Academic Open Tourism Management Research Journal
+    Academic Open Traffic & Transportation Engineering Research Journal
+    Academic Open Transfusion Science Research Journal
+    Academic Open Transportation Engineering Research Journal
+    Academic Open Tumor Therapy Research Journal
+    Academic Open Urology & Nephrology Research Journal
+    Academic Open Vaccine & Vaccination Research Journal
+    Academic Open Vector Biology Research Journal
+    Academic Open Veterinary Medicine Research Journal
+    Academic Open Veterinary Science & Animal Health Research Journal
+    Academic Open Virology Research Journal
+    Academic Open Vocational Education Research Journal
+    Academic Open Waste Management & Technology Research Journal
+    Academic Open Waste Management Research Journal
+    Academic Open Waste Recycling Engineering Research Journal
+    Academic Open Waste to Energy Research Journal
+    Academic Open Water Research Journal
+    Academic Open Water Resources & Environmental Engineering Research Journal
+    Academic Open Water, Soil & Air Pollution Research Journal
+    Academic Open Web & Database Technology Research Journal
+    Academic Open Web & Grid Services Research Journal
+    Academic Open Web Engineering Research Journal
+    Academic Open Wildlife Ecology Research Journal
+    Academic Open Wireless & Mobile Communications Engineering Research Journal
+    Academic Open Wireless Networks & Applications Research Journal
+    Academic Open Wireless Networks & Communications Research Journal
+    Academic Open Zoology Research Journal

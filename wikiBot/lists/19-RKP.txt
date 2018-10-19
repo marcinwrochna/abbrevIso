@@ -1,0 +1,433 @@
+target = Category:Research and Knowledge Publication academic journals
+category =        Research and Knowledge Publication academic journals
+---
+    American Open AIDS & HIV Journal
+    American Open Accounting Journal
+    American Open Accounting and Information Systems Journal
+    American Open Acoustics Journal
+    American Open Addiction Journal
+    American Open Administrative Sciences Journal
+    American Open Advanced Astronomy Journal
+    American Open Advanced Calculus Journal
+    American Open Advanced Computer Journal
+    American Open Advanced Linguistics Journal
+    American Open Advanced Mechanics Journal
+    American Open Advanced Physics Journal
+    American Open Advances in Materials Science Journal
+    American Open Aerospace Engineering Journal
+    American Open Aging Journal
+    American Open Agricultural Economics Journal
+    American Open Agricultural Engineering Journal
+    American Open Agricultural Science & Technology Journal
+    American Open Agriculture Journal
+    American Open Agriculture and Sustainability Journal
+    American Open Agronomy Journal
+    American Open Algorithm Journal
+    American Open Allergy Journal
+    American Open Alternative Energy Journal
+    American Open Alzheimer's Disease Journal
+    American Open Analytical Chemistry Journal
+    American Open Anatomy Journal
+    American Open Andrology Journal
+    American Open Anesthesiology Journal
+    American Open Animal Physiology Journal
+    American Open Animal Science Journal
+    American Open Anthropology Journal
+    American Open Antimicrobial Agents Journal
+    American Open Antioxidants Journal
+    American Open Applied Analysis Journal
+    American Open Applied Chemistry Journal
+    American Open Applied Engineering Journal
+    American Open Applied Informatics Journal
+    American Open Applied Mathematics Journal
+    American Open Applied Science Journal
+    American Open Aquaculture & Fisheries Journal
+    American Open Archaeology Journal
+    American Open Architecture Journal
+    American Open Area Studies Journal
+    American Open Arthritis Journal
+    American Open Artificial Intelligence Journal
+    American Open Atherosclerosis & Thrombosis Journal
+    American Open Atmospheric Science Journal
+    American Open Autoimmunity Journal
+    American Open Automation and Control Science Journal
+    American Open Banking Journal
+    American Open Banking and Business Journal
+    American Open Behavioral Science Journal
+    American Open Bioactive Compounds Journal
+    American Open Biochemistry Journal
+    American Open Bioengineering Journal
+    American Open Bioinformatics Journal
+    American Open Biological Chemistry Journal
+    American Open Biology & Cell Development Journal
+    American Open Biology Journal
+    American Open Biomarkers Journal
+    American Open Biomaterials Journal
+    American Open Biomedical Engineering Journal
+    American Open Biomolecules Journal
+    American Open Bioresource Technology Journal
+    American Open Biosecurity Journal
+    American Open Biosensors Journal
+    American Open Biotechnology Journal
+    American Open Bone Journal
+    American Open Botany Journal
+    American Open Breast Cancer Journal
+    American Open Business Development Journal
+    American Open Business Journal
+    American Open Business and Trade Journal
+    American Open Cancer Immunology Journal
+    American Open Cancer Journal
+    American Open Carbon Dioxide Journal
+    American Open Cardiovascular & Thoracic Surgery Journal
+    American Open Cardiovascular Imaging Journal
+    American Open Cardiovascular Medicine Journal
+    American Open Catalysis Journal
+    American Open Cell Biology Journal
+    American Open Cell Signaling Journal
+    American Open Ceramic Science & Engineering Journal
+    American Open Chemical & Biomedical Journal
+    American Open Chemical Engineering Journal
+    American Open Chemical Genomics Journal
+    American Open Chemical Physics Journal
+    American Open Chemistry Journal
+    American Open Chemotherapy Journal
+    American Open Chromatography Journal
+    American Open Chromosphere Journal
+    American Open Circulation and Vascular Journal
+    American Open Civil & Mechanical Engineering Journal
+    American Open Civil Engineering Journal
+    American Open Climate Change Journal
+    American Open Clinical Cancer Journal
+    American Open Clinical Chemistry Journal
+    American Open Clinical Trials Journal
+    American Open Coal Science Journal
+    American Open Colloid Science Journal
+    American Open Colorectal Cancer Journal
+    American Open Communication Journal
+    American Open Complementary Medicine Journal
+    American Open Computational and Applied Mathematics Journal
+    American Open Computer & Library Science Journal
+    American Open Computer Engineering Journal
+    American Open Computer Science Journal
+    American Open Computer Technology Journal
+    American Open Computers and Civil Engineering Journal
+    American Open Computers and Electrical Engineering Journal
+    American Open Computers and Mechanical Engineering Journal
+    American Open Condensed Matter Physics Journal
+    American Open Conference Proceedings Journal
+    American Open Conservation Biology Journal
+    American Open Construction and Building Technology Journal
+    American Open Corrosion Journal
+    American Open Criminology Journal
+    American Open Critical Care Medicine Journal
+    American Open Crystallography Journal
+    American Open Cybernetics and Systemics Journal
+    American Open Demography Journal
+    American Open Dentistry Journal
+    American Open Dermatology Journal
+    American Open Design Engineering Journal
+    American Open Development Studies Journal
+    American Open Devices and Systems Journal
+    American Open Diabetes Journal
+    American Open Diseases Journal
+    American Open Drug Delivery Journal
+    American Open Drug Discovery Journal
+    American Open Drug Metabolism Journal
+    American Open Drug Resistance Journal
+    American Open Drug Safety Journal
+    American Open Earth Science Journal
+    American Open Earthquake Engineering Journal
+    American Open Ecology Journal
+    American Open Ecology and Environment Journal
+    American Open Economics Journal
+    American Open Economics and Entrepreneurship Development Journal
+    American Open Education Journal
+    American Open Electrical & Electronic Engineering Journal
+    American Open Electrochemistry Journal
+    American Open Electronic & Photonic Materials Journal
+    American Open Emergency Medicine Journal
+    American Open Endocrinology Journal
+    American Open Energy Engineering Journal
+    American Open Energy and Combustion Journal
+    American Open Energy and Economics Journal
+    American Open Energy and Environment Journal
+    American Open Energy and Power Journal
+    American Open Energy and Smart Grid Journal
+    American Open Engineering Management Journal
+    American Open Engineering Mathematics Journal
+    American Open English and Literature Journal
+    American Open Entomology Journal
+    American Open Environmental & Biological Journal
+    American Open Environmental Economics Journal
+    American Open Environmental Engineering Journal
+    American Open Environmental Pollution and Toxicology Journal
+    American Open Environmental Protection Journal
+    American Open Environmental Sciences Journal
+    American Open Environmental Sciences and Technology Journal
+    American Open Environmental Studies Journal
+    American Open Enzyme Inhibition Journal
+    American Open Epidemiology Journal
+    American Open Epithelial Biology & Pharmacology Journal
+    American Open Ergonomics Journal
+    American Open Ethics Journal
+    American Open Evolution Journal
+    American Open Family Studies Journal
+    American Open Finance & Accounting Journal
+    American Open Finance & Banking Journal
+    American Open Finance & Business Journal
+    American Open Finance & Economics Journal
+    American Open Finance & Management Journal
+    American Open Finance & Taxation Journal
+    American Open Finance Journal
+    American Open Finance and Trade Policy Journal
+    American Open Fish Science Journal
+    American Open Fluid and Dynamic Journal
+    American Open Food Chemistry Journal
+    American Open Food Science Journal
+    American Open Food Technology Journal
+    American Open Forensic Science Journal
+    American Open Forest Science Journal
+    American Open Fuel Cell Journal
+    American Open Fuel and Economics Journal
+    American Open Fuels & Energy Journal
+    American Open Fuels Journal
+    American Open Game Theory Journal
+    American Open Gastroenterology Journal
+    American Open Gene Therapy Journal
+    American Open General Medicine Journal
+    American Open Genetics Engineering Journal
+    American Open Genomics Journal
+    American Open Geography Journal
+    American Open Geology Journal
+    American Open Geriatric Medicine Journal
+    American Open Glycoscience Journal
+    American Open Green and Sustainable Chemistry Journal
+    American Open Hazardous Materials Journal
+    American Open Health Services & Policy Journal
+    American Open Heart Failure Journal
+    American Open Hematology Journal
+    American Open Hepatology Journal
+    American Open Herbal Medicine Journal
+    American Open History and Culture Journal
+    American Open Horticulture Journal
+    American Open Human Interface Technology Journal
+    American Open Human Resource Management Journal
+    American Open Humanities Journal
+    American Open Hydraulic Engineering Journal
+    American Open Hydrology Journal
+    American Open Hypertension Journal
+    American Open Immunology Journal
+    American Open Industrial Chemistry Journal
+    American Open Industrial Engineering Journal
+    American Open Industrial and Manufacturing Engineering Journal
+    American Open Infectious Diseases Journal
+    American Open Inflammation Journal
+    American Open Information Science Journal
+    American Open Information Science and Internet Technology Journal
+    American Open Information Science and Management Journal
+    American Open Information Systems and Business Journal
+    American Open Inorganic Chemistry Journal
+    American Open Intelligence Journal
+    American Open Internet and Security Journal
+    American Open Investment Journal
+    American Open Lake and River Journal
+    American Open Language and Culture Journal
+    American Open Law Journal
+    American Open Leukemia Journal
+    American Open Linear Algebra and Matrix Theory Journal
+    American Open Livestock Products Technology Journal
+    American Open Logistics and Supply Chain Management Journal
+    American Open Longevity Science Journal
+    American Open Lubricants Journal
+    American Open Lung Cancer Journal
+    American Open Macroeconomics & Microeconomics Journal
+    American Open Macromolecules Journal
+    American Open Magnetic Resonance Journal
+    American Open Management Journal
+    American Open Marine Biology Journal
+    American Open Marine Engineering Journal
+    American Open Mass Communication Journal
+    American Open Materials Science Journal
+    American Open Mathematical Finance Journal
+    American Open Mathematical Modeling & Applied Computing Journal
+    American Open Mathematics Journal
+    American Open Mechanical Engineering Journal
+    American Open Mechanical and Electrical Engineering Journal
+    American Open Mechanics Journal
+    American Open Medical Anatomy Journal
+    American Open Medical Devices Journal
+    American Open Medical Education Journal
+    American Open Medical Imaging Journal
+    American Open Medical Informatics Journal
+    American Open Medical Physics Journal
+    American Open Medical Sciences Journal
+    American Open Medicinal Chemistry Journal
+    American Open Medicine Journal
+    American Open Metal Science Journal
+    American Open Microbiology Journal
+    American Open Mineralogy Journal
+    American Open Mining & Mineral Processing Journal
+    American Open Mobile and Wireless Technology Journal
+    American Open Modeling and Computation Journal
+    American Open Modern Language Journal
+    American Open Molecular Biology Journal
+    American Open Molecular Medicine Journal
+    American Open Molecular Sciences Journal
+    American Open Music and Instrument Journal
+    American Open Mycology Science Journal
+    American Open NGO Journal
+    American Open Nano Carbon Technology Journal
+    American Open Nanomaterials Journal
+    American Open Nanomedicine Journal
+    American Open Nanoscience Journal
+    American Open Natural Products Journal
+    American Open Natural Science Journal
+    American Open Neurobiology Journal
+    American Open Neurochemistry Journal
+    American Open Neuroendocrinology Journal
+    American Open Neuroimaging Journal
+    American Open Neurology Journal
+    American Open Neuropsychopharmacology Journal
+    American Open Neuroscience Journal
+    American Open Neurosurgery Journal
+    American Open Nitric Oxide Journal
+    American Open Nuclear & Particle Physics Journal
+    American Open Nuclear Chemistry Journal
+    American Open Nuclear Energy Engineering Journal
+    American Open Nuclear Medicine Journal
+    American Open Nuclear Science Journal
+    American Open Numerical Advanced Methods Journal
+    American Open Nursing Science Journal
+    American Open Nutraceuticals Journal
+    American Open Nutrition Journal
+    American Open Obesity Journal
+    American Open Obstetrics and Gynecology Journal
+    American Open Occupational Health and Safety Journal
+    American Open Ocean Engineering Journal
+    American Open Oceanography Journal
+    American Open Operational Research Journal
+    American Open Ophthalmology Journal
+    American Open Optics Journal
+    American Open Organic Chemistry Journal
+    American Open Ornithology Journal
+    American Open Orthopaedics Journal
+    American Open Otorhinolaryngology Journal
+    American Open Pacing & Therapy Journal
+    American Open Pain Management Journal
+    American Open Paleontology Journal
+    American Open Parasitology Journal
+    American Open Parkinson's Disease Journal
+    American Open Pathology Journal
+    American Open Patient Counselling Journal
+    American Open Pediatric Medicine Journal
+    American Open Petroleum Engineering Journal
+    American Open Petroleum and Gas Resources Journal
+    American Open Pharmaceutical Crops Journal
+    American Open Pharmacoeconomics & Health Economics Journal
+    American Open Pharmacology Journal
+    American Open Pharmacy Journal
+    American Open Philosophy Journal
+    American Open Physical Chemistry Journal
+    American Open Physics & Mathematics Journal
+    American Open Physics and Chemistry Journal
+    American Open Physiology Journal
+    American Open Plant Genetics Journal
+    American Open Plant Science Journal
+    American Open Plasma Physics Journal
+    American Open Plastic Surgery Journal
+    American Open Political Science Journal
+    American Open Polymer Engineering Journal
+    American Open Polymer Science Journal
+    American Open Process Chemistry Journal
+    American Open Process Engineering Journal
+    American Open Prostate Cancer Journal
+    American Open Proteomics Journal
+    American Open Psychiatry Journal
+    American Open Psychology Journal
+    American Open Public Health Journal
+    American Open Publication Journal
+    American Open Pyrolysis and Thermal Journal
+    American Open Quality Control Journal
+    American Open Quantum Chemistry Journal
+    American Open Quantum Information Science Journal
+    American Open Quantum Physics Journal
+    American Open Radio Engineering Journal
+    American Open Radiology Journal
+    American Open Reconstructive and Cosmetic Surgery Journal
+    American Open Recycle and Resource Journal
+    American Open Rehabilitation Journal
+    American Open Religions Journal
+    American Open Remote Sensing Journal
+    American Open Renewable & Sustainable Energy Journal
+    American Open Renewable Energy Journal
+    American Open Reproductive Science Journal
+    American Open Resource and Environment Journal
+    American Open Respiratory Medicine Journal
+    American Open Rheumatology Journal
+    American Open Risks Journal
+    American Open Robotics Journal
+    American Open Safety Journal
+    American Open Science and Technology Journal
+    American Open Scientific Essay Journal
+    American Open Separation Technology Journal
+    American Open Sexual Medicine Journal
+    American Open Signal Processing Journal
+    American Open Sleep Journal
+    American Open Smart House Journal
+    American Open Social Science Journal
+    American Open Societies Journal
+    American Open Sociology Journal
+    American Open Software Engineering Journal
+    American Open Soil Science Journal
+    American Open Spectroscopy Journal
+    American Open Spinal Cord Journal
+    American Open Sports Medicine Journal
+    American Open Sports Sciences Journal
+    American Open Statistic and Mathematics Journal
+    American Open Statistics & Probability Journal
+    American Open Statistics and Physics Journal
+    American Open Stem Cell Journal
+    American Open Structural Biology Journal
+    American Open Superconductors Journal
+    American Open Surface Science Journal
+    American Open Surgery Journal
+    American Open Surgical Oncology Journal
+    American Open Systems Biology Journal
+    American Open Systems Journal
+    American Open Tax and Finance Journal
+    American Open Technology Journal
+    American Open Technology and Investment Journal
+    American Open Telecommunication Journal
+    American Open Textile Science Journal
+    American Open Theoretical Physics Journal
+    American Open Thermodynamics Journal
+    American Open Tissue Engineering & Regenerative Medicine Journal
+    American Open Tourism Management Journal
+    American Open Toxicology Journal
+    American Open Toxinology Journal
+    American Open Translational Medicine Journal
+    American Open Transplantation Journal
+    American Open Transport Phenomena Journal
+    American Open Transportation Engineering Journal
+    American Open Tropical Medicine Journal
+    American Open Tumor Therapy Journal
+    American Open Urban Studies Journal
+    American Open Urology and Nephrology Journal
+    American Open Vaccine and Vaccination Journal
+    American Open Vascular Disease Prevention Journal
+    American Open Veterinary Medicine Journal
+    American Open Veterinary Science Journal
+    American Open Virology Journal
+    American Open Virtual Reality Journal
+    American Open Vocational Education Journal
+    American Open Waste Management Journal
+    American Open Waste Management and Technology Journal
+    American Open Waste to Energy Journal
+    American Open Water Resource Journal
+    American Open Water and Environment Journal
+    American Open Web Engineering Journal
+    American Open Wildlife Journal
+    American Open Wireless Network Journal
+    American Open Womens Health Journal
+    American Open Zoology Journal
+    American Open Zoology and Ecology Journal 

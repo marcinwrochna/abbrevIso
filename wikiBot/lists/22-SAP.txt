@@ -1,0 +1,132 @@
+target = Category:Scientific & Academic Publishing academic journals
+category =        Scientific & Academic Publishing academic journals
+---
+Advances in Analytical Chemistry
+Advances in Computing
+Advances in Life Sciences
+Algorithms Research
+American Journal of Biochemistry
+American Journal of Bioinformatics Research
+American Journal of Biomedical Engineering
+American Journal of Chemistry
+American Journal of Computational and Applied Mathematics
+American Journal of Computer Architecture
+American Journal of Condensed Matter Physics
+American Journal of Database Theory and Application
+American Journal of Dermatology and Venereology
+American Journal of Economics
+American Journal of Environmental Engineering
+American Journal of Fluid Dynamics
+American Journal of Geographic Information System
+American Journal of Intelligent Systems
+American Journal of Linguistics
+American Journal of Materials Science
+American Journal of Mathematics and Statistics
+American Journal of Medicine and Medical Sciences
+American Journal of Operational Research
+American Journal of Organic Chemistry
+American Journal of Polymer Science
+American Journal of Signal Processing
+American Journal of Sociological Research
+American Journal of Stem Cell Research
+American Journal of Systems Science
+American Journal of Tourism Management
+Architecture Research
+Basic Sciences of Medicine
+Clinical Medicine and Diagnostics
+Clinical Practice (journal)
+Computer Science and Engineering (journal)
+Education (journal)
+Energy and Power (journal)
+Food and Public Health
+Frontiers in Science
+Human Resource Management Research
+International Journal of Advanced and Multidisciplinary Engineering Science
+International Journal of Advanced and Multidisciplinary Social Science
+International Journal of Advances in Philosophy
+International Journal of Aerospace Sciences
+International Journal of Agriculture and Forestry
+International Journal of Applied Psychology
+International Journal of Applied Sociology
+International Journal of Astronomy
+International Journal of Astronomy
+International Journal of Biological Engineering
+International Journal of Biophysics
+International Journal of Brain and Cognitive Sciences
+International Journal of Clinical Psychiatry
+International Journal of Clothing Science
+International Journal of Composite Materials
+International Journal of Construction Engineering and Management
+International Journal of Control Science and Engineering
+International Journal of Diabetes Research
+International Journal of Ecosystem
+International Journal of Electromagnetics and Applications
+International Journal of Energy Engineering
+International Journal of Finance and Accounting
+International Journal of Food Science and Nutrition Engineering
+International Journal of Genetic Engineering
+International Journal of Hydraulic Engineering
+International Journal of Information Science
+International Journal of Inspiration & Resilience Economy
+International Journal of Instrumentation Science
+International Journal of Internal Medicine
+International Journal of Internet of Things
+International Journal of Library Science
+International Journal of Materials Engineering
+International Journal of Materials and Chemistry
+International Journal of Mechanics and Applications
+International Journal of Metallurgical Engineering
+International Journal of Mining Engineering and Mineral Processing
+International Journal of Modern Botany
+International Journal of Networks and Communications
+International Journal of Nursing Science
+International Journal of Optics and Applications
+International Journal of Optoelectronic Engineering
+International Journal of Plant Research
+International Journal of Prevention and Treatment
+International Journal of Probability and Statistics
+International Journal of Psychology and Behavioral Sciences
+International Journal of Sports Science
+International Journal of Statistics and Applications
+International Journal of Stomatological Research
+International Journal of Stroke Research
+International Journal of Surgical Research
+International Journal of Textile Science
+International Journal of Theoretical and Mathematical Physics
+International Journal of Traffic and Transportation Engineering
+International Journal of Tumor Therapy
+International Journal of Virology and Molecular Biology
+International Journal of Web Engineering
+Journal of Applied Linguistics and Language Learning
+Journal of Civil Engineering Research
+Journal of Comparative Creative Industries
+Journal of Experience Research
+Journal of Game Theory
+Journal of Game Theory
+Journal of Health Science
+Journal of Laboratory Chemical Education
+Journal of Logistics Management
+Journal of Mechanical Engineering and Automation
+Journal of Microbiology Research
+Journal of Mobile Studies
+Journal of Nuclear and Particle Physics
+Journal of Safety Engineering
+Journal of Wireless Networking and Communications
+Management (journal)
+Marine Science (journal)
+Microeconomics and Macroeconomics
+Microelectronics and Solid State Electronics
+Modern International Journal of Pure and Applied Mathematics
+Nanoscience and Nanotechnology
+Physical Chemistry (journal)
+Public Health Research
+Research in Cancer and Tumor
+Research in Cell Biology
+Research in Neuroscience
+Research in Obstetrics and Gynecology
+Research in Ophthalmology
+Research in Otolaryngology
+Research in Zoology
+Resources and Environment
+Science and Technology (journal)
+World Environment

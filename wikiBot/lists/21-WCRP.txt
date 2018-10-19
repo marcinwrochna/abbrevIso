@@ -1,0 +1,1186 @@
+target = Category:World Current Research Publishing academic journals
+category =        World Current Research Publishing academic journals
+---
+    World Open AIDS Journal
+    World Open Abstract and Applied Analysis Journal
+    World Open Accounting & Marketing Journal
+    World Open Accounting Journal
+    World Open Accounting and Auditing Journal
+    World Open Accounting and Finance Journal
+    World Open Accounting and Information Systems Journal
+    World Open Accounting, Auditing and Taxation Journal
+    World Open Acoustics Journal
+    World Open Actuators Journal
+    World Open Addiction Journal
+    World Open Administrative Sciences Journal
+    World Open Adult Education Journal
+    World Open Advanced Agriculture Journal
+    World Open Advanced Astronomy Journal
+    World Open Advanced Biology Journal
+    World Open Advanced Calculus Journal
+    World Open Advanced Computer Science Journal
+    World Open Advanced Food Science Journal
+    World Open Advanced Life Sciences Journal
+    World Open Advanced Linguistics Journal
+    World Open Advanced Mathematical Studies Journal
+    World Open Advanced Mechanics Journal
+    World Open Advanced Microbiology Journal
+    World Open Advanced Physics Journal
+    World Open Advanced Research Journal
+    World Open Advanced Science Journal
+    World Open Advanced Science and Technology Journal
+    World Open Advanced Technology Journal
+    World Open Advances in Management and Applied Economics Journal
+    World Open Advances in Mathematical Physics Journal
+    World Open Advertising Journal
+    World Open Aerospace Engineering Journal
+    World Open Aging Journal
+    World Open Agrarianism and Peasant Studies Journal
+    World Open Agribusiness and Resource Economics Journal
+    World Open Agricultural Biotechnology and Sustainable Development Journal
+    World Open Agricultural Business and Management Journal
+    World Open Agricultural Chemistry Journal
+    World Open Agricultural Cooperatives and Collective Farming Journal
+    World Open Agricultural Development Projects and Programs Journal
+    World Open Agricultural Economics Journal
+    World Open Agricultural Economics and Development Journal
+    World Open Agricultural Economics and Extension Journal
+    World Open Agricultural Engineering Journal
+    World Open Agricultural Extension and Rural Development Journal
+    World Open Agricultural Finance Journal
+    World Open Agricultural Health and Safety Journal
+    World Open Agricultural Information and Communication Journal
+    World Open Agricultural Management and Food Production Journal
+    World Open Agricultural Marketing Journal
+    World Open Agricultural Policies and Practices Journal
+    World Open Agricultural Research and Development Journal
+    World Open Agricultural Research and Natural Resources Journal
+    World Open Agricultural Research and Reviews Journal
+    World Open Agricultural Resources and Sustainability Journal
+    World Open Agricultural Revolution and Development Journal
+    World Open Agricultural Robotics and Automation Journal
+    World Open Agricultural Science and Technology Journal
+    World Open Agricultural Sciences Journal
+    World Open Agricultural Statistics, Farm Records and Accounting Journal
+    World Open Agricultural Subsidy and Rural Economics Journal
+    World Open Agricultural Systems Journal
+    World Open Agricultural Technology and Productivity Journal
+    World Open Agricultural Waste Recycling Journal
+    World Open Agricultural and Biological Sciences Journal
+    World Open Agricultural and Cropping Systems Journal
+    World Open Agricultural and Economic Geography Journal
+    World Open Agricultural and Food Economics Journal
+    World Open Agricultural and Resource Economics Journal
+    World Open Agriculture Journal
+    World Open Agriculture and Environmental Sciences Journal
+    World Open Agriculture and Food Science Journal
+    World Open Agriculture and Soil Science Journal
+    World Open Agriculture and Sustainability Journal
+    World Open Agrochemicals and Plant Protection Journal
+    World Open Agroforestry and Silviculture Journal
+    World Open Agrominerals and Agromaterials Journal
+    World Open Agronomy Journal
+    World Open Agrophysics Research Journal
+    World Open Air Pollution Journal
+    World Open Algorithm Journal
+    World Open Allergy Journal
+    World Open Alloys and Compounds Journal
+    World Open Alternative Energy Journal
+    World Open Alzheimer's Journal
+    World Open Analytical Chemistry Journal
+    World Open Analytical Science Journal
+    World Open Anatomy Journal
+    World Open Andrology Journal
+    World Open Anesthesiology Journal
+    World Open Animal & Environmental Science Journal
+    World Open Animal Anatomy and Physiology Journal
+    World Open Animal Breeding Journal
+    World Open Animal Pests and Diseases Journal
+    World Open Animal Physiology Journal
+    World Open Animal Production and Husbandry Journal
+    World Open Animal Science Journal
+    World Open Anthropology Journal
+    World Open Antibiotics Journal
+    World Open Antibodies Journal
+    World Open Antimicrobial Agents Journal
+    World Open Antioxidants Journal
+    World Open Apoptosis Journal
+    World Open Applied Analysis Journal
+    World Open Applied Biochemistry and Biotechnology Journal
+    World Open Applied Biosensor Journal
+    World Open Applied Business Journal
+    World Open Applied Chemical Sciences Journal
+    World Open Applied Chemicstry Journal
+    World Open Applied Econometrics Journal
+    World Open Applied Economics Journal
+    World Open Applied Engineering Journal
+    World Open Applied Entomology and Zoology Journal
+    World Open Applied Financial Economics Journal
+    World Open Applied Geography and Development Journal
+    World Open Applied Health Economics and Health Policy Journal
+    World Open Applied Informatics Journal
+    World Open Applied Mathematical Finance Journal
+    World Open Applied Mathematics Journal
+    World Open Applied Physics Journal
+    World Open Applied Psychology Journal
+    World Open Applied Science Journal
+    World Open Applied Sociology Journal
+    World Open Aquaculture Economics and Management Journal
+    World Open Archaeology Journal
+    World Open Architecture Journal
+    World Open Area Studies Journal
+    World Open Arthritis and Rheumatology Journal
+    World Open Artificial Intelligence Journal
+    World Open Arts Journal
+    World Open Arts and Humanities Journal
+    World Open Asthma Journal
+    World Open Astrobiology Journal
+    World Open Atherosclerosis & Thrombosis Journal
+    World Open Atmospheric Science Journal
+    World Open Atoms Journal
+    World Open Autoimmunity Journal
+    World Open Automation and Control Science Journal
+    World Open Axioms Journal
+    World Open Bacteria and Antibiotics Journal
+    World Open Bacteriology Journal
+    World Open Banking and Accounting Journal
+    World Open Banking and Business Journal
+    World Open Banking and Finance Journal
+    World Open Banking, Accounting and Finance Journal
+    World Open Banking, Accounting and Management Journal
+    World Open Batteries Journal
+    World Open Behavioral Medicine Journal
+    World Open Behavioral Research in Accounting Journal
+    World Open Behavioral Science Journal
+    World Open Beverages Journal
+    World Open Bioactive Compounds Journal
+    World Open Biochemical Engineering Journal
+    World Open Biochemistry Journal
+    World Open Biochemistry and Biotechnology Journal
+    World Open Biodiversity & Conservation Journal
+    World Open Biodiversity and Ecosystems Journal
+    World Open Bioelectrochemistry Journal
+    World Open Bioengineering Journal
+    World Open Biography Journal
+    World Open Bioinformatics Journal
+    World Open Biological Science Journal
+    World Open Biology & Cell Development Journal
+    World Open Biology and Botany Journal
+    World Open Biology and Ecology Journal
+    World Open Biomarkers Journal
+    World Open Biomaterials Journal
+    World Open Biomathematics and Biostatistics Journal
+    World Open Biomedical Engineering Journal
+    World Open Biomedical Journal
+    World Open Biomolecules Journal
+    World Open Biophysical Chemistry Journal
+    World Open Biophysics and Structural Biology Journal
+    World Open Bioresource Technology Journal
+    World Open Bioscience Journal
+    World Open Biosecurity Journal
+    World Open Biosecurity and Bioterrorism Journal
+    World Open Biosensors Journal
+    World Open Biotechnology Journal
+    World Open Blood Lymph Journal
+    World Open Bonds and Derivatives Journal
+    World Open Bone Journal
+    World Open Botany Journal
+    World Open Brain Sciences Journal
+    World Open Breast Cancer Journal
+    World Open Building Biology & Ecology Journal
+    World Open Buildings Journal
+    World Open Business & Economics Journal
+    World Open Business & Entrepreneurship Journal
+    World Open Business & Management Journal
+    World Open Business Continuity and Risk Management Journal
+    World Open Business Education Journal
+    World Open Business Environment Journal
+    World Open Business Excellence Journal
+    World Open Business Governance and Ethics Journal
+    World Open Business Information Systems Journal
+    World Open Business Innovation and Research Journal
+    World Open Business Intelligence and Data Mining Journal
+    World Open Business Journal
+    World Open Business and Accounting Journal
+    World Open Business and Banking Journal
+    World Open Business and Commercial Law Journal
+    World Open Business and Emerging Markets Journal
+    World Open Business and Finance Journal
+    World Open Business and Globalisation Journal
+    World Open Business and Industrial Marketing Journal
+    World Open Business and International Management Journal
+    World Open Business and Marketing Journal
+    World Open Business and Politics Journal
+    World Open Business and Social Research Journal
+    World Open Business and Trade Journal
+    World Open Business, Economics and Finance Journal
+    World Open Cancer Immunology Journal
+    World Open Cancer Journal
+    World Open Cancer and Chemotherapy Journal
+    World Open Cancer and Tumar Journal
+    World Open Carbon Dioxide Journal
+    World Open Carbon Journal
+    World Open Cardiology Research Journal
+    World Open Cardiovascular & Thoracic Surgery Journal
+    World Open Cardiovascular Diseases and Surgery Journal
+    World Open Cardiovascular Imaging Journal
+    World Open Cardiovascular Medicine Journal
+    World Open Cassava and Potatoes Research Journal
+    World Open Catalysis Journal
+    World Open Cell Biology Journal
+    World Open Cell Signaling Journal
+    World Open Cell and Animal Biology Journal
+    World Open Ceramic Science & Engineering Journal
+    World Open Ceramics and Glass Engineering Journal
+    World Open Cereals and Oilseeds Journal
+    World Open Cereals, Legumes, Nuts and Seeds Journal
+    World Open Challenges Journal
+    World Open Chemical & Biomedical Journal
+    World Open Chemical Engineering Journal
+    World Open Chemical Genomics Journal
+    World Open Chemical Physics Journal
+    World Open Chemical Vapor Deposition Journal
+    World Open Chemistry Journal
+    World Open Chemosensors Journal
+    World Open Child and Adolescent Behaviour Journal
+    World Open Children Journal
+    World Open Chinese Culture and Management Journal
+    World Open Chinese Economy Journal
+    World Open Chinese Medicine Journal
+    World Open Chinese Studies Journal
+    World Open Chromatography Journal
+    World Open Chromosome Research Journal
+    World Open Chromosphere Journal
+    World Open Chronic Diseases Journal
+    World Open Circulation and Vascular Journal
+    World Open Civil & Mechanical Engineering Journal
+    World Open Civil Engineering Journal
+    World Open Civil and Criminal Law Journal
+    World Open Climate Change Economics Journal
+    World Open Climate Change Journal
+    World Open Clinical Biochemistry Journal
+    World Open Clinical Cancer Journal
+    World Open Clinical Case Reports Journal
+    World Open Clinical Chemistry Journal
+    World Open Clinical Immunology Journal
+    World Open Clinical Informatics Journal
+    World Open Clinical Laboratory Research Journal
+    World Open Clinical Neurophysiology Journal
+    World Open Clinical Nutrition Journal
+    World Open Clinical Psychology Journal
+    World Open Clinical Trials Journal
+    World Open Clinical pharmacology Journal
+    World Open Clothing and Textiles Journal
+    World Open Coal Science Journal
+    World Open Coatings Journal
+    World Open Cocoa, Rubber and Palm Oil Research Journal
+    World Open Colloid Science Journal
+    World Open Colorectal Cancer Journal
+    World Open Colorectal Surgery Journal
+    World Open Commerce and Commodity Market Journal
+    World Open Communication Journal
+    World Open Communication in Healthcare Journal
+    World Open Community Development Journal
+    World Open Community Health Journal
+    World Open Comparative Education Research Journal
+    World Open Competition and Change Journal
+    World Open Complementary Medicine Journal
+    World Open Complementary and Alternative Medicine Journal
+    World Open Computation Journal
+    World Open Computational Economics Journal
+    World Open Computational Management Science Journal
+    World Open Computational and Applied Mathematics Journal
+    World Open Computer & Electrical Engineering Journal
+    World Open Computer & Library Science Journal
+    World Open Computer Engineering Journal
+    World Open Computer Science Journal
+    World Open Computer Science in Economics and Management Journal
+    World Open Computer Technology Journal
+    World Open Computer and Chemical Engineering Journal
+    World Open Computer and Information Science Education Journal
+    World Open Computers & Chemistry Journal
+    World Open Computers & Mathematics Journal
+    World Open Computers & Physics Journal
+    World Open Condensed Matter Physics Journal
+    World Open Conference Papers Journal
+    World Open Conflict Management and Peace Science Journal
+    World Open Conservation Biology Journal
+    World Open Conservation Medicine Journal
+    World Open Constitutional Political Economy Journal
+    World Open Constitutional and Administrative Law Journal
+    World Open Construction and Building Technology Journal
+    World Open Consumer Policy Journal
+    World Open Contemporary Accounting Research Journal
+    World Open Contemporary Research Journal
+    World Open Corporate Ownership and Control Journal
+    World Open Corrosion Journal
+    World Open Cosmetics Journal
+    World Open Cough and Tuberculosis Journal
+    World Open Credit and Capital Markets Journal
+    World Open Criminology Journal
+    World Open Critical Agricultural Reviews Journal
+    World Open Critical Care Journal
+    World Open Critical Care Medicine Journal
+    World Open Critical Review Journal
+    World Open Cryobiology Research Journal
+    World Open Crystallography Journal
+    World Open Crystals Journal
+    World Open Culture, Language & Society Journal
+    World Open Cultures, Customs and Traditions Journal
+    World Open Curriculum Development and Planning Journal
+    World Open Cybernetics and Systemics Journal
+    World Open DNA & Cell Biology Journal
+    World Open Dairy Farming and Milk Production Journal
+    World Open Dance & Therapy Journal
+    World Open Decision Analysis Journal
+    World Open Decisions in Economics and Finance Journal
+    World Open Defence and Peace Economics Journal
+    World Open Demography Journal
+    World Open Dentistry Journal
+    World Open Depression & Anxiety Journal
+    World Open Dermatology Journal
+    World Open Design Engineering Journal
+    World Open Developing Economies Journal
+    World Open Development Policy Review Journal
+    World Open Development Studies Journal
+    World Open Development and Area Studies Journal
+    World Open Development and Change Journal
+    World Open Development and Finance Journal
+    World Open Diabetes Journal
+    World Open Diagnostics Journal
+    World Open Disabilities Journal
+    World Open Diseases Journal
+    World Open Distance, Lifelong and Continuing Education Journal
+    World Open Diversity Journal
+    World Open Diving and Hyperbaric Medicine Journal
+    World Open Division of Labour and Transaction Costs Journal
+    World Open Drawing, Painting and Sculpture Journal
+    World Open Drug Delivery Journal
+    World Open Drug Design Journal
+    World Open Drug Discovery Journal
+    World Open Drug Metabolism Journal
+    World Open Drug Policy Journal
+    World Open Drug Resistance Journal
+    World Open Drug Safety Journal
+    World Open Dynamic Games and Applications Journal
+    World Open E-Health Telecommunication and Networks Journal
+    World Open Earth & Environmental Sciences Journal
+    World Open Earth Science Journal
+    World Open Earthquake Engineering Journal
+    World Open Ecological Economics Journal
+    World Open Ecology Journal
+    World Open Ecology and Ecosystems Journal
+    World Open Ecommerce Journal
+    World Open Econometrics Journal
+    World Open Economic Analysis and Policy Journal
+    World Open Economic Development and Cultural Change Journal
+    World Open Economic Studies Journal
+    World Open Economic and Business Review Journal
+    World Open Economic and Financial Review Journal
+    World Open Economic and Labour Relations Journal
+    World Open Economic and Social Review Journal
+    World Open Economics Journal
+    World Open Economics and Human Biology Journal
+    World Open Economics and Sociology Journal
+    World Open Economics of Transportation Journal
+    World Open Economies Journal
+    World Open Economy and History Journal
+    World Open Education Journal
+    World Open Education and Management Journal
+    World Open Educational Philosophy Journal
+    World Open Educational Psychology Journal
+    World Open Educational Technology Journal
+    World Open Elearning Journal
+    World Open Electrical Engineering Journal
+    World Open Electroanalytical Chemistry Journal
+    World Open Electrochemistry Journal
+    World Open Electronics & Digital Device Journal
+    World Open Electronics Engineering Journal
+    World Open Embryology Research Journal
+    World Open Emergency Medicine Journal
+    World Open Emergency Surgery Journal
+    World Open Emergency and Disaster Medicine Journal
+    World Open Endocrinology Journal
+    World Open Energy Conversion and Management Journal
+    World Open Energy Engineering Journal
+    World Open Energy Journal
+    World Open Energy Law & Business Journal
+    World Open Energy Policy Journal
+    World Open Energy and Combustion Journal
+    World Open Energy and Economics Journal
+    World Open Energy and Environment Journal
+    World Open Energy and Power Journal
+    World Open Energy and Smart Grid Journal
+    World Open Energy, Environment and Economics Journal
+    World Open Engine Journal
+    World Open Engineering Management Journal
+    World Open Engineering Mathematics Journal
+    World Open English and Literature Journal
+    World Open English and Modern Language Journal
+    World Open Enterprise Content Management Journal
+    World Open Enterprise Marketing Journal
+    World Open Entomology Journal
+    World Open Entropy Journal
+    World Open Environment, Development and Sustainability Journal
+    World Open Environmental & Biological Journal
+    World Open Environmental Biology Journal
+    World Open Environmental Economics and Management Journal
+    World Open Environmental Economics and Policy Studies Journal
+    World Open Environmental Engineering Journal
+    World Open Environmental Law and Protection Journal
+    World Open Environmental Policy & Planning Journal
+    World Open Environmental Pollution and Toxicology Journal
+    World Open Environmental Protection Journal
+    World Open Environmental Sciences Journal
+    World Open Environmental Sciences and Ecology Journal
+    World Open Environmental Sciences and Technology Journal
+    World Open Environmental Studies & Review Journal
+    World Open Environmental and Resource Economics Journal
+    World Open Environmental and Waste Management Journal
+    World Open Enzyme Inhibition Journal
+    World Open Epidemiology Journal
+    World Open Epilepsy Journal
+    World Open Epithelial Biology & Pharmacology Journal
+    World Open Ergonomics Journal
+    World Open Estate and Property Management Journal
+    World Open Ethics Journal
+    World Open Ethology and Sociobiology Journal
+    World Open Evolution Journal
+    World Open Evolutionary Biology Journal
+    World Open Experimental Biology Journal
+    World Open Experimental Economics Journal
+    World Open Facial Surgery Journal
+    World Open Family Economics and Nutrition Journal
+    World Open Family Studies Journal
+    World Open Fashion Marketing and Management Journal
+    World Open Fibers and Fabrics Journal
+    World Open Finance & Accounting Journal
+    World Open Finance & Banking Journal
+    World Open Finance & Business Journal
+    World Open Finance & Economics Journal
+    World Open Finance & Management Journal
+    World Open Finance & Taxation Journal
+    World Open Finance Journal
+    World Open Finance and Development Journal
+    World Open Finance and Trade Policy Journal
+    World Open Finance, Economics and Business Journal
+    World Open Finance, Economics and Management Journal
+    World Open Financial Counseling and Planning Journal
+    World Open Financial Engineering Journal
+    World Open Financial Management & Accounting Journal
+    World Open Financial Management Journal
+    World Open Financial Markets, Institutions and Instruments Journal
+    World Open Financial Mathematics Journal
+    World Open Financial Studies Journal
+    World Open Financial Theory and Practice Journal
+    World Open Finger Joint Pain Journal
+    World Open Fisheries Science Journal
+    World Open Flavour Journal
+    World Open Fluid Dynamics Journal
+    World Open Food Additives & Contaminants Journal
+    World Open Food Analytical Methods Journal
+    World Open Food Biophysics Journal
+    World Open Food Chemistry Journal
+    World Open Food Engineering Journal
+    World Open Food Measurement & Characterization Journal
+    World Open Food Policy Journal
+    World Open Food Processing and Preservation Journal
+    World Open Food Science & Nutrition Journal
+    World Open Food Science Journal
+    World Open Food Science and Biotechnology Journal
+    World Open Food Science and Technology Journal
+    World Open Food Security Journal
+    World Open Food Technology Journal
+    World Open Food and Bioprocess Technology Journal
+    World Open Food and Environmental Virology Journal
+    World Open Foot and Ankle Surgery Journal
+    World Open Foreign Trade Journal
+    World Open Forensic Medicine and Pathology Journal
+    World Open Forensic Science Journal
+    World Open Forest Science Journal
+    World Open Forum for Health Economics and Policy Journal
+    World Open Foundations and Trends in Accounting Journal
+    World Open Foundations and Trends in Econometrics Journal
+    World Open Foundations and Trends in Entrepreneurship Journal
+    World Open Foundations and Trends in Microeconomics Journal
+    World Open Foundations of Computational Mathematics Journal
+    World Open Frontiers in Finance and Economics Journal
+    World Open Fuel Cell Journal
+    World Open Fuel Processing Technology Journal
+    World Open Fuels & Energy Journal
+    World Open Fuels Journal
+    World Open Galaxies Journal
+    World Open Game Design & Development Journal
+    World Open Game Theory Journal
+    World Open Gardening and Domesticated Plants Journal
+    World Open Gastroenterology Journal
+    World Open Gastrointestinal Medicine Journal
+    World Open Gels Journal
+    World Open Gender and Sexuality Studies Journal
+    World Open Gender and Sustainable Development Journal
+    World Open Gene Therapy Journal
+    World Open General Medicine Journal
+    World Open General Practice Journal
+    World Open General Science Journal
+    World Open Genetic Engineering and Biotechnology Journal
+    World Open Genetic Medicine Journal
+    World Open Genetics Engineering Journal
+    World Open Genomics Journal
+    World Open Geochemistry Journal
+    World Open Geographical Information Science Journal
+    World Open Geography Journal
+    World Open Geography and Economics Journal
+    World Open Geography and Regional Planning Journal
+    World Open Geology Journal
+    World Open Geometry Journal
+    World Open Geosciences Journal
+    World Open Geriatric Medicine Journal
+    World Open Gerontology and Geriatrics Journal
+    World Open Global Health and Social Medicine Journal
+    World Open Global Networks Journal
+    World Open Global Social Policy Journal
+    World Open Global Warming and Climate Change Journal
+    World Open Globalization and Health Journal
+    World Open Globalization and World Development Journal
+    World Open Glycoscience Journal
+    World Open Government and Politics Journal
+    World Open Gravity Journal
+    World Open Greenhouse Gas Emission Journal
+    World Open Greenhouse Gas Management Journal
+    World Open Growth and Change Journal
+    World Open HIV Medicine Journal
+    World Open HPB Surgery Journal
+    World Open Hazardous Materials Journal
+    World Open Head & Face Medicine Journal
+    World Open Headaches and Migraines Journal
+    World Open Health Economics Journal
+    World Open Health Education Journal
+    World Open Health Psychology Journal
+    World Open Health Services & Policy Journal
+    World Open Heart Failure Journal
+    World Open Heat and Mass Transfer Journal
+    World Open Hematology Journal
+    World Open Hepatitis Research Journal
+    World Open Hepatology Journal
+    World Open Herbal Medicine Journal
+    World Open Heredity and Evolution Journal
+    World Open Herpetology Journal
+    World Open High Blood Pressure & Cardiovascular Journal
+    World Open High Energy Chemistry Journal
+    World Open High Energy Materials Journal
+    World Open High Energy Physics Journal
+    World Open Higher Education Journal
+    World Open Hip Surgery Journal
+    World Open Histology Journal
+    World Open Histology and Cytology Journal
+    World Open History and Historiography Journal
+    World Open History of Education Journal
+    World Open History of Political Economy Journal
+    World Open History, Language and Culture Journal
+    World Open Home Economics Journal
+    World Open Horticulture and Floriculture Journal
+    World Open Hospice and Palliative Medicine Journal
+    World Open Hospital Medicine Journal
+    World Open Hospitality Management Journal
+    World Open Hospitality and Tourism Management Journal
+    World Open Housing Finance Journal
+    World Open Human Activity Journal
+    World Open Human Anatomy and Physiology Journal
+    World Open Human Biology Journal
+    World Open Human Genetics Journal
+    World Open Human Geographies Journal
+    World Open Human Interface Technology Journal
+    World Open Human Resource Development Journal
+    World Open Human Resource Management Journal
+    World Open Human-Computer Interaction Journal
+    World Open Humanities Journal
+    World Open Hybrid Technology Journal
+    World Open Hydraulic Engineering Journal
+    World Open Hydrology Journal
+    World Open Hypertension Journal
+    World Open IT and Hardware Journal
+    World Open Immune Based Therapies Journal
+    World Open Immunology Journal
+    World Open Immunology and Cell Biology Journal
+    World Open Immunology and Infectious Disease Journal
+    World Open Industrial Engineering Journal
+    World Open Industrial Engineering and Management Journal
+    World Open Industrial Marketing Management Journal
+    World Open Industrial Mathematics Journal
+    World Open Industrial and Business Management Journal
+    World Open Industrial and Labor Relations Journal
+    World Open Industrial and Manufacturing Engineering Journal
+    World Open Industry and Development Journal
+    World Open Infectious Diseases Journal
+    World Open Inflammation Journal
+    World Open Informatics Journal
+    World Open Information Economics and Policy Journal
+    World Open Information Science Journal
+    World Open Information Systems Journal
+    World Open Information and Communications Technology Journal
+    World Open Innovation and Entrepreneurship Journal
+    World Open Innovative Marketing Journal
+    World Open Inorganic Chemistry Journal
+    World Open Inorganic Non-metallic Materials Journal
+    World Open Insects Journal
+    World Open Instrumentation Journal
+    World Open Intellectual Property Law Journal
+    World Open Intelligence Journal
+    World Open Interior Design Journal
+    World Open Internal Medicine Journal
+    World Open International Education Journal
+    World Open Internet Protocol Technology Journal
+    World Open Internet Services and Applications Journal
+    World Open Internet and Security Journal
+    World Open Invasive Surgery Journal
+    World Open Investment Policy Journal
+    World Open Islamic Studies Journal
+    World Open Labour Economics Journal
+    World Open Labour Policy
+    World Open Lake and River Journal
+    World Open Land Journal
+    World Open Landscape and Urban Planning Journal
+    World Open Language and Hearing Research Journal
+    World Open Languages Journal
+    World Open Languages and Cultures Journal
+    World Open Law Journal
+    World Open Leadership Journal
+    World Open Learning Research Journal
+    World Open Leukemia & Lymphoma Medicine Journal
+    World Open Leukemia Journal
+    World Open Library and Information Science Journal
+    World Open Life Sciences Journal
+    World Open Life Support Engineering Journal
+    World Open Linear Algebra and Matrix Theory Journal
+    World Open Linguistics Journal
+    World Open Lipids Journal
+    World Open Liver Disease & Transplantation Journal
+    World Open Liver Journal
+    World Open Livestock Production Journal
+    World Open Longevity Science Journal
+    World Open Lubricants Journal
+    World Open Lung Cancer Journal
+    World Open Lymphoma Journal
+    World Open Macroeconomics & Microeconomics Journal
+    World Open Macromolecules Journal
+    World Open Magnetic Resonance Journal
+    World Open Malaria Research Journal
+    World Open Management Accounting Journal
+    World Open Management Accounting Journal
+    World Open Management Journal
+    World Open Management Mathematics Journal
+    World Open Manufacturing Engineering Journal
+    World Open Marine Biology Journal
+    World Open Marine Biology and Ecology Journal
+    World Open Marine Ecology Journal
+    World Open Marine Engineering Journal
+    World Open Marketing Journal
+    World Open Mass Communication Journal
+    World Open Mass Emergencies and Disasters Journal
+    World Open Materials Science Journal
+    World Open Mathematical Biology Journal
+    World Open Mathematical Chemistry Journal
+    World Open Mathematical Finance Journal
+    World Open Mathematical Modelling and Applied Computing Journal
+    World Open Mathematical Physics Journal
+    World Open Mathematical Social Sciences Journal
+    World Open Mathematical Statistics Journal
+    World Open Mathematics Journal
+    World Open Mathematics and Financial Economics Journal
+    World Open Mathematics and Mathematical Sciences Journal
+    World Open Measurement and Evaluation Journal
+    World Open Measurement in Physical Education Journal
+    World Open Mechanical Engineering Journal
+    World Open Mechanical and Electrical Engineering Journal
+    World Open Mechanics Journal
+    World Open Media Studies Journal
+    World Open Mediators of Inflammation Journal
+    World Open Medical Devices Journal
+    World Open Medical Economics Journal
+    World Open Medical Education Journal
+    World Open Medical Engineering & Technology Journal
+    World Open Medical Engineering Journal
+    World Open Medical Genetics Journal
+    World Open Medical Imaging Journal
+    World Open Medical Informatics Journal
+    World Open Medical Physics Journal
+    World Open Medical Practice Management Journal
+    World Open Medical Science Journal
+    World Open Medical Science and Medicine Journal
+    World Open Medical Science and Public Health Journal
+    World Open Medicinal Chemistry Journal
+    World Open Medicine Journal
+    World Open Men's Health Journal
+    World Open Metal Science Journal
+    World Open Metallurgy Journal
+    World Open Microbiology Journal
+    World Open Microchemical Journal
+    World Open Microelectronic Engineering Journal
+    World Open Microgravity Science and Technology Journal
+    World Open Microporous and Mesoporous Materials Journal
+    World Open Microwave Science and Technology Journal
+    World Open Mineralogy Journal
+    World Open Mining & Mineral Processing Journal
+    World Open Mobile Information Systems Journal
+    World Open Mobile and Wireless Technology Journal
+    World Open Modeling and Computation for Flow and Transport Journal
+    World Open Modelling and Simulation in Engineering Journal
+    World Open Molecular Biology Journal
+    World Open Molecular Imaging Journal
+    World Open Molecular Sciences Journal
+    World Open Molecular and Genetic Medicine Journal
+    World Open Molecular and Optical Physics Journal
+    World Open Money, Investment and Banking Journal
+    World Open Music and Instrument Journal
+    World Open Mycology Journal
+    World Open Mycology Science Journal
+    World Open NGO Journal
+    World Open Nanobiomedical Journal
+    World Open Nanobiotechnology Journal
+    World Open Nanomaterials Journal
+    World Open Nanomedicine Journal
+    World Open Nanoparticles Journal
+    World Open Nanoscience Journal
+    World Open Nanotechnology Journal
+    World Open Natural Hazards Journal
+    World Open Natural Products Journal
+    World Open Natural Resources Journal
+    World Open Natural Science Journal
+    World Open Neglected Tropical Diseases Journal
+    World Open Nematology and Entomology Journal
+    World Open Nephrology Journal
+    World Open Network Engineering Journal
+    World Open Networking and Virtual Organisations Journal
+    World Open Networks and Spatial Economics Journal
+    World Open Neural Plasticity Journal
+    World Open Neurodegenerative Diseases Journal
+    World Open Neuroendocrinology Journal
+    World Open Neuroimaging Journal
+    World Open Neuroinfectious Diseases Journal
+    World Open Neurological Medicine Journal
+    World Open Neurology Journal
+    World Open Neuropsychopharmacology Journal
+    World Open Neuroscience Journal
+    World Open Neurosurgery Journal
+    World Open Nitric Oxide Journal
+    World Open Nonferrous Metallurgy Journal
+    World Open Nonlinear Dynamics Journal
+    World Open Nonlinear Optical Physics & Materials Journal
+    World Open Nonprofit Management and Leadership Journal
+    World Open Nonprofit and Voluntary Journal
+    World Open Nuclear & Particle Physics Journal
+    World Open Nuclear Chemistry Journal
+    World Open Nuclear Energy Engineering Journal
+    World Open Nuclear Energy Journal
+    World Open Nuclear Medicine Journal
+    World Open Nuclear Science Journal
+    World Open Nucleic Acids Journal
+    World Open Numbers Journal
+    World Open Numerical Advanced Methods Journal
+    World Open Numerical Analysis Journal
+    World Open Nursing Science Journal
+    World Open Nutraceuticals Journal
+    World Open Nutrition Journal
+    World Open Nutrition and Metabolism Journal
+    World Open OR Spectrum Research Journal
+    World Open Obesity Journal
+    World Open Obstetrics and Gynecology Journal
+    World Open Occupational Health and Safety Journal
+    World Open Occupational Science Journal
+    World Open Occupational Therapy Journal
+    World Open Ocean & Coastal Management Journal
+    World Open Ocean Dynamics Journal
+    World Open Ocean Engineering Journal
+    World Open Ocean Medicine Journal
+    World Open Oceanography Journal
+    World Open Oil and Gas Law Journal
+    World Open Oncological Medicine Journal
+    World Open Online Marketing Journal
+    World Open Operating Systems Development Journal
+    World Open Operational Research Journal
+    World Open Operators Journal
+    World Open Ophthalmological Medicine Journal
+    World Open Ophthalmology Journal
+    World Open Optical Technologies Journal
+    World Open Optics Journal
+    World Open Optimization Journal
+    World Open OptoElectronics Journal
+    World Open Oral Diseases Journal
+    World Open Oral Implants Journal
+    World Open Oral Medicine Journal
+    World Open Oral Oncology Journal
+    World Open Organic Agriculture Journal
+    World Open Organic Chemistry Journal
+    World Open Organic Electronics Journal
+    World Open Organic Polymer Materials Journal
+    World Open Organic Reaction Mechanisms Journal
+    World Open Organic Semiconductors Journal
+    World Open Organic Waste Journal
+    World Open Organisms and Taxonomy Journal
+    World Open Organization and Environment Journal
+    World Open Organizational Behaviour Journal
+    World Open Ornithology Journal
+    World Open Orthopaedics Journal
+    World Open Orthopaedics and Traumatology Journal
+    World Open Orthopedic Surgery Journal
+    World Open Orthopedics Journal
+    World Open Osteoporosis Journal
+    World Open Otolaryngology Journal
+    World Open Otorhinolaryngology Journal
+    World Open Oxidative Medicine Journal
+    World Open Pacing & Therapy Journal
+    World Open Pain Management Journal
+    World Open Paleontology Journal
+    World Open Palliative Care Journal
+    World Open Parasitology Journal
+    World Open Parkinson's Disease Journal
+    World Open Partial Differential Equations Journal
+    World Open Particle & Particle Systems Journal
+    World Open Patent and Trademark Journal
+    World Open Pathogens Journal
+    World Open Pathology Journal
+    World Open Patient Counselling Journal
+    World Open Patient Education and Counseling Journal
+    World Open Peace and Conflict Journal
+    World Open Peacebuilding & Development Journal
+    World Open Pediatric Medicine Journal
+    World Open Peptides Journal
+    World Open Petroleum Engineering Journal
+    World Open Petroleum and Oil Exploration Journal
+    World Open Pharmaceutical Crops Journal
+    World Open Pharmaceutical Sciences and Drug Designing Journal
+    World Open Pharmaceutical and Biomedical Analysis Journal
+    World Open Pharmaceutics Journal
+    World Open Pharmacoeconomics & Health Economics Journal
+    World Open Pharmacology & Pharmacy Journal
+    World Open Pharmacology Journal
+    World Open Pharmacy Journal
+    World Open Philosophy Journal
+    World Open Photochemistry Journal
+    World Open Photoenergy Journal
+    World Open Photography Journal
+    World Open Photonics Journal
+    World Open Physical Chemistry Journal
+    World Open Physical Education Journal
+    World Open Physical Sciences Journal
+    World Open Physics & Mathematics Journal
+    World Open Physics Journal
+    World Open Physics and Chemistry Journal
+    World Open Physiological and Biochemical Zoology Journal
+    World Open Physiology Journal
+    World Open Physiotherapy Journal
+    World Open Pig Farming Journal
+    World Open Plant Anatomy and Physiology Journal
+    World Open Plant Biology Journal
+    World Open Plant Genetics Journal
+    World Open Plant Genomics Journal
+    World Open Plant Pests and Diseases Journal
+    World Open Plant Protection Journal
+    World Open Plant Science Journal
+    World Open Plant and Animal Products Journal
+    World Open Plantation Agriculture Journal
+    World Open Plasma Physics Journal
+    World Open Plastic Surgery Journal
+    World Open Policies and Practices Journal
+    World Open Policy Studies Journal
+    World Open Political Science & Diplomacy Journal
+    World Open Political Science Journal
+    World Open Politics and Governance Journal
+    World Open Polymer Chemistry Journal
+    World Open Polymer Engineering Journal
+    World Open Polymer Science Journal
+    World Open Population Research Journal
+    World Open Postgraduate Medicine Journal
+    World Open Pottery, Weaving and Fabrics Journal
+    World Open Poultry Farming Journal
+    World Open Poverty and Public Policy Journal
+    World Open Powder Technology Journal
+    World Open Power Electronics Journal
+    World Open Power Systems Engineering Journal
+    World Open Pregnancy Journal
+    World Open Preventive Medicine Journal
+    World Open Probability Journal
+    World Open Probability and Statistics Journal
+    World Open Problems and Perspectives in Management Journal
+    World Open Process Chemistry Journal
+    World Open Process Engineering Journal
+    World Open Processes Journal
+    World Open Production and Operations Management Journal
+    World Open Productivity Analysis Journal
+    World Open Programming Languages Journal
+    World Open Project Management Journal
+    World Open Property Management Journal
+    World Open Prostate Cancer Journal
+    World Open Proteomes Journal
+    World Open Proteomics Journal
+    World Open Psychiatry Journal
+    World Open Psychology Journal
+    World Open Public Administration Journal
+    World Open Public Finance and Management Journal
+    World Open Public Health Journal
+    World Open Public Health and Epidemiology Journal
+    World Open Public Organization Journal
+    World Open Public Relations Journal
+    World Open Public Services Journal
+    World Open Publications Journal
+    World Open Pulmonary Diseases Journal
+    World Open Pulmonary Medicine Journal
+    World Open Pulmonology Journal
+    World Open Pure Mathematics Journal
+    World Open Pure and Applied Physics Journal
+    World Open Pyrolysis and Thermal Journal
+    World Open Quality Assurance Journal
+    World Open Quality Management Journal
+    World Open Quality and Reliability Engineering Journal
+    World Open Quality in Higher Education Journal
+    World Open Quantitative Economics Journal
+    World Open Quantitative Finance Journal
+    World Open Quantitative Marketing and Economics Journal
+    World Open Quantitative Research in Education Journal
+    World Open Quantum Chemistry Journal
+    World Open Quantum Electronics Journal
+    World Open Quantum Information Science Journal
+    World Open Quantum Mechanics Journal
+    World Open Quantum Physics Journal
+    World Open Radio Engineering Journal
+    World Open Radio Frequency Identification Technology Journal
+    World Open Radiological Physics and Technology Journal
+    World Open Radiology Journal
+    World Open Radiotherapy & Oncology Journal
+    World Open Radiotherapy Journal
+    World Open Railway Systems Engineering Journal
+    World Open Random Structures & Algorithms Journal
+    World Open Reconfigurable Computing Journal
+    World Open Reconstructive and Cosmetic Surgery Journal
+    World Open Recycle and Resource Journal
+    World Open Regeneration Journal
+    World Open Regenerative Medicine Journal
+    World Open Regulation and Governance Journal
+    World Open Rehabilitation Journal
+    World Open Religions Journal
+    World Open Remote Sensing Journal
+    World Open Renewable & Sustainable Energy Journal
+    World Open Renewable Energy Journal
+    World Open Reproductive Medicine Journal
+    World Open Reproductive Science Journal
+    World Open Research Policy Journal
+    World Open Research and Review Journal
+    World Open Residence Management Journal Journal
+    World Open Resource Management Journal
+    World Open Resource and Energy Economics Journal
+    World Open Resources Policy Journal
+    World Open Respiratory Diseases Journal
+    World Open Respiratory Medicine Journal
+    World Open Rheumatology Journal
+    World Open Rheumatology and Autoimmune Diseases Journal
+    World Open Rice, Wheat and Maize Research Journal
+    World Open Risk Decision and Policy Journal
+    World Open Risk Management Journal
+    World Open Risks Journal
+    World Open River Basin Management Journal
+    World Open River Research Journal
+    World Open Robotics Journal
+    World Open Roots and Tubers Journal
+    World Open Rotating Machinery Journal
+    World Open Safety Journal
+    World Open Safety Science and Technology Journal
+    World Open Sarcoma Journal
+    World Open Savings and Development Journal
+    World Open Scanning Journal
+    World Open Schizophrenia Research Journal
+    World Open Science Journal
+    World Open Science and Society Journal
+    World Open Science and Technology Journal
+    World Open Scientific Essay Journal
+    World Open Scientific Programming Journal
+    World Open Security Journal
+    World Open Seed Science and Crop Improvement Journal
+    World Open Sensors Journal
+    World Open Sericulture and Cotton Production Journal
+    World Open Service Management Journal
+    World Open Service Science Journal
+    World Open Service Science and Management Journal
+    World Open Sexual Medicine Journal
+    World Open Sexuality Education Journal
+    World Open Shock and Vibration Journal
+    World Open Signal Processing Journal
+    World Open Signal Transduction Journal
+    World Open Signal and Imaging Systems Engineering Journal
+    World Open Skin Cancer Journal
+    World Open Sleep Journal
+    World Open Small Business Economics Journal
+    World Open Small Business Management Journal
+    World Open Smart House Journal
+    World Open Smart Materials Journal
+    World Open Social Networking Journal
+    World Open Social Networks Journal
+    World Open Social Policy Journal
+    World Open Social Psychology Journal
+    World Open Social Science Journal
+    World Open Social Science and Humanities Journal
+    World Open Societies Journal
+    World Open Sociology Journal
+    World Open Soft Matter Journal
+    World Open Software Engineering Journal
+    World Open Soil Science Journal
+    World Open Soil and Water Engineering Journal
+    World Open Solar Energy Journal
+    World Open Solid State Chemistry Journal
+    World Open Solid State Physics Journal
+    World Open Soybeans and Sorghum Research Journal
+    World Open Spectral Analysis Review Journal
+    World Open Spectroscopy Journal
+    World Open Spinal Cord Journal
+    World Open Sports Medicine Journal
+    World Open Sports Sciences Journal
+    World Open Statistical Mechanics Journal
+    World Open Statistics & Probability Journal
+    World Open Statistics Journal
+    World Open Statistics and Physics Journal
+    World Open Stem Cell Journal
+    World Open Stochastic Analysis Journal
+    World Open Stochastics Journal
+    World Open Stomatology Journal
+    World Open Stored Products and Postharvest Journal
+    World Open Stroke Research Journal
+    World Open Structural Biology Journal
+    World Open Structure & Bonding Journal
+    World Open Structures Journal
+    World Open Student Financial Aid Journal
+    World Open Student Research Management Journal
+    World Open Studies in Family Planning Journal
+    World Open Studies in Regional Science Journal
+    World Open Sugar and Cardiovascular Disease Journal
+    World Open Superconductivity Journal
+    World Open Superconductors Journal
+    World Open Surface Science Journal
+    World Open Surgery & Transplantation Journal
+    World Open Surgery Journal
+    World Open Surgical Oncology Journal
+    World Open Sustainability Journal
+    World Open Symmetry Journal
+    World Open Symptoms and Syndromes Journal
+    World Open Synthesis Theory and Applications Journal
+    World Open Synthetic Biology Journal
+    World Open Systems Biology Journal
+    World Open Systems Engineering Journal
+    World Open Systems Journal
+    World Open Tax and Public Finance Journal
+    World Open Teacher Development Journal
+    World Open Teacher Education Journal
+    World Open Teaching Business and Economics Journal
+    World Open Technologies Journal
+    World Open Technology & Globalization Journal
+    World Open Technology Analysis and Strategic Management Journal
+    World Open Technology and Innovation Journal
+    World Open Technology and Investment Journal
+    World Open Telecommunications Engineering Journal
+    World Open Telecommunications Policy Journal
+    World Open Telecommunications and Network Management Journal
+    World Open Telemedicine and Applications Journal
+    World Open Textile Engineering Journal
+    World Open Textile Science Journal
+    World Open Textiles Journal
+    World Open Texture Studies Journal
+    World Open Theatre & Performance Studies Journal
+    World Open Theoretical Chemistry Journal
+    World Open Theoretical and Applied Economics Journal
+    World Open Theoretical and Mathematical Physics Journal
+    World Open Theory and Applications Journal
+    World Open Theory and Decision Journal
+    World Open Therapy and Rehabilitation Journal
+    World Open Thermal Analysis and Calorimetry Journal
+    World Open Thermodynamics Journal
+    World Open Thoracic Surgery Journal
+    World Open Thrombosis Journal
+    World Open Thyroid Research Journal
+    World Open Tissue Engineering & Regenerative Medicine Journal
+    World Open Tissue Engineering Journal
+    World Open Tissues and Organ Systems Journal
+    World Open Tourism Economics Journal
+    World Open Tourism Management Journal
+    World Open Tourism and Hospitality Management Journal
+    World Open Toxicology Journal
+    World Open Toxinology Journal
+    World Open Toxins Journal
+    World Open Trade Journal
+    World Open Trade and Global Markets Journal
+    World Open Traffic Injury Prevention Journal
+    World Open Transition Studies Journal
+    World Open Translational Medicine Journal
+    World Open Transnational Corporations Journal
+    World Open Transplantation Journal
+    World Open Transport Phenomena Journal
+    World Open Transport and Environment Journal
+    World Open Transportation Engineering Journal
+    World Open Transportation Journal
+    World Open Transportation Technologies Journal
+    World Open Transportation and Logistics Journal
+    World Open Travels and Tourism Journal
+    World Open Tribology Journal
+    World Open Tropical Agriculture Journal
+    World Open Tropical Diseases Journal
+    World Open Tropical Medicine Journal
+    World Open Tuberculosis Research Journal Journal
+    World Open Tumor Therapy Journal
+    World Open Ulcers Journal
+    World Open Universal Education Journal
+    World Open Universe Journal
+    World Open Unsolved Problems in Biology and Chemistry Journal
+    World Open Urban Affairs Journal
+    World Open Urban Planning and Environment Journal
+    World Open Urban Public Economics Journal
+    World Open Urban Studies Journal
+    World Open Urology Journal
+    World Open Urology Medicine Journal
+    World Open Urology and Nephrology Journal
+    World Open Utilities Policy Journal
+    World Open VLSI Design Journal
+    World Open Vaccine and Vaccination Journal
+    World Open Value in Health Journal
+    World Open Vascular Disease Prevention Journal
+    World Open Vascular Medicine Journal
+    World Open Vector Biology Journal
+    World Open Vector Ecology Journal
+    World Open Vehicular Technology Journal
+    World Open Venereology Journal
+    World Open Venomous Animals and Toxins Journal
+    World Open Venture Capital Journal
+    World Open Veterinary Medicine Journal
+    World Open Veterinary Science Journal
+    World Open Video Journal
+    World Open Virology Journal
+    World Open Virtual Reality Journal
+    World Open Virtual and Personal Learning Journal
+    World Open Viruses Journal
+    World Open Vocational Education Journal
+    World Open Volumetric and Viscosity Study Journal
+    World Open Waste Management Journal
+    World Open Waste Management and Technology Journal
+    World Open Waste To Energy Journal
+    World Open Wastewater Treatment and Technology Journal
+    World Open Water Conservation and Sustainability Journal
+    World Open Water Pollution Journal
+    World Open Water Resource Journal
+    World Open Water Resource and Environment Journal
+    World Open Water Resource and Industry Journal
+    World Open Water Resource and Protection Journal
+    World Open Water Resources Development Journal
+    World Open Water Resources Management Journal
+    World Open Water Resources and Economics Journal
+    World Open Water Science and Technology Journal
+    World Open Web Engineering Journal
+    World Open Web Engineering and Technology Journal
+    World Open Weed Science and Vegetation Management Journal
+    World Open Wildlife Biology Journal
+    World Open Wildlife and Environment Journal
+    World Open Wildlife and Range Management Journal
+    World Open Wind Energy Journal
+    World Open Wireless Network Journal
+    World Open Women's Health Journal
+    World Open Wood Science and Forestry Journal
+    World Open Wounds and Injuries Journal
+    World Open Yam and Plantain Research Journal
+    World Open Zoo and Wildlife Medicine Journal
+    World Open Zoology Journal
+    World Open Zoology and Ecology Journal

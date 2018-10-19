@@ -1,3 +1,6 @@
+target = OMICS Publishing Group
+category = OMICS Publishing Group academic journals
+---
 Abnormal and Behavioural Psychology
 Acta Chimica and Pharmaceutica Indica
 Acta Psychopathologica

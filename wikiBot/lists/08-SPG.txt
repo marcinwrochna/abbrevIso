@@ -1,3 +1,6 @@
+target = Science Publishing Group
+category = Science Publishing Group academic journals
+---
 Advances in Applied Physiology
 Advances in Applied Sciences
 Advances in Biochemistry

@@ -12,7 +12,7 @@ import state
 
 # ==Some basic config==
 # Max number of edits to make (in one run of the script).
-EDITS_LIMITS = {'create': 10000, 'talk': 10000, 'fix': 10000, 'hatnote': 0}
+EDITS_LIMITS = {'create': 60000, 'talk': 60000, 'fix': 60000, 'hatnote': 0}
 EDITS_DONE = {'create': 0, 'talk': 0, 'fix': 0, 'hatnote': 0}
 # If true, only print what we would do, don't edit.
 ONLY_SIMULATE_EDITS = False
@@ -28,34 +28,57 @@ def main() -> None:
     """Execute the bot."""
     global site  # pylint: disable=global-statement
     logging.basicConfig(level=logging.WARNING)
+    if len(sys.argv) != 2:
+        print('Usage: ' + sys.argv[0] + ' filename.txt')
+        return
+    filename = sys.argv[1]
+
     state.loadOrInitState(STATE_FILE_NAME)
     site = pywikibot.Site('en')
-    #filename = 'srp.txt'
-    #rTarget = 'Scientific Research Publishing'
-    #filename = 'omics.txt'
-    #rTarget = 'OMICS Publishing Group'
-    #filename = 'baishideng.txt'
-    #rTarget = 'Baishideng Publishing Group'
-    #filename = 'ame.txt'
-    #rTarget = 'AME Publishing Company'
-    #filename = 'e.txt'
-    #rTarget = 'e-Century Publishing Corporation'
-    #filename = 'jacobs.txt'
-    #rTarget = 'Jacobs Publishers'
-    #filename = 'pulsus.txt'
-    #rTarget = 'Pulsus Group'
-    filename = 'spg.txt'
-    rTarget = 'Science Publishing Group'
-    #filename = 'BenthamOpen.txt'
-    #rTarget = 'Bentham Science Publishers'
-    #rCat = 'Bentham Open academic journals'
-    rCat = rTarget + ' academic journals'
-    with open('lists/' + filename) as f:
+ 
+    configLines = True
+    numLines = num_lines = sum(1 for line in open(filename) if line.rstrip())
+    i = 0
+    with open(filename) as f:
         for title in f:
             title = title.strip()
             if not title:
                 continue
-            doOmicsRedirects(title, rTarget, rCat)
+            i += 1
+            print('Line ' + str(i - 3) + '/' + str(numLines - 3) + ' \t [' + filename + ']')
+            if configLines:
+                if title == '---':
+                    if not rTarget:
+                        print('ERROR: Target not configured!')
+                        break
+                    targetPage = pywikibot.Page(site, rTarget)
+                    if not targetPage.exists() or targetPage.isRedirectPage() or targetPage.isCategoryRedirect() or targetPage.isDisambig():
+                        print('ERROR: target "' + rTarget +'" does not exists or is a redirect')
+                        break
+                    if not rCat:
+                        print('WARNING: no category configured!')
+                    else:
+                        catPage = pywikibot.Page(site, 'Category:' + rCat)
+                        if not catPage.exists() or not catPage.is_categorypage() or catPage.isCategoryRedirect():
+                            print('ERROR: category "' + rCat +'" does not exist or is not category or is redirect')
+                            break
+                    print('Redirect target = [[' + rTarget + ']]')
+                    print('Redirect cat = [[Category:' +rCat + ']]')
+                    configLines = False
+                    continue
+                keyvalue = title.split('=', 2)
+                if len(keyvalue) != 2:
+                    print('ERROR: lines before "---" should be key=value config!')
+                    break
+                if keyvalue[0].strip() == 'target':
+                    rTarget = keyvalue[1].strip()
+                elif keyvalue[0].strip() == 'category':
+                    rCat = keyvalue[1].strip()
+                else:
+                    print('ERROR: unrecognized configuration key "' + keyvalue[0] + '"')
+                    break
+            else:
+                doOmicsRedirects(title, rTarget, rCat)
             # doOmicsHatnotes(title)
             sys.stdout.flush()
     state.saveState(STATE_FILE_NAME)

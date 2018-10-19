@@ -1,3 +1,6 @@
+target = Pulsus Group
+category = Pulsus Group academic journals
+---
 Anesthesiology Case Reports
 Annals of Histology & Surgical Pathology
 Applied Food Science Journal

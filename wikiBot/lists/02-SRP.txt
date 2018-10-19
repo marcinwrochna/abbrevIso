@@ -1,3 +1,6 @@
+target = Scientific Research Publishing
+category = Scientific Research Publishing academic journals
+---
 Advances in Aerospace Science and Technology
 Advances in Aging Research
 Advances in Alzheimer's Disease

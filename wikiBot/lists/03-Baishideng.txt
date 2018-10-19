@@ -1,3 +1,6 @@
+target = Baishideng Publishing Group
+category = Baishideng Publishing Group academic journals
+---
 World Journal of Anesthesiology
 World Journal of Biological Chemistry
 World Journal of Cardiology

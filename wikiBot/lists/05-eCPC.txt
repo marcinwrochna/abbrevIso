@@ -1,3 +1,6 @@
+target = e-Century Publishing Corporation
+category = e-Century Publishing Corporation academic journals
+---
 American Journal of Blood Research
 American Journal of Cancer Research
 American Journal of Cardiovascular Disease

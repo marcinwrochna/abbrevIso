@@ -1,0 +1,534 @@
+target = Category:Eurasian Research Publishing academic journals
+category =        Eurasian Research Publishing academic journals
+---
+    Eurasian Accounting & Taxation Research Journal
+    Eurasian Accounting Research Journal
+    Eurasian Addiction & Therapy Research Journal
+    Eurasian Addiction Research Journal
+    Eurasian Administration Science Research Journal
+    Eurasian Advanced Agricultural Engineering Research Journal
+    Eurasian Advanced Agricultural Research Journal
+    Eurasian Advanced Analysis Research Journal
+    Eurasian Advanced Biochemistry & Microbiology Research Journal
+    Eurasian Advanced Bioengineering Research Journal
+    Eurasian Advanced Biotechnology Research Journal
+    Eurasian Advanced Calculus Research Journal
+    Eurasian Advanced Cell Biology Research Journal
+    Eurasian Advanced Engineering Research Journal
+    Eurasian Advanced Mathematics & Physics Research Journal
+    Eurasian Advanced Mathematics Research Journal
+    Eurasian Advanced Mechanical Engineering Research Journal
+    Eurasian Advanced Mechanics Research Journal
+    Eurasian Advanced Nanomaterial Research Journal
+    Eurasian Advanced Physics Research Journal
+    Eurasian Advanced Software Engineering Research Journal
+    Eurasian Aerospace Engineering Research Journal
+    Eurasian Aging Research Journal
+    Eurasian Agricultural Biotechnology & Sustainable Development Research Journal
+    Eurasian Agricultural Chemistry Research Journal
+    Eurasian Agricultural Development & Economics Research Journal
+    Eurasian Agricultural Engineering & Biotechnology Research Journal
+    Eurasian Agricultural Extension & Rural Development Research Journal
+    Eurasian Agricultural Management & Economics Research Journal
+    Eurasian Agricultural Process Engineering Research Journal
+    Eurasian Agricultural Processing Research Journal
+    Eurasian Agricultural Production Engineering Research Journal
+    Eurasian Agricultural Sciences & Technology Research Journal
+    Eurasian Agricultural Waste & Management Research Journal
+    Eurasian Agriculture & Biology Research Journal
+    Eurasian Agriculture & Development Research Journal
+    Eurasian Agriculture & Economics Research Journal
+    Eurasian Agriculture & Finance Research Journal
+    Eurasian Agriculture & Food Sciences Research Journal
+    Eurasian Agriculture & Food Technology Research Journal
+    Eurasian Agriculture & Forestry Research Journal
+    Eurasian Agriculture & Management Research Journal
+    Eurasian Agriculture & Soil Science Research Journal
+    Eurasian Agriculture Engineering Research Journal
+    Eurasian Agriculture Research Journal
+    Eurasian Agro-Industrial Engineering Research Journal
+    Eurasian Agronomy Research Journal
+    Eurasian Air Conditioning Engineering Research Journal
+    Eurasian Alternative Energy & Petroleum Technology Research Journal
+    Eurasian Alternative Energy Research Journal
+    Eurasian Alzheimer's Research Journal
+    Eurasian Analytic Geometry Research Journal
+    Eurasian Analytical Biochemistry Research Journal
+    Eurasian Analytical Chemistry Research Journal
+    Eurasian Analytical Science & Engineering Research Journal
+    Eurasian Anatomy & Physiology Research Journal
+    Eurasian Animal & Environmental Biology Research Journal
+    Eurasian Animal Health & Veterinary Medicine Research Journal
+    Eurasian Animal Physiology Research Journal
+    Eurasian Animal Science Research Journal
+    Eurasian Anthropology Research Journal
+    Eurasian Applications of Discrete Mathematics Research Journal
+    Eurasian Applied Agricultural Engineering Research Journal
+    Eurasian Applied Agricultural Research Journal
+    Eurasian Applied Anthropology Research Journal
+    Eurasian Applied Chemical Engineering Research Journal
+    Eurasian Applied Chemical Science Research Journal
+    Eurasian Applied Chemistry Research Journal
+    Eurasian Applied Electronics & Interfacing Research Journal
+    Eurasian Applied Engineering Research Journal
+    Eurasian Applied Engineering in Agriculture Research Journal
+    Eurasian Applied Environmental Sciences Research Journal
+    Eurasian Applied Physics Research Journal
+    Eurasian Applied Science & Technology Research Journal
+    Eurasian Applied Sociology Research Journal
+    Eurasian Applied Statistics Research Journal
+    Eurasian Aquaculture Engineering Research Journal
+    Eurasian Aquatic Ecology Research Journal
+    Eurasian Archaeology Research Journal
+    Eurasian Architectural Engineering Research Journal
+    Eurasian Arthritis & Therapy Research Journal
+    Eurasian Arts Research Journal
+    Eurasian Astrobiology Research Journal
+    Eurasian Astronomy & Astrophysics Research Journal
+    Eurasian Astronomy Research Journal
+    Eurasian Astrophysics Research Journal
+    Eurasian Atomic, Molecular & Optical Physics Research Journal
+    Eurasian Automotive Engineering Research Journal
+    Eurasian Baking Process Technology Research Journal
+    Eurasian Basic & Applied Science Research Journal
+    Eurasian Basic Sciences of Medicine Research Journal
+    Eurasian Behavioral Health & Neuroscience Research Journal
+    Eurasian Behavioural Sciences Research Journal
+    Eurasian Biochemistry & Biotechnology Research Journal
+    Eurasian Biochemistry Research Journal
+    Eurasian Biodiversity & Conservation Research Journal
+    Eurasian Biofertilizers & Biopesticides Research Journal
+    Eurasian Biological Chemistry Research Journal
+    Eurasian Biological Engineering Research Journal
+    Eurasian Biological Sciences Research Journal
+    Eurasian Biomedical Engineering Research Journal
+    Eurasian Biophysics Research Journal
+    Eurasian Bioresource Technology Research Journal
+    Eurasian Biosecurity Research Journal
+    Eurasian Biotechnology & Bioengineering Research Journal
+    Eurasian Biotechnology Research Journal
+    Eurasian Botany Research Journal
+    Eurasian Brain & Cognitive Sciences Research Journal
+    Eurasian Business & Management Research Journal
+    Eurasian Business & Marketing Research Journal
+    Eurasian Business & Rural Development Studies Research Journal
+    Eurasian Business & Technology Research Journal
+    Eurasian Business Administration & Management Research Journal
+    Eurasian Business Administration Research Journal
+    Eurasian Business Development Research Journal
+    Eurasian Business Management & Information Technology Research Journal
+    Eurasian Business Research Journal
+    Eurasian Business, Economics & Finance Research Journal
+    Eurasian Cancer & Tumor Research Journal
+    Eurasian Cancer Research Journal
+    Eurasian Carbon Nanotechnology Research Journal
+    Eurasian Cardiovascular Disease Research Journal
+    Eurasian Catalyst Research Journal
+    Eurasian Cell & Animal Biology Research Journal
+    Eurasian Cell Biology & Genetics Research Journal
+    Eurasian Cell Biology Research Journal
+    Eurasian Ceramic Engineering Research Journal
+    Eurasian Cereals & Oilseeds Research Journal
+    Eurasian Chemical Engineering & Materials Science Research Journal
+    Eurasian Chemical Engineering & Processing Technology Research Journal
+    Eurasian Chemical Engineering Research Journal
+    Eurasian Chemical Science Research Journal
+    Eurasian Chemistry & Chemical Engineering Research Journal
+    Eurasian Chemistry & Materials Science Research Journal
+    Eurasian Chemistry Research Journal
+    Eurasian Chemosphere Research Journal
+    Eurasian Circuits & Systems Research Journal
+    Eurasian Civil & Environmental Engineering Research Journal
+    Eurasian Civil Engineering & Construction Technology Research Journal
+    Eurasian Civil Engineering Research Journal
+    Eurasian Civil Mechanical Engineering Research Journal
+    Eurasian Classical Physics Research Journal
+    Eurasian Cleaner Production Research Journal
+    Eurasian Climate Change & Ecological Research Journal
+    Eurasian Climate Change Research Journal
+    Eurasian Clinical Immunopathology & Immunology Research Journal
+    Eurasian Clinical Medicine Research Journal
+    Eurasian Clinical Pathology Research Journal
+    Eurasian Clinical Practice Research Journal
+    Eurasian Clinical Reviews & Opinions Research Journal
+    Eurasian Clothing Science Research Journal
+    Eurasian Coal Science & Engineering Research Journal
+    Eurasian Colloid & Interface Science Research Journal
+    Eurasian Composite Materials Research Journal
+    Eurasian Composting Technology Research Journal
+    Eurasian Computation Techniques in the Materials Science Research Journal
+    Eurasian Computational Intelligence in Bioinformatics Research Journal
+    Eurasian Computational Linear Algebra Research Journal
+    Eurasian Computational Physics Research Journal
+    Eurasian Computational Science & Engineering Research Journal
+    Eurasian Computer & Internet Security System Research Journal
+    Eurasian Computer Engineering Research Journal
+    Eurasian Computer Science & Application Research Journal
+    Eurasian Computer Science & Technology Research Journal
+    Eurasian Computer Science Research Journal
+    Eurasian Computers & Civil Engineering Research Journal
+    Eurasian Computers & Electrical Engineering Research Journal
+    Eurasian Computers & Mechanical Engineering Research Journal
+    Eurasian Condensed Matter Physics Research Journal
+    Eurasian Construction Engineering & Management Research Journal
+    Eurasian Control Science & Engineering Research Journal
+    Eurasian Creative Education Research Journal
+    Eurasian Database Theory & Application Research Journal
+    Eurasian Demographic Research Journal
+    Eurasian Depression Research Journal
+    Eurasian Dermatology & Venereology Research Journal
+    Eurasian Design Engineering Research Journal
+    Eurasian Developing Country Education Research Journal
+    Eurasian Developmental Microbiology Research Journal
+    Eurasian Diabetes & Endocrinology Research Journal
+    Eurasian Digital Signal Engineering Research Journal
+    Eurasian Drying Process Engineering Research Journal
+    Eurasian Dynamics of Fluids Engineering Research Journal
+    Eurasian Ear, Nose & Throat Research Journal
+    Eurasian Earth & Planetary Science Research Journal
+    Eurasian Earth Science & Engineering Research Journal
+    Eurasian Earthquake Engineering Research Journal
+    Eurasian Ecohydrology & Climate Change Research Journal
+    Eurasian Ecology Research Journal
+    Eurasian Economics & Finance Research Journal
+    Eurasian Economics Research Journal
+    Eurasian Ecosystem Research Journal
+    Eurasian Educational Research Journal
+    Eurasian Educational Sustainability, Management & Leadership Research Journal
+    Eurasian Electrical & Electronics Engineering Research Journal
+    Eurasian Electrochemical Science Research Journal
+    Eurasian Electromagnetic Science Research Journal
+    Eurasian Electronics Cooling & Thermal Control Research Journal
+    Eurasian Energy & Combustion Science Research Journal
+    Eurasian Energy & Economics Research Journal
+    Eurasian Energy & Power Research Journal
+    Eurasian Energy Conversion & Management Research Journal
+    Eurasian Energy Engineering Research Journal
+    Eurasian Energy Management & Policy Research Journal
+    Eurasian Energy Research Journal
+    Eurasian Energy Science & Technology Research Journal
+    Eurasian Energy, Sustainability & Environment Research Journal
+    Eurasian Engineering & Computer Innovations Research Journal
+    Eurasian Engineering & Manufacturing Science Research Journal
+    Eurasian Engineering & Technology Research Journal
+    Eurasian Engineering Studies Research Journal
+    Eurasian Engineering Technology Research Journal
+    Eurasian English & Literature Research Journal
+    Eurasian Enrgy & Power Engineering Research Journal
+    Eurasian Entomology Research Journal
+    Eurasian Environment & Agriculture Research Journal
+    Eurasian Environment & Applied Science Research Journal
+    Eurasian Environment & Development Economics Research Journal
+    Eurasian Environment & Energy Research Journal
+    Eurasian Environmental & Earth Sciences Research Journal
+    Eurasian Environmental & Occupational Health Sciences Research Journal
+    Eurasian Environmental Biology Research Journal
+    Eurasian Environmental Chemistry Research Journal
+    Eurasian Environmental Control Engineering Research Journal
+    Eurasian Environmental Engineering & Management Research Journal
+    Eurasian Environmental Engineering Research Journal
+    Eurasian Environmental Forensics Research Journal
+    Eurasian Environmental Health Sciences & Toxicology Research Journal
+    Eurasian Environmental Protection & Management Science Research Journal
+    Eurasian Environmental Protection Research Journal
+    Eurasian Environmental Science & Development Research Journal
+    Eurasian Environmental Science & Engineering Research Journal
+    Eurasian Environmental Science & Technology Research Journal
+    Eurasian Environmental Science & Water Resources Research Journal
+    Eurasian Environmental Sciences Research Journal
+    Eurasian Environmental Toxicology Research Journal
+    Eurasian Experimental Oncology Research Journal
+    Eurasian Farm Structures Engineering Research Journal
+    Eurasian Finance & Accounting Research Journal
+    Eurasian Finance & Banking Research Journal
+    Eurasian Finance & Management Research Journal
+    Eurasian Finance Research Journal
+    Eurasian Fish Process Engineering Research Journal
+    Eurasian Fisheries & Aquaculture Research Journal
+    Eurasian Fisheries Research Journal
+    Eurasian Fluid Dynamics Research Journal
+    Eurasian Food & Nutrition Research Journal
+    Eurasian Food & Public Health Research Journal
+    Eurasian Food Bioprocess Engineering Research Journal
+    Eurasian Food Chemistry Research Journal
+    Eurasian Food Process Engineering Research Journal
+    Eurasian Food Science & Technology Research Journal
+    Eurasian Food and Nutrition Research Journal
+    Eurasian Foreign Trade & Policy Research Journal
+    Eurasian Forensic Medicine Research Journal
+    Eurasian Forensic Science Research Journal
+    Eurasian Forest & Mountain Ecology Research Journal
+    Eurasian Forestry & Plant Science Research Journal
+    Eurasian Forestry Science Research Journal
+    Eurasian Foundation Mathematics Research Journal
+    Eurasian Frontiers in Science Research Journal
+    Eurasian Fuel & Energy Research Journal
+    Eurasian Fuel Processing Technology Research Journal
+    Eurasian Fuels Research Journal
+    Eurasian Game Theory Research Journal
+    Eurasian Gastroenterology & Hepatology Research Journal
+    Eurasian Gender Studies Research Journal
+    Eurasian General Engineering Research Journal
+    Eurasian Genetics Engineering Research Journal
+    Eurasian Genetics Research Journal
+    Eurasian Geographic Information System Research Journal
+    Eurasian Geography & Natural Disasters Research Journal
+    Eurasian Geography Research Journal
+    Eurasian Globalization & Industrial Technology Research Journal
+    Eurasian Grain Handling Technology Research Journal
+    Eurasian Grain Storage Engineering Research Journal
+    Eurasian Green Chemistry Research Journal
+    Eurasian HIV & AIDS Research Journal
+    Eurasian Hazard & Disaster Management Research Journal
+    Eurasian Hazardous Materials Research Journal
+    Eurasian Health Science Research Journal
+    Eurasian Heat & Mass Transfer Research Journal
+    Eurasian Herbal Medicine Research Journal
+    Eurasian Histology Research Journal
+    Eurasian History & Culture Research Journal
+    Eurasian History Research Journal
+    Eurasian Horticulture & Forestry Research Journal
+    Eurasian Hospitality Administration & Management Research Journal
+    Eurasian Human Geography Research Journal
+    Eurasian Human Resource Development Research Journal
+    Eurasian Human Resource Management Research Journal
+    Eurasian Humanities & Social Science Research Journal
+    Eurasian Hydraulic Engineering Research Journal
+    Eurasian Industrial & Processing Technology Research Journal
+    Eurasian Industrial & Production Engineering Research Journal
+    Eurasian Industrial & Technology Management Research Journal
+    Eurasian Industrial Chemistry Research Journal
+    Eurasian Industrial Engineering & Management Research Journal
+    Eurasian Industrial Engineering & Technology Research Journal
+    Eurasian Industrial Technology Research Journal
+    Eurasian Infectious Diseases & Immunity Research Journal
+    Eurasian Information & Communications Technology Research Journal
+    Eurasian Information & Computation Technology Research Journal
+    Eurasian Information Science & Application Research Journal
+    Eurasian Information Science & Education Research Journal
+    Eurasian Information Science & Technology Research Journal
+    Eurasian Information Science Research Journal
+    Eurasian Information Technology & Library Science Research Journal
+    Eurasian Information Technology & Operations Management Research Journal
+    Eurasian Informetrics Research Journal
+    Eurasian Inorganic Chemistry Research Journal
+    Eurasian Instrumentation Science Research Journal
+    Eurasian Internal Medicine Research Journal
+    Eurasian International Relations Research Journal
+    Eurasian Lakes & Rivers Research Journal
+    Eurasian Languages & Culture Research Journal
+    Eurasian Law Research Journal
+    Eurasian Leadership Research Journal
+    Eurasian Librarianship & Information Science Research Journal
+    Eurasian Library Administration Research Journal
+    Eurasian Library History & Metadata Research Journal
+    Eurasian Library Management Research Journal
+    Eurasian Linear Algebra & Matrix Theory Research Journal
+    Eurasian Linguistics Research Journal
+    Eurasian Livestock Product & Technology Research Journal
+    Eurasian Livestock Production Research Journal
+    Eurasian Management & Technology Research Journal
+    Eurasian Management Research Journal
+    Eurasian Marine Engineering Research Journal
+    Eurasian Marine Geosciences Research Journal
+    Eurasian Marine Science Research Journal
+    Eurasian Marketing & Management Research Journal
+    Eurasian Marketing Research Journal
+    Eurasian Materials Chemistry Research Journal
+    Eurasian Materials Science Research Journal
+    Eurasian Mathematical Finance Research Journal
+    Eurasian Mathematical Modelling & Applied Computing Research Journal
+    Eurasian Mathematics & Physical Science Research Journal
+    Eurasian Mathematics Research Journal
+    Eurasian Mechanical Engineering Research Journal
+    Eurasian Media & Mass Communication Research Journal
+    Eurasian Medical & Diagnostic Biochemistry Research Journal
+    Eurasian Medical Case Studies Research Journal
+    Eurasian Medical Genetics & Genomics Research Journal
+    Eurasian Medical Laboratory & Diagnosis Research Journal
+    Eurasian Medical Practice & Reviews Research Journal
+    Eurasian Medical Science & Public Health Research Journal
+    Eurasian Medical Science & Technology Research Journal
+    Eurasian Medical Sciences & Medicine Research Journal
+    Eurasian Medicinal Chemistry Research Journal
+    Eurasian Medicinal Plant Research Journal
+    Eurasian Metabolic Biochemistry Research Journal
+    Eurasian Metabolomics & Systems Biology Research Journal
+    Eurasian Metal & Steel Research Journal
+    Eurasian Microbial Ecology Research Journal
+    Eurasian Microbiology & Antimicrobials Research Journal
+    Eurasian Microbiology Research Journal
+    Eurasian Microeconomics & Macroeconomics Research Journal
+    Eurasian Microelectronics & Solid State Electronics Research Journal
+    Eurasian Microscopy & Cytometry Research Journal
+    Eurasian Mineral Science Research Journal
+    Eurasian Minerals, Materials Characterization & Engineering Research Journal
+    Eurasian Mining & Mineral Engineering Research Journal
+    Eurasian Modern Language Research Journal
+    Eurasian Modern Nonlinear Theory & Application Research Journal
+    Eurasian Molecular Biology Research Journal
+    Eurasian Molecular Catalysis Research Journal
+    Eurasian Molecular Chemistry Research Journal
+    Eurasian Molecular Genetics Research Journal
+    Eurasian Molecular Medicine Research Journal
+    Eurasian Molecular Nanotechnology Research Journal
+    Eurasian Multimedia Research Journal
+    Eurasian Music & Dance Research Journal
+    Eurasian NGO Research Journal
+    Eurasian Nanomaterial Research Journal
+    Eurasian Nanoscience Research Journal
+    Eurasian Natural Science Research Journal
+    Eurasian Networking & Computer Engineering Research Journal
+    Eurasian Neurochemistry Research Journal
+    Eurasian Neuroscience Research Journal
+    Eurasian Nuclear Engineering Research Journal
+    Eurasian Nuclear Science Research Journal
+    Eurasian Nursing & Midwifery Research Journal
+    Eurasian Nursing Science Research Journal
+    Eurasian Nutrition & Metabolism Research Journal
+    Eurasian Obstetrics & Gynecology Research Journal
+    Eurasian Ocean & Oceanography Research Journal
+    Eurasian Ocean Engineering Research Journal
+    Eurasian Oceanography & Marine Science Research Journal
+    Eurasian Oceans & Oceanography Research Journal
+    Eurasian Open Sustainable Development Journal
+    Eurasian Operations Management & Services Research Journal
+    Eurasian Operations Research Journal
+    Eurasian Ophthalmology Research Journal
+    Eurasian Optics & Nanophotonics Research Journal
+    Eurasian Optics Science Research Journal
+    Eurasian Optoelectronic Engineering Research Journal
+    Eurasian Oral Hygiene & Dentistry Research Journal
+    Eurasian Organic Chemistry Research Journal
+    Eurasian Organizational Behavior Journal
+    Eurasian Orthopaedics & Traumatology research Journal
+    Eurasian Parasitology Immunology Research Journal
+    Eurasian Parasitology Research Journal
+    Eurasian Patent Research Journal
+    Eurasian Peace & Development Research Journal
+    Eurasian Pediatric Science Research Journal
+    Eurasian Petroleum & Gas Engineering Research Journal
+    Eurasian Pharmaceutical Biotechnology Research Journal
+    Eurasian Pharmaceutical, Biological & Chemical Sciences Research Journal
+    Eurasian Pharmacology & Microbiology Research Journal
+    Eurasian Pharmacology & Pharmacy Research Journal
+    Eurasian Pharmacy Research Journal
+    Eurasian Philosophy Research Journal
+    Eurasian Physical & Analytical Science Research Journal
+    Eurasian Physical Chemistry Research Journal
+    Eurasian Physical Science Research Journal
+    Eurasian Physiology & Pathophysiology Research Journal
+    Eurasian Physiology Research Journal
+    Eurasian Phytotherapy & Pharmacognosy Research Journal
+    Eurasian Plant & Soil Science Research Journal
+    Eurasian Plant Breeding & Crop Science Research Journal
+    Eurasian Plant Disease & Pathology Research Journal
+    Eurasian Plant Genetics Research Journal
+    Eurasian Plant Science Research Journal
+    Eurasian Plant Sciences Research Journal
+    Eurasian Political Science Research Journal
+    Eurasian Polymer Chemistry Research Journal
+    Eurasian Polymer Degradation & Stability Research Journal
+    Eurasian Polymer Science Research Journal
+    Eurasian Postharvest Engineering Research Journal
+    Eurasian Postharvest Operations Engineering Research Journal
+    Eurasian Prevention & Treatment Research Journal
+    Eurasian Psychology Research Journal
+    Eurasian Psychrometry Engineering Research Journal
+    Eurasian Public Health & Epidemiology Research Journal
+    Eurasian Public Health Research Journal
+    Eurasian Public Health, Water & Food Research Journal
+    Eurasian Pure & Applied Mathematics Research Journal
+    Eurasian Pure Mathematics Research Journal
+    Eurasian Pyrolysis Technology Research Journal
+    Eurasian Quantum Mechanics Research Journal
+    Eurasian Quantum Physics Research Journal
+    Eurasian Radio Engineering Journal Research Journal
+    Eurasian Radiology Research Journal
+    Eurasian Recycling of Organic Waste in Agriculture Research Journal
+    Eurasian Religion Research Journal
+    Eurasian Renewable & Sustainable Energy Research Journal
+    Eurasian Renewable Energy & Smart Grid Research Journal
+    Eurasian Renewable Energy Research Journal
+    Eurasian Resources & Environment Research Journal
+    Eurasian Resources & Recycling Research Journal
+    Eurasian Rheumatology Diseases Research Journal
+    Eurasian Roads & Highway Engineering Research Journal
+    Eurasian Robotic Engineering Research Journal
+    Eurasian Safety Engineering Research Journal
+    Eurasian Science & Entrepreneurship Research Journal
+    Eurasian Science & Environment Research Journal
+    Eurasian Science & Technology Research Journal
+    Eurasian Science, Technology & Engineering Research Journal
+    Eurasian Scientific Research & Essays Journal
+    Eurasian Sensor Technology Research Journal
+    Eurasian Separation & Purification Technology Research Journal
+    Eurasian Separation Process Engineering Research Journal
+    Eurasian Smart House Research Journal
+    Eurasian Social Science & Geography Research Journal
+    Eurasian Social Science & Management Research Journal
+    Eurasian Social Science Research Journal
+    Eurasian Sociological Science Research Journal
+    Eurasian Sociology & Arts Research Journal
+    Eurasian Software Engineering Research Journal
+    Eurasian Soil & Agricultural Research Journal
+    Eurasian Soil & Crop Science Research Journal
+    Eurasian Soil & Erosion Research Journal
+    Eurasian Soil Science & Environmental Management Research Journal
+    Eurasian Soil Science Research Journal
+    Eurasian Solid State Science Research Journal
+    Eurasian Solid-State Chemistry Research Journal
+    Eurasian Spinal Cord Research Journal
+    Eurasian Sports Science Research Journal
+    Eurasian Statistical Design & Analysis Research Journal
+    Eurasian Statistics & Mathematics Research Journal
+    Eurasian Statistics Research Journal
+    Eurasian Stomatological Research Journal
+    Eurasian Stored Product Protection Engineering Research Journal
+    Eurasian Stored Products & Postharvest Research Journal
+    Eurasian Stroke Research Journal
+    Eurasian Studies & Development Research Journal
+    Eurasian Surface & Coatings Technology Research Journal
+    Eurasian Surface Science Research Journal
+    Eurasian Surgical Application Research Journal
+    Eurasian Sustainability Research Journal
+    Eurasian Sustainable Agriculture Research Journal
+    Eurasian Synthetic Chemistry Research Journal
+    Eurasian Technology Education Research Journal
+    Eurasian Telecommunication Engineering Research Journal
+    Eurasian Textile Science Research Journal
+    Eurasian Theoretical Chemistry Research Journal
+    Eurasian Theoretical Physics Research Journal
+    Eurasian Thermal & Catalytic Process Research Journal
+    Eurasian Thermal Engineering Research Journal
+    Eurasian Thermodynamics Research Journal
+    Eurasian Tourism & Business Research Journal
+    Eurasian Tourism Management Research Journal
+    Eurasian Traffic & Transportation Engineering Research Journal
+    Eurasian Transfusion Science Research Journal
+    Eurasian Transportation Engineering Research Journal
+    Eurasian Tumor Therapy Research Journal
+    Eurasian Urology & Nephrology Research Journal
+    Eurasian Vaccine & Vaccination Research Journal
+    Eurasian Vector Biology Research Journal
+    Eurasian Veterinary Medicine Research Journal
+    Eurasian Veterinary Science & Animal Health Research Journal
+    Eurasian Virology Research Journal
+    Eurasian Vocational Education Research Journal
+    Eurasian Waste Management & Technology Research Journal
+    Eurasian Waste Management Research Journal
+    Eurasian Waste Recycling Engineering Research Journal
+    Eurasian Waste to Energy Research Journal
+    Eurasian Water Research Journal
+    Eurasian Water Resources & Environmental Engineering Research Journal
+    Eurasian Water Science & Technology Research Journal
+    Eurasian Water Science and Technology Research Journal
+    Eurasian Water, Soil & Air Pollution Research Journal
+    Eurasian Web & Database Technology Research Journal
+    Eurasian Web & Grid Services Research Journal
+    Eurasian Web Engineering Research Journal
+    Eurasian Wildlife Ecology Research Journal
+    Eurasian Wireless & Mobile Communications Engineering Research Journal
+    Eurasian Wireless Networks & Applications Research Journal
+    Eurasian Wireless Networks & Communications Research Journal
+    Eurasian Zoology Research Journal
