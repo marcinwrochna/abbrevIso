@@ -47,7 +47,7 @@ function onInputChange() {
 	// If user checked 'English only', use english, multi, latin and undefined.
 	let languages = undefined;
 	if ($('#engCheckbox')[0].checked)
-	languages = [ 'eng', 'mul', 'lat', 'und' ];
+		languages = [ 'eng', 'mul', 'lat', 'und' ];
 	// Compute and show the abbreviation.
 	const result = abbrevIso.makeAbbreviation(value, languages);
 	$('#resultString').text(result);
