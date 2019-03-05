@@ -53,15 +53,21 @@ function onInputChange() {
 	$('#resultString').text(result);
 	// Find and list all matching patterns (without excluding overlaps).
 	const matchingPatterns = abbrevIso.getMatchingPatterns(value, languages);
-	$('#matchingPatterns').html("<th>Words</th><th>Abbr.</th><th><a " +
+	const weakPatterns = abbrevIso.getMatchingPatterns(value, languages, true);
+	const header = "<th>Words</th><th>Abbr.</th><th><a " +
 		"href='https://www.loc.gov/standards/iso639-2/php/code_list.php'>" +
-		"Languages</a></th>");
-	for (const pattern of matchingPatterns) {
+		"Languages</a></th>";
+	$('#matchingPatterns').html(header);
+	$('#weakPatterns').html(header);
+	for (const pattern of weakPatterns) {
 		let row = document.createElement('tr');
 		row.innerHTML = "<td>" + pattern.pattern + "</td><td>" +
 			pattern.replacement + "</td><td>" +
-			pattern.languages.join(',') + "</td>";
-		$('#matchingPatterns').append(row);
+			pattern.languages.sort().join(',') + "</td>";
+		if (matchingPatterns.includes(pattern))
+			$('#matchingPatterns').append(row);
+		else
+			$('#weakPatterns').append(row);
 	}
 	$('#info2').html(""); // Clear the 'searching...'.
 };
@@ -173,10 +179,12 @@ $(document).ready(function() {
 	<span id="info2"></span>
 	<br/>
 	<input id="inputText" type="text" value="International Journal of Geographical Information Science" /><br/>
-	<table id="matchingPatterns"></table>
+	<table id="matchingPatterns" class="patterns"></table>
 	<br/>
 	Probably standard ISO-4 abbrevation:<br/>
 	<span id="resultString"></span><br/>
+	Unused patterns that could match as compound words:
+	<table id="weakPatterns" class="patterns"></table>
 	<br/>
 	<p>Some caveats:
 		<ul>

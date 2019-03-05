@@ -1,4 +1,4 @@
-var AbbrevIso = (function (exports) {
+(function (exports) {
 'use strict';
 
 /**
@@ -378,9 +378,11 @@ class AbbrevIso {
 	 * Returns any patterns that could potentially match `s` somewhere.
 	 * This returns around 5 times more patterns than actually match.
 	 * @param {string} s
+	 * @param {boolean} pretendDash - If true, pretend all patterns start
+	 * 	and end with a dash (to find potential compound words)
 	 * @return {Array<LTWAPattern>}
 	 */
-	getPotentialPatterns(s) {
+	getPotentialPatterns(s, pretendDash = false) {
 		// Always add all bad patterns.
 		let result = this.badPatterns_;
 		s = promiscuouslyNormalize(s);
@@ -392,7 +394,7 @@ class AbbrevIso {
 				isNewWord = true;
 				continue;
 			}
-			if (isNewWord)
+			if (isNewWord || pretendDash)
 				result = result.concat(this.dictPatterns_.get(s.substr(i)));
 			result = result.concat(this.nonprefixPatterns_.get(s.substr(i)));
 			isNewWord = false;
@@ -413,16 +415,18 @@ class AbbrevIso {
 	 * be applied.
 	 * @param {string} value
 	 * @param {LTWAPattern} pattern
-	 * @param {?Array<string>} languages - If this has empty intersection with
+	 * @param {?Array<string>} languages - If defined and has empty intersection with
 	 *     `pattern.languages`, we return no matches (an empty array).
-	 *     (as ISO-639-2 (B) codes, e.g. 'mul' for multiple, 'und' for undefined).
+	 *     (as ISO-639-2 (B) codes, e.g. 'mul' for multiple, 'und' for undefined lang).
+	 * @param {boolean} pretendDash - If true, pretend all patterns start
+	 * 	and end with a dash (to find potential compound words)
 	 * @return {Array} An Array of `[i, iend, abbr, pattern]` Arrays,
 	 *     where the `pattern` matches `value[i..iend-1]`,
 	 *     `abbr` is the computed abbreviation that should be put in place of the
 	 *     match; it has capitalization, diacritics etc. preserved.
 	 *     `pattern` is the input LTWAPattern.
 	 */
-	getPatternMatches(value, pattern, languages = undefined) {
+	getPatternMatches(value, pattern, languages = undefined, pretendDash = false) {
 		// If a list of languages is given, check if it intersects the pattern's list.
 		if (languages !== undefined) {
 			let isLanguageMatching = false;
@@ -440,11 +444,11 @@ class AbbrevIso {
 		if (replacement == '–')
 			replacement = '';
 		let p = pattern.pattern;
-		if (pattern.startDash) {
+		if (pattern.startDash || pretendDash) {
 			p = p.replace(/^-/, '');
 			replacement = replacement.replace(/^-/, '');
 		}
-		if (pattern.endDash)
+		if (pattern.endDash || pretendDash)
 			p = p.replace(/-$/, '');
 		replacement = Array.from(replacement);
 
@@ -452,7 +456,7 @@ class AbbrevIso {
 		let isPreviousCharBoundary = true;
 		let i = 0;
 		while (i < value.length) {
-			if (!pattern.startDash && !isPreviousCharBoundary) {
+			if (!pattern.startDash && !pretendDash && !isPreviousCharBoundary) {
 				isPreviousCharBoundary = boundariesRegex.test(value[i]);
 				i++;
 				continue;
@@ -499,7 +503,7 @@ class AbbrevIso {
 			}
 			// If the pattern had an ending dash,
 			// omit all characters until we get a boundary.
-			if (pattern.endDash)
+			if (pattern.endDash || pretendDash)
 				while (iend < value.length && !boundariesRegex.test(value[iend]))
 					iend++;
 			// If the pattern had no ending dash, try to omit some characters due to
@@ -540,16 +544,18 @@ class AbbrevIso {
 	 * @param {string} value
 	 * @param {?Array<string>} languages - Only use patterns that apply to these.
 	 *     (as ISO-639-2 (B) codes, e.g. 'mul' for multiple, 'und' for undefined).
+	 * @param {boolean} pretendDash - If true, pretend all patterns start
+	 * 	and end with a dash (to find potential compound words)
 	 * @param {?Array<LTWAPattern>} [patterns=getPotentialPatterns(value)]
 	 * @return {Array<LTWAPattern>}
 	 */
-	getMatchingPatterns(value, languages = undefined, patterns = undefined) {
+	getMatchingPatterns(value, languages = undefined, pretendDash = false, patterns = undefined) {
 		if (patterns === undefined)
-			patterns = this.getPotentialPatterns(value);
+			patterns = this.getPotentialPatterns(value, pretendDash=pretendDash);
 		value = value.normalize('NFC').trim();
 		let matches = [];
 		for (const pattern of patterns)
-			matches = matches.concat(this.getPatternMatches(value, pattern, languages));
+			matches = matches.concat(this.getPatternMatches(value, pattern, languages, pretendDash));
 		let getBeginning = ([i, iend, abbr, pattern]) => i;
 		matches.sort((a, b) => (getBeginning(a) - getBeginning(b)));
 		return matches.map(([i, iend, abbr, pattern]) => pattern);
@@ -681,6 +687,4 @@ class AbbrevIso {
 exports.LTWAPattern = LTWAPattern;
 exports.AbbrevIso = AbbrevIso;
 
-return exports;
-
-}({}));
+}((this.AbbrevIso = this.AbbrevIso || {})));
