@@ -1,5 +1,5 @@
 # abbrevIso
-Publication title abbreviation per [ISO-4](http://www.uai.cl/images/sitio/biblioteca/citas/ISO_4_1997en.pdf) standard.
+Publication title abbreviation per [ISO-4](https://web.archive.org/web/20180328190032/http://www.uai.cl/images/sitio/biblioteca/citas/ISO_4_1997en.pdf/) standard.
 
 This is a library for finding abbreviations of journal titles and searching [LTWA](http://www.issn.org/services/online-services/access-to-the-ltwa/) (List of Title Word Abbreviations).
 Try it [live](https://marcinwrochna.github.io/abbrevIso/), also check there for caveats and an overview of ISO-4 rules.
