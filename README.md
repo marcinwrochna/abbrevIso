@@ -64,7 +64,7 @@ You can instead start a basic server that will host the current working director
 ### In Node.js
 You can run the library on any PC as follows:
 * install [Node.js](https://nodejs.org/en/) (from the Windows installer or from your Linux repository)
-* download the 3 files
+* download (or git clone) the 3 files
 * write an example script using the library:
 
 ```node
