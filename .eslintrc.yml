@@ -1,0 +1,23 @@
+env:
+  browser: true
+  es6: true
+  node: true
+extends: google
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+parserOptions:
+  ecmaVersion: 2018
+  sourceType: module
+rules: 
+        curly:
+                - error
+                - "multi-or-nest"
+                - "consistent"
+        block-spacing:
+                - error
+                - "always"
+        no-unused-vars:
+                - error
+                - varsIgnorePattern: "^_" 
+                  argsIgnorePattern: "^_"

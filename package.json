@@ -1,0 +1,23 @@
+{
+  "name": "abbreviso",
+  "version": "1.0.0",
+  "description": "Publication title abbreviation per ISO-4 standard.",
+  "main": "AbbrevIso.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcinwrochna/abbrevIso.git"
+  },
+  "author": "Marcin Wrochna (https://github.com/marcinwrochna/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcinwrochna/abbrevIso/issues"
+  },
+  "homepage": "https://github.com/marcinwrochna/abbrevIso#readme",
+  "devDependencies": {
+    "eslint": "^5.14.1",
+    "eslint-config-google": "^0.12.0"
+  }
+}
