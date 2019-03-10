@@ -6,36 +6,35 @@
  * file.
  */
 'use strict';
-let fs = require('fs');
-let AbbrevIso = require('../nodeBundle.js');
+const fs = require('fs');
+const AbbrevIso = require('../nodeBundle.js');
 
-let recomputeAll = process.argv.includes('reset')
+const recomputeAll = process.argv.includes('reset');
 
-let ltwa = fs.readFileSync('../LTWA_20170914-modified.csv', 'utf8');
-let shortWords = fs.readFileSync('../shortwords.txt', 'utf8');
-let abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
+const ltwa = fs.readFileSync('../LTWA_20170914-modified.csv', 'utf8');
+const shortWords = fs.readFileSync('../shortwords.txt', 'utf8');
+const abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
 
 const stateFileName = 'abbrevBotState.json';
 let state = fs.readFileSync(stateFileName, 'utf8');
 state = JSON.parse(state);
 
 if (!('abbrevs' in state))
-	throw "Invalid bot state file.";
+  throw new Error('Invalid bot state file.');
 
 for (const title in state['abbrevs']) {
-	if (!recomputeAll && typeof(state['abbrevs'][title]) === 'object')
-		continue
-	let t = title.normalize('NFC');
-	let result = {};
-	result['all'] = abbrevIso.makeAbbreviation(t);
-	result['eng'] = abbrevIso.makeAbbreviation(t, ['eng', 'mul', 'lat', 'und']);
-	let matchingPatterns = abbrevIso.getMatchingPatterns(t);
-	let s = '';
-	for (const pattern of matchingPatterns) {
-		s += pattern.line + '\n';
-	}
-	result['matchingPatterns'] = s;
-	state['abbrevs'][title] = result;
+  if (!recomputeAll && typeof(state['abbrevs'][title]) === 'object')
+    continue;
+  const t = title.normalize('NFC');
+  const result = {};
+  result['all'] = abbrevIso.makeAbbreviation(t);
+  result['eng'] = abbrevIso.makeAbbreviation(t, ['eng', 'mul', 'lat', 'und']);
+  const matchingPatterns = abbrevIso.getMatchingPatterns(t);
+  let s = '';
+  for (const pattern of matchingPatterns)
+    s += pattern.line + '\n';
+  result['matchingPatterns'] = s;
+  state['abbrevs'][title] = result;
 }
 
 fs.writeFileSync(stateFileName, JSON.stringify(state), 'utf8');
