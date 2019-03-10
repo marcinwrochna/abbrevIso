@@ -1,0 +1,42 @@
+target = Category:International Institute for Science, Technology and Education academic journals
+category =        International Institute for Science, Technology and Education academic journals
+---
+    Advances in Life Science and Technology
+    Advances in Physics Theories and Applications
+    Chemical and Process Engineering Research
+    Computer Engineering and Intelligent Systems
+    European Journal of Business and Management
+    Food Science and Quality Management
+    Historical Research Letter
+    Industrial Engineering Letters
+    Information and Knowledge Management
+    Innovative Systems Design and Engineering
+    International Affairs and Global Strategy
+    International Journal of African and Asian Studies
+    Journal of Arts and Design Studies
+    Journal of Biology, Agriculture and Healthcare
+    Journal of Chemistry and Materials Research
+    Journal of Civil and Environmental Research
+    Journal of Control Theory and Informatics
+    Journal of Culture, Society and Development
+    Journal of Developing Country Studies
+    Journal of Economics and Sustainable Development
+    Journal of Education and Practice
+    Journal of Energy Technologies and Policy
+    Journal of Environment and Earth Science
+    Journal of Health, Medicine and Nursing
+    Journal of Information Engineering and Applications
+    Journal of Law, Policy and Globalization
+    Journal of Literature, Languages and Linguistics
+    Journal of Marketing and Consumer Research
+    Journal of Mathematical Theory and Modeling
+    Journal of Medicine, Physiology and Biophysics
+    Journal of Natural Sciences Research
+    Journal of Network and Complex Systems
+    Journal of New Media and Mass Communication
+    Journal of Philosophy, Culture and Religion
+    Journal of Poverty, Investment and Development
+    Journal of Resources Development and Management
+    Journal of Tourism, Hospitality and Sports
+    Research Journal of Finance and Accounting
+    Research on Humanities and Social Sciences
