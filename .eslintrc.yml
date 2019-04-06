@@ -21,3 +21,5 @@ rules:
                 - error
                 - varsIgnorePattern: "^_" 
                   argsIgnorePattern: "^_"
+plugins:
+        - "html"

@@ -1,5 +1,5 @@
 /**
- * AbbrevIso v1.0 JS lib for publication title abbreviation per ISO-4 standard.
+ * AbbrevIso v1.1 JS lib for publication title abbreviation per ISO-4 standard.
  * Copyright (C) 2017 by Marcin Wrochna. MIT License, see file: LICENSE.
  * @fileoverview The library implements the method of abbreviating titles of
  * publications according to the ISO-4 standard. It also provides a way to list
@@ -348,6 +348,11 @@ export class AbbrevIso {
     value = value.replace(/([^A-Z0-9])[&+]([^A-Z0-9])/ug, '$1$2');
     //     All other punctuation is preserved.
 
+    // Omit generic terms separating dependent titles.
+    const sTerms = ['Sect.', 'Ser.'];
+    for (const term of sTerms)
+      value = value.replace(term + ' ', '');
+
     // Capitalization is preserved.
     //     (First letter should be capitalized, but we leave that to local
     //     style, check e.g. 'tm-Technisches Messen').
@@ -376,7 +381,7 @@ export class AbbrevIso {
     }
     // French articles "l'", "d'" may be followed by whatever.
     value = value.replace(new RegExp(
-        '((^|' + collation.boundariesRegex.source + '))(l|L|d|D)\'',
+        '((^|' + collation.boundariesRegex.source + '))(l|L|d|D)(\'|’)',
         'gu'), '$1');
 
     // We delay checking prepositions and conjunctions until a bit later, as
@@ -430,7 +435,10 @@ export class AbbrevIso {
       }
     }
 
-    // TODO Omit words like Series, Part, Section, Sect., Ser.
+    // Omit generic terms separating dependent titles.
+    const terms = ['Series', 'Part', 'Section'];
+    for (const term of terms)
+      result = result.replace(' ' + term + ' ', ' ');
 
     // Remove superfluous whitepace.
     result = result.replace(/\s+/gu, ' ').trim();

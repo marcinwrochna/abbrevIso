@@ -1,5 +1,5 @@
 /**
- * AbbrevIso v1.0 JS lib for publication title abbreviation per ISO-4 standard.
+ * AbbrevIso v1.1 JS lib for publication title abbreviation per ISO-4 standard.
  * Copyright (C) 2017 by Marcin Wrochna. MIT License, see file: LICENSE.
  * @fileoverview Prefix trees for quickly finding patterns.
  */

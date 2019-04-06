@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <head>
-	<meta charset = "utf-8">
-	<title>LTWA search</title>
-	<script
-		src="https://code.jquery.com/jquery-3.2.1.min.js"
-		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-		crossorigin="anonymous"></script>
-	<script src="browserBundle.js"></script>
+  <meta charset = 'utf-8'>
+  <title>LTWA search</title>
+  <script
+    src='https://code.jquery.com/jquery-3.2.1.min.js'
+    integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+    crossorigin='anonymous'></script>
+  <script src='browserBundle.js'></script>
 
 
 <script>
@@ -16,202 +16,207 @@ let abbrevIso;
 
 /**
  * Returns a wrapping function: as long as it continues to be invoked,
- * `f` will not be triggered. It will be called after it stops being called for
- * `wait` milliseconds.
- * @param {} f
- * @param {number} wait
+ * `f` will not be triggered. It will be called after it stops being called
+ * for `wait` milliseconds.
+ * @param {function} f
+ * @param {*} wait - number of milliseconds required without another call
+ * @return {function}
  */
 function debounce(f, wait) {
-	let timeout;
-	return function() {
-		let context = this, args = arguments;
-		let later = function() {
-			timeout = null;
-			f.apply(context, args);
-		};
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-	};
+  let timeout;
+  return function() {
+    const context = this; /* eslint-disable-line no-invalid-this */
+    const args = arguments; /* eslint-disable-line prefer-rest-params */
+    const later = function() {
+      timeout = null;
+      f.apply(context, args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
 };
 
 /**
  * Processes the string given by the user in the form input and show results.
  */
 function onInputChange() {
-	const value = $('#inputText')[0].value;
-	// Ignore short values.
-	if (value.trim().length < 4) {
-		$('#info2').html(""); // Clear the 'searching...'.
-		return;
-	}
-	// If user checked 'English only', use english, multi, latin and undefined.
-	let languages = undefined;
-	if ($('#engCheckbox')[0].checked)
-		languages = [ 'eng', 'mul', 'lat', 'und' ];
-	// Compute and show the abbreviation.
-	const result = abbrevIso.makeAbbreviation(value, languages);
-	$('#resultString').text(result);
-	// Find and list all matching patterns (without excluding overlaps).
-	const matchingPatterns = abbrevIso.getMatchingPatterns(value, languages);
-	const weakPatterns = abbrevIso.getMatchingPatterns(value, languages, true);
-	const header = "<th>Words</th><th>Abbr.</th><th><a " +
-		"href='https://www.loc.gov/standards/iso639-2/php/code_list.php'>" +
-		"Languages</a></th>";
-	$('#matchingPatterns').html(header);
-	$('#weakPatterns').html(header);
-	for (const pattern of weakPatterns) {
-		let row = document.createElement('tr');
-		row.innerHTML = "<td>" + pattern.pattern + "</td><td>" +
-			pattern.replacement + "</td><td>" +
-			pattern.languages.sort().join(',') + "</td>";
-		if (matchingPatterns.includes(pattern))
-			$('#matchingPatterns').append(row);
-		else
-			$('#weakPatterns').append(row);
-	}
-	$('#info2').html(""); // Clear the 'searching...'.
+  const value = $('#inputText')[0].value;
+  // Ignore short values.
+  if (value.trim().length < 4) {
+    $('#info2').html(''); // Clear the 'searching...'.
+    return;
+  }
+  // If user checked 'English only', use english, multi, latin and undefined.
+  let languages = undefined;
+  if ($('#engCheckbox')[0].checked)
+    languages = ['eng', 'mul', 'lat', 'und'];
+  // Compute and show the abbreviation.
+  const result = abbrevIso.makeAbbreviation(value, languages);
+  $('#resultString').text(result);
+  // Find and list all matching patterns (without excluding overlaps).
+  const matchingPatterns = abbrevIso.getMatchingPatterns(value, languages);
+  const weakPatterns = abbrevIso.getMatchingPatterns(value, languages, true);
+  const header = '<th>Words</th><th>Abbr.</th><th><a ' +
+    'href="https://www.loc.gov/standards/iso639-2/php/code_list.php">' +
+    'Languages</a></th>';
+  $('#matchingPatterns').html(header);
+  $('#weakPatterns').html(header);
+  for (const pattern of weakPatterns) {
+    const row = document.createElement('tr');
+    row.innerHTML = '<td>' + pattern.pattern + '</td><td>' +
+      pattern.replacement + '</td><td>' +
+      pattern.languages.sort().join(',') + '</td>';
+    if (matchingPatterns.includes(pattern))
+      $('#matchingPatterns').append(row);
+    else
+      $('#weakPatterns').append(row);
+  }
+  $('#info2').html(''); // Clear the 'searching...'.
 };
 
 
 $(document).ready(function() {
-	// Handle API: read parameters from GET into the HTML form.
-	// Default is English only, because it's much faster.
-	$('#engCheckbox').prop('checked', true);
-	let r = new RegExp('[\?&]eng=([^&#]*)', 'i').exec(window.location.href);
-	if (r) {
-		if (r[1] && ['true','1','True','yes','eng'].includes(r[1]))
-			$('#engCheckbox').prop('checked', true);
-		else
-			$('#engCheckbox').prop('checked', false);
-	}
-	r = new RegExp('[\?&]search=([^&#]*)', 'i').exec(window.location.href);
-	if (r && r[1])
-		$('#inputText').val(decodeURIComponent(r[1]).replace(/_/g, ' '));
+  // Handle API: read parameters from GET into the HTML form.
+  // Default is English only, because it's much faster.
+  $('#engCheckbox').prop('checked', true);
+  let r = new RegExp('[\?&]eng=([^&#]*)', 'i').exec(window.location.href);
+  if (r) {
+    if (r[1] && ['true', '1', 'True', 'yes', 'eng'].includes(r[1]))
+      $('#engCheckbox').prop('checked', true);
+    else
+      $('#engCheckbox').prop('checked', false);
+  }
+  r = new RegExp('[\?&]search=([^&#]*)', 'i').exec(window.location.href);
+  if (r && r[1])
+    $('#inputText').val(decodeURIComponent(r[1]).replace(/_/g, ' '));
 
-	// Load the LTWA table, short words list, and tests.
-	let ltwaAjax = $.ajax({
-		mimeType: 'text/plain; charset=utf-8',
-		url: 'LTWA_20170914-modified.csv', // This version has a few fixes for some obvious bugs or technical problems.
-		dataType: 'text',
-	});
-	let shortWordsAjax = $.ajax({
-		mimeType: 'text/plain; charset=utf-8',
-		url: 'shortwords.txt',
-		dataType: 'text',
-	});
+  // Load the LTWA table, short words list, and tests.
+  const ltwaAjax = $.ajax({
+    mimeType: 'text/plain; charset=utf-8',
+    url: 'LTWA_20170914-modified.csv',
+    dataType: 'text',
+  });
+  const shortWordsAjax = $.ajax({
+    mimeType: 'text/plain; charset=utf-8',
+    url: 'shortwords.txt',
+    dataType: 'text',
+  });
 
-	$.when(ltwaAjax, shortWordsAjax).done(
-		(ltwa, shortWords) => {
-			ltwa = ltwa[0];
-			shortWords = shortWords[0];
-			abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
-			$('#info').html("Loaded " +  abbrevIso.size + " rows.");
+  $.when(ltwaAjax, shortWordsAjax).done(
+      (ltwa, shortWords) => {
+        ltwa = ltwa[0];
+        shortWords = shortWords[0];
+        abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
+        $('#info').html('Loaded ' + abbrevIso.size + ' rows.');
 
-			// We're ready to parse, so enable the interface and doTheMatching();
-			$('#engCheckbox').on('change', function(){ $('#inputText').trigger('input'); });
-			$('#inputText').on('input',
-				debounce(function(){
-					// The zero timeout allows the browser to refresh the GUI and draw '(searching...)'.
-					$('#info2').html("(searching...)");
-					setTimeout(onInputChange,0);
-				}, 300)
-			);
-			$('#info2').html("(searching...)");
-			setTimeout(onInputChange,0);
-		}
-	);
+        // We're ready to parse, so enable the interface and doTheMatching();
+        $('#engCheckbox').on('change', () => $('#inputText').trigger('input'));
+        $('#inputText').on('input',
+            debounce(() => {
+              // The zero timeout allows the browser to refresh the GUI
+              // and draw '(searching...)'.
+              $('#info2').html('(searching...)');
+              setTimeout(onInputChange, 0);
+            }, 300)
+        );
+        $('#info2').html('(searching...)');
+        setTimeout(onInputChange, 0);
+      }
+  );
 
-	// Google analytics.
-	setTimeout(function(){
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-12926426-9', 'auto');
-		ga('send', 'pageview');
-	}, 1);
+  // Google analytics.
+  /* eslint-disable */
+  setTimeout(function(){
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-12926426-9', 'auto');
+    ga('send', 'pageview');
+  }, 1);
+  /* eslint-enable */
 });
 </script>
 
 
 <style>
-	#container { max-width: 620px; margin: auto; }
-	table {
-		border: none;
-		border-collapse: collapse;
-	}
-	td, th {
-		border-left: 1px solid gray;
-		border-right: 1px solid gray;
-		padding: 5px;
-	}
-	td:nth-child(1) { min-width: 9em; }
-	td:nth-child(2) { min-width: 9em; }
-	td:nth-child(3) { min-width: 2em; }
-	tr:nth-child(even) {
-		background-color: #ddeeee;
-	}
-	#info {
-		margin-left: 3em;
-	}
-	input[type=text] {
-		min-width: 30em;
-		margin-top: 5px;
-		margin-bottom: 5px;
-	}
-	h1 {
-		font-size: 120%;
-		margin-bottom: 10px;
-	}
-	p { margin: 0; }
-	ul { margin: 0.5em; }
-	#resultString { display: block; margin: 0.9em; font-style: italic; }
-	a { color: #337; text-decoration: none; }
+  #container { max-width: 620px; margin: auto; }
+  table {
+    border: none;
+    border-collapse: collapse;
+  }
+  td, th {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    padding: 5px;
+  }
+  td:nth-child(1) { min-width: 9em; }
+  td:nth-child(2) { min-width: 9em; }
+  td:nth-child(3) { min-width: 2em; }
+  tr:nth-child(even) {
+    background-color: #ddeeee;
+  }
+  #info {
+    margin-left: 3em;
+  }
+  input[type=text] {
+    min-width: 30em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  h1 {
+    font-size: 120%;
+    margin-bottom: 10px;
+  }
+  p { margin: 0; }
+  ul { margin: 0.5em; }
+  #resultString { display: block; margin: 0.9em; font-style: italic; }
+  a { color: #337; text-decoration: none; }
 </style>
 </head>
 <body>
-<div id="container">
-<form action="javascript:void(0);">
-	<h1>List of Title Word Abbreviations</h1>
-	<br/>
-	<input id="engCheckbox" type="checkbox" checked="checked"/> English only
-	<span id="info">Loading...</span>
-	<span id="info2"></span>
-	<br/>
-	<input id="inputText" type="text" value="International Journal of Geographical Information Science" /><br/>
-	<table id="matchingPatterns" class="patterns"></table>
-	<br/>
-	Probably standard ISO-4 abbrevation:<br/>
-	<span id="resultString"></span><br/>
-	Unused patterns that could match as compound words:
-	<table id="weakPatterns" class="patterns"></table>
-	<br/>
-	<p>Some caveats:
-		<ul>
-			<li>Sometimes the LTWA only includes an entry that should be inflected (if
-				<i>equilibria</i> is not abbreviated, check <i>equilibrium</i>).</li>
-			<li>For non-English titles untick the checkbox (watch out for: wrongly
-				applied matches from other languages; grammar issues, e.g. German
-				compound words; other transliterations from slavic languages).</li>
-			<li>Dependent titles (<i>Series A</i>) are not really supported.</li>
-			<li>Names of persons should not be abbreviated, even if they match.</li>
-		</ul>
-	</p>
-	<br/>
-	<p>See the <a href="https://web.archive.org/web/20180328190032/http://www.uai.cl/images/sitio/biblioteca/citas/ISO_4_1997en.pdf/">ISO-4</a> for general rules, e.g.:
-		<ul>
-			<li>articles, conjunctions and prepositions are omitted (except prepositions at the beginning, like <i>From zero to hero</i>, or locutions like <i>in vivo</i>);</li>
-			<li>commas are removed, periods are replaced by commas, other punctuation is preserved;</li>
-			<li>capitalization is not specified;</li>
-			<li>diacritics are left as in the original title;</li>
-			<li>words like <i>Part</i>, <i>Series</i>, <i>Section</i> should be omitted, unless required for identification;</li>
-			<li>single word titles (possibly with an article or preposition) are not abbreviated;</li>
-			<li><i>n.a.</i> or <i>–</i> means not abbreviated.</li>
-		</ul>
-	</p>
-	<br/>
-	<p>Based on the 2017-09-14 version of the <a href="http://www.issn.org/services/online-services/access-to-the-ltwa/">LTWA</a>.</p>
-	<p><small>Report issues at <a href="https://github.com/marcinwrochna/abbrevIso">GitHub</a></small></p>
+<div id='container'>
+<form action='javascript:void(0);'>
+  <h1>List of Title Word Abbreviations</h1>
+  <br/>
+  <input id='engCheckbox' type='checkbox' checked='checked'/> English only
+  <span id='info'>Loading...</span>
+  <span id='info2'></span>
+  <br/>
+  <input id='inputText' type='text' value='International Journal of Geographical Information Science' /><br/>
+  <table id='matchingPatterns' class='patterns'></table>
+  <br/>
+  Probably standard ISO-4 abbrevation:<br/>
+  <span id='resultString'></span><br/>
+  Unused patterns that could match as compound words:
+  <table id='weakPatterns' class='patterns'></table>
+  <br/>
+  <p>Some caveats:
+    <ul>
+      <li>Sometimes the LTWA only includes an entry that should be inflected (if
+        <i>equilibria</i> is not abbreviated, check <i>equilibrium</i>).</li>
+      <li>For non-English titles untick the checkbox (watch out for: wrongly
+        applied matches from other languages; grammar issues, e.g. German
+        compound words; other transliterations from slavic languages).</li>
+      <li>Dependent titles (<i>Series A</i>) are not really supported.</li>
+      <li>Names of persons should not be abbreviated, even if they match.</li>
+    </ul>
+  </p>
+  <br/>
+  <p>See the <a href='https://web.archive.org/web/20180328190032/http://www.uai.cl/images/sitio/biblioteca/citas/ISO_4_1997en.pdf/'>ISO-4</a> for general rules, e.g.:
+    <ul>
+      <li>articles, conjunctions and prepositions are omitted (except prepositions at the beginning, like <i>From zero to hero</i>, or locutions like <i>in vivo</i>);</li>
+      <li>commas are removed, periods are replaced by commas, other punctuation is preserved;</li>
+      <li>capitalization is not specified;</li>
+      <li>diacritics are left as in the original title;</li>
+      <li>words like <i>Part</i>, <i>Series</i>, <i>Section</i> should be omitted, unless required for identification;</li>
+      <li>single word titles (possibly with an article or preposition) are not abbreviated;</li>
+      <li><i>n.a.</i> or <i>–</i> means not abbreviated.</li>
+    </ul>
+  </p>
+  <br/>
+  <p>Based on the 2017-09-14 version of the <a href='http://www.issn.org/services/online-services/access-to-the-ltwa/'>LTWA</a>.</p>
+  <p><small>Report issues at <a href='https://github.com/marcinwrochna/abbrevIso'>GitHub</a></small></p>
 </form>
 </div>
 </body>
