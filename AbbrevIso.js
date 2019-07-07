@@ -364,6 +364,10 @@ export class AbbrevIso {
     // is preserved, since it may mean 'Operations Research', but 'B-A ' would
     // lose the 'A').
 
+    // This is the same as collation.boundariesRegex, except that we don't
+    // consider +&? as boundaries (they are part of initialisms like A&A).
+    const boundariesRegex = /[-\s\u2013\u2014_.,:;!|=*\\/'"()#%@$]/;
+
     // Articles, as opposed to other short words, are removed from the
     // beginning also, and are not preserved in single word titles.
     const articles = ['a', 'an', 'the', 'der', 'die', 'das', 'den', 'dem',
@@ -371,18 +375,19 @@ export class AbbrevIso {
       'els', 'ses', 'es', 'gli', 'een', '\'t', '\'n'];
     for (const word of articles) {
       value = value.replace(new RegExp(
-          '((^|' + collation.boundariesRegex.source + '))' + word + '\\s',
+          '((^|' + boundariesRegex.source + '))' + word + '\\s',
           'gu'), '$1');
       // Also try the word with the first letter capitalized.
       const cWord = word.charAt(0).toUpperCase() + word.trim().substr(1);
       value = value.replace(new RegExp(
-          '((^|' + collation.boundariesRegex.source + '))' + cWord + '\\s',
+          '((^|' + boundariesRegex.source + '))' + cWord + '\\s',
           'gu'), '$1');
     }
     // French articles "l'", "d'" may be followed by whatever.
     value = value.replace(new RegExp(
-        '((^|' + collation.boundariesRegex.source + '))(l|L|d|D)(\'|’)',
+        '((^|' + boundariesRegex.source + '))(l|L|d|D)(\'|’)',
         'gu'), '$1');
+
 
     // We delay checking prepositions and conjunctions until a bit later, as
     // they are retained in 'single word' titles. If at the end we'd get a
@@ -425,12 +430,12 @@ export class AbbrevIso {
     for (const word of this.shortWords_) {
       if (word.trim().length != 0) {
         result = result.replace(new RegExp(
-            '(' + collation.boundariesRegex.source + ')' + word.trim() + '\\s',
+            '(' + boundariesRegex.source + ')' + word.trim() + '\\s',
             'gu'), '$1');
         const cWord =
           word.trim().charAt(0).toUpperCase() + word.trim().substr(1);
         result = result.replace(new RegExp(
-            '(' + collation.boundariesRegex.source + ')' + cWord + '\\s',
+            '(' + boundariesRegex.source + ')' + cWord + '\\s',
             'gu'), '$1');
       }
     }

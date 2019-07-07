@@ -22,7 +22,7 @@
  */
 'use strict';
 const fs = require('fs');
-const AbbrevIso = require('nodeBundle.js');
+const AbbrevIso = require('./nodeBundle.js');
 
 // Parse command-line arguments.
 if (process.argv.length < 3 || process.argv[2] == 'reset')
@@ -37,8 +37,8 @@ if (!(state instanceof Object) || !('abbrevs' in state))
   throw new Error('Invalid file: expected object with "abbrevs" key.');
 
 // Load abbrevISO.
-const ltwa = fs.readFileSync('LTWA_20170914-modified.csv', 'utf8');
-const shortWords = fs.readFileSync('shortwords.txt', 'utf8');
+const ltwa = fs.readFileSync(__dirname + '/LTWA_20170914-modified.csv', 'utf8');
+const shortWords = fs.readFileSync(__dirname + '/shortwords.txt', 'utf8');
 const abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
 
 // Compute the data in state['abbrevs'][title] for all titles.
