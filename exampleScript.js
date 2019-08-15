@@ -42,22 +42,31 @@ const shortWords = fs.readFileSync(__dirname + '/shortwords.txt', 'utf8');
 const abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
 
 // Compute the data in state['abbrevs'][title] for all titles.
-for (const title in state['abbrevs']) {
-  if (!recomputeAll
-      && typeof(state['abbrevs'][title]) === 'object'
-      && 'all' in state['abbrevs'][title])
-    continue;
-  const t = title.normalize('NFC');
-  console.log(t);
-  const result = {};
-  result['all'] = abbrevIso.makeAbbreviation(t);
-  result['eng'] = abbrevIso.makeAbbreviation(t, ['eng', 'mul', 'lat']);
-  const matchingPatterns = abbrevIso.getMatchingPatterns(t);
-  let s = '';
-  for (const pattern of matchingPatterns)
-    s += pattern.line + '\n';
-  result['matchingPatterns'] = s;
-  state['abbrevs'][title] = result;
+for (let [title, data] of Object.entries(state['abbrevs'])) {
+  let changed = false;
+  if (typeof(data) !== 'object')
+    data = {'all': null, 'eng': null, 'matchingPatterns': null};
+  for (const lang of Object.keys(data)) {
+    if (data[lang] !== null && !recomputeAll)
+      continue;
+    changed = true;
+    const t = title.normalize('NFC');
+    if (lang == 'matchingPatterns') {
+      const matchingPatterns = abbrevIso.getMatchingPatterns(t);
+      let s = '';
+      for (const pattern of matchingPatterns)
+        s += pattern.line + '\n';
+      data[lang] = s;
+    } else if (lang == 'all') {
+      data[lang] = abbrevIso.makeAbbreviation(t);
+    } else {
+      const langSet = lang.split(',').concat([, 'mul', 'lat']);
+      data[lang] = abbrevIso.makeAbbreviation(t, langSet);
+    }
+    console.log(`"${t}"\t[${lang}]\t->\t${data[lang]}`);
+  }
+  if (changed)
+    state['abbrevs'][title] = data;
 }
 
 // Save JSON 'state' file.
