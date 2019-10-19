@@ -4,7 +4,8 @@
   "description": "Publication title abbreviation per ISO-4 standard.",
   "main": "AbbrevIso.js",
   "scripts": {
-    "test": "exampleScript.js",
+    "start": "./server.js",
+    "test": "./exampleScript.js",
     "rollup": "rollup AbbrevIso.js -o browserBundle.js --f iife --name AbbrevIso && rollup AbbrevIso.js -o nodeBundle.js --f cjs --name AbbrevIso"
   },
   "repository": {
@@ -17,10 +18,18 @@
     "url": "https://github.com/marcinwrochna/abbrevIso/issues"
   },
   "homepage": "https://github.com/marcinwrochna/abbrevIso#readme",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "express": "^4.17.1"
+  },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-google": "^0.12.0",
-    "eslint-plugin-html": "^5.0.3",
-    "eslint-plugin-jsdoc": "^4.8.0"
+    "eslint": "^6.4.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsdoc": "^15.9.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "rollup": "*"
   }
 }

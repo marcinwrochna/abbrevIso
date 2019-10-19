@@ -3,6 +3,7 @@ Publication title abbreviation per [ISO-4](https://web.archive.org/web/201803281
 
 This is a library for finding abbreviations of journal titles and searching [LTWA](http://www.issn.org/services/online-services/access-to-the-ltwa/) (List of Title Word Abbreviations).
 Try it [live](https://marcinwrochna.github.io/abbrevIso/), also check there for caveats and an overview of ISO-4 rules.
+Or try [the API](https://tools.wmflabs.org/abbreviso/) instead.
 
 _International Journal of Geographical Information Science → Int. J. Geogr. Inf. Sci._  
 _Zeitschrift für deutsches Altertum und deutsche Literatur → Z. dtsch. Altert. dtsch. Lit._  

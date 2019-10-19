@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>AbbrevIso API</title>
+    <style>
+        #container {
+            max-width: 900px;
+            margin: auto;
+            font-size: 17px;
+            line-height: 1.6;    
+        }
+        h1 {
+            background-color: #112;            
+            color: white;
+            font-size: 170%;
+            padding: 0.9ex;
+            margin-bottom: 10px;
+        }
+        p { margin: 0; }
+        ul { margin: 0.5em; }
+        li { margin-bottom: 1.5ex; line-height: 1.9; }
+        a { color: #337; text-decoration: none; }
+        code { font-size: 15px; }
+    </style>
+</head>
+<body><div id='container'>
+    <h1>AbbrevIso API</h1>
+    <p>This simple API provides abbreviations of journal titles attempting to implement the <a href="https://en.wikipedia.org/wiki/ISO_4">ISO-4 standard</a>.
+    It executes the <a href="https://github.com/marcinwrochna/abbrevIso">AbbrevIso library (GitHub)</a>.
+    See <a href="https://marcinwrochna.github.io/abbrevIso/">the browser UI</a> for details and caveats.</p>
+
+    <ul>
+        <li><a href="/abbreviso/a/Journal%20of%20Foo">
+                GET <code>/a/Journal%20of%20Foo</code>
+            </a><br/>
+            → <code>J. Foo</code></li>
+        <li><a href="/abbreviso/a/Zeitschrift%20f%C3%BCr%20deutsches%20Altertum%20und%20deutsche%20Literatur">
+                GET <code>/a/Zeitschrift%20f%C3%BCr%20deutsches%20Altertum%20und%20deutsche%20Literatur</code>
+            </a><br/>
+            → <code>Z. dtsch. Altert. dtsch. Lit.</code></li>
+        <li><a href="/abbreviso/a/Zeitschrift%20f%C3%BCr%20deutsches%20Altertum%20und%20deutsche%20Literatur?lang=eng">
+                GET <code>/a/Zeitschrift%20f%C3%BCr%20deutsches%20Altertum%20und%20deutsche%20Literatur?lang=eng</code>
+            </a><br/>
+            → <code>Zeitschrift deutsches Altertum deutsche Literatur</code></li>
+    </ul>
+</div></body>
+</html>

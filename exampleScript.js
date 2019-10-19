@@ -63,7 +63,8 @@ for (let [title, data] of Object.entries(state['abbrevs'])) {
       const langSet = lang.split(',').concat([, 'mul', 'lat']);
       data[lang] = abbrevIso.makeAbbreviation(t, langSet);
     }
-    console.log(`"${t}"\t[${lang}]\t->\t${data[lang]}`);
+    if (lang != 'matchingPatterns')
+      console.log(`"${t}"\t[${lang}]\t->\t${data[lang]}`);
   }
   if (changed)
     state['abbrevs'][title] = data;
