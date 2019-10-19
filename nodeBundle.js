@@ -157,12 +157,6 @@ function getCollatingMatch(s, t) {
 }
 
 /**
- * Print all consecutive unicode code points of a string.
- * @param {string} s
- * @return {Array<string>}
- */
-
-/**
  * AbbrevIso v1.1 JS lib for publication title abbreviation per ISO-4 standard.
  * Copyright (C) 2017 by Marcin Wrochna. MIT License, see file: LICENSE.
  * @fileoverview Prefix trees for quickly finding patterns.
@@ -266,6 +260,8 @@ class PrefixTree {
  * publications according to the ISO-4 standard. It also provides a way to list
  * matching patterns from the LTWA (List of Title Word Abbreviations).
  */
+
+
 /**
  * A single pattern line from the LTWA.
  * @property {string} pattern - The actual pattern from the LTWA, with dashes.
@@ -623,7 +619,7 @@ class AbbrevIso {
 
     // This is the same as collation.boundariesRegex, except that we don't
     // consider +&? as boundaries (they are part of initialisms like A&A).
-    const boundariesRegex$$1 = /[-\s\u2013\u2014_.,:;!|=*\\/'"()#%@$]/;
+    const boundariesRegex$1 = /[-\s\u2013\u2014_.,:;!|=*\\/'"()#%@$]/;
 
     // Articles, as opposed to other short words, are removed from the
     // beginning also, and are not preserved in single word titles.
@@ -632,17 +628,17 @@ class AbbrevIso {
       'els', 'ses', 'es', 'gli', 'een', '\'t', '\'n'];
     for (const word of articles) {
       value = value.replace(new RegExp(
-          '((^|' + boundariesRegex$$1.source + '))' + word + '\\s',
+          '((^|' + boundariesRegex$1.source + '))' + word + '\\s',
           'gu'), '$1');
       // Also try the word with the first letter capitalized.
       const cWord = word.charAt(0).toUpperCase() + word.trim().substr(1);
       value = value.replace(new RegExp(
-          '((^|' + boundariesRegex$$1.source + '))' + cWord + '\\s',
+          '((^|' + boundariesRegex$1.source + '))' + cWord + '\\s',
           'gu'), '$1');
     }
     // French articles "l'", "d'" may be followed by whatever.
     value = value.replace(new RegExp(
-        '((^|' + boundariesRegex$$1.source + '))(l|L|d|D)(\'|’)',
+        '((^|' + boundariesRegex$1.source + '))(l|L|d|D)(\'|’)',
         'gu'), '$1');
 
 
@@ -687,12 +683,12 @@ class AbbrevIso {
     for (const word of this.shortWords_) {
       if (word.trim().length != 0) {
         result = result.replace(new RegExp(
-            '(' + boundariesRegex$$1.source + ')' + word.trim() + '\\s',
+            '(' + boundariesRegex$1.source + ')' + word.trim() + '\\s',
             'gu'), '$1');
         const cWord =
           word.trim().charAt(0).toUpperCase() + word.trim().substr(1);
         result = result.replace(new RegExp(
-            '(' + boundariesRegex$$1.source + ')' + cWord + '\\s',
+            '(' + boundariesRegex$1.source + ')' + cWord + '\\s',
             'gu'), '$1');
       }
     }
@@ -714,5 +710,5 @@ class AbbrevIso {
   }
 }
 
-exports.LTWAPattern = LTWAPattern;
 exports.AbbrevIso = AbbrevIso;
+exports.LTWAPattern = LTWAPattern;
