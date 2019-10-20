@@ -61,8 +61,6 @@ export function promiscuouslyNormalize(s) {
       .replace(new RegExp(boundariesRegex, 'g'), ' ')
       .replace(/\s+/gu, ' ').replace(/^\s/gu, '').replace(/\s$/gu, '')
       .replace(/[^a-z\ ]/g, ' ')
-      .replace(/ss/g, 's')
-      .replace(/oe/g, 'o').replace(/ae/g, 'e')
       .replace(/kh/g, '').replace(/h/g, '');
 }
 

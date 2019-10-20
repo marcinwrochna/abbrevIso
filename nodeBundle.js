@@ -65,8 +65,6 @@ function promiscuouslyNormalize(s) {
       .replace(new RegExp(boundariesRegex, 'g'), ' ')
       .replace(/\s+/gu, ' ').replace(/^\s/gu, '').replace(/\s$/gu, '')
       .replace(/[^a-z\ ]/g, ' ')
-      .replace(/ss/g, 's')
-      .replace(/oe/g, 'o').replace(/ae/g, 'e')
       .replace(/kh/g, '').replace(/h/g, '');
 }
 
@@ -425,11 +423,12 @@ class AbbrevIso {
    *     e.g. 'mul' for multiple, 'und' for undefined language.
    * @param {boolean} pretendDash - If true, pretend all patterns start and end
    *   with a dash (to find potential compound words)
-   * @return {Array} An Array of `[i, iend, abbr, pattern]` Arrays, where the
-   *     `pattern` matches `value[i..iend-1]`, `abbr` is the computed
-   *     abbreviation that should be put in place of the match; it has
+   * @return {Array} An Array of `[i, iend, abbr, pattern, appendix]` Arrays,
+   *     where the  `pattern` matches `value[i..iend-1]`, `abbr` is the
+   *     computed abbreviation that should be put in place of the match; it has
    *     capitalization, diacritics etc. preserved. `pattern` is the input
-   *     LTWAPattern.
+   *     LTWAPattern; `appendix` is the flection ending that was accepted
+   *     even though the pattern had no ending dash (like -s, -ian).
    */
   getPatternMatches(value, pattern, languages = ['*'], pretendDash = false) {
     // If a list of languages is given, check it intersects the pattern's list.
@@ -470,6 +469,7 @@ class AbbrevIso {
       let abbr = '';
       let ii = 0;
       let iend = i + r[0][ii].length;
+      let appendix = '';
       for (let j = 0; j < replacement.length; j++) {
         if (replacement[j] == '.') {
           abbr += '.';
@@ -508,14 +508,13 @@ class AbbrevIso {
       // flection and if we don't have a boundary at iend, discard the pattern.
       } else {
         let valid = true;
-        while (iend < value.length &&
-               !boundariesRegex.test(value[iend])) {
-          if (/[iesn'’]/u.test(value[iend])) { // TODO better flection.
-            iend++;
-          } else {
-            valid = false;
-            break;
-          }
+        const ending = new RegExp('^([iaesn\'’]{0,3})' + '($|' + boundariesRegex.source + ')', 'u');
+        const match = value.substr(iend).match(ending);
+        if (match) {
+          appendix = match[1];
+          iend += appendix.length;
+        } else {
+          valid = false;
         }
         if (!valid) {
           isPreviousCharBoundary = boundariesRegex.test(value[i]);
@@ -528,7 +527,7 @@ class AbbrevIso {
       if (replacement == '')
         abbr = value.substring(i, iend);
       // Report the match.
-      result.push([i, iend, abbr, pattern]);
+      result.push([i, iend, abbr, pattern, appendix]);
 
       i++;
       isPreviousCharBoundary = boundariesRegex.test(value[i-1]);
@@ -559,9 +558,9 @@ class AbbrevIso {
           this.getPatternMatches(value, pattern, languages, pretendDash)
       );
     }
-    const getBeginning = ([i, _iend, _abbr, _pattern]) => i;
+    const getBeginning = ([i, _iend, _abbr, _pattern, _appendix]) => i;
     matches.sort((a, b) => (getBeginning(a) - getBeginning(b)));
-    return matches.map(([_i, _iend, _abbr, pattern]) => pattern);
+    return matches.map(([_i, _iend, _abbr, pattern, _appendix]) => pattern);
   }
 
   /**
@@ -613,6 +612,7 @@ class AbbrevIso {
     //    Return periods in acronyms (repeat for overlaps).
     result = result.replace(/((^|[A-Z,\.&\-\\\/])\s?[A-Z]),/ug, '$1.');
     result = result.replace(/((^|[A-Z,\.&\-\\\/])\s?[A-Z]),/ug, '$1.');
+    result = result.replace(/(\s[A-Z]),/ug, '$1.');
     //    Return periods inside words (like Eco.mont)
     result = result.replace(/([A-Za-z]),([A-Za-z])/ug, '$1.$2');
     //    Return periods in ordinals and common expressions.
@@ -652,7 +652,7 @@ class AbbrevIso {
     result = this.removeShortWords(result, articles, '(^|' + boundariesRegex$1.source + ')');
     // French articles "l'", "d'" may be followed by whatever.
     result = result.replace(new RegExp(
-      '((^|' + boundariesRegex.source + '))(l|L|d|D|dell)(\'|’)', 'gu'), '$1');
+      '((^|' + boundariesRegex.source + '))(l|L|d|D|dell|nell)(\'|’)', 'gu'), '$1');
 
     // Check if we have a single word after removing all short words.
     let preResult = this.removeShortWords(result, this.shortWords_, '(^|' + boundariesRegex$1.source + ')');
@@ -669,11 +669,12 @@ class AbbrevIso {
       );
     }
     
-    // Sort by priority: patterns with fewer dashes first,
+    // Sort by priority: patterns with no starting dashes first,
     // patterns with longer matches first, longer patterns first.
-    const getPriority = ([i, iend, _abbr, pattern]) => (
-      (pattern.startDash ? 100 : 0) +
-      (pattern.endDash ? 100 : 0) - (iend - i) - pattern.pattern.length
+    // The fine details regulate whether we prefer to match 'futures' to 'futur-' or 'future'.
+    const getPriority = ([i, iend, _abbr, pattern, appendix]) => (
+      (pattern.startDash ? 100 : 0) + (pattern.endDash ? 3 : 0)
+      + appendix.length - (iend - i - appendix.length) - pattern.pattern.length
     );
     matches.sort((a, b) => (getPriority(a) - getPriority(b)));
     // Resolve overlapping patterns according to priority.
