@@ -352,7 +352,8 @@ var AbbrevIso = (function (exports) {
       // Trim all shortWords.
       if (!(shortWords instanceof Array))
         shortWords = shortWords.split(newlineRegex);
-      this.shortWords_ = shortWords.map((s) => s.trim());
+      shortWords = shortWords.map((s) => s.trim());
+      this.shortWords_ = shortWords.filter((s) => s.length > 0);
     }
 
     /** @return {number} Number of patterns added. */
@@ -508,7 +509,7 @@ var AbbrevIso = (function (exports) {
           let valid = true;
           while (iend < value.length &&
                  !boundariesRegex.test(value[iend])) {
-            if (/[iesn]/u.test(value[iend])) { // TODO better flection.
+            if (/[iesn'’]/u.test(value[iend])) { // TODO better flection.
               iend++;
             } else {
               valid = false;
@@ -563,6 +564,28 @@ var AbbrevIso = (function (exports) {
     }
 
     /**
+     * Remove short words from s, under some boundary constraints.
+     * @param {string} s
+     * @param {Array<string>} shortWords
+     * @param {string} before regex source for boundary to be matched before word,
+     *  with one parenthesised group to keep.
+     */
+    removeShortWords(s, shortWords, before, after) {
+      // Omit articles, prepositions, and conjunctions, unless first preposition
+      // in title/subtitle, parts of names, meant as initialisms, 'A' meant as
+      // 'Part A', national practice... Here I omit them only when preceded by a
+      // boundary, succeeded by whitespace, and lower case or CamelCase (e.g. 'OR'
+      // is preserved, since it may mean 'Operations Research', but 'B-A ' would
+      // lose the 'A').
+
+      // Also try the word with the first letter capitalized.
+      let wordList = shortWords.concat(shortWords.map((s) => s.charAt(0).toUpperCase() + s.substr(1)));
+      for (const word of wordList)
+        s = s.replace(new RegExp(before + word + '\\s', 'gu'), '$1');
+      return s;
+    }
+
+    /**
      * Compute an abbreviation according to all ISO-4 rules.
      * @param {string} value
      * @param {?Array<string>} languages - Only use patterns that apply to these.
@@ -574,84 +597,58 @@ var AbbrevIso = (function (exports) {
     makeAbbreviation(value, languages = undefined, patterns = undefined) {
       if (patterns === undefined)
         patterns = this.getPotentialPatterns(value);
+      let result = value;
       // Some basic lossless Unicode normalization.
-      value = value.normalize('NFC').trim();
+      result = result.normalize('NFC').trim();
       // Punctuation:
       //     Remove ellipsis.
-      value = value.replace(/\.\.\./ug, '');
-      value = value.replace(/\u2026/ug, '');
+      result = result.replace(/\.\.\./ug, '');
+      result = result.replace(/\u2026/ug, '');
       //     Remove commas.
-      value = value.replace(/,/ug, '');
+      result = result.replace(/,/ug, '');
       //     Replace periods with commas, unless part of acronyms/initialisms,
       //     ordinals, or already abbreviated expressions.
-      value = value.replace(/\./ug, ',');
+      result = result.replace(/\./ug, ',');
       //    Return periods in acronyms (repeat for overlaps).
-      value = value.replace(/((^|[A-Z,\.&\-\\\/])\s?[A-Z]),/ug, '$1.');
-      value = value.replace(/((^|[A-Z,\.&\-\\\/])\s?[A-Z]),/ug, '$1.');
+      result = result.replace(/((^|[A-Z,\.&\-\\\/])\s?[A-Z]),/ug, '$1.');
+      result = result.replace(/((^|[A-Z,\.&\-\\\/])\s?[A-Z]),/ug, '$1.');
+      //    Return periods inside words (like Eco.mont)
+      result = result.replace(/([A-Za-z]),([A-Za-z])/ug, '$1.$2');
       //    Return periods in ordinals and common expressions.
-      value = value.replace(/([\s\-:,&#()\\\/][0-9]{1,3}),/ug, '$1.');
-      value = value.replace(/((^|\s)(St|Mr|Ms|Mrs|Mx|Dr|Prof|vs)),/ug, '$1.');
-      value = value.replace(/^J,/ug, 'J.');
+      result = result.replace(/([\s\-:,&#()\\\/][0-9]{1,3}),/ug, '$1.');
+      result = result.replace(/((^|\s)(St|Mr|Ms|Mrs|Mx|Dr|Prof|vs)),/ug, '$1.');
+      result = result.replace(/^J,/ug, 'J.');
       //     (Standard says commas and periods for dependent titles can be
       //     preserved, but it doesn't seem to apply any such exceptions in
       //     examples).
       //     Omit '&' and '+' (when they stand for 'and'),
       //     unless part of names like AT&T.
-      value = value.replace(/([^A-Z0-9])[&+]([^A-Z0-9])/ug, '$1$2');
+      result = result.replace(/([^A-Z0-9])[&+]([^A-Z0-9])/ug, '$1$2');
       //     All other punctuation is preserved.
 
       // Omit generic terms separating dependent titles.
-      const sTerms = ['Sect.', 'Ser.'];
-      for (const term of sTerms)
-        value = value.replace(term + ' ', '');
+      // If preceded by [^a-z]
+      //result = result.replace(/([^a-z\s])\s*(Series|Serie|Ser|Part|Section|Sect|Sec|Série)[,.]?/ug, '$1');
+      // If followed by single letter A-Z, roman numeral, or digit
+      result = result.replace(new RegExp(
+        '(Series|Serie|Ser|Part|Section|Sect|Sec|Série)[,.]?\\s*([A-Z]|[0-9IVXivx]+)'
+        + '(' + boundariesRegex.source + '|$)', 'gu'), '$2$3');
+      // (Otherwise it may be part of a title, like "Bulletin of the Section of Logic").
+
 
       // Capitalization is preserved.
       //     (First letter should be capitalized, but we leave that to local
       //     style, check e.g. 'tm-Technisches Messen').
 
-      // Omit articles, prepositions, and conjunctions, unless first preposition
-      // in title/subtitle, parts of names, meant as initialisms, 'A' meant as
-      // 'Part A', national practice... Here I omit them only when preceded by a
-      // boundary, succeeded by whitespace, and lower case or CamelCase (e.g. 'OR'
-      // is preserved, since it may mean 'Operations Research', but 'B-A ' would
-      // lose the 'A').
-
-      // This is the same as collation.boundariesRegex, except that we don't
-      // consider +&? as boundaries (they are part of initialisms like A&A).
-      const boundariesRegex$1 = /[-\s\u2013\u2014_.,:;!|=*\\/'"()#%@$]/;
-
-      // Articles, as opposed to other short words, are removed from the
-      // beginning also, and are not preserved in single word titles.
-      const articles = ['a', 'an', 'the', 'der', 'die', 'das', 'den', 'dem',
-        'des', 'le', 'la', 'les', 'el', 'il', 'lo', 'los', 'de', 'het',
-        'els', 'ses', 'es', 'gli', 'een', '\'t', '\'n'];
-      for (const word of articles) {
-        value = value.replace(new RegExp(
-            '((^|' + boundariesRegex$1.source + '))' + word + '\\s',
-            'gu'), '$1');
-        // Also try the word with the first letter capitalized.
-        const cWord = word.charAt(0).toUpperCase() + word.trim().substr(1);
-        value = value.replace(new RegExp(
-            '((^|' + boundariesRegex$1.source + '))' + cWord + '\\s',
-            'gu'), '$1');
-      }
-      // French articles "l'", "d'" may be followed by whatever.
-      value = value.replace(new RegExp(
-          '((^|' + boundariesRegex$1.source + '))(l|L|d|D)(\'|’)',
-          'gu'), '$1');
-
-
-      // We delay checking prepositions and conjunctions until a bit later, as
-      // they are retained in 'single word' titles. If at the end we'd get a
-      // single word, the current `value` will be returned. So further
-      // modifications work on 'result' instead of `value`.
-      let result = value;
+      // If at the end we'd get a single word, the current `result` will be returned,
+      // before any abbreviations are matched.
+      let preResult = result;
 
       // Find and apply patterns, being careful about overlaps.
       let matches = []; // A list of [i, iend, startDash, endDash, abbr, line].
       for (const pattern of patterns) {
         matches = matches.concat(
-            this.getPatternMatches(value, pattern, languages)
+            this.getPatternMatches(result, pattern, languages)
         );
       }
       // Sort by priority: patterns with fewer dashes first,
@@ -668,44 +665,48 @@ var AbbrevIso = (function (exports) {
             matches.splice(k--, 1); // Remove the later one from matches.
         }
       }
-      // Apply matches starting from the later ones.
+      
+      // Apply matches starting from the later ones.    
       const getBeginning = ([i, _iend, _abbr, _pattern]) => i;
       matches.sort((a, b) => (getBeginning(b) - getBeginning(a)));
       for (const [i, iend, abbr, _pattern] of matches) {
         // If we'd abbreviate only one character or less (and add a dot),
         // we don't abbreviate at all.
-        if (abbr.length < iend - i)
+        if (abbr.length < iend - i) {
           result = result.substring(0, i) + abbr + result.substr(iend);
-      }
-
-      // Other short words are not removed from beginning
-      for (const word of this.shortWords_) {
-        if (word.trim().length != 0) {
-          result = result.replace(new RegExp(
-              '(' + boundariesRegex$1.source + ')' + word.trim() + '\\s',
-              'gu'), '$1');
-          const cWord =
-            word.trim().charAt(0).toUpperCase() + word.trim().substr(1);
-          result = result.replace(new RegExp(
-              '(' + boundariesRegex$1.source + ')' + cWord + '\\s',
-              'gu'), '$1');
         }
       }
 
-      // Omit generic terms separating dependent titles.
-      const terms = ['Series', 'Part', 'Section'];
-      for (const term of terms)
-        result = result.replace(' ' + term + ' ', ' ');
+      // This is the same as collation.boundariesRegex, except that we don't
+      // consider +&?' as boundaries (they are part of initialisms like A&A
+      // or words like Baha'i).
+      const boundariesRegex$1 = /[-\s\u2013\u2014_.,:;!|=*\\/"()#%@$]/;
+      // Articles, as opposed to other short words, are removed from the
+      // beginning also, and are not preserved in single word titles.
+      const articles = ['a', 'an', 'the', 'der', 'die', 'das', 'den', 'dem',
+        'des', 'le', 'la', 'les', 'el', 'il', 'lo', 'los', 'de', 'het',
+        'els', 'ses', 'es', 'gli', 'een', '\'t', '\'n'];
+      result = this.removeShortWords(result, articles, '(^|' + boundariesRegex$1.source + ')');
+      // French articles "l'", "d'" may be followed by whatever.
+      result = result.replace(new RegExp(
+          '((^|' + boundariesRegex.source + '))(l|L|d|D)(\'|’)', 'gu'), '$1');
+      // Other short words are not removed from beginning.
+      result = this.removeShortWords(result, this.shortWords_, '(' + boundariesRegex$1.source + ')');
 
       // Remove superfluous whitepace.
       result = result.replace(/\s+/gu, ' ').trim();
 
-      // Preserve single words.
+      // Preserve single words (mod articles and prepositions). TODO rethink this logic.
       const r = new RegExp('.' + boundariesRegex.source + '.', 'u');
-      if (!(r.test(result)))
-        return value;
-      else
+      if (!(r.test(result))) {
+        // Only remove articles.
+        result = this.removeShortWords(preResult, articles, '(^|' + boundariesRegex$1.source + ')');
+        preResult = preResult.replace(new RegExp(
+          '((^|' + boundariesRegex.source + '))(l|L|d|D)(\'|’)', 'gu'), '$1');
+        return preResult;
+      } else {
         return result;
+      }
     }
   }
 
