@@ -3,7 +3,7 @@ Publication title abbreviation per [ISO-4](https://web.archive.org/web/201803281
 Try it [live](https://marcinwrochna.github.io/abbrevIso/)!
 
 This is a library for finding abbreviations of journal titles and searching [LTWA](http://www.issn.org/services/online-services/access-to-the-ltwa/) (List of Title Word Abbreviations).
-[See it live](https://marcinwrochna.github.io/abbrevIso/) for an overview of ISO-4 rules and caveats.
+See [here](https://marcinwrochna.github.io/abbrevIso/) for an overview of ISO-4 rules and caveats.
 Or try [the API](https://tools.wmflabs.org/abbreviso/) instead.
 
 _International Journal of Geographical Information Science → Int. J. Geogr. Inf. Sci._  
