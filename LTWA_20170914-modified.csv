@@ -26604,7 +26604,7 @@ labirint-	labirint.	lit
 labirinta	n.a.	lav
 labirynt	n.a.	pol
 labor	n.a.	mul
-Labor	Lab.	ger
+Labor-	Lab.	ger
 labor (work)	n.a.	mul
 laboral	labor.	spa
 laboratoir-	lab.	fre
@@ -27702,7 +27702,6 @@ libar	n.a.	hrv
 libellenonderzoek-	libellenonderz.	dut
 libellum	n.a.	lat
 liber	n.a.	lat
-liber-	lib.	rum
 liberal-	lib.	eng
 libérat-	lib.	fre
 liberator	lib.	eng
@@ -56114,5 +56113,16 @@ zhurnal	zh.	rus,slo,ext
 meditsin-	med.	mul,ext
 counterintelligenc-	counterintell.	eng,fre,ext
 -medic-	-med.	mul,ext
-real sociedad	n.a.	spa,cat,ext
+real sociedad	r. soc.	spa,cat,ext
 comptes rendus	c. r.	fre,ext
+etholog-	ethol.	eng,ext
+real anal-	real anal.	eng,ext
+real number-	n.a.	eng,ext
+real-world	n.a.	eng,ext
+eleven	n.a.	eng,ext
+libert-	lib.	eng,ext
+latinx	lat.	eng,ext
+psikhoterap-	psikhoter.	rus,ext
+micromechani-	micromech.	eng,ext
+mikromechani-	mikromech.	pol,ext
+microengineer-	microeng.	eng,ext
