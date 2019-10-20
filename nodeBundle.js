@@ -16,7 +16,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
  * Avoid using \W and \w, they match a nonsense range.
  * @type {RegExp}
  */
-const boundariesRegex = /[-\s\u2013\u2014_.,:;!|=+*\\/'"()&#%@$?]/;
+const boundariesRegex = /[-\s\u2013\u2014_.,:;!|=+*\\/"()&#%@$?]/;
 /**
  * A regex for matching line breaks, as per Unicode standards:
  * {@link http://www.unicode.org/reports/tr18/#Line_Boundaries}.
@@ -64,7 +64,7 @@ function promiscuouslyNormalize(s) {
       .toLowerCase()
       .replace(new RegExp(boundariesRegex, 'g'), ' ')
       .replace(/\s+/gu, ' ').replace(/^\s/gu, '').replace(/\s$/gu, '')
-      .replace(/[^a-z\ ]/g, '')
+      .replace(/[^a-z\ ]/g, ' ')
       .replace(/ss/g, 's')
       .replace(/oe/g, 'o').replace(/ae/g, 'e')
       .replace(/kh/g, '').replace(/h/g, '');
@@ -394,7 +394,7 @@ class AbbrevIso {
     // depending on whether this position starts a word or not.
     let isNewWord = true;
     for (let i = 0; i < s.length; i++) {
-      if (s.charAt(i) == ' ') {
+      if (!/[a-zA-Z]/.test(s.charAt(i))) {
         isNewWord = true;
         continue;
       }
@@ -596,9 +596,9 @@ class AbbrevIso {
    * @return {string}
    */
   makeAbbreviation(value, languages = undefined, patterns = undefined) {
-    if (patterns === undefined)
-      patterns = this.getPotentialPatterns(value);
     let result = value;
+    if (patterns === undefined)
+      patterns = this.getPotentialPatterns(result);
     // Some basic lossless Unicode normalization.
     result = result.normalize('NFC').trim();
     // Punctuation:
@@ -636,15 +636,31 @@ class AbbrevIso {
       + '(' + boundariesRegex.source + '|$)', 'gu'), '$2$3');
     // (Otherwise it may be part of a title, like "Bulletin of the Section of Logic").
 
-
     // Capitalization is preserved.
     //     (First letter should be capitalized, but we leave that to local
     //     style, check e.g. 'tm-Technisches Messen').
 
-    // If at the end we'd get a single word, the current `result` will be returned,
-    // before any abbreviations are matched.
-    let preResult = result;
+    // This is the same as collation.boundariesRegex, except that we don't
+    // consider +&?' as boundaries (they are part of initialisms like A&A
+    // or words like Baha'i).
+    const boundariesRegex$1 = /[-\s\u2013\u2014_.,:;!|=*\\/"()#%@$]/;
+    // Articles, as opposed to other short words, are removed from the
+    // beginning also, and are not preserved in single word titles.
+    const articles = ['a', 'an', 'the', 'der', 'die', 'das', 'den', 'dem',
+      'des', 'le', 'la', 'les', 'el', 'il', 'lo', 'los', 'de', 'het',
+      'els', 'ses', 'es', 'gli', 'een', '\'t', '\'n'];
+    result = this.removeShortWords(result, articles, '(^|' + boundariesRegex$1.source + ')');
+    // French articles "l'", "d'" may be followed by whatever.
+    result = result.replace(new RegExp(
+      '((^|' + boundariesRegex.source + '))(l|L|d|D|dell)(\'|’)', 'gu'), '$1');
 
+    // Check if we have a single word after removing all short words.
+    let preResult = this.removeShortWords(result, this.shortWords_, '(^|' + boundariesRegex$1.source + ')');
+    const r = new RegExp('.' + boundariesRegex.source + '.', 'u');
+    if (!(r.test(preResult)))
+      return result.replace(/\s+/gu, ' ').trim();
+
+    // Now the main part: applying LTWA rules.
     // Find and apply patterns, being careful about overlaps.
     let matches = []; // A list of [i, iend, startDash, endDash, abbr, line].
     for (const pattern of patterns) {
@@ -652,6 +668,7 @@ class AbbrevIso {
           this.getPatternMatches(result, pattern, languages)
       );
     }
+    
     // Sort by priority: patterns with fewer dashes first,
     // patterns with longer matches first, longer patterns first.
     const getPriority = ([i, iend, _abbr, pattern]) => (
@@ -678,36 +695,13 @@ class AbbrevIso {
       }
     }
 
-    // This is the same as collation.boundariesRegex, except that we don't
-    // consider +&?' as boundaries (they are part of initialisms like A&A
-    // or words like Baha'i).
-    const boundariesRegex$1 = /[-\s\u2013\u2014_.,:;!|=*\\/"()#%@$]/;
-    // Articles, as opposed to other short words, are removed from the
-    // beginning also, and are not preserved in single word titles.
-    const articles = ['a', 'an', 'the', 'der', 'die', 'das', 'den', 'dem',
-      'des', 'le', 'la', 'les', 'el', 'il', 'lo', 'los', 'de', 'het',
-      'els', 'ses', 'es', 'gli', 'een', '\'t', '\'n'];
-    result = this.removeShortWords(result, articles, '(^|' + boundariesRegex$1.source + ')');
-    // French articles "l'", "d'" may be followed by whatever.
-    result = result.replace(new RegExp(
-        '((^|' + boundariesRegex.source + '))(l|L|d|D)(\'|’)', 'gu'), '$1');
     // Other short words are not removed from beginning.
     result = this.removeShortWords(result, this.shortWords_, '(' + boundariesRegex$1.source + ')');
 
     // Remove superfluous whitepace.
     result = result.replace(/\s+/gu, ' ').trim();
 
-    // Preserve single words (mod articles and prepositions). TODO rethink this logic.
-    const r = new RegExp('.' + boundariesRegex.source + '.', 'u');
-    if (!(r.test(result))) {
-      // Only remove articles.
-      result = this.removeShortWords(preResult, articles, '(^|' + boundariesRegex$1.source + ')');
-      preResult = preResult.replace(new RegExp(
-        '((^|' + boundariesRegex.source + '))(l|L|d|D)(\'|’)', 'gu'), '$1');
-      return preResult;
-    } else {
-      return result;
-    }
+    return result;
   }
 }
 

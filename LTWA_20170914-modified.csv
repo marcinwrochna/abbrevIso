@@ -56095,6 +56095,7 @@ vertebra-	vertebr.	mul,ext
 legeförening-	legeforen.	dan,nor,swe,ext
 lingvist-	lingvist.	lat,ext
 tekhnika-	tekh.	rus,ext
+andranikolog-	andranikol.	eng,ext
 neurotoxicolog-	neurotoxicol.	eng,fre,ext
 militært	mil.	dan,ext
 neglect-	negl.	eng,ext
@@ -56111,4 +56112,7 @@ in vivo	n.a.	mul,ext
 -forschung	-forsch.	ger,ext
 zhurnal	zh.	rus,slo,ext
 meditsin-	med.	mul,ext
-counterintelligenc-	counterintell.	eng,fre
+counterintelligenc-	counterintell.	eng,fre,ext
+-medic-	-med.	mul,ext
+real sociedad	n.a.	spa,cat,ext
+comptes rendus	c. r.	fre,ext
