@@ -46,16 +46,11 @@ function onInputChange() {
     $('#info2').html(''); // Clear the 'searching...'.
     return;
   }
-  // If user checked 'English only', use english, multi, latin and undefined.
-  let languages = undefined;
-  if ($('#engCheckbox')[0].checked)
-    languages = ['eng', 'mul', 'lat', 'und'];
-  // Compute and show the abbreviation.
-  const result = abbrevIso.makeAbbreviation(value, languages);
+  const result = abbrevIso.makeAbbreviation(value);
   $('#resultString').text(result);
   // Find and list all matching patterns (without excluding overlaps).
-  const matchingPatterns = abbrevIso.getMatchingPatterns(value, languages);
-  const weakPatterns = abbrevIso.getMatchingPatterns(value, languages, true);
+  const matchingPatterns = abbrevIso.getMatchingPatterns(value);
+  const weakPatterns = abbrevIso.getMatchingPatterns(value, ['*'], true);
   const header = '<th>Words</th><th>Abbr.</th><th><a ' +
     'href="https://www.loc.gov/standards/iso639-2/php/code_list.php">' +
     'Languages</a></th>';
@@ -77,16 +72,7 @@ function onInputChange() {
 
 $(document).ready(function() {
   // Handle API: read parameters from GET into the HTML form.
-  // Default is English only, because it's much faster.
-  $('#engCheckbox').prop('checked', true);
-  let r = new RegExp('[\?&]eng=([^&#]*)', 'i').exec(window.location.href);
-  if (r) {
-    if (r[1] && ['true', '1', 'True', 'yes', 'eng'].includes(r[1]))
-      $('#engCheckbox').prop('checked', true);
-    else
-      $('#engCheckbox').prop('checked', false);
-  }
-  r = new RegExp('[\?&]search=([^&#]*)', 'i').exec(window.location.href);
+  let r = new RegExp('[\?&]search=([^&#]*)', 'i').exec(window.location.href);
   if (r && r[1])
     $('#inputText').val(decodeURIComponent(r[1]).replace(/_/g, ' '));
 
@@ -110,7 +96,6 @@ $(document).ready(function() {
         $('#info').html('Loaded ' + abbrevIso.size + ' rows.');
 
         // We're ready to parse, so enable the interface and doTheMatching();
-        $('#engCheckbox').on('change', () => $('#inputText').trigger('input'));
         $('#inputText').on('input',
             debounce(() => {
               // The zero timeout allows the browser to refresh the GUI
@@ -157,15 +142,15 @@ $(document).ready(function() {
     background-color: #ddeeee;
   }
   #info {
-    margin-left: 3em;
+    font-size: 0.9em;
   }
   input[type=text] {
-    min-width: 30em;
+    min-width: 32em;
     margin-top: 5px;
     margin-bottom: 5px;
   }
   h1 {
-    font-size: 120%;
+    font-size: 1.2em;
     margin-bottom: 10px;
   }
   p { margin: 0; }
@@ -179,14 +164,13 @@ $(document).ready(function() {
 <form action='javascript:void(0);'>
   <h1>List of Title Word Abbreviations</h1>
   <br/>
-  <input id='engCheckbox' type='checkbox' checked='checked'/> English only
   <span id='info'>Loading...</span>
   <span id='info2'></span>
   <br/>
   <input id='inputText' type='text' value='International Journal of Geographical Information Science' /><br/>
   <table id='matchingPatterns' class='patterns'></table>
   <br/>
-  Probably standard ISO-4 abbrevation:<br/>
+  Probably standard ISO-4 abbreviation:<br/>
   <span id='resultString'></span><br/>
   Unused patterns that could match as compound words:
   <table id='weakPatterns' class='patterns'></table>
@@ -195,10 +179,13 @@ $(document).ready(function() {
     <ul>
       <li>Sometimes the LTWA only includes an entry that should be inflected (if
         <i>equilibria</i> is not abbreviated, check <i>equilibrium</i>).</li>
-      <li>For non-English titles untick the checkbox (watch out for: wrongly
-        applied matches from other languages; grammar issues, e.g. German
-        compound words; other transliterations from slavic languages).</li>
+      <li>Look for compounds words (if <i>bioengineering</i> is not abbreviated,
+        check if <i>engineering</i> appears on the list of possible compounds).</li>
       <li>Names of persons should not be abbreviated, even if they match.</li>
+      <li>Every rule applies to every language (not only those listed). However,
+        if two rules contradict, check the <i>languages</i> column to see which meaning
+        was intended (e.g. <i>Real sociedad</i> vs <i>Real number</i>).
+      </li>
     </ul>
   </p>
   <br/>
@@ -208,7 +195,7 @@ $(document).ready(function() {
       <li>commas are removed, periods are replaced by commas, other punctuation is preserved;</li>
       <li>capitalization is not specified;</li>
       <li>diacritics are left as in the original title;</li>
-      <li>words like <i>Part</i>, <i>Series</i>, <i>Section</i> should be omitted, unless required for identification;</li>
+      <li>words like <i>Part</i>, <i>Series</i>, <i>Section</i> should be omitted;</li>
       <li>single word titles (possibly with an article or preposition) are not abbreviated;</li>
       <li><i>n.a.</i> or <i>–</i> means not abbreviated.</li>
     </ul>

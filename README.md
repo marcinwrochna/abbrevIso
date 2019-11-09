@@ -23,9 +23,6 @@ The patterns are returned as a list of objects with the following properties:
  * startDash, endDash – booleans telling whether the pattern has dashes;
  * line – the original full line from the LTWA.
 
-Both functions accept an optional `languages` parameter, an `Array` of [ISO-639-2 (B)](https://www.loc.gov/standards/iso639-2/php/code_list.php) language codes. If given, only LTWA patterns that apply to at least one of these languages are used.
-If not given, all patterns are used. A recommended option for English titles is `['eng', 'mul', 'lat', 'und']` (for English, multilanguage, Latin, and undefined languages – in case some LTWA bugs are relevant to you).
-
 The library is designed for mass use, so the abbrevIso object is created once, slowly generating an index, but once this is done, queries should be fast.
 
 ## Running

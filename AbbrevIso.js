@@ -13,8 +13,9 @@ import PrefixTree from './PrefixTree.js';
  * A single pattern line from the LTWA.
  * @property {string} pattern - The actual pattern from the LTWA, with dashes.
  * @property {string} replacement - The replacement from the LTWA.
- * @property {Array<String>} languages - Languages to which this applies.
+ * @property {Array<String>} languages - Languages from which the word came.
  *   (as ISO-639-2 (B) codes, e.g. 'mul' for multiple, 'und' for undefined).
+ *   All patterns apply to all titles regardless of language, so this should be avoided.
  * @property {boolean} startDash - Does it have a starting dash?
  * @property {boolean} endDash - Does it have an ending dash?
  * @property {string} line - The original full line from the LTWA.
@@ -170,6 +171,7 @@ export class AbbrevIso {
    *     check intersection with `pattern.languages`: if empty, we return no
    *     matches (an empty array). Languages are listed as ISO-639-2 (B) codes,
    *     e.g. 'mul' for multiple, 'und' for undefined language.
+   *     In the standard, all patterns apply to all titles regardless of language.
    * @param {boolean} pretendDash - If true, pretend all patterns start and end
    *   with a dash (to find potential compound words)
    * @return {Array} An Array of `[i, iend, abbr, pattern, appendix]` Arrays,
@@ -289,7 +291,7 @@ export class AbbrevIso {
    * Returns all patterns matching `value`, sorted by start index of match.
    * Note this is not called by `makeAbbreviation`.
    * @param {string} value
-   * @param {?Array<string>} languages - Only use patterns that apply to these.
+   * @param {?Array<string>} languages - Only use patterns from these.
    *     (as ISO-639-2 (B) codes, e.g. 'mul' for multiple, 'und' for undefined).
    * @param {boolean} pretendDash - If true, pretend all patterns start
    *   and end with a dash (to find potential compound words)
@@ -337,8 +339,9 @@ export class AbbrevIso {
   /**
    * Compute an abbreviation according to all ISO-4 rules.
    * @param {string} value
-   * @param {?Array<string>} languages - Only use patterns that apply to these.
+   * @param {?Array<string>} languages - Only use patterns from these.
    *     (as ISO-639-2 (B) codes, e.g. 'mul' for multiple, 'und' for undefined).
+   *     All patterns apply to all titles regardless of language, so this should be avoided.
    * @param {?Array<LTWAPattern>} [patterns=getPotentialPatterns(value)]
    *     A list of potential patterns (you could give all, it's just damn slow).
    * @return {string}
