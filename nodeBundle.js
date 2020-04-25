@@ -155,6 +155,12 @@ function getCollatingMatch(s, t) {
 }
 
 /**
+ * Print all consecutive unicode code points of a string.
+ * @param {string} s
+ * @return {Array<string>}
+ */
+
+/**
  * AbbrevIso v1.1 JS lib for publication title abbreviation per ISO-4 standard.
  * Copyright (C) 2017 by Marcin Wrochna. MIT License, see file: LICENSE.
  * @fileoverview Prefix trees for quickly finding patterns.
@@ -258,14 +264,13 @@ class PrefixTree {
  * publications according to the ISO-4 standard. It also provides a way to list
  * matching patterns from the LTWA (List of Title Word Abbreviations).
  */
-
-
 /**
  * A single pattern line from the LTWA.
  * @property {string} pattern - The actual pattern from the LTWA, with dashes.
  * @property {string} replacement - The replacement from the LTWA.
- * @property {Array<String>} languages - Languages to which this applies.
+ * @property {Array<String>} languages - Languages from which the word came.
  *   (as ISO-639-2 (B) codes, e.g. 'mul' for multiple, 'und' for undefined).
+ *   All patterns apply to all titles regardless of language, so this should be avoided.
  * @property {boolean} startDash - Does it have a starting dash?
  * @property {boolean} endDash - Does it have an ending dash?
  * @property {string} line - The original full line from the LTWA.
@@ -421,6 +426,7 @@ class AbbrevIso {
    *     check intersection with `pattern.languages`: if empty, we return no
    *     matches (an empty array). Languages are listed as ISO-639-2 (B) codes,
    *     e.g. 'mul' for multiple, 'und' for undefined language.
+   *     In the standard, all patterns apply to all titles regardless of language.
    * @param {boolean} pretendDash - If true, pretend all patterns start and end
    *   with a dash (to find potential compound words)
    * @return {Array} An Array of `[i, iend, abbr, pattern, appendix]` Arrays,
@@ -540,7 +546,7 @@ class AbbrevIso {
    * Returns all patterns matching `value`, sorted by start index of match.
    * Note this is not called by `makeAbbreviation`.
    * @param {string} value
-   * @param {?Array<string>} languages - Only use patterns that apply to these.
+   * @param {?Array<string>} languages - Only use patterns from these.
    *     (as ISO-639-2 (B) codes, e.g. 'mul' for multiple, 'und' for undefined).
    * @param {boolean} pretendDash - If true, pretend all patterns start
    *   and end with a dash (to find potential compound words)
@@ -588,8 +594,9 @@ class AbbrevIso {
   /**
    * Compute an abbreviation according to all ISO-4 rules.
    * @param {string} value
-   * @param {?Array<string>} languages - Only use patterns that apply to these.
+   * @param {?Array<string>} languages - Only use patterns from these.
    *     (as ISO-639-2 (B) codes, e.g. 'mul' for multiple, 'und' for undefined).
+   *     All patterns apply to all titles regardless of language, so this should be avoided.
    * @param {?Array<LTWAPattern>} [patterns=getPotentialPatterns(value)]
    *     A list of potential patterns (you could give all, it's just damn slow).
    * @return {string}
@@ -643,19 +650,19 @@ class AbbrevIso {
     // This is the same as collation.boundariesRegex, except that we don't
     // consider +&?' as boundaries (they are part of initialisms like A&A
     // or words like Baha'i).
-    const boundariesRegex$1 = /[-\s\u2013\u2014_.,:;!|=*\\/"()#%@$]/;
+    const boundariesRegex$$1 = /[-\s\u2013\u2014_.,:;!|=*\\/"()#%@$]/;
     // Articles, as opposed to other short words, are removed from the
     // beginning also, and are not preserved in single word titles.
     const articles = ['a', 'an', 'the', 'der', 'die', 'das', 'den', 'dem',
       'des', 'le', 'la', 'les', 'el', 'il', 'lo', 'los', 'de', 'het',
       'els', 'ses', 'es', 'gli', 'een', '\'t', '\'n'];
-    result = this.removeShortWords(result, articles, '(^|' + boundariesRegex$1.source + ')');
+    result = this.removeShortWords(result, articles, '(^|' + boundariesRegex$$1.source + ')');
     // French articles "l'", "d'" may be followed by whatever.
     result = result.replace(new RegExp(
       '((^|' + boundariesRegex.source + '))(l|L|d|D|dell|nell)(\'|’)', 'gu'), '$1');
 
     // Check if we have a single word after removing all short words.
-    let preResult = this.removeShortWords(result, this.shortWords_, '(^|' + boundariesRegex$1.source + ')');
+    let preResult = this.removeShortWords(result, this.shortWords_, '(^|' + boundariesRegex$$1.source + ')');
     const r = new RegExp('.' + boundariesRegex.source + '.', 'u');
     if (!(r.test(preResult)))
       return result.replace(/\s+/gu, ' ').trim();
@@ -697,7 +704,7 @@ class AbbrevIso {
     }
 
     // Other short words are not removed from beginning.
-    result = this.removeShortWords(result, this.shortWords_, '(' + boundariesRegex$1.source + ')');
+    result = this.removeShortWords(result, this.shortWords_, '(' + boundariesRegex$$1.source + ')');
 
     // Remove superfluous whitepace.
     result = result.replace(/\s+/gu, ' ').trim();
@@ -706,5 +713,5 @@ class AbbrevIso {
   }
 }
 
-exports.AbbrevIso = AbbrevIso;
 exports.LTWAPattern = LTWAPattern;
+exports.AbbrevIso = AbbrevIso;
