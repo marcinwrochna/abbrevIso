@@ -8,7 +8,7 @@
 const fs = require('fs');
 const AbbrevIso = require('./nodeBundle.js');
 
-const ltwa = fs.readFileSync('./LTWA_20170914-modified.csv', 'utf8');
+const ltwa = fs.readFileSync('./LTWA_20210702-modified.csv', 'utf8');
 const shortWords = fs.readFileSync('./shortwords.txt', 'utf8');
 const abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
 
@@ -36,7 +36,7 @@ if (t.length) {
         if (abbrev !== line[1] && line[1] !== '???') {
             console.log(`Mismatch:\t${line[0]}\nIs:       \t${abbrev}\nShould be:\t${line[1]}`);
             if (line[2])
-                console.log(line[2]);
+                console.log(`Known issue: ${line[2]}`);
             console.log('');
         }
     });

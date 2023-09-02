@@ -28,7 +28,7 @@ The library is designed for mass use, so the abbrevIso object is created once, s
 ## Running
 You need 3 files to run the library yourself:
 * the bundled library: either `browserBundle.js` (for browsers) or `nodeBundle.js` (for Node.js)
-* the [LTWA](http://www.issn.org/services/online-services/access-to-the-ltwa/) in CSV format; the library comes with a slightly modified version fixing some obvious bugs in it: `LTWA_20170914-modified.csv`
+* the [LTWA](http://www.issn.org/services/online-services/access-to-the-ltwa/) in CSV format; the library comes with a slightly modified version fixing some obvious bugs in it: `LTWA_20210702-modified.csv`
 * a list of _short words_ (articles, prepositions, conjuctions) that should be omitted from titles; the library comes with a list including English, French, German and Spanish ones: `shortwords.txt` (Since articles are actually handled a bit differently by the standard, they are hard-coded in the library.)
 
 ### In browsers
@@ -42,7 +42,7 @@ The library can be run in a browser as follows (loading auxilliary files using j
 <script>
 	let ltwaAjax = $.ajax({
 		mimeType: 'text/plain; charset=utf-8',
-		url: 'LTWA_20170914-modified.csv',
+		url: 'LTWA_20210702-modified.csv',
 		dataType: 'text',
 	});
 	let shortWordsAjax = $.ajax({
@@ -70,7 +70,7 @@ You can run the library on any PC as follows:
 let fs = require('fs');
 let AbbrevIso = require('./nodeBundle.js');
 
-let ltwa = fs.readFileSync('LTWA_20170914-modified.csv', 'utf8');
+let ltwa = fs.readFileSync('LTWA_20210702-modified.csv', 'utf8');
 let shortWords = fs.readFileSync('shortwords.txt', 'utf8');
 let abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
 

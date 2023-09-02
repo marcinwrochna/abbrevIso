@@ -37,7 +37,7 @@ if (!(state instanceof Object) || !('abbrevs' in state))
   throw new Error('Invalid file: expected object with "abbrevs" key.');
 
 // Load abbrevISO.
-const ltwa = fs.readFileSync(__dirname + '/LTWA_20170914-modified.csv', 'utf8');
+const ltwa = fs.readFileSync(__dirname + '/LTWA_20210702-modified.csv', 'utf8');
 const shortWords = fs.readFileSync(__dirname + '/shortwords.txt', 'utf8');
 const abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
 

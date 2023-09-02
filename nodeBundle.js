@@ -1,10 +1,8 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
 /**
- * AbbrevIso v1.1 JS lib for publication title abbreviation per ISO-4 standard.
- * Copyright (C) 2017 by Marcin Wrochna. MIT License, see file: LICENSE.
+ * AbbrevIso v1.2 JS lib for publication title abbreviation per ISO-4 standard.
+ * Copyright (C) 2023 by Marcin Wrochna. MIT License, see file: LICENSE.
  * @fileoverview Utils for handling different ways of writing equivalent
  * characters.
  */
@@ -155,14 +153,8 @@ function getCollatingMatch(s, t) {
 }
 
 /**
- * Print all consecutive unicode code points of a string.
- * @param {string} s
- * @return {Array<string>}
- */
-
-/**
- * AbbrevIso v1.1 JS lib for publication title abbreviation per ISO-4 standard.
- * Copyright (C) 2017 by Marcin Wrochna. MIT License, see file: LICENSE.
+ * AbbrevIso v1.2 JS lib for publication title abbreviation per ISO-4 standard.
+ * Copyright (C) 2023 by Marcin Wrochna. MIT License, see file: LICENSE.
  * @fileoverview Prefix trees for quickly finding patterns.
  */
 
@@ -258,12 +250,14 @@ class PrefixTree {
 }
 
 /**
- * AbbrevIso v1.1 JS lib for publication title abbreviation per ISO-4 standard.
- * Copyright (C) 2017 by Marcin Wrochna. MIT License, see file: LICENSE.
+ * AbbrevIso v1.2 JS lib for publication title abbreviation per ISO-4 standard.
+ * Copyright (C) 2023 by Marcin Wrochna. MIT License, see file: LICENSE.
  * @fileoverview The library implements the method of abbreviating titles of
  * publications according to the ISO-4 standard. It also provides a way to list
  * matching patterns from the LTWA (List of Title Word Abbreviations).
  */
+
+
 /**
  * A single pattern line from the LTWA.
  * @property {string} pattern - The actual pattern from the LTWA, with dashes.
@@ -650,19 +644,19 @@ class AbbrevIso {
     // This is the same as collation.boundariesRegex, except that we don't
     // consider +&?' as boundaries (they are part of initialisms like A&A
     // or words like Baha'i).
-    const boundariesRegex$$1 = /[-\s\u2013\u2014_.,:;!|=*\\/"()#%@$]/;
+    const boundariesRegex$1 = /[-\s\u2013\u2014_.,:;!|=*\\/"()#%@$]/;
     // Articles, as opposed to other short words, are removed from the
     // beginning also, and are not preserved in single word titles.
     const articles = ['a', 'an', 'the', 'der', 'die', 'das', 'den', 'dem',
       'des', 'le', 'la', 'les', 'el', 'il', 'lo', 'los', 'de', 'het',
       'els', 'ses', 'es', 'gli', 'een', '\'t', '\'n'];
-    result = this.removeShortWords(result, articles, '(^|' + boundariesRegex$$1.source + ')');
+    result = this.removeShortWords(result, articles, '(^|' + boundariesRegex$1.source + ')');
     // French articles "l'", "d'" may be followed by whatever.
     result = result.replace(new RegExp(
       '((^|' + boundariesRegex.source + '))(l|L|d|D|dell|nell)(\'|’)', 'gu'), '$1');
 
     // Check if we have a single word after removing all short words.
-    let preResult = this.removeShortWords(result, this.shortWords_, '(^|' + boundariesRegex$$1.source + ')');
+    let preResult = this.removeShortWords(result, this.shortWords_, '(^|' + boundariesRegex$1.source + ')');
     const r = new RegExp('.' + boundariesRegex.source + '.', 'u');
     if (!(r.test(preResult)))
       return result.replace(/\s+/gu, ' ').trim();
@@ -704,7 +698,7 @@ class AbbrevIso {
     }
 
     // Other short words are not removed from beginning.
-    result = this.removeShortWords(result, this.shortWords_, '(' + boundariesRegex$$1.source + ')');
+    result = this.removeShortWords(result, this.shortWords_, '(' + boundariesRegex$1.source + ')');
 
     // Remove superfluous whitepace.
     result = result.replace(/\s+/gu, ' ').trim();
@@ -713,5 +707,5 @@ class AbbrevIso {
   }
 }
 
-exports.LTWAPattern = LTWAPattern;
 exports.AbbrevIso = AbbrevIso;
+exports.LTWAPattern = LTWAPattern;

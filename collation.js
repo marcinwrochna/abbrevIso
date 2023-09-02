@@ -1,6 +1,6 @@
 /**
- * AbbrevIso v1.1 JS lib for publication title abbreviation per ISO-4 standard.
- * Copyright (C) 2017 by Marcin Wrochna. MIT License, see file: LICENSE.
+ * AbbrevIso v1.2 JS lib for publication title abbreviation per ISO-4 standard.
+ * Copyright (C) 2023 by Marcin Wrochna. MIT License, see file: LICENSE.
  * @fileoverview Utils for handling different ways of writing equivalent
  * characters.
  */
