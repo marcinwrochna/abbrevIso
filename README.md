@@ -6,8 +6,8 @@ This is a library for finding abbreviations of journal titles and searching [LTW
 See [here](https://marcinwrochna.github.io/abbrevIso/) for an overview of ISO-4 rules and caveats.
 Or try [the API](https://abbreviso.toolforge.org/) instead.
 
-_International Journal of Geographical Information Science → Int. J. Geogr. Inf. Sci._  
-_Zeitschrift für deutsches Altertum und deutsche Literatur → Z. dtsch. Altert. dtsch. Lit._  
+_International Journal of Geographical Information Science → Int. J. Geogr. Inf. Sci._
+_Zeitschrift für deutsches Altertum und deutsche Literatur → Z. dtsch. Altert. dtsch. Lit._
 _4OR-A Quarterly Journal of Operations Research → 4OR-Q. J. Oper. Res._
 
 There is also a [Python bot](https://github.com/marcinwrochna/tokenzeroBot/tree/master/abbrevIsoBot) using this library for maintaining redirects on Wikipedia.
@@ -28,7 +28,7 @@ The library is designed for mass use, so the abbrevIso object is created once, s
 ## Running
 You need 3 files to run the library yourself:
 * the bundled library: either `browserBundle.js` (for browsers) or `nodeBundle.js` (for Node.js)
-* the [LTWA](http://www.issn.org/services/online-services/access-to-the-ltwa/) in CSV format; the library comes with a slightly modified version fixing some obvious bugs in it: `LTWA_20210702-modified.csv`
+* the [LTWA](http://www.issn.org/services/online-services/access-to-the-ltwa/) in CSV format; the library comes with a slightly modified version fixing some obvious bugs in it: `LTWA_2024-modified.csv`
 * a list of _short words_ (articles, prepositions, conjuctions) that should be omitted from titles; the library comes with a list including English, French, German and Spanish ones: `shortwords.txt` (Since articles are actually handled a bit differently by the standard, they are hard-coded in the library.)
 
 ### In browsers
@@ -42,7 +42,7 @@ The library can be run in a browser as follows (loading auxilliary files using j
 <script>
 	let ltwaAjax = $.ajax({
 		mimeType: 'text/plain; charset=utf-8',
-		url: 'LTWA_20210702-modified.csv',
+		url: 'LTWA_2024-modified.csv',
 		dataType: 'text',
 	});
 	let shortWordsAjax = $.ajax({
@@ -55,7 +55,7 @@ The library can be run in a browser as follows (loading auxilliary files using j
 		let s = 'International Journal of Geographical Information Science';
 		console.log(abbrevIso.makeAbbreviation(s));
 	});
-</script>  
+</script>
 ```
 Note that the ajax may fail if loading this locally using `file://` in Chrome.
 You can instead start a basic server that will host the current working directory at `http://localhost:8000` simply by running `python3 -m http.server`.
@@ -70,7 +70,7 @@ You can run the library on any PC as follows:
 let fs = require('fs');
 let AbbrevIso = require('./nodeBundle.js');
 
-let ltwa = fs.readFileSync('LTWA_20210702-modified.csv', 'utf8');
+let ltwa = fs.readFileSync('LTWA_2024-modified.csv', 'utf8');
 let shortWords = fs.readFileSync('shortwords.txt', 'utf8');
 let abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
 
@@ -81,7 +81,7 @@ console.log(abbrevIso.makeAbbreviation(s));
 * to use with other languages, you can use your language to write a JSON file with a list of titles to be abbreviated, fill the JSON file with abbreviations with a simple JavaScript script (like [here](exampleScript.js)) and read the resulting JSON file back in your language.
 
 ## Compiling (bundling/repackaging)
-In case you need to change the library, you will need to repackage it. 
+In case you need to change the library, you will need to repackage it.
 This is because the library is arranged in ECMAScript 6 modules, which are not well supported yet.
 Fortunately it suffices to repackage it using [rollup.js](https://rollupjs.org/) (which can be installed from your repository or using npm, the Node.js package manager, like: `sudo npm install --global rollup`).
 

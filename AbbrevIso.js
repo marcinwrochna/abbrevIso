@@ -24,7 +24,7 @@ export class LTWAPattern {
   /** @param {string} line A full tab-separated line from the LTWA CSV.*/
   constructor(line) {
     const a = line.split('\t');
-    if (a.length != 3)
+    if (a.length > 3)
       throw new Error('Number of fields in LTWA line is not 3: "' + line + '"');
 
     this.line = line;
@@ -34,13 +34,28 @@ export class LTWAPattern {
     this.pattern = p;
     if (p.length < 3)
       throw new Error('LTWA line has too short pattern: "' + line + '"');
-    this.replacement = a[1].normalize('NFC').trim();
-    if (['n.a.', 'n. a.', 'n.a'].includes(this.replacement))
+    if (a.length < 2) {
       this.replacement = '–';
-    this.languages = a[2].split(',').map(Function.prototype.call,
-        String.prototype.trim);
+    } else {
+      this.replacement = a[1].normalize('NFC').trim();
+    }
+    if (['', 'n.a.', 'n. a.', 'n.a'].includes(this.replacement))
+      this.replacement = '–';
+    if (a.length < 3) {
+      this.languages = 'Unknown'.split(',').map(Function.prototype.call,
+          String.prototype.trim);
+    } else {
+      this.languages = a[2].split(',').map(Function.prototype.call,
+          String.prototype.trim);
+    }
     this.startDash = (p.charAt(0) == '-');
     this.endDash = (p.charAt(p.length - 1) == '-');
+    if (this.pattern.length < 3)
+      throw new Error('LTWA line has too short pattern: "' + line + '"');
+    if (this.replacement.length < 1)
+      throw new Error('LTWA line has too short replacement: "' + line + '"');
+    if (this.languages.length < 1)
+      throw new Error('LTWA line has invalid languages: "' + line + '"');
   }
 
   /**
@@ -203,7 +218,7 @@ export class AbbrevIso {
     const result = [];
     let isPreviousCharBoundary = true;
     let i = 0;
-    while (i < value.length) {
+    while (i < value.length) {  // For each possible initial position in value of pattern.
       if (!pattern.startDash && !pretendDash && !isPreviousCharBoundary) {
         isPreviousCharBoundary = collation.boundariesRegex.test(value[i]);
         i++;
@@ -218,20 +233,29 @@ export class AbbrevIso {
       // Now pattern (ignoring dashes) has a match in `value`,
       // starting from i-th position.
       let abbr = '';
-      let ii = 0;
-      let iend = i + r[0][ii].length;
+      let ii = 0;    // currently considered index in r[0] and r[1].
+      let iend = i;  // i + len(sum(r[0][0..ii1])).
       let appendix = '';
-      for (let j = 0; j < replacement.length; j++) {
+
+      if (ii >= r[1].length)
+        throw new Error('LTWA error A: r[0] = ' + r[0] + '\nr[1] = ' + r[1] + '\nrepl = ' + replacement + '\n');
+
+      iend += r[0][ii].length;
+
+      for (let j = 0; j < replacement.length; j++) {  // For each character in replacement.
         if (replacement[j] == '.') {
           abbr += '.';
           continue;
         }
+
         // Omit value characters until we get to one
         // also present in the replacement.
         while (!collation.cEquiv(r[1][ii], replacement[j]) &&
             (j + 1 >= replacement.length ||
             !collation.cEquiv(r[1][ii], replacement[j] + replacement[j + 1]))) {
           ii++;
+          if (ii >= r[0].length)
+            throw new Error('LTWA error B: r[0] = ' + r[0] + '\nr[1] = ' + r[1] + '\nrepl = ' + replacement + '\n');
           iend += r[0][ii].length;
         }
         // If r[1][ii] is equivalent to two characters of the replacement,
@@ -420,7 +444,7 @@ export class AbbrevIso {
           this.getPatternMatches(result, pattern, languages)
       );
     }
-    
+
     // Sort by priority: patterns with no starting dashes first,
     // patterns with longer matches first, longer patterns first.
     // The fine details regulate whether we prefer to match 'futures' to 'futur-' or 'future'.
@@ -436,8 +460,8 @@ export class AbbrevIso {
           matches.splice(k--, 1); // Remove the later one from matches.
       }
     }
-    
-    // Apply matches starting from the later ones.    
+
+    // Apply matches starting from the later ones.
     const getBeginning = ([i, _iend, _abbr, _pattern]) => i;
     matches.sort((a, b) => (getBeginning(b) - getBeginning(a)));
     for (const [i, iend, abbr, _pattern] of matches) {

@@ -8,7 +8,7 @@
 const fs = require('fs');
 const AbbrevIso = require('./nodeBundle.js');
 
-const ltwa = fs.readFileSync('./LTWA_20210702-modified.csv', 'utf8');
+const ltwa = fs.readFileSync('./LTWA_2024-modified.csv', 'utf8');
 const shortWords = fs.readFileSync('./shortwords.txt', 'utf8');
 const abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
 

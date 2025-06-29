@@ -76,6 +76,10 @@ export function cEquiv(s, t) {
   // TODO perhaps we could use instead the following more standard collator?
   //    c = new Intl.Collator('en-u', {usage:'search', sensitivity:'base'});
   //    return c.compare(s,t);
+  if (typeof s !== 'string' || typeof t !== 'string') {
+    throw new Error('cEquiv expects two strings, got: ' + s + ' and ' + t);
+  }
+  if (s === t) return true; // Fast path.
   return (normalize(s).toLowerCase() == normalize(t).toLowerCase());
 }
 
@@ -145,6 +149,17 @@ export function getCollatingMatch(s, t) {
       i++;
     } else {
       return false; // Characters don't match.
+    }
+  }
+  if (result[0].length !== result[1].length) {
+    throw new Error('getCollatingMatch: result arrays have different lengths: ' +
+                    result[0].length + ' and ' + result[1].length);
+  }
+  for (i = 0; i < result[1].length; i++) {
+   if (typeof result[0][i] !== 'string' ||
+       typeof result[1][i] !== 'string') {
+      throw new Error('getCollatingMatch: expected strings, got: ' +
+                      result[0][i] + ' and ' + result[1][i]);
     }
   }
   return result;
