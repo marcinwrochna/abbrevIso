@@ -45,7 +45,7 @@ const abbrevIso = new AbbrevIso.AbbrevIso(ltwa, shortWords);
 for (let [title, data] of Object.entries(state['abbrevs'])) {
   let changed = false;
   if (typeof(data) !== 'object')
-    data = {'all': null, 'eng': null, 'matchingPatterns': null};
+    data = {'all': null, 'matchingPatterns': null};
   for (const lang of Object.keys(data)) {
     if (data[lang] !== null && !recomputeAll)
       continue;
@@ -60,8 +60,8 @@ for (let [title, data] of Object.entries(state['abbrevs'])) {
     } else if (lang == 'all') {
       data[lang] = abbrevIso.makeAbbreviation(t);
     } else {
-      const langSet = lang.split(',').concat([, 'mul', 'lat']);
-      data[lang] = abbrevIso.makeAbbreviation(t, langSet);
+      // Ignore requests for languages other than 'all'.
+      delete data[lang];
     }
     if (lang != 'matchingPatterns')
       console.log(`"${t}"\t[${lang}]\t->\t${data[lang]}`);

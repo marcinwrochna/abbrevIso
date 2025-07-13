@@ -56474,6 +56474,11 @@ Antonie		ext
 Rylands		ext
 Baha'i		ext
 Dalton		ext
+Johnson Matthey		ext
+Antonie van Leeuwenhoek		ext
+Courtauld		ext
+Warburg and Courtauld		ext
+Louis de Broglie		ext
 bioorganic	bioorg.	ext
 Netherland-	Neth.	ext
 interprofession-	interprof.	ext
@@ -56502,6 +56507,7 @@ in vivo		ext
 -psikhiatri-	-psikhiatr.	ext
 -zoolog-	-zool.	ext
 -forschung	-forsch.	ext
+-system-	-syst.	ext
 zhurnal	zh.	ext
 meditsin-	med.	ext
 counterintelligenc-	counterintell.	ext
@@ -56519,5 +56525,26 @@ psikhoterap-	psikhoter.	ext
 micromechani-	micromech.	ext
 mikromechani-	mikromech.	ext
 microengineer-	microeng.	ext
+xenobioti-	biot.	ext
 Cimmaron		ext
 PracTeX		ext
+Varsovie	Vars.	ext
+transgender	transgend.	ext
+transsexual	transsex.	ext
+bisexual-	bisex.	ext
+skill		ext
+cimarrón		ext
+unsurprising	unsurpris.	ext
+paleoclimatolog-	paleoclimatol.	ext
+prehistor-	prehist.	ext
+préhistoire	préhist.	ext
+NeuroVirology	NeuroVirol.	ext
+NeuroInterven-	NeuroInterv.	ext
+geoenvironment-	geoenviron.	ext
+cheminformatic	cheminform.	ext
+cyberpsychology	cyberpsychol.	ext
+HeartRhythm		ext
+equilibria	equilib.	ext
+Forschungsinstitut	Forschungsinst.	ext
+Bioinspiration	Bioinspir.	ext
+Biorefining	Biorefin.	ext
